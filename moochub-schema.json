@@ -1,0 +1,544 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://github.com/moochub/schema/releases/tag/v2.1",
+  "title": "JSON schema for MOOC providers integrated into moochub.org",
+  "description": "This schema specifies the JSON format each MOOC provider must offer in order to be integrated into moochub.org",
+  "type": "object",
+  "properties": {
+    "links": {
+      "title": "Links",
+      "type": "object",
+      "description": "Page information for the API",
+      "required": [
+        "self",
+        "first",
+        "last"
+      ],
+      "properties": {
+        "self": {
+          "type": "string",
+          "format": "uri",
+          "description": "The current page"
+        },
+        "first": {
+          "type": "string",
+          "format": "uri",
+          "description": "The first page"
+        },
+        "last": {
+          "type": "string",
+          "format": "uri",
+          "description": "The last page"
+        },
+        "next": {
+          "type": "string",
+          "format": "uri",
+          "description": "The next page if available"
+        },
+        "prev": {
+          "type": "string",
+          "format": "uri",
+          "description": "The previous page if available"
+        }
+      }
+    },
+    "data": {
+      "type": "array",
+      "description": "The actual data of the response",
+      "uniqueItems": true,
+      "items": {
+        "title": "Course",
+        "type": "object",
+        "description": "Serialized course object",
+        "required": [
+          "id",
+          "type",
+          "attributes"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "description": "ID of the object, UUID is preferred"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "courses"
+            ],
+            "description": "Type of the object"
+          },
+          "attributes": {
+            "type": "object",
+            "description": "Attributes of the object",
+            "required": [
+              "name",
+              "courseMode",
+              "instructors",
+              "moocProvider",
+              "url",
+              "courseLicenses",
+              "access"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Promoted course title"
+              },
+              "courseCode": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Course code, slug or human visible identifier for the course"
+              },
+              "courseMode": {
+                "type": "string",
+                "description": "Mode of the course",
+                "enum": [
+                  "MOOC"
+                ]
+              },
+              "abstract": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Abstract of the course as an HTML document"
+              },
+              "description": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Description of the course as an HTML document"
+              },
+              "languages": {
+                "type": "array",
+                "description": "List of languages in which the course is offered. Each language should be abbreviated in accordance with BCP 47: https://tools.ietf.org/html/bcp47",
+                "minItems": 0,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "startDate": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Start date with time of the course as shown on the course detail page in ISO 8601 format",
+                "format": "date-time"
+              },
+              "endDate": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "End date with time of the course as shown on the course detail page in ISO 8601 format",
+                "format": "date-time"
+              },
+              "availableUntil": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "An end date with time in ISO 8601 format specifying when the course is removed (and hence no longer available) for learners. A null value is used for courses not disappearing from the platform.",
+                "format": "date-time"
+              },
+              "image": {
+                "title": "Visual",
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "description": "Details of the visual (image / video depending on the context)",
+                "required": [
+                  "url",
+                  "licenses"
+                ],
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "description": "Location of the visual",
+                    "format": "uri"
+                  },
+                  "licenses": {
+                    "type": "array",
+                    "description": "A list of licenses that one may choose from for the visual",
+                    "uniqueItems": true,
+                    "minItems": 1,
+                    "items": {
+                      "title": "License",
+                      "type": "object",
+                      "description": "License details",
+                      "required": [
+                        "url"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "description": "Either 'Proprietary' or a license identifier according to https://spdx.org/licenses"
+                        },
+                        "url": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "format": "uri",
+                          "description": "Links to a license document that applies for the course, preferably as recognized by the SPDX license list"
+                        },
+                        "name": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "description": "A human readable license name"
+                        },
+                        "author": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "description": "The author(s) that should be attributed for the work, e.g. when choosing a corresponding CC license such as CC BY-NC-SA"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "video": {
+                "title": "Visual",
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "description": "Details of the visual (image / video depending on the context)",
+                "required": [
+                  "url",
+                  "licenses"
+                ],
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "description": "Location of the visual",
+                    "format": "uri"
+                  },
+                  "licenses": {
+                    "type": "array",
+                    "description": "A list of licenses that one may choose from for the visual",
+                    "uniqueItems": true,
+                    "minItems": 1,
+                    "items": {
+                      "title": "License",
+                      "type": "object",
+                      "description": "License details",
+                      "required": [
+                        "url"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "description": "Either 'Proprietary' or a license identifier according to https://spdx.org/licenses"
+                        },
+                        "url": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "format": "uri",
+                          "description": "Links to a license document that applies for the course, preferably as recognized by the SPDX license list"
+                        },
+                        "name": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "description": "A human readable license name"
+                        },
+                        "author": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "description": "The author(s) that should be attributed for the work, e.g. when choosing a corresponding CC license such as CC BY-NC-SA"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "instructors": {
+                "type": "array",
+                "description": "List of instructors for this course",
+                "uniqueItems": true,
+                "minItems": 0,
+                "items": {
+                  "title": "Instructor",
+                  "type": "object",
+                  "description": "Details for an instructor offering a course",
+                  "required": [
+                    "name"
+                  ],
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "description": "Full (display name) of an instructor incl. academic titles"
+                    },
+                    "role": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "description": "Course role of the instructor"
+                    },
+                    "image": {
+                      "title": "Visual",
+                      "type": [
+                        "object",
+                        "null"
+                      ],
+                      "description": "Details of the visual (image / video depending on the context)",
+                      "required": [
+                        "url",
+                        "licenses"
+                      ],
+                      "properties": {
+                        "url": {
+                          "type": "string",
+                          "description": "Location of the visual",
+                          "format": "uri"
+                        },
+                        "licenses": {
+                          "type": "array",
+                          "description": "A list of licenses that one may choose from for the visual",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "title": "License",
+                            "type": "object",
+                            "description": "License details",
+                            "required": [
+                              "url"
+                            ],
+                            "properties": {
+                              "id": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "description": "Either 'Proprietary' or a license identifier according to https://spdx.org/licenses"
+                              },
+                              "url": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "uri",
+                                "description": "Links to a license document that applies for the course, preferably as recognized by the SPDX license list"
+                              },
+                              "name": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "description": "A human readable license name"
+                              },
+                              "author": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "description": "The author(s) that should be attributed for the work, e.g. when choosing a corresponding CC license such as CC BY-NC-SA"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "description": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "description": "Description of an instructor as an HTML document"
+                    }
+                  }
+                }
+              },
+              "learningObjectives": {
+                "type": "array",
+                "description": "List of learning objectives for this course",
+                "uniqueItems": true,
+                "minItems": 0,
+                "items": {
+                  "type": "string",
+                  "title": "LearningObjective",
+                  "description": "A single learning goal as an HTML document"
+                }
+              },
+              "duration": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^P(?!$)(\\d+(?:\\.\\d+)?Y)?(\\d+(?:\\.\\d+)?M)?(\\d+(?:\\.\\d+)?W)?(\\d+(?:\\.\\d+)?D)?(T(?=\\d)(\\d+(?:\\.\\d+)?H)?(\\d+(?:\\.\\d+)?M)?(\\d+(?:\\.\\d+)?S)?)?$",
+                "description": "ISO 8601 encoded duration"
+              },
+              "partnerInstitutes": {
+                "type": "array",
+                "description": "list of partner institutes for this course",
+                "uniqueItems": true,
+                "minItems": 0,
+                "items": {
+                  "title": "PartnerInstitute",
+                  "type": "object",
+                  "description": "Associated partner for the course",
+                  "required": [
+                    "name"
+                  ],
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "description": "Name of the partner"
+                    },
+                    "description": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "description": "Description of the partner as an HTML document"
+                    },
+                    "logo": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "description": "Link to a logo image of the partner",
+                      "format": "uri"
+                    },
+                    "url": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "format": "uri",
+                      "description": "Homepage of the partner"
+                    }
+                  }
+                }
+              },
+              "moocProvider": {
+                "title": "MOOC Provider",
+                "type": "object",
+                "description": "Details for the MOOC provider offering a course",
+                "required": [
+                  "name",
+                  "url",
+                  "logo"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "name of the MOOC provider"
+                  },
+                  "url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Homepage of the MOOC provider"
+                  },
+                  "logo": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL pointing to a logo of the MOOC provider"
+                  }
+                }
+              },
+              "url": {
+                "type": "string",
+                "format": "uri",
+                "description": "Link to the course detail page"
+              },
+              "workload": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "description": "Specifies the amount of weekly hours course participants should plan with when taking the course"
+              },
+              "courseLicenses": {
+                "type": "array",
+                "uniqueItems": true,
+                "minItems": 1,
+                "description": "A list of licenses that one may choose from for this course",
+                "items": {
+                  "title": "License",
+                  "type": "object",
+                  "description": "License details",
+                  "required": [
+                    "url"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "description": "Either 'Proprietary' or a license identifier according to https://spdx.org/licenses"
+                    },
+                    "url": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "format": "uri",
+                      "description": "Links to a license document that applies for the course, preferably as recognized by the SPDX license list"
+                    },
+                    "name": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "description": "A human readable license name"
+                    },
+                    "author": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "description": "The author(s) that should be attributed for the work, e.g. when choosing a corresponding CC license such as CC BY-NC-SA"
+                    }
+                  }
+                }
+              },
+              "access": {
+                "type": "array",
+                "description": "Specifies how this course can be accessed by learners. The different access options shall not be used to transport differences between available content under this access option but rather annotate the course track or certificate that can be achieved",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "free",
+                    "paid",
+                    "member-only",
+                    "other"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "links",
+    "data"
+  ]
+}

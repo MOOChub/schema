@@ -94,7 +94,6 @@ paths:
                             - free
                             - paid
                           url: 'https://open.hpi.de/courses/internetworking2020'
-                          license: 'https://creativecommons.org/licenses/by-nc-sa/3.0/de/'
                           workload: 5
                           courseLicenses:
                             - id: CC-BY-NC-SA-4.0

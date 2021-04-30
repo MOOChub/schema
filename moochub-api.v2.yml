@@ -7,6 +7,9 @@ info:
     name: openHPI
     url: 'https://open.hpi.de/'
     email: info@openhpi.de
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
 servers:
   - url: 'http://localhost:3000/bridges/moochub'
     description: localhost

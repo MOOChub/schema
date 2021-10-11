@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://github.com/moochub/schema/releases/tag/v2.1",
+  "$id": "https://github.com/moochub/schema/releases/tag/v2.2",
   "title": "JSON schema for MOOC providers integrated into moochub.org",
   "description": "This schema specifies the JSON format each MOOC provider must offer in order to be integrated into moochub.org",
   "type": "object",
@@ -289,6 +289,17 @@
                     "name": {
                       "type": "string",
                       "description": "Full (display name) of an instructor incl. academic titles"
+                    },
+                    "type": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "enum": [
+                        "Person",
+                        "Organization"
+                      ],
+                      "description": "Type of the instructor to specify whether this is a \"Person\" or an \"Organization\""
                     },
                     "role": {
                       "type": [

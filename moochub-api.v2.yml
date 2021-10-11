@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: MOOChub API
-  version: '2.1'
+  version: '2.2'
   description: API for MOOChub to access public course information.
   contact:
     name: openHPI
@@ -9,7 +9,7 @@ info:
     email: info@openhpi.de
   license:
     name: MIT
-    url: https://opensource.org/licenses/MIT
+    url: 'https://opensource.org/licenses/MIT'
 servers:
   - url: 'http://localhost:3000/bridges/moochub'
     description: localhost
@@ -111,6 +111,17 @@ paths:
               description: 'This date signals the last day of support for the given API version, according to RFC 8594. The client should upgrade to a newer API version before this date. This header is only set if the API version is / will be deprecated'
         '404':
           description: Not Found
+        '406':
+          description: Not Acceptable
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+              examples:
+                Unsupported requested version:
+                  value:
+                    title: Unsupported requested version
+                    status: 406
       operationId: get-courses
       description: This endpoint lists all public and non-external courses.
       tags:
@@ -476,6 +487,7 @@ components:
       x-examples:
         Prof. Dr. Christoph Meinel:
           name: Prof. Dr. Christoph Meinel
+          type: Person
           role: course instructor
           image:
             url: 'https://s3.xopic.de/openhpi-public/teachers/6el0C1Afsp9YsiN6Ny85IG/v1.png'
@@ -489,12 +501,32 @@ components:
             <p>Christoph Meinel teaches in the Bachelor and Master courses in IT-Systems Engineering and at the <a href="http://www.hpi.uni-potsdam.de/d_school/home.html?L=1">HPI School of Design Thinking</a>. He is honorary professor at the Computer Sciences School at Beijing University of Technology, visiting professor at Shanghai University in China, and a senior research fellow at the <a href="http://wwwen.uni.lu/snt">Interdisciplinary Centre for Security, Reliability and Trust (SnT)</a> at the University of Luxembourg. Since 2008, together with Larry Leifer from Stanford University, he is program director of the <a href="http://www.hpi.uni-potsdam.de/forschung/design_thinking_research_program/program.html?L=1">HPI-Stanford Design Thinking Research Program</a>. Since 2010, he chairs the Steering Committee of the <a href="https://hpi.de/en/research/future-soc-lab.html">HPI Future SOC lab</a>.</p>
             <p>Christoph Meinel is author/co-author of 10 <a href="http://www.hpi.uni-potsdam.de/meinel/publikationen/books.html?L=0">books</a> and 4 anthologies, as well as editor of various conference proceedings. More than 400 of his papers have been published in high-profile scientific journals and at international conferences. His high-security solution <a href="http://www.lock-keeper.org/">Lock-Keeper</a> is internationally patented and licensed by Siemens AG. His <a href="https://www.tele-task.de/">tele-TASK</a> system provides an innovative mobile system for recording and Internet broadcasting lectures and presentations used in many universities all-over the world. The virtual tele-lab for Internet Security provides the possibility to get hands-on experiences in practical issues of Internet and information security. The recently developed tele-Board supports remote work of creative teams.</p>
             <p>Christoph Meinel is a member of acatech, the German academy of sciences and engineering. He is chairman of the German IPv6 council and of the advisory board of UTD Meraka in South Africa, and a member of the SAP Security Advisory Board. In 2006, he hosted together with Hasso Plattner the first German "National IT-Summit" of the German Federal Chancellor Dr. Angela Merkel. From 1998 to 2002 he was the founder and CEO of the Research Lab "Institute for Telematics" in Trier. Christoph Meinel is chief editor of the scientific electronic journals <a href="http://eccc.hpi-web.de/">ECCC - Electronic Colloquium on Computational Complexity</a> and <a href="http://ecdtr.hpi-web.de/">ECDTR - Electronic Colloquium on Design Thinking Research</a>, the <a href="https://it-gipfelblog.hpi-web.de/">IT-Gipfelblog</a>, and the <a href="http://www.tele-task.de/">tele-TASK</a> archive.</p>
+        Hasso Plattner Institute:
+          name: Hasso Plattner Institute
+          type: Organization
+          role: exercise instructor
+          image:
+            url: 'https://hpi.de/fileadmin/user_upload/hpi/bilder/logos/hpi_logo.jpg'
+            licenses:
+              - id: Proprietary
+                url: null
+                name: Proprietary License
+                author: 'Hasso Plattner Institute, University of Potsdam'
+          description: '<p>The Hasso Plattner Institute (HPI) is unique in the German university landscape. Academically structured as the independent Faculty of Digital Engineering at the University of Potsdam, HPI unites excellent research and teaching with the advantages of a privately financed institute and a tuition-free study program.</p>'
       properties:
         name:
           type: string
           nullable: false
           example: Prof. Dr. Christoph Meinel
           description: Full (display name) of an instructor incl. academic titles
+        type:
+          type: string
+          nullable: true
+          enum:
+            - Person
+            - Organization
+          example: Person
+          description: Type of the instructor to specify whether this is a "Person" or an "Organization"
         role:
           type: string
           nullable: true
@@ -585,5 +617,29 @@ components:
       required:
         - url
         - licenses
+    Problem:
+      title: Problem
+      type: object
+      description: Error details
+      properties:
+        title:
+          type: string
+          example: Unsupported requested version
+          description: A human readable explanation of the error
+          readOnly: true
+        status:
+          type: integer
+          format: int32
+          description: The HTTP status code of the error
+          readOnly: true
+      required:
+        - title
+        - status
+      readOnly: true
+      x-examples:
+        Unsupported requested version:
+          title: Unsupported requested version
+          status: 406
+
 tags:
   - name: courses

@@ -17,27 +17,27 @@
       "properties": {
         "self": {
           "type": "string",
-          "format": "uri",
+          "format": "iri",
           "description": "The current page"
         },
         "first": {
           "type": "string",
-          "format": "uri",
+          "format": "iri",
           "description": "The first page"
         },
         "last": {
           "type": "string",
-          "format": "uri",
+          "format": "iri",
           "description": "The last page"
         },
         "next": {
           "type": "string",
-          "format": "uri",
+          "format": "iri",
           "description": "The next page if available"
         },
         "prev": {
           "type": "string",
-          "format": "uri",
+          "format": "iri",
           "description": "The previous page if available"
         }
       }
@@ -160,7 +160,7 @@
                   "url": {
                     "type": "string",
                     "description": "Location of the visual",
-                    "format": "uri"
+                    "format": "iri"
                   },
                   "licenses": {
                     "type": "array",
@@ -187,7 +187,7 @@
                             "string",
                             "null"
                           ],
-                          "format": "uri",
+                          "format": "iri",
                           "description": "Links to a license document that applies for the course, preferably as recognized by the SPDX license list"
                         },
                         "name": {
@@ -224,7 +224,7 @@
                   "url": {
                     "type": "string",
                     "description": "Location of the visual",
-                    "format": "uri"
+                    "format": "iri"
                   },
                   "licenses": {
                     "type": "array",
@@ -251,7 +251,7 @@
                             "string",
                             "null"
                           ],
-                          "format": "uri",
+                          "format": "iri",
                           "description": "Links to a license document that applies for the course, preferably as recognized by the SPDX license list"
                         },
                         "name": {
@@ -323,7 +323,7 @@
                         "url": {
                           "type": "string",
                           "description": "Location of the visual",
-                          "format": "uri"
+                          "format": "iri"
                         },
                         "licenses": {
                           "type": "array",
@@ -350,7 +350,7 @@
                                   "string",
                                   "null"
                                 ],
-                                "format": "uri",
+                                "format": "iri",
                                 "description": "Links to a license document that applies for the course, preferably as recognized by the SPDX license list"
                               },
                               "name": {
@@ -431,14 +431,14 @@
                         "null"
                       ],
                       "description": "Link to a logo image of the partner",
-                      "format": "uri"
+                      "format": "iri"
                     },
                     "url": {
                       "type": [
                         "string",
                         "null"
                       ],
-                      "format": "uri",
+                      "format": "iri",
                       "description": "Homepage of the partner"
                     }
                   }
@@ -460,19 +460,19 @@
                   },
                   "url": {
                     "type": "string",
-                    "format": "uri",
+                    "format": "iri",
                     "description": "Homepage of the MOOC provider"
                   },
                   "logo": {
                     "type": "string",
-                    "format": "uri",
-                    "description": "URL pointing to a logo of the MOOC provider"
+                    "format": "iri",
+                    "description": "IRI pointing to a logo of the MOOC provider"
                   }
                 }
               },
               "url": {
                 "type": "string",
-                "format": "uri",
+                "format": "iri",
                 "description": "Link to the course detail page"
               },
               "workload": {
@@ -507,7 +507,7 @@
                         "string",
                         "null"
                       ],
-                      "format": "uri",
+                      "format": "iri",
                       "description": "Links to a license document that applies for the course, preferably as recognized by the SPDX license list"
                     },
                     "name": {

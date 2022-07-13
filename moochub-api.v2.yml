@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: MOOChub API
-  version: '2.2'
+  version: '2.3'
   description: API for MOOChub to access public course information.
   contact:
     name: openHPI
@@ -166,15 +166,15 @@ components:
         url:
           type: string
           nullable: false
-          format: uri
+          format: iri
           example: 'https://open.hpi.de/'
           description: Homepage of the MOOC provider
         logo:
           type: string
           nullable: false
-          format: uri
+          format: iri
           example: 'https://openhpi.azureedge.net/assets/logo-155a11eefd46841c38fb009a2d9b84d28550a0c920fbf50b591b3aa1f7c0190c.png'
-          description: URL pointing to a logo of the MOOC provider
+          description: IRI pointing to a logo of the MOOC provider
       required:
         - name
         - url
@@ -354,7 +354,7 @@ components:
             url:
               type: string
               nullable: false
-              format: uri
+              format: iri
               example: 'https://open.hpi.de/courses/internetworking2020'
               description: Link to the course detail page
             workload:
@@ -406,32 +406,32 @@ components:
         self:
           type: string
           nullable: false
-          format: uri
+          format: iri
           example: 'https://open.hpi.de/bridges/moochub/courses?page=2'
           description: The current page
         first:
           type: string
           nullable: false
-          format: uri
+          format: iri
           example: 'https://open.hpi.de/bridges/moochub/courses?page=1'
           description: The first page
         last:
           type: string
           nullable: false
           example: 'https://open.hpi.de/bridges/moochub/courses?page=3'
-          format: uri
+          format: iri
           description: The last page
         next:
           type: string
           nullable: false
-          format: uri
+          format: iri
           example: 'https://open.hpi.de/bridges/moochub/courses?page=3'
           description: The next page if available
         prev:
           type: string
           nullable: false
           example: 'https://open.hpi.de/bridges/moochub/courses?page=1'
-          format: uri
+          format: iri
           description: The previous page if available
       required:
         - self
@@ -463,12 +463,12 @@ components:
           type: string
           nullable: true
           description: Link to a logo image of the partner
-          format: uri
+          format: iri
           example: 'https://hpi-academy.de/fileadmin/hpi-academy/Logo_HPI_Academy_2018_neu.png'
         url:
           type: string
           nullable: true
-          format: uri
+          format: iri
           example: 'https://hpi-academy.de/'
           description: Homepage of the partner
       required:
@@ -570,7 +570,7 @@ components:
           description: 'Either ''Proprietary'' or a license identifier according to https://spdx.org/licenses'
         url:
           type: string
-          format: uri
+          format: iri
           nullable: true
           example: 'https://creativecommons.org/licenses/by-nc-sa/4.0/'
           description: 'Links to a license document that applies for the course, preferably as recognized by the SPDX license list'
@@ -605,7 +605,7 @@ components:
           nullable: false
           example: 'https://s3.xopic.de/openhpi-public/courses/hrQGwS4dOI8porAtQ2AU4/visual_v1.png'
           description: Location of the visual
-          format: uri
+          format: iri
         licenses:
           type: array
           nullable: false

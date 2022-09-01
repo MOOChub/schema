@@ -65,7 +65,7 @@ paths:
                           endDate: '2020-10-20T21:59:00Z'
                           availableUntil: null
                           image:
-                            url: 'https://s3.xopic.de/openhpi-public/courses/hrQGwS4dOI8porAtQ2AU4/visual_v1.png'
+                            url: 'https://s3.openhpicloud.de/openhpi-public/courses/hrQGwS4dOI8porAtQ2AU4/visual_v1.png'
                             licenses:
                               - id: Proprietary
                                 url: null
@@ -206,7 +206,7 @@ components:
             endDate: '2020-10-20T21:59:00Z'
             availableUntil: null
             image:
-              url: 'https://s3.xopic.de/openhpi-public/courses/hrQGwS4dOI8porAtQ2AU4/visual_v1.png'
+              url: 'https://s3.openhpicloud.de/openhpi-public/courses/hrQGwS4dOI8porAtQ2AU4/visual_v1.png'
               licenses:
                 - id: Proprietary
                   url: null
@@ -490,7 +490,7 @@ components:
           type: Person
           role: course instructor
           image:
-            url: 'https://s3.xopic.de/openhpi-public/teachers/6el0C1Afsp9YsiN6Ny85IG/v1.png'
+            url: 'https://s3.openhpicloud.de/openhpi-public/teachers/6el0C1Afsp9YsiN6Ny85IG/v1.png'
             licenses:
               - id: CC-BY-NC-SA-4.0
                 url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/'
@@ -593,7 +593,7 @@ components:
       description: Details of the visual (image / video depending on the context)
       x-examples:
         openHPI Image:
-          url: 'https://s3.xopic.de/openhpi-public/courses/hrQGwS4dOI8porAtQ2AU4/visual_v1.png'
+          url: 'https://s3.openhpicloud.de/openhpi-public/courses/hrQGwS4dOI8porAtQ2AU4/visual_v1.png'
           licenses:
             - id: CC-BY-NC-SA-4.0
               url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/'
@@ -603,7 +603,7 @@ components:
         url:
           type: string
           nullable: false
-          example: 'https://s3.xopic.de/openhpi-public/courses/hrQGwS4dOI8porAtQ2AU4/visual_v1.png'
+          example: 'https://s3.openhpicloud.de/openhpi-public/courses/hrQGwS4dOI8porAtQ2AU4/visual_v1.png'
           description: Location of the visual
           format: iri
         licenses:

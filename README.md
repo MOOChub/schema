@@ -20,7 +20,7 @@ The [latest finalized version](https://github.com/moochub/schema/releases/latest
 
 ## Contributions
 
-The schema is mainly driven by the [MOOChub organization and their partners](https://moochub.org/partners.html). Therefore, it is designed to provide a consistent and uniform mechanism to transport required information between the partners. We will evolve the schema based on requirements introduced by partners and consumers. Additional contributions to the schema are welcome and will be considered for an upcoming release. Please create an issue or a pull request to start contributing!
+The schema is mainly driven by the [MOOChub organization and their partners](https://moochub.org/partners/). Therefore, it is designed to provide a consistent and uniform mechanism to transport required information between the partners. We will evolve the schema based on requirements introduced by partners and consumers. Additional contributions to the schema are welcome and will be considered for an upcoming release. Please create an issue or a pull request to start contributing!
 
 ## Contact
 

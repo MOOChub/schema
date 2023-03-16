@@ -25,7 +25,7 @@ paths:
         '200':
           description: OK
           content:
-            application/vnd.api+json; moochub-version=2.1: #TODO Needs to be changed to version 3.0 here ???
+            application/vnd.api+json; moochub-version=3.0:
               schema:
                 type: object
                 description: 'A response following the JSON:API schema (https://jsonapi.org/)'

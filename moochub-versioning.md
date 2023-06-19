@@ -27,7 +27,7 @@ As explained above, clients should always send the number of the last major API 
 They can use the `Accept` header to specify the corresponding content type:
 
 ~~~http
-GET bridges/moochub/courses HTTP/1.1
+GET /bridges/moochub/courses HTTP/1.1
 Accept: application/vnd.api+json; moochub-version=2
 
 HTTP/1.1 200 OK
@@ -37,7 +37,7 @@ Content-Type: application/vnd.api+json; moochub-version=2.1
 Deprecated versions can be recognized based on the presence of the `Sunset` header:
 
 ~~~http
-GET bridges/moochub/courses HTTP/1.1
+GET /bridges/moochub/courses HTTP/1.1
 Accept: application/vnd.api+json; moochub-version=1
 
 HTTP/1.1 200 OK

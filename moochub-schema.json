@@ -71,7 +71,7 @@
           },
           "attributes": {
             "type": "object",
-            "description": "The Attributes of the object.",
+            "description": "The Attributes of the course.",
             "required": [
               "name",
               "learningResourceType",
@@ -154,7 +154,7 @@
                   "null"
                 ],
                 "uniqueItems": true,
-                "description": "The time and date the course starts. It is possible to give several date-times for repetitive courses. The date-time to be given according to ISO 8601.",
+                "description": "The time the course starts. It is possible to give several date-times for repetitive courses. The date-time to be given according to ISO 8601.",
                 "items": {
                   "type": "string",
                   "format": "date-time",
@@ -167,7 +167,7 @@
                   "null"
                 ],
                 "uniqueItems": true,
-                "description": "The time and date the course ends. It is possible to give several date-times for repetitive courses. The date-time to be given according to ISO 8601.",
+                "description": "The time the course ends. It is possible to give several date-times for repetitive courses. The date-time to be given according to ISO 8601.",
                 "items": {
                   "type": "string",
                   "format": "date-time",
@@ -180,7 +180,7 @@
                   "null"
                 ],
                 "uniqueItems": true,
-                "description": "The time and date the course is no longer available. It is possible to give several date-times for repetitive courses. The date-time to be given according to ISO 8601.\n",
+                "description": "The time and date the course is no longer available. It is possible to give several date-times for repetitive courses. The date-time to be given according to ISO 8601.",
                 "items": {
                   "type": "string",
                   "format": "date-time",
@@ -218,7 +218,7 @@
                     "items": {
                       "title": "License",
                       "type": "object",
-                      "description": "This schema describes the attributes of a license.\n",
+                      "description": "This schema describes the attributes of a license.",
                       "properties": {
                         "identifier": {
                           "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
@@ -291,7 +291,7 @@
                     "items": {
                       "title": "License",
                       "type": "object",
-                      "description": "This schema describes the attributes of a license.\n",
+                      "description": "This schema describes the attributes of a license.",
                       "properties": {
                         "identifier": {
                           "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
@@ -406,7 +406,7 @@
                               "items": {
                                 "title": "License",
                                 "type": "object",
-                                "description": "This schema describes the attributes of a license.\n",
+                                "description": "This schema describes the attributes of a license.",
                                 "properties": {
                                   "identifier": {
                                     "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
@@ -535,7 +535,7 @@
                               "items": {
                                 "title": "License",
                                 "type": "object",
-                                "description": "This schema describes the attributes of a license.\n",
+                                "description": "This schema describes the attributes of a license.",
                                 "properties": {
                                   "identifier": {
                                     "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
@@ -651,7 +651,7 @@
                                   "items": {
                                     "title": "License",
                                     "type": "object",
-                                    "description": "This schema describes the attributes of a license.\n",
+                                    "description": "This schema describes the attributes of a license.",
                                     "properties": {
                                       "identifier": {
                                         "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
@@ -770,7 +770,7 @@
                     },
                     "educationalFramework": {
                       "type": "string",
-                      "description": "The name of the educational framework that describes the ski",
+                      "description": "The name of the educational framework that describes the skill.",
                       "example": "DigComp 2.2"
                     },
                     "url": {
@@ -806,7 +806,7 @@
                         },
                         "name": {
                           "type": "array",
-                          "description": "List of names of the educational level. This array allows localized strings. A name and a language have to be given in the respective",
+                          "description": "List of names of the educational level. This array allows localized strings. A name and a language have to be given in the respective field.",
                           "items": {
                             "type": "object",
                             "properties": {
@@ -848,7 +848,7 @@
                         },
                         "educationalFramework": {
                           "type": "string",
-                          "description": "The name of the educational framework that describes the educational l",
+                          "description": "The name of the educational framework that describes the educational level.",
                           "example": "DigComp 2.2"
                         },
                         "url": {
@@ -968,7 +968,7 @@
                               "items": {
                                 "title": "License",
                                 "type": "object",
-                                "description": "This schema describes the attributes of a license.\n",
+                                "description": "This schema describes the attributes of a license.",
                                 "properties": {
                                   "identifier": {
                                     "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
@@ -1097,7 +1097,7 @@
                               "items": {
                                 "title": "License",
                                 "type": "object",
-                                "description": "This schema describes the attributes of a license.\n",
+                                "description": "This schema describes the attributes of a license.",
                                 "properties": {
                                   "identifier": {
                                     "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
@@ -1145,7 +1145,7 @@
                             "string",
                             "null"
                           ],
-                          "description": "A short description of the person. Can be a CV-like description. Should be provided in HTML",
+                          "description": "A short description of the person. Can be a CV-like description. Should be provided in HTML.",
                           "example": null
                         },
                         "affiliation": {
@@ -1213,7 +1213,7 @@
                                   "items": {
                                     "title": "License",
                                     "type": "object",
-                                    "description": "This schema describes the attributes of a license.\n",
+                                    "description": "This schema describes the attributes of a license.",
                                     "properties": {
                                       "identifier": {
                                         "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
@@ -1339,7 +1339,7 @@
                             "items": {
                               "title": "License",
                               "type": "object",
-                              "description": "This schema describes the attributes of a license.\n",
+                              "description": "This schema describes the attributes of a license.",
                               "properties": {
                                 "identifier": {
                                   "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
@@ -1468,7 +1468,7 @@
                             "items": {
                               "title": "License",
                               "type": "object",
-                              "description": "This schema describes the attributes of a license.\n",
+                              "description": "This schema describes the attributes of a license.",
                               "properties": {
                                 "identifier": {
                                   "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
@@ -1584,7 +1584,7 @@
                                 "items": {
                                   "title": "License",
                                   "type": "object",
-                                  "description": "This schema describes the attributes of a license.\n",
+                                  "description": "This schema describes the attributes of a license.",
                                   "properties": {
                                     "identifier": {
                                       "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
@@ -1683,7 +1683,7 @@
                 "items": {
                   "title": "License",
                   "type": "object",
-                  "description": "This schema describes the attributes of a license.\n",
+                  "description": "This schema describes the attributes of a license.",
                   "properties": {
                     "identifier": {
                       "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
@@ -2029,7 +2029,7 @@
                               "items": {
                                 "title": "License",
                                 "type": "object",
-                                "description": "This schema describes the attributes of a license.\n",
+                                "description": "This schema describes the attributes of a license.",
                                 "properties": {
                                   "identifier": {
                                     "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
@@ -2158,7 +2158,7 @@
                               "items": {
                                 "title": "License",
                                 "type": "object",
-                                "description": "This schema describes the attributes of a license.\n",
+                                "description": "This schema describes the attributes of a license.",
                                 "properties": {
                                   "identifier": {
                                     "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
@@ -2274,7 +2274,7 @@
                                   "items": {
                                     "title": "License",
                                     "type": "object",
-                                    "description": "This schema describes the attributes of a license.\n",
+                                    "description": "This schema describes the attributes of a license.",
                                     "properties": {
                                       "identifier": {
                                         "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",

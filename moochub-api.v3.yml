@@ -346,7 +346,7 @@ paths:
           description: The page that has been requested
         - schema:
             type: string
-            example: application/vnd.api+json; moochub-version=2
+            example: application/vnd.api+json; moochub-version=3
           in: header
           name: Accept
           description: The last major API version that is supported by the client and requested from the server. The newest version will be used if no version is included in the original request.
@@ -354,42 +354,6 @@ security: []
 components:
   securitySchemes: {}
   schemas:
-    MOOCProvider:
-      title: MOOC Provider
-      type: object
-      nullable: false
-      description: Details for the MOOC provider offering a course
-      x-examples:
-        openHPI:
-          name: openHPI
-          url: 'https://open.hpi.de/'
-          logo: 'https://openhpi.azureedge.net/assets/logo-155a11eefd46841c38fb009a2d9b84d28550a0c920fbf50b591b3aa1f7c0190c.png'
-        KI-Campus:
-          name: KI-Campus
-          url: 'https://learn.ki-campus.org/'
-          logo: 'https://learn.ki-campus.org/assets/logo.en-f081c5c68df9da5a327547785836e930817e26e512fce144206edb81d51cc3c6.png'
-      properties:
-        name:
-          type: string
-          nullable: false
-          example: openHPI
-          description: name of the MOOC provider
-        url:
-          type: string
-          nullable: false
-          format: iri
-          example: 'https://open.hpi.de/'
-          description: Homepage of the MOOC provider
-        logo:
-          type: string
-          nullable: false
-          format: iri
-          example: 'https://openhpi.azureedge.net/assets/logo-155a11eefd46841c38fb009a2d9b84d28550a0c920fbf50b591b3aa1f7c0190c.png'
-          description: IRI pointing to a logo of the MOOC provider
-      required:
-        - name
-        - url
-        - logo
     Course:
       title: Course
       type: object

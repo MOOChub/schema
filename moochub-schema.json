@@ -765,7 +765,12 @@
                     "educationalFramework": {
                       "type": "string",
                       "description": "The name of the educational framework that describes the skill.",
-                      "example": "DigComp 2.2"
+                      "example": "DigComp"
+                    },
+                    "educationalFramework_version": {
+                      "type": "string",
+                      "description": "The version of the educational framework that describes the skill. Can also be the year the framework was released/published.",
+                      "example": "2.2"
                     },
                     "url": {
                       "type": [
@@ -843,7 +848,12 @@
                         "educationalFramework": {
                           "type": "string",
                           "description": "The name of the educational framework that describes the educational level.",
-                          "example": "DigComp 2.2"
+                          "example": "DigComp"
+                        },
+                        "educationalFramework_version": {
+                          "type": "string",
+                          "description": "The version of the educational framework that describes the skill. Can also be the year the framework was released/published.",
+                          "example": "2.2"
                         },
                         "url": {
                           "type": [
@@ -874,13 +884,15 @@
                       "required": [
                         "name",
                         "educationalFramework",
+                        "educationalFramework_version",
                         "type"
                       ]
                     }
                   },
                   "required": [
                     "name",
-                    "educationalFramework"
+                    "educationalFramework",
+                    "educationalFramework_version"
                   ]
                 }
               },
@@ -1736,6 +1748,11 @@
                         "OEFOS"
                       ]
                     },
+                    "educationalFramework_version": {
+                      "type": "string",
+                      "description": "The version of the educational framework that describes the skill. Can also be the year the framework was released/published.",
+                      "example": "2013"
+                    },
                     "url": {
                       "type": [
                         "string",
@@ -1814,6 +1831,7 @@
                   },
                   "required": [
                     "educationalFramework",
+                    "educationalFramework_version",
                     "name",
                     "type"
                   ]
@@ -1881,7 +1899,12 @@
                     "educationalFramework": {
                       "type": "string",
                       "description": "The name of the educational framework that describes the educational level.",
-                      "example": "DigComp 2.2"
+                      "example": "DigComp"
+                    },
+                    "educationalFramework_version": {
+                      "type": "string",
+                      "description": "The version of the educational framework that describes the skill. Can also be the year the framework was released/published.",
+                      "example": "2.2"
                     },
                     "url": {
                       "type": [
@@ -1912,6 +1935,7 @@
                   "required": [
                     "name",
                     "educationalFramework",
+                    "educationalFramework_version",
                     "type"
                   ]
                 }
@@ -2549,7 +2573,12 @@
                         "educationalFramework": {
                           "type": "string",
                           "description": "The name of the educational framework that describes the ski",
-                          "example": "DigComp 2.2"
+                          "example": "DigComp"
+                        },
+                        "educationalFramework_version": {
+                          "type": "string",
+                          "description": "The version of the educational framework that describes the skill. Can also be the year the framework was released/published.",
+                          "example": "2.2"
                         },
                         "url": {
                           "type": [
@@ -2627,7 +2656,12 @@
                             "educationalFramework": {
                               "type": "string",
                               "description": "The name of the educational framework that describes the educational l",
-                              "example": "DigComp 2.2"
+                              "example": "DigComp"
+                            },
+                            "educationalFramework_version": {
+                              "type": "string",
+                              "description": "The version of the educational framework that describes the skill. Can also be the year the framework was released/published.",
+                              "example": "2.2"
                             },
                             "url": {
                               "type": [
@@ -2658,13 +2692,15 @@
                           "required": [
                             "name",
                             "educationalFramework",
+                            "educationalFramework_version",
                             "type"
                           ]
                         }
                       },
                       "required": [
                         "name",
-                        "educationalFramework"
+                        "educationalFramework",
+                        "educationalFramework_version"
                       ]
                     }
                   ]
@@ -2867,7 +2903,8 @@
                             },
                             "required": [
                               "name",
-                              "educationalFramework"
+                              "educationalFramework",
+                              "educationalFramework_version"
                             ]
                           },
                           {
@@ -2928,7 +2965,12 @@
                               "educationalFramework": {
                                 "type": "string",
                                 "description": "The name of the educational framework that describes the ski",
-                                "example": "DigComp 2.2"
+                                "example": "DigComp"
+                              },
+                              "educationalFramework_version": {
+                                "type": "string",
+                                "description": "The version of the educational framework that describes the skill. Can also be the year the framework was released/published.",
+                                "example": "2.2"
                               },
                               "url": {
                                 "type": [
@@ -3006,7 +3048,12 @@
                                   "educationalFramework": {
                                     "type": "string",
                                     "description": "The name of the educational framework that describes the educational l",
-                                    "example": "DigComp 2.2"
+                                    "example": "DigComp"
+                                  },
+                                  "educationalFramework_version": {
+                                    "type": "string",
+                                    "description": "The version of the educational framework that describes the skill. Can also be the year the framework was released/published.",
+                                    "example": "2.2"
                                   },
                                   "url": {
                                     "type": [
@@ -3037,13 +3084,15 @@
                                 "required": [
                                   "name",
                                   "educationalFramework",
+                                  "educationalFramework_version",
                                   "type"
                                 ]
                               }
                             },
                             "required": [
                               "name",
-                              "educationalFramework"
+                              "educationalFramework",
+                              "educationalFramework_version"
                             ]
                           }
                         ]

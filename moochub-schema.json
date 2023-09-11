@@ -360,12 +360,12 @@
                           "description": "The name of the organization.",
                           "example": "openHPI"
                         },
-                        "identifier": {
+                        "url": {
                           "type": [
                             "string",
                             "null"
                           ],
-                          "description": "An identifier for the organization. Can be a link to a homepage, Wikidata,...",
+                          "description": "An url for the organization. Can be a link to a homepage, Wikidata,...",
                           "format": "iri",
                           "example": "https://open.hpi.de/"
                         },
@@ -484,13 +484,13 @@
                           "description": "The honorific suffix of the person (e.g. PhD, MD, ...).",
                           "example": null
                         },
-                        "identifier": {
+                        "url": {
                           "type": [
                             "string",
                             "null"
                           ],
                           "format": "iri",
-                          "description": "An unique identifier e.g. IRI. Can be a link to a homepage, Wikidata, ORCID,...",
+                          "description": "Can be a link to a homepage, Wikidata, ORCID,...",
                           "example": null
                         },
                         "type": {
@@ -595,12 +595,12 @@
                               "description": "The name of the organization.",
                               "example": "openHPI"
                             },
-                            "identifier": {
+                            "url": {
                               "type": [
                                 "string",
                                 "null"
                               ],
-                              "description": "An identifier for the organization. Can be a link to a homepage, Wikidata,...",
+                              "description": "An url for the organization. Can be a link to a homepage, Wikidata,...",
                               "format": "iri",
                               "example": "https://open.hpi.de/"
                             },
@@ -907,12 +907,12 @@
                           "description": "The name of the organization.",
                           "example": "openHPI"
                         },
-                        "identifier": {
+                        "url": {
                           "type": [
                             "string",
                             "null"
                           ],
-                          "description": "An identifier for the organization. Can be a link to a homepage, Wikidata,...",
+                          "description": "An url for the organization. Can be a link to a homepage, Wikidata,...",
                           "format": "iri",
                           "example": "https://open.hpi.de/"
                         },
@@ -1031,13 +1031,13 @@
                           "description": "The honorific suffix of the person (e.g. PhD, MD, ...).",
                           "example": null
                         },
-                        "identifier": {
+                        "url": {
                           "type": [
                             "string",
                             "null"
                           ],
                           "format": "iri",
-                          "description": "An unique identifier e.g. IRI. Can be a link to a homepage, Wikidata, ORCID,...",
+                          "description": "Can be a link to a homepage, Wikidata, ORCID,...",
                           "example": null
                         },
                         "type": {
@@ -1142,12 +1142,12 @@
                               "description": "The name of the organization.",
                               "example": "openHPI"
                             },
-                            "identifier": {
+                            "url": {
                               "type": [
                                 "string",
                                 "null"
                               ],
-                              "description": "An identifier for the organization. Can be a link to a homepage, Wikidata,...",
+                              "description": "An url for the organization. Can be a link to a homepage, Wikidata,...",
                               "format": "iri",
                               "example": "https://open.hpi.de/"
                             },
@@ -1263,12 +1263,12 @@
                         "description": "The name of the organization.",
                         "example": "openHPI"
                       },
-                      "identifier": {
+                      "url": {
                         "type": [
                           "string",
                           "null"
                         ],
-                        "description": "An identifier for the organization. Can be a link to a homepage, Wikidata,...",
+                        "description": "An url for the organization. Can be a link to a homepage, Wikidata,...",
                         "format": "iri",
                         "example": "https://open.hpi.de/"
                       },
@@ -1387,13 +1387,13 @@
                         "description": "The honorific suffix of the person (e.g. PhD, MD, ...).",
                         "example": null
                       },
-                      "identifier": {
+                      "url": {
                         "type": [
                           "string",
                           "null"
                         ],
                         "format": "iri",
-                        "description": "An unique identifier e.g. IRI. Can be a link to a homepage, Wikidata, ORCID,...",
+                        "description": "Can be a link to a homepage, Wikidata, ORCID,...",
                         "example": null
                       },
                       "type": {
@@ -1498,12 +1498,12 @@
                             "description": "The name of the organization.",
                             "example": "openHPI"
                           },
-                          "identifier": {
+                          "url": {
                             "type": [
                               "string",
                               "null"
                             ],
-                            "description": "An identifier for the organization. Can be a link to a homepage, Wikidata,...",
+                            "description": "An url for the organization. Can be a link to a homepage, Wikidata,...",
                             "format": "iri",
                             "example": "https://open.hpi.de/"
                           },
@@ -1933,12 +1933,12 @@
                           "description": "The name of the organization.",
                           "example": "openHPI"
                         },
-                        "identifier": {
+                        "url": {
                           "type": [
                             "string",
                             "null"
                           ],
-                          "description": "An identifier for the organization. Can be a link to a homepage, Wikidata,...",
+                          "description": "An url for the organization. Can be a link to a homepage, Wikidata,...",
                           "format": "iri",
                           "example": "https://open.hpi.de/"
                         },
@@ -2057,13 +2057,13 @@
                           "description": "The honorific suffix of the person (e.g. PhD, MD, ...).",
                           "example": null
                         },
-                        "identifier": {
+                        "url": {
                           "type": [
                             "string",
                             "null"
                           ],
                           "format": "iri",
-                          "description": "An unique identifier e.g. IRI. Can be a link to a homepage, Wikidata, ORCID,...",
+                          "description": "Can be a link to a homepage, Wikidata, ORCID,...",
                           "example": null
                         },
                         "type": {
@@ -2168,12 +2168,12 @@
                               "description": "The name of the organization.",
                               "example": "openHPI"
                             },
-                            "identifier": {
+                            "url": {
                               "type": [
                                 "string",
                                 "null"
                               ],
-                              "description": "An identifier for the organization. Can be a link to a homepage, Wikidata,...",
+                              "description": "An url for the organization. Can be a link to a homepage, Wikidata,...",
                               "format": "iri",
                               "example": "https://open.hpi.de/"
                             },
@@ -3066,7 +3066,7 @@
                   "type": "object",
                   "description": "This schema describes the attributes of a course program to an extend that it links to a EducationalOccupationalProgram.",
                   "properties": {
-                    "identifier": {
+                    "url": {
                       "type": "string",
                       "description": "An IRI pointing at the course program or a homepage of the program, ... etc.",
                       "format": "iri"

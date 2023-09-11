@@ -59,7 +59,7 @@
           "id": {
             "type": "string",
             "description": "The ID of the course as an UUID.",
-            "minLength": 1,
+            "format": "uuid",
             "example": "8978f51e-770c-4d0a-a2e3-23fae8f6aa79"
           },
           "type": {
@@ -126,6 +126,25 @@
                       "https://w3id.org/kim/hcrt/scheme"
                     ]
                   }
+                }
+              },
+              "courseMode" : {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "minItems": 0,
+                "uniqueItems": true,
+                "description": "This attribute describes the course mode. It is limited to \"blended\", \"online\", \"onsite\", \"synchronous\" and \"asynchronous\".",
+                "items": {
+                  "type":  "string",
+                  "enum": [
+                    "blended",
+                    "onsite",
+                    "online",
+                    "synchronous",
+                    "asynchronous"
+                  ]
                 }
               },
               "description": {
@@ -221,26 +240,20 @@
                       "description": "This schema describes the attributes of a license.",
                       "properties": {
                         "identifier": {
-                          "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
-                          "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                          "format": "iri",
-                          "oneOf": [
-                            {
-                              "format": "iri",
-                              "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                              "description": " A generic, general license according to https://spdx.org/licenses/."
-                            },
-                            {
-                              "enum": [
-                                "proprietary"
-                              ],
-                              "example": "proprietary",
-                              "description": "Marking the course as proprietary."
-                            }
-                          ],
+                          "description": "A license shortcode according to https://spdx.org/licenses/ or \"proprietary\".",
+                          "example": "CC-BY-SA-4.0",
                           "type": "string"
                         },
                         "url": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "format": "iri",
+                          "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
+                          "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                        },
+                        "contentUrl": {
                           "type": [
                             "string",
                             "null"
@@ -251,7 +264,8 @@
                         }
                       },
                       "required": [
-                        "identifier"
+                        "identifier",
+                        "url"
                       ]
                     }
                   }
@@ -294,26 +308,20 @@
                       "description": "This schema describes the attributes of a license.",
                       "properties": {
                         "identifier": {
-                          "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
-                          "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                          "format": "iri",
-                          "oneOf": [
-                            {
-                              "format": "iri",
-                              "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                              "description": " A generic, general license according to https://spdx.org/licenses/."
-                            },
-                            {
-                              "enum": [
-                                "proprietary"
-                              ],
-                              "example": "proprietary",
-                              "description": "Marking the course as proprietary."
-                            }
-                          ],
+                          "description": "A license shortcode according to https://spdx.org/licenses/ or \"proprietary\".",
+                          "example": "CC-BY-SA-4.0",
                           "type": "string"
                         },
                         "url": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "format": "iri",
+                          "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
+                          "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                        },
+                        "contentUrl": {
                           "type": [
                             "string",
                             "null"
@@ -324,7 +332,8 @@
                         }
                       },
                       "required": [
-                        "identifier"
+                        "identifier",
+                        "url"
                       ]
                     }
                   }
@@ -409,26 +418,20 @@
                                 "description": "This schema describes the attributes of a license.",
                                 "properties": {
                                   "identifier": {
-                                    "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
-                                    "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                    "format": "iri",
-                                    "oneOf": [
-                                      {
-                                        "format": "iri",
-                                        "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                        "description": " A generic, general license according to https://spdx.org/licenses/."
-                                      },
-                                      {
-                                        "enum": [
-                                          "proprietary"
-                                        ],
-                                        "example": "proprietary",
-                                        "description": "Marking the course as proprietary."
-                                      }
-                                    ],
+                                    "description": "A license shortcode according to https://spdx.org/licenses/ or \"proprietary\".",
+                                    "example": "CC-BY-SA-4.0",
                                     "type": "string"
                                   },
                                   "url": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ],
+                                    "format": "iri",
+                                    "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
+                                    "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                  },
+                                  "contentUrl": {
                                     "type": [
                                       "string",
                                       "null"
@@ -439,7 +442,8 @@
                                   }
                                 },
                                 "required": [
-                                  "identifier"
+                                  "identifier",
+                                  "url"
                                 ]
                               }
                             }
@@ -538,26 +542,20 @@
                                 "description": "This schema describes the attributes of a license.",
                                 "properties": {
                                   "identifier": {
-                                    "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
-                                    "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                    "format": "iri",
-                                    "oneOf": [
-                                      {
-                                        "format": "iri",
-                                        "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                        "description": " A generic, general license according to https://spdx.org/licenses/."
-                                      },
-                                      {
-                                        "enum": [
-                                          "proprietary"
-                                        ],
-                                        "example": "proprietary",
-                                        "description": "Marking the course as proprietary."
-                                      }
-                                    ],
+                                    "description": "A license shortcode according to https://spdx.org/licenses/ or \"proprietary\".",
+                                    "example": "CC-BY-SA-4.0",
                                     "type": "string"
                                   },
                                   "url": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ],
+                                    "format": "iri",
+                                    "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
+                                    "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                  },
+                                  "contentUrl": {
                                     "type": [
                                       "string",
                                       "null"
@@ -568,7 +566,8 @@
                                   }
                                 },
                                 "required": [
-                                  "identifier"
+                                  "identifier",
+                                  "url"
                                 ]
                               }
                             }
@@ -654,26 +653,20 @@
                                     "description": "This schema describes the attributes of a license.",
                                     "properties": {
                                       "identifier": {
-                                        "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
-                                        "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                        "format": "iri",
-                                        "oneOf": [
-                                          {
-                                            "format": "iri",
-                                            "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                            "description": " A generic, general license according to https://spdx.org/licenses/."
-                                          },
-                                          {
-                                            "enum": [
-                                              "proprietary"
-                                            ],
-                                            "example": "proprietary",
-                                            "description": "Marking the course as proprietary."
-                                          }
-                                        ],
+                                        "description": "A license shortcode according to https://spdx.org/licenses/ or \"proprietary\".",
+                                        "example": "CC-BY-SA-4.0",
                                         "type": "string"
                                       },
                                       "url": {
+                                        "type": [
+                                          "string",
+                                          "null"
+                                        ],
+                                        "format": "iri",
+                                        "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
+                                        "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                      },
+                                      "contentUrl": {
                                         "type": [
                                           "string",
                                           "null"
@@ -684,7 +677,8 @@
                                       }
                                     },
                                     "required": [
-                                      "identifier"
+                                      "identifier",
+                                      "url"
                                     ]
                                   }
                                 }
@@ -971,26 +965,20 @@
                                 "description": "This schema describes the attributes of a license.",
                                 "properties": {
                                   "identifier": {
-                                    "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
-                                    "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                    "format": "iri",
-                                    "oneOf": [
-                                      {
-                                        "format": "iri",
-                                        "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                        "description": " A generic, general license according to https://spdx.org/licenses/."
-                                      },
-                                      {
-                                        "enum": [
-                                          "proprietary"
-                                        ],
-                                        "example": "proprietary",
-                                        "description": "Marking the course as proprietary."
-                                      }
-                                    ],
+                                    "description": "A license shortcode according to https://spdx.org/licenses/ or \"proprietary\".",
+                                    "example": "CC-BY-SA-4.0",
                                     "type": "string"
                                   },
                                   "url": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ],
+                                    "format": "iri",
+                                    "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
+                                    "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                  },
+                                  "contentUrl": {
                                     "type": [
                                       "string",
                                       "null"
@@ -1001,7 +989,8 @@
                                   }
                                 },
                                 "required": [
-                                  "identifier"
+                                  "identifier",
+                                  "url"
                                 ]
                               }
                             }
@@ -1100,26 +1089,20 @@
                                 "description": "This schema describes the attributes of a license.",
                                 "properties": {
                                   "identifier": {
-                                    "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
-                                    "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                    "format": "iri",
-                                    "oneOf": [
-                                      {
-                                        "format": "iri",
-                                        "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                        "description": " A generic, general license according to https://spdx.org/licenses/."
-                                      },
-                                      {
-                                        "enum": [
-                                          "proprietary"
-                                        ],
-                                        "example": "proprietary",
-                                        "description": "Marking the course as proprietary."
-                                      }
-                                    ],
+                                    "description": "A license shortcode according to https://spdx.org/licenses/ or \"proprietary\".",
+                                    "example": "CC-BY-SA-4.0",
                                     "type": "string"
                                   },
                                   "url": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ],
+                                    "format": "iri",
+                                    "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
+                                    "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                  },
+                                  "contentUrl": {
                                     "type": [
                                       "string",
                                       "null"
@@ -1130,7 +1113,8 @@
                                   }
                                 },
                                 "required": [
-                                  "identifier"
+                                  "identifier",
+                                  "url"
                                 ]
                               }
                             }
@@ -1216,26 +1200,20 @@
                                     "description": "This schema describes the attributes of a license.",
                                     "properties": {
                                       "identifier": {
-                                        "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
-                                        "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                        "format": "iri",
-                                        "oneOf": [
-                                          {
-                                            "format": "iri",
-                                            "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                            "description": " A generic, general license according to https://spdx.org/licenses/."
-                                          },
-                                          {
-                                            "enum": [
-                                              "proprietary"
-                                            ],
-                                            "example": "proprietary",
-                                            "description": "Marking the course as proprietary."
-                                          }
-                                        ],
+                                        "description": "A license shortcode according to https://spdx.org/licenses/ or \"proprietary\".",
+                                        "example": "CC-BY-SA-4.0",
                                         "type": "string"
                                       },
                                       "url": {
+                                        "type": [
+                                          "string",
+                                          "null"
+                                        ],
+                                        "format": "iri",
+                                        "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
+                                        "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                      },
+                                      "contentUrl": {
                                         "type": [
                                           "string",
                                           "null"
@@ -1246,7 +1224,8 @@
                                       }
                                     },
                                     "required": [
-                                      "identifier"
+                                      "identifier",
+                                      "url"
                                     ]
                                   }
                                 }
@@ -1342,26 +1321,20 @@
                               "description": "This schema describes the attributes of a license.",
                               "properties": {
                                 "identifier": {
-                                  "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
-                                  "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                  "format": "iri",
-                                  "oneOf": [
-                                    {
-                                      "format": "iri",
-                                      "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                      "description": " A generic, general license according to https://spdx.org/licenses/."
-                                    },
-                                    {
-                                      "enum": [
-                                        "proprietary"
-                                      ],
-                                      "example": "proprietary",
-                                      "description": "Marking the course as proprietary."
-                                    }
-                                  ],
+                                  "description": "A license shortcode according to https://spdx.org/licenses/ or \"proprietary\".",
+                                  "example": "CC-BY-SA-4.0",
                                   "type": "string"
                                 },
                                 "url": {
+                                  "type": [
+                                    "string",
+                                    "null"
+                                  ],
+                                  "format": "iri",
+                                  "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
+                                  "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                },
+                                "contentUrl": {
                                   "type": [
                                     "string",
                                     "null"
@@ -1372,7 +1345,8 @@
                                 }
                               },
                               "required": [
-                                "identifier"
+                                "identifier",
+                                "url"
                               ]
                             }
                           }
@@ -1471,26 +1445,20 @@
                               "description": "This schema describes the attributes of a license.",
                               "properties": {
                                 "identifier": {
-                                  "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
-                                  "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                  "format": "iri",
-                                  "oneOf": [
-                                    {
-                                      "format": "iri",
-                                      "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                      "description": " A generic, general license according to https://spdx.org/licenses/."
-                                    },
-                                    {
-                                      "enum": [
-                                        "proprietary"
-                                      ],
-                                      "example": "proprietary",
-                                      "description": "Marking the course as proprietary."
-                                    }
-                                  ],
+                                  "description": "A license shortcode according to https://spdx.org/licenses/ or \"proprietary\".",
+                                  "example": "CC-BY-SA-4.0",
                                   "type": "string"
                                 },
                                 "url": {
+                                  "type": [
+                                    "string",
+                                    "null"
+                                  ],
+                                  "format": "iri",
+                                  "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
+                                  "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                },
+                                "contentUrl": {
                                   "type": [
                                     "string",
                                     "null"
@@ -1501,7 +1469,8 @@
                                 }
                               },
                               "required": [
-                                "identifier"
+                                "identifier",
+                                "url"
                               ]
                             }
                           }
@@ -1587,26 +1556,20 @@
                                   "description": "This schema describes the attributes of a license.",
                                   "properties": {
                                     "identifier": {
-                                      "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
-                                      "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                      "format": "iri",
-                                      "oneOf": [
-                                        {
-                                          "format": "iri",
-                                          "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                          "description": " A generic, general license according to https://spdx.org/licenses/."
-                                        },
-                                        {
-                                          "enum": [
-                                            "proprietary"
-                                          ],
-                                          "example": "proprietary",
-                                          "description": "Marking the course as proprietary."
-                                        }
-                                      ],
+                                      "description": "A license shortcode according to https://spdx.org/licenses/ or \"proprietary\".",
+                                      "example": "CC-BY-SA-4.0",
                                       "type": "string"
                                     },
                                     "url": {
+                                      "type": [
+                                        "string",
+                                        "null"
+                                      ],
+                                      "format": "iri",
+                                      "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
+                                      "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                    },
+                                    "contentUrl": {
                                       "type": [
                                         "string",
                                         "null"
@@ -1617,7 +1580,8 @@
                                     }
                                   },
                                   "required": [
-                                    "identifier"
+                                    "identifier",
+                                    "url"
                                   ]
                                 }
                               }
@@ -1686,26 +1650,20 @@
                   "description": "This schema describes the attributes of a license.",
                   "properties": {
                     "identifier": {
-                      "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
-                      "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                      "format": "iri",
-                      "oneOf": [
-                        {
-                          "format": "iri",
-                          "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                          "description": " A generic, general license according to https://spdx.org/licenses/."
-                        },
-                        {
-                          "enum": [
-                            "proprietary"
-                          ],
-                          "example": "proprietary",
-                          "description": "Marking the course as proprietary."
-                        }
-                      ],
+                      "description": "A license shortcode according to https://spdx.org/licenses/ or \"proprietary\".",
+                      "example": "CC-BY-SA-4.0",
                       "type": "string"
                     },
                     "url": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "format": "iri",
+                      "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
+                      "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                    },
+                    "contentUrl": {
                       "type": [
                         "string",
                         "null"
@@ -1716,7 +1674,8 @@
                     }
                   },
                   "required": [
-                    "identifier"
+                    "identifier",
+                    "url"
                   ]
                 }
               },
@@ -2032,26 +1991,20 @@
                                 "description": "This schema describes the attributes of a license.",
                                 "properties": {
                                   "identifier": {
-                                    "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
-                                    "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                    "format": "iri",
-                                    "oneOf": [
-                                      {
-                                        "format": "iri",
-                                        "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                        "description": " A generic, general license according to https://spdx.org/licenses/."
-                                      },
-                                      {
-                                        "enum": [
-                                          "proprietary"
-                                        ],
-                                        "example": "proprietary",
-                                        "description": "Marking the course as proprietary."
-                                      }
-                                    ],
+                                    "description": "A license shortcode according to https://spdx.org/licenses/ or \"proprietary\".",
+                                    "example": "CC-BY-SA-4.0",
                                     "type": "string"
                                   },
                                   "url": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ],
+                                    "format": "iri",
+                                    "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
+                                    "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                  },
+                                  "contentUrl": {
                                     "type": [
                                       "string",
                                       "null"
@@ -2062,7 +2015,8 @@
                                   }
                                 },
                                 "required": [
-                                  "identifier"
+                                  "identifier",
+                                  "url"
                                 ]
                               }
                             }
@@ -2161,26 +2115,20 @@
                                 "description": "This schema describes the attributes of a license.",
                                 "properties": {
                                   "identifier": {
-                                    "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
-                                    "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                    "format": "iri",
-                                    "oneOf": [
-                                      {
-                                        "format": "iri",
-                                        "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                        "description": " A generic, general license according to https://spdx.org/licenses/."
-                                      },
-                                      {
-                                        "enum": [
-                                          "proprietary"
-                                        ],
-                                        "example": "proprietary",
-                                        "description": "Marking the course as proprietary."
-                                      }
-                                    ],
+                                    "description": "A license shortcode according to https://spdx.org/licenses/ or \"proprietary\".",
+                                    "example": "CC-BY-SA-4.0",
                                     "type": "string"
                                   },
                                   "url": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ],
+                                    "format": "iri",
+                                    "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
+                                    "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                  },
+                                  "contentUrl": {
                                     "type": [
                                       "string",
                                       "null"
@@ -2191,7 +2139,8 @@
                                   }
                                 },
                                 "required": [
-                                  "identifier"
+                                  "identifier",
+                                  "url"
                                 ]
                               }
                             }
@@ -2277,26 +2226,20 @@
                                     "description": "This schema describes the attributes of a license.",
                                     "properties": {
                                       "identifier": {
-                                        "description": "A license according to https://spdx.org/licenses/ or \"proprietary\".",
-                                        "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                        "format": "iri",
-                                        "oneOf": [
-                                          {
-                                            "format": "iri",
-                                            "example": "https://creativecommons.org/publicdomain/zero/1.0",
-                                            "description": " A generic, general license according to https://spdx.org/licenses/."
-                                          },
-                                          {
-                                            "enum": [
-                                              "proprietary"
-                                            ],
-                                            "example": "proprietary",
-                                            "description": "Marking the course as proprietary."
-                                          }
-                                        ],
+                                        "description": "A license shortcode according to https://spdx.org/licenses/ or \"proprietary\".",
+                                        "example": "CC-BY-SA-4.0",
                                         "type": "string"
                                       },
                                       "url": {
+                                        "type": [
+                                          "string",
+                                          "null"
+                                        ],
+                                        "format": "iri",
+                                        "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
+                                        "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                      },
+                                      "contentUrl": {
                                         "type": [
                                           "string",
                                           "null"
@@ -2307,7 +2250,8 @@
                                       }
                                     },
                                     "required": [
-                                      "identifier"
+                                      "identifier",
+                                      "url"
                                     ]
                                   }
                                 }

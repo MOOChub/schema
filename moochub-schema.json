@@ -765,7 +765,11 @@
                     "educationalFramework": {
                       "type": "string",
                       "description": "The name of the educational framework that describes the skill.",
-                      "example": "DigComp"
+                      "enum": [
+                        "ESCO",
+                        "DigComp",
+                        "GRETA"
+                      ]
                     },
                     "educationalFramework_version": {
                       "type": "string",
@@ -848,7 +852,11 @@
                         "educationalFramework": {
                           "type": "string",
                           "description": "The name of the educational framework that describes the educational level.",
-                          "example": "DigComp"
+                          "enum": [
+                            "ESCO",
+                            "DigComp",
+                            "GRETA"
+                          ]
                         },
                         "educationalFramework_version": {
                           "type": "string",
@@ -1900,7 +1908,11 @@
                     "educationalFramework": {
                       "type": "string",
                       "description": "The name of the educational framework that describes the educational level.",
-                      "example": "DigComp"
+                      "enum": [
+                        "ESCO",
+                        "DigComp",
+                        "GRETA"
+                      ]
                     },
                     "educationalFramework_version": {
                       "type": "string",
@@ -2575,7 +2587,11 @@
                         "educationalFramework": {
                           "type": "string",
                           "description": "The name of the educational framework that describes the ski",
-                          "example": "DigComp"
+                          "enum": [
+                            "ESCO",
+                            "DigComp",
+                            "GRETA"
+                          ]
                         },
                         "educationalFramework_version": {
                           "type": "string",
@@ -2658,7 +2674,11 @@
                             "educationalFramework": {
                               "type": "string",
                               "description": "The name of the educational framework that describes the educational l",
-                              "example": "DigComp"
+                              "enum": [
+                                "ESCO",
+                                "DigComp",
+                                "GRETA"
+                              ]
                             },
                             "educationalFramework_version": {
                               "type": "string",
@@ -2967,7 +2987,11 @@
                               "educationalFramework": {
                                 "type": "string",
                                 "description": "The name of the educational framework that describes the ski",
-                                "example": "DigComp"
+                                "enum": [
+                                  "ESCO",
+                                  "DigComp",
+                                  "GRETA"
+                                ]
                               },
                               "educationalFramework_version": {
                                 "type": "string",
@@ -3050,7 +3074,11 @@
                                   "educationalFramework": {
                                     "type": "string",
                                     "description": "The name of the educational framework that describes the educational l",
-                                    "example": "DigComp"
+                                    "enum": [
+                                      "ESCO",
+                                      "DigComp",
+                                      "GRETA"
+                                    ]
                                   },
                                   "educationalFramework_version": {
                                     "type": "string",

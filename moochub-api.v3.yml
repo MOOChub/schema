@@ -1458,11 +1458,11 @@ components:
       properties:
         identifier:
           description: 'A license according to https://spdx.org/licenses/ or \"proprietary\".'
-          example: 'https://creativecommons.org/publicdomain/zero/1.0'
+          example: 'CC0-1.0'
           format: iri
           oneOf:
-            - format: iri
-              example: 'https://creativecommons.org/publicdomain/zero/1.0'
+            - format: string
+              example: 'CC0-1.0'
               description: 'A generic, general license according to https://spdx.org/licenses/.'
             - enum:
                 - proprietary
@@ -1473,7 +1473,7 @@ components:
           type: string
           nullable: true
           format: iri
-          example: null
+          example: 'https://creativecommons.org/publicdomain/zero/1.0'
           description: 'A link to the specific license document (if any, otherwise set to \"null" - the identifier pointing at the general license is to be considered the license document then). Has to be \"null" if identifier is \"proprietary".'
       required:
         - identifier

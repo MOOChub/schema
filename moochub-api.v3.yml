@@ -90,15 +90,15 @@ paths:
                             - *id001
                         instructor:
                           - name: Christoph Meinel
-                            honorificPrefix: Prof.Dr.
+                            honorificPrefix: Prof. Dr.
                             identifier: https://www.wikidata.org/wiki/Q92706
                             type: Person
-                            description: Prof.Dr.Christoph Meinel is professor at
+                            description: Prof. Dr. Christoph Meinel is professor at
                               the HPI at the University of Potsdam. He teaches computational
                               sciences at Bachelor and Master level and supervised
                               Master and Doctoral theses.
                             image:
-                              description: An image showing Prof.Dr.Christoph Meinel.
+                              description: An image showing Prof. Dr. Christoph Meinel.
                               type: ImageObject
                               contentUrl: 
                                 https://imgproxy.services.openhpi.de/sgUb4IJNxAL_thQHYE-mI2jN-UDqOc7vKbsMmEPd_CM/fit/550/0/ce/false/aHR0cHM6Ly9vcGVu/aHBpLXB1YmxpYy5z/My5vcGVuaHBpY2xv/dWQuZGUvdGVhY2hl/cnMvNmVsMEMxQWZz/cDlZc2lONk55ODVJ/Ry92MS5wbmc.png
@@ -255,7 +255,7 @@ paths:
                               sciences at Bachelor and Master level and supervised
                               Master and Doctoral theses.
                             image:
-                              description: An image showing Prof.Dr.Christoph Meinel.
+                              description: An image showing Prof. Dr. Christoph Meinel.
                               type: ImageObject
                               contentUrl: 
                                 https://imgproxy.services.openhpi.de/sgUb4IJNxAL_thQHYE-mI2jN-UDqOc7vKbsMmEPd_CM/fit/550/0/ce/false/aHR0cHM6Ly9vcGVu/aHBpLXB1YmxpYy5z/My5vcGVuaHBpY2xv/dWQuZGUvdGVhY2hl/cnMvNmVsMEMxQWZz/cDlZc2lONk55ODVJ/Ry92MS5wbmc.png

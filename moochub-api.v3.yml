@@ -133,7 +133,7 @@ paths:
                             educationalFramework: DigComp
                             educationalFrameworkVersion: '2.2'
                             url: 'https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf'
-                            targetUrl:
+                            targetUrl: null
                             educationalLevel:
                               description: 'Independently, according to my own needs,
                                 and solving well-defined and non-routine problems,
@@ -148,12 +148,12 @@ paths:
                                   name: INTERMEDIATE
                               alternateName:
                                 - 'independent use of concept'
-                                - 'useing concept for oneself'
+                                - 'using concept for oneself'
                               shortCode: '4'
                               educationalFramework: DigComp
                               educationalFrameworkVersion: '2.2'
                               url: 'https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf'
-                              targetUrl:
+                              targetUrl: null
                               type: EducationalLevel
                         duration: P2W
                         contributor:
@@ -201,10 +201,10 @@ paths:
                               - inLanguage: en
                                 name: Computer use
                             alternateName:
-                              - 'use of computers'
-                              - 'working with computers'
+                              - '"use of computers"'
+                              - '"working with computers"'
                             shortCode: '0611'
-                            targetUrl:
+                            targetUrl: null
                             type: EducationalAlignment
                             description: 'Computer use is the study of using computers
                               and computer software and applications for different
@@ -233,7 +233,7 @@ paths:
                             educationalFramework: DigComp
                             educationalFrameworkVersion: '2.2'
                             url: 'https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf'
-                            targetUrl:
+                            targetUrl: null
                             type: EducationalLevel
                         creator:
                           - name: Christoph Meinel
@@ -387,7 +387,7 @@ components:
       type: object
       nullable: false
       description: Serialized course object.
-      example:
+      example: null
         - *id003
       properties:
         id:
@@ -416,9 +416,8 @@ components:
               description: The title of the course.
               example: Confidential Communication in the Internet
             courseCode:
-              type:
-                - string
-                - 'null'
+              type: string
+              nullable: true
               description: An internal short code of the course. Also possible to
                 give internal codes for templates here.
               example: confidentialcommunication2021
@@ -439,7 +438,7 @@ components:
                     is allowed.
                   format: iri
                   enum:
-                    - https://w3id.org/kim/hcrt/course
+                    - 'https://w3id.org/kim/hcrt/course'
                 type:
                   type: string
                   enum:
@@ -451,11 +450,10 @@ components:
                   description: A pointer to the used scheme. Currently, only https://w3id.org/kim/hcrt/scheme
                     is allowed.
                   enum:
-                    - https://w3id.org/kim/hcrt/scheme
+                    - 'https://w3id.org/kim/hcrt/scheme'
             courseMode:
-              type:
-                - array
-                - 'null'
+              type: array
+              nullable: true
               minItems: 0
               uniqueItems: true
               description: This attribute describes the course mode. It is limited
@@ -469,9 +467,8 @@ components:
                   - synchronous
                   - asynchronous
             description:
-              type:
-                - string
-                - 'null'
+              type: string
+              nullable: true
               description: Description of the course as an HTML document
               example: <p>A message on the Internet is sent through several networks
                 and via different stations on its way to the target system. The individual
@@ -489,9 +486,8 @@ components:
                 provide insights into different models and standards that are used
                 in practice.</p>\n
             inLanguage:
-              type:
-                - array
-                - 'null'
+              type: array
+              nullable: true
               uniqueItems: true
               description: 'List of languages in which the course is offered. Each
                 language should be abbreviated in accordance with BCP 47: https://tools.ietf.org/html/bcp47.'
@@ -499,9 +495,8 @@ components:
                 type: string
                 example: en
             startDate:
-              type:
-                - array
-                - 'null'
+              type: array
+              nullable: true
               uniqueItems: true
               description: The time the course starts. It is possible to give several
                 date-times for repetitive courses. The date-time to be given according
@@ -511,9 +506,8 @@ components:
                 format: date-time
                 example: '2021-01-13T08:00:00Z'
             endDate:
-              type:
-                - array
-                - 'null'
+              type: array
+              nullable: true
               uniqueItems: true
               description: The time the course ends. It is possible to give several
                 date-times for repetitive courses. The date-time to be given according
@@ -523,9 +517,8 @@ components:
                 format: date-time
                 example: '2021-01-27T20:00:00Z'
             expires:
-              type:
-                - array
-                - 'null'
+              type: array
+              nullable: true
               uniqueItems: true
               description: The time and date the course is no longer available. It
                 is possible to give several date-times for repetitive courses. The
@@ -533,7 +526,7 @@ components:
               items:
                 type: string
                 format: date-time
-                example:
+                example: null
             image: &id005
               title: ImageObject
               type: object
@@ -575,19 +568,17 @@ components:
                         example: CC-BY-SA-4.0
                         type: string
                       url:
-                        type:
-                          - string
-                          - 'null'
+                        type: string
+                        nullable: true
                         format: iri
                         description: A license according to https://spdx.org/licenses/
                           or "null" if proprietary.
                         example: https://creativecommons.org/publicdomain/zero/1.0
                       contentUrl:
-                        type:
-                          - string
-                          - 'null'
+                        type: string
+                        nullable: true
                         format: iri
-                        example:
+                        example: null
                         description: A link to the specific license document (if any,
                           otherwise set to "null" - the identifier pointing at the
                           general license is to be considered the license document
@@ -640,9 +631,8 @@ components:
                         description: The name of the organization.
                         example: openHPI
                       url:
-                        type:
-                          - string
-                          - 'null'
+                        type: string
+                        nullable: true
                         description: An url for the organization. Can be a link to
                           a homepage, Wikidata,...
                         format: iri
@@ -653,9 +643,8 @@ components:
                         enum:
                           - Organization
                       description:
-                        type:
-                          - string
-                          - 'null'
+                        type: string
+                        nullable: true
                         description: A short description of the organization. Should
                           be provided in HTML.
                         example: openHPI is a digital educational platform situated
@@ -675,45 +664,40 @@ components:
                           suffix have to be excluded.
                         example: Christoph Meinel
                       honorificPrefix:
-                        type:
-                          - string
-                          - 'null'
+                        type: string
+                        nullable: true
                         description: The honorific prefix of the person (e.g. Dr.,
                           Prof., ...).
                         example: 'Prof. Dr. '
                       honorificSuffix:
-                        type:
-                          - string
-                          - 'null'
+                        type: string
+                        nullable: true
                         description: The honorific suffix of the person (e.g. PhD,
                           MD, ...).
-                        example:
+                        example: null
                       url:
-                        type:
-                          - string
-                          - 'null'
+                        type: string
+                        nullable: true
                         format: iri
                         description: Can be a link to a homepage, Wikidata, ORCID,...
-                        example:
+                        example: null
                       type:
                         type: string
                         description: The type of the object.
                         enum:
                           - Person
                       jobTitle:
-                        type:
-                          - string
-                          - 'null'
+                        type: string
+                        nullable: true
                         description: The job title of the person.
-                        example:
+                        example: null
                       image: *id005
                       description:
-                        type:
-                          - string
-                          - 'null'
+                        type: string
+                        nullable: true
                         description: A short description of the person. Can be a CV-like
                           description. Should be provided in HTML
-                        example:
+                        example: null
                       affiliation: *id006
                     required:
                       - name
@@ -750,11 +734,10 @@ components:
                         - inLanguage
                         - name
                   alternateName:
-                    type:
-                      - array
-                      - 'null'
+                    type: array
+                    nullable: true
                     description: A list of alternative names for the skill.
-                    example:
+                    example: null
                       - Understand Personal Privacy
                       - Use Privacy Policy
                     items:
@@ -765,9 +748,8 @@ components:
                       provides one.
                     example: '4.2'
                   description:
-                    type:
-                      - string
-                      - 'null'
+                    type: string
+                    nullable: true
                     description: A short description of the skill. Should be based
                       on the framework used.
                     example: To protect personal data and privacy in digital environments.
@@ -789,21 +771,19 @@ components:
                       the skill. Can also be the year the framework was released/published.
                     example: '2.2'
                   url:
-                    type:
-                      - string
-                      - 'null'
+                    type: string
+                    nullable: true
                     description: An IRI pointing at the document which describes the
                       educational framework.
                     format: iri
                     example: 
                       https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf
                   targetUrl:
-                    type:
-                      - string
-                      - 'null'
+                    type: string
+                    nullable: true
                     format: iri
                     description: An IRI pointing at the framework node of the skill.
-                    example:
+                    example: null
                   educationalLevel: &id008
                     title: EducationalLevel
                     type: object
@@ -811,9 +791,8 @@ components:
                       level.
                     properties:
                       description:
-                        type:
-                          - string
-                          - 'null'
+                        type: string
+                        nullable: true
                         description: A short description of the educational level.
                           Should be based on the framework used.
                         example: 'Independently, according to my own needs, and solving
@@ -845,12 +824,11 @@ components:
                             - inLanguage
                             - name
                       alternateName:
-                        type:
-                          - array
-                          - 'null'
+                        type: array
+                        nullable: true
                         description: A list of alternative names for the educational
                           level.
-                        example:
+                        example: null
                           - independent use of concept
                           - use of concept for oneself
                         items:
@@ -875,22 +853,20 @@ components:
                           was released/published.
                         example: '2.2'
                       url:
-                        type:
-                          - string
-                          - 'null'
+                        type: string
+                        nullable: true
                         format: iri
                         description: An IRI pointing at the document which describes
                           the educational framework.
                         example: 
                           https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf
                       targetUrl:
-                        type:
-                          - string
-                          - 'null'
+                        type: string
+                        nullable: true
                         format: iri
                         description: An IRI pointing at the framework node of the
                           educational level.
-                        example:
+                        example: null
                       type:
                         type: string
                         description: The type of the object.
@@ -938,7 +914,7 @@ components:
               description: Specifies the amount of time course participants should
                 plan with when taking the course.
               minProperties: 0
-              example:
+              example: null
               properties:
                 timeValue:
                   type: integer
@@ -963,9 +939,8 @@ components:
               uniqueItems: true
               items: *id004
             access:
-              type:
-                - array
-                - 'null'
+              type: array
+              nullable: true
               description: Specifies how this course can be accessed by learners.
                 The different access options shall not be used to transport differences
                 between available content under this access option but rather annotate
@@ -979,9 +954,8 @@ components:
                   - student
                   - other
             audience:
-              type:
-                - array
-                - 'null'
+              type: array
+              nullable: true
               description: A list of audiences the course is intended for. The audience
                 type is chosen by giving a node of the DublinCore vocabulary from
                 https://www.dublincore.org/specifications/lrmi/concept_schemes/educationalAudienceRole/.
@@ -1003,9 +977,8 @@ components:
                   of a course.
                 properties:
                   alignmentType:
-                    type:
-                      - string
-                      - 'null'
+                    type: string
+                    nullable: true
                     description: The type of the alignment. Can only be "educationalSubject"
                     enum:
                       - educationalSubject
@@ -1024,9 +997,8 @@ components:
                       the skill. Can also be the year the framework was released/published.
                     example: '2013'
                   url:
-                    type:
-                      - string
-                      - 'null'
+                    type: string
+                    nullable: true
                     description: An IRI pointing at the document which describes the
                       educational framework.
                     format: iri
@@ -1054,14 +1026,13 @@ components:
                         - inLanguage
                         - name
                   alternateName:
-                    type:
-                      - array
-                      - 'null'
+                    type: array
+                    nullable: true
                     description: 'A list of alternative names for the educational
                       alignment. '
-                    example:
-                      - use of computers
-                      - working with computers
+                    example: null
+                      - "use of computers"
+                      - "working with computers"
                     items:
                       type: string
                   shortCode:
@@ -1070,9 +1041,8 @@ components:
                       by the framework.
                     example: '0611'
                   targetUrl:
-                    type:
-                      - string
-                      - 'null'
+                    type: string
+                    nullable: true
                     description: An IRI pointing at the framework node of the educational
                       alignment.
                     format: iri
@@ -1083,9 +1053,8 @@ components:
                     enum:
                       - EducationalAlignment
                   description:
-                    type:
-                      - string
-                      - 'null'
+                    type: string
+                    nullable: true
                     description: A short description of the educational alignment.
                       Should be based on the framework used.
                     example: 'Computer use is the study of using computers and computer
@@ -1112,9 +1081,8 @@ components:
                   - *id006
                   - *id007
             keywords:
-              type:
-                - array
-                - 'null'
+              type: array
+              nullable: true
               description: Keywords describing the course.
               uniqueItems: true
               items:
@@ -1134,11 +1102,11 @@ components:
                       type: string
                       description: Country where the course takes place in accordance
                         with ISO 3166-1.
-                      example:
+                      example: null
                     streetAddress:
                       type: string
                       description: The street address where the course takes place.
-                      example:
+                      example: null
                     city:
                       type: string
                       description: The city the course takes place.
@@ -1146,16 +1114,15 @@ components:
                       type: string
                       description: The postal code of the place where the course takes
                         place.
-                      example:
+                      example: null
                     description:
                       type: string
                       description: More detailed description of the place e.g. a room
                         number/identifier to find the course location.
-                      example:
+                      example: null
                 name:
-                  type:
-                    - string
-                    - 'null'
+                  type: string
+                  nullable: true
                   description: The name of the place, university, etc. where the course
                     is given. Also, information for "online" or "hybrid" can be given
                     here.
@@ -1166,14 +1133,14 @@ components:
                     - 'null'
                   description: The geo coordinate latitude of the place.
                   format: float
-                  example:
+                  example: null
                 longitude:
                   type:
                     - number
                     - 'null'
                   description: The geo coordinate longitude of the place.
                   format: float
-                  example:
+                  example: null
                 url:
                   type: string
                   format: iri
@@ -1244,12 +1211,11 @@ components:
               description: The number of credits received for successfully completing
                 the course. Currently, credits are given according the European Credit
                 Transfer System (ECTS)
-              example:
+              example: null
               minimum: 0
             educationalCredentialsAwarded:
-              type:
-                - array
-                - 'null'
+              type: array
+              nullable: true
               description: Clarification which kinds of awards for successfully completing
                 the course are given. ECTS are awarded if numberOfCredits > 0 (No
                 explicit information given here).
@@ -1267,7 +1233,7 @@ components:
                 complete the course. This includes skills, certificated, (high) school
                 degrees, other courses, etc.
               uniqueItems: true
-              example:
+              example: null
               items:
                 anyOf:
                   - &id010
@@ -1318,25 +1284,22 @@ components:
                       - educationalFrameworkVersion
                   - *id009
             applicationStartDate:
-              type:
-                - string
-                - 'null'
+              type: string
+              nullable: true
               description: The time and date the period to enroll or hand in an application
                 for the course begins. Given according to ISO 8601.
               format: date-time
-              example:
+              example: null
             applicationDeadline:
-              type:
-                - string
-                - 'null'
+              type: string
+              nullable: true
               format: date-time
               description: The time end date the enrolment and application period
                 for the course ends. Given according to ISO 8601.
-              example:
+              example: null
             accessMode:
-              type:
-                - array
-                - 'null'
+              type: array
+              nullable: true
               description: Listing of accessModes e.g. audio-descriptive (for deaf
                 people) and other handicaps, uses vocabulary from 
                 https://www.w3.org/2021/a11y-discov-vocab/latest/#accessModeSufficient-vocabulary.
@@ -1353,7 +1316,7 @@ components:
               description: A list of schedule objects describing in which frequency
                 course units take place, e.g. every Tuesday 7pm to 9pm and every Thursday
                 6pm to 8pm.
-              example:
+              example: null
               items:
                 title: Schedule
                 type: object
@@ -1381,25 +1344,22 @@ components:
                   - startTime
                   - endTime
               dateCreated:
-                type:
-                  - string
-                  - 'null'
+                type: string
+                nullable: true
                 description: The date the content was created. Given according to
                   ISO 8601.
                 format: date-time
-                example:
+                example: null
               dateModified:
-                type:
-                  - string
-                  - 'null'
+                type: string
+                nullable: true
                 format: date-time
                 description: The date the content was changed last. Given according
                   to ISO 8601.
-                example:
+                example: null
               hollandCode:
-                type:
-                  - array
-                  - 'null'
+                type: array
+                nullable: true
                 description: The assessed competency described in Holland Code/RIASEC
                   Model. The allowed values are therefor "R", "I", "A", "S", "E",
                   "C" according to the Holland taxonomy.
@@ -1442,15 +1402,13 @@ components:
                       example: 
                         https://open.hpi.de/courses/confidentialcommunication2022/items/1uDqDl23eu0i2h6jrGR49p
                     name:
-                      type:
-                        - string
-                        - 'null'
+                      type: string
+                      nullable: true
                       description: The name of the learning item.
                       example: 2.9 Certificate Standards
                     duration:
-                      type:
-                        - string
-                        - 'null'
+                      type: string
+                      nullable: true
                       pattern: 
                         ^P(?!$)(\d+(?:\.\d+)?Y)?(\d+(?:\.\d+)?M)?(\d+(?:\.\d+)?W)?(\d+(?:\.\d+)?D)?(T(?=\d)(\d+(?:\.\d+)?H)?(\d+(?:\.\d+)?M)?(\d+(?:\.\d+)?S)?)?$
                       description: ISO 8601 encoded duration.
@@ -1473,7 +1431,7 @@ components:
                   this course is part of. The given metadata shall at least contain
                   a link to the program.
                 uniqueItems: true
-                example:
+                example: null
                 items:
                   title: Program
                   type: object

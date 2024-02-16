@@ -101,20 +101,20 @@ paths:
                               contentUrl: 'https://imgproxy.services.openhpi.de/sgUb4IJNxAL_thQHYE-mI2jN-UDqOc7vKbsMmEPd_CM/fit/550/0/ce/false/aHR0cHM6Ly9vcGVu/aHBpLXB1YmxpYy5z/My5vcGVuaHBpY2xv/dWQuZGUvdGVhY2hl/cnMvNmVsMEMxQWZz/cDlZc2lONk55ODVJ/Ry92MS5wbmc.png'
                               license:
                                 - *id001
-                              affiliation:
-                                name: openHPI
-                                identifier: 'https://www.wikidata.org/wiki/Q10854783'
-                                type: Organization
-                                description: 'openHPI is a digital educational platform
-                                  situated at the HPI with a focus on topics regarding
-                                  computational sciences, internet and world wide
-                                  web and design thinking.'
-                                image:
-                                  description: The openHPI logo.
-                                  type: ImageObject
-                                  contentUrl: 'https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png'
-                                  license:
-                                    - *id001
+                            affiliation:
+                              name: openHPI
+                              identifier: 'https://www.wikidata.org/wiki/Q10854783'
+                              type: Organization
+                              description: 'openHPI is a digital educational platform
+                                situated at the HPI with a focus on topics regarding
+                                computational sciences, internet and world wide web
+                                and design thinking.'
+                              image:
+                                description: The openHPI logo.
+                                type: ImageObject
+                                contentUrl: 'https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png'
+                                license:
+                                  - *id001
                         teaches:
                           - &id002
                             name:

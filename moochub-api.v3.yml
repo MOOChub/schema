@@ -5,17 +5,17 @@ info:
   description: API for MOOChub to access public course information.
   contact:
     name: openHPI
-    url: https://open.hpi.de/
+    url: 'https://open.hpi.de/'
     email: info@openhpi.de
   license:
     name: MIT
-    url: https://opensource.org/licenses/MIT
+    url: 'https://opensource.org/licenses/MIT'
 servers:
-  - url: http://localhost:3000/bridges/moochub
+  - url: 'http://localhost:3000/bridges/moochub'
     description: localhost
-  - url: https://open.hpi.de/bridges/moochub
+  - url: 'https://open.hpi.de/bridges/moochub'
     description: openHPI
-  - url: https://learn.ki-campus.org/bridges/moochub
+  - url: 'https://learn.ki-campus.org/bridges/moochub'
     description: KI-Campus
 paths:
   /courses:
@@ -28,7 +28,7 @@ paths:
             application/vnd.api+json; moochub-version=3.0:
               schema:
                 type: object
-                description: A response following the JSON:API schema (https://jsonapi.org/)
+                description: 'A response following the JSON:API schema (https://jsonapi.org/)'
                 properties:
                   links:
                     $ref: '#/components/schemas/Links'
@@ -45,11 +45,11 @@ paths:
                 openHPI:
                   value:
                     links: &id011
-                      self: https://open.hpi.de/bridges/moochub/courses?page=2
-                      first: https://open.hpi.de/bridges/moochub/courses?page=1
-                      last: https://open.hpi.de/bridges/moochub/courses?page=3
-                      next: https://open.hpi.de/bridges/moochub/courses?page=3
-                      prev: https://open.hpi.de/bridges/moochub/courses?page=1
+                      self: 'https://open.hpi.de/bridges/moochub/courses?page=2'
+                      first: 'https://open.hpi.de/bridges/moochub/courses?page=1'
+                      last: 'https://open.hpi.de/bridges/moochub/courses?page=3'
+                      next: 'https://open.hpi.de/bridges/moochub/courses?page=3'
+                      prev: 'https://open.hpi.de/bridges/moochub/courses?page=1'
                     data: &id003
                       id: '123'
                       type: Course
@@ -57,9 +57,9 @@ paths:
                         name: Course - the complete example
                         courseCode: CourseComplete23
                         learningResourceType:
-                          identifier: https://w3id.org/kim/hcrt/course
+                          identifier: 'https://w3id.org/kim/hcrt/course'
                           type: Concept
-                          inScheme: https://w3id.org/kim/hcrt/scheme
+                          inScheme: 'https://w3id.org/kim/hcrt/scheme'
                         description: "<p> This is an example of an complete course.
                           Here all fields will be filled with data. Also the data
                           is <b>NOT REAL</b> it will help to understand how this metadata
@@ -75,23 +75,21 @@ paths:
                         image:
                           description: A thumbnail image of the course
                           type: ImageObject
-                          contentUrl: 
-                            https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png
+                          contentUrl: 'https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png'
                           license:
                             - &id001
                               identifier: CC-BY-SA-4.0
-                              url: https://creativecommons.org/publicdomain/zero/1.0
+                              url: 'https://creativecommons.org/publicdomain/zero/1.0'
                         trailer:
                           description: A short trailer for the course.
-                          contentUrl: 
-                            https://player.vimeo.com/progressive_redirect/playback/488129602/rendition/720p/file.mp4?loc=external&oauth2_token_id=1212898389&signature=4065e2228ebeaf1a20b88acbd735bdbb72a8535ac5612a6cba5e78599cdebdb0
+                          contentUrl: 'https://player.vimeo.com/progressive_redirect/playback/488129602/rendition/720p/file.mp4?loc=external&oauth2_token_id=1212898389&signature=4065e2228ebeaf1a20b88acbd735bdbb72a8535ac5612a6cba5e78599cdebdb0'
                           type: VideoObject
                           license:
                             - *id001
                         instructor:
                           - name: Christoph Meinel
                             honorificPrefix: Prof. Dr.
-                            identifier: https://www.wikidata.org/wiki/Q92706
+                            identifier: 'https://www.wikidata.org/wiki/Q92706'
                             type: Person
                             description: Prof. Dr. Christoph Meinel is professor at
                               the HPI at the University of Potsdam. He teaches computational
@@ -100,23 +98,21 @@ paths:
                             image:
                               description: An image showing Prof. Dr. Christoph Meinel.
                               type: ImageObject
-                              contentUrl: 
-                                https://imgproxy.services.openhpi.de/sgUb4IJNxAL_thQHYE-mI2jN-UDqOc7vKbsMmEPd_CM/fit/550/0/ce/false/aHR0cHM6Ly9vcGVu/aHBpLXB1YmxpYy5z/My5vcGVuaHBpY2xv/dWQuZGUvdGVhY2hl/cnMvNmVsMEMxQWZz/cDlZc2lONk55ODVJ/Ry92MS5wbmc.png
+                              contentUrl: 'https://imgproxy.services.openhpi.de/sgUb4IJNxAL_thQHYE-mI2jN-UDqOc7vKbsMmEPd_CM/fit/550/0/ce/false/aHR0cHM6Ly9vcGVu/aHBpLXB1YmxpYy5z/My5vcGVuaHBpY2xv/dWQuZGUvdGVhY2hl/cnMvNmVsMEMxQWZz/cDlZc2lONk55ODVJ/Ry92MS5wbmc.png'
                               license:
                                 - *id001
                               affiliation:
                                 name: openHPI
-                                identifier: https://www.wikidata.org/wiki/Q10854783
+                                identifier: 'https://www.wikidata.org/wiki/Q10854783'
                                 type: Organization
-                                description: openHPI is a digital educational platform
+                                description: 'openHPI is a digital educational platform
                                   situated at the HPI with a focus on topics regarding
                                   computational sciences, internet and world wide
-                                  web and design thinking.
+                                  web and design thinking.'
                                 image:
                                   description: The openHPI logo.
                                   type: ImageObject
-                                  contentUrl: 
-                                    https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png
+                                  contentUrl: 'https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png'
                                   license:
                                     - *id001
                         teaches:
@@ -124,9 +120,9 @@ paths:
                             name:
                               - inLanguage: en
                                 name: PROTECTING PERSONAL DATA AND PRIVACY
-                            alternatName:
-                              - Personal Privacy
-                              - Privacy Policy
+                            alternateName:
+                              - 'Personal Privacy'
+                              - 'Privacy Policy'
                             shortCode: '4.2'
                             description: To protect personal data and privacy in digital
                               environments.To understand how to use and share personally
@@ -136,8 +132,7 @@ paths:
                               data is used.
                             educationalFramework: DigComp
                             educationalFrameworkVersion: '2.2'
-                            url: 
-                              https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf
+                            url: 'https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf'
                             targetUrl:
                             educationalLevel:
                               description: 'Independently, according to my own needs,
@@ -152,46 +147,43 @@ paths:
                                 - inLanguage: en
                                   name: INTERMEDIATE
                               alternateName:
-                                - independent use of concept
-                                - use concept for oneself
+                                - 'independent use of concept'
+                                - 'useing concept for oneself'
                               shortCode: '4'
                               educationalFramework: DigComp
                               educationalFrameworkVersion: '2.2'
-                              url: 
-                                https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf
+                              url: 'https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf'
                               targetUrl:
                               type: EducationalLevel
                         duration: P2W
                         contributor:
                           - name: openHPI
-                            identifier: https://open.hpi.de/
+                            identifier: 'https://open.hpi.de/'
                             type: Organization
-                            description: openHPI is a digital educational platform
+                            description: 'openHPI is a digital educational platform
                               situated at the HPI with a focus on topics regarding
                               computational sciences, internet and world wide web
-                              and design thinking.
+                              and design thinking.'
                             image:
                               description: The openHPI logo.
                               type: ImageObject
-                              contentUrl: 
-                                https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png
+                              contentUrl: 'https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png'
                               license:
                                 - *id001
                         publisher:
                           name: openHPI
-                          identifier: https://open.hpi.de/
+                          identifier: 'https://open.hpi.de/'
                           type: Organization
-                          description: openHPI is a digital educational platform situated
-                            at the HPI with a focus on topics regarding computational
-                            sciences, internet and world wide web and design thinking.
+                          description: 'openHPI is a digital educational platform
+                            situated at the HPI with a focus on topics regarding computational
+                            sciences, internet and world wide web and design thinking.'
                           image:
                             description: The openHPI logo.
                             type: ImageObject
-                            contentUrl: 
-                              https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png
+                            contentUrl: 'https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png'
                             license:
                               - *id001
-                        url: https://open.hpi.de/courses/confidentialcommunication2021
+                        url: 'https://open.hpi.de/courses/confidentialcommunication2021'
                         workload:
                           timeValue: 3
                           timeUnit: h/week
@@ -200,18 +192,17 @@ paths:
                         access:
                           - free
                         audience:
-                          - http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/generalPublic
+                          - 'http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/generalPublic'
                         educationalAlignment:
                           - alignmentType: educationalSubject
                             educationalFramework: ISCED-F
-                            url: 
-                              http://uis.unesco.org/sites/default/files/documents/international-standard-classification-of-education-fields-of-education-and-training-2013-detailed-field-descriptions-2015-en.pdf
+                            url: 'http://uis.unesco.org/sites/default/files/documents/international-standard-classification-of-education-fields-of-education-and-training-2013-detailed-field-descriptions-2015-en.pdf'
                             name:
                               - inLanguage: en
                                 name: Computer use
                             alternateName:
-                              - use of computers
-                              - working with computers
+                              - 'use of computers'
+                              - 'working with computers'
                             shortCode: '0611'
                             targetUrl:
                             type: EducationalAlignment
@@ -236,19 +227,18 @@ paths:
                               - inLanguage: en
                                 name: INTERMEDIATE
                             alternateName:
-                              - independent use of concept
-                              - use concept for oneself
+                              - 'independent use of concept'
+                              - 'use concept for oneself'
                             shortCode: '4'
                             educationalFramework: DigComp
                             educationalFrameworkVersion: '2.2'
-                            url: 
-                              https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf
+                            url: 'https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf'
                             targetUrl:
                             type: EducationalLevel
                         creator:
                           - name: Christoph Meinel
                             honorificPrefix: Prof. Dr.
-                            identifier: https://www.wikidata.org/wiki/Q92706
+                            identifier: 'https://www.wikidata.org/wiki/Q92706'
                             type: Person
                             description: Prof. Dr. Christoph Meinel is professor at
                               the HPI at the University of Potsdam. He teaches computational
@@ -257,13 +247,12 @@ paths:
                             image:
                               description: An image showing Prof. Dr. Christoph Meinel.
                               type: ImageObject
-                              contentUrl: 
-                                https://imgproxy.services.openhpi.de/sgUb4IJNxAL_thQHYE-mI2jN-UDqOc7vKbsMmEPd_CM/fit/550/0/ce/false/aHR0cHM6Ly9vcGVu/aHBpLXB1YmxpYy5z/My5vcGVuaHBpY2xv/dWQuZGUvdGVhY2hl/cnMvNmVsMEMxQWZz/cDlZc2lONk55ODVJ/Ry92MS5wbmc.png
+                              contentUrl: 'https://imgproxy.services.openhpi.de/sgUb4IJNxAL_thQHYE-mI2jN-UDqOc7vKbsMmEPd_CM/fit/550/0/ce/false/aHR0cHM6Ly9vcGVu/aHBpLXB1YmxpYy5z/My5vcGVuaHBpY2xv/dWQuZGUvdGVhY2hl/cnMvNmVsMEMxQWZz/cDlZc2lONk55ODVJ/Ry92MS5wbmc.png'
                               license:
                                 - *id001
                             affiliation:
                               name: openHPI
-                              identifier: https://www.wikidata.org/wiki/Q10854783
+                              identifier: 'https://www.wikidata.org/wiki/Q10854783'
                               type: Organization
                               description: openHPI is a digital educational platform
                                 situated at the HPI with a focus on topics regarding
@@ -272,8 +261,7 @@ paths:
                               image:
                                 description: The openHPI logo.
                                 type: ImageObject
-                                contentUrl: 
-                                  https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png
+                                contentUrl: 'https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png'
                                 license:
                                   - *id001
                         keywords:
@@ -315,19 +303,19 @@ paths:
                                 name: 'HPI Academy: Digitale Transformation und Innovation
                                   anfuehren - Herbst 2020'
                             educationalFramework: Course_ID
-                            targetUrl: https://open.hpi.de/courses/digitrans2020-1
+                            targetUrl: 'https://open.hpi.de/courses/digitrans2020-1'
                           - *id002
                         applicationStartDate: '2022-01-01T01:00:00Z'
                         applicationDeadline: '2022-01-31T23:59:59Z'
                         accessMode:
                           - visual
                         repeatFrequency:
-                          - byDay: https://schema.org/Monday
-                            startTime: 10:30:00Z
-                            endTime: 12:00:00Z
-                          - byDay: https://schema.org/Wednesday
-                            startTime: 14:00:00Z
-                            endTime: 14:45:00Z
+                          - byDay: 'https://schema.org/Monday'
+                            startTime: '10:30:00Z'
+                            endTime: '12:00:00Z'
+                          - byDay: 'https://schema.org/Wednesday'
+                            startTime: '14:00:00Z'
+                            endTime: '14:45:00Z'
                         dateCreated: '2020-06-12T12:00:00Z'
                         dateModified: '2021-11-30T14:15:00Z'
                         hollandCode:
@@ -335,8 +323,7 @@ paths:
                           - S
                         hasPart:
                           - type: Video
-                            identifier: 
-                              https://open.hpi.de/courses/confidentialcommunication2022/items/1uDqDl23eu0i2h6jrGR49p
+                            identifier: 'https://open.hpi.de/courses/confidentialcommunication2022/items/1uDqDl23eu0i2h6jrGR49p'
                             name: 2.9 Certificate Standards
                             duration: PT19M21S
                             competencyRequired:
@@ -345,27 +332,26 @@ paths:
                                     name: 'HPI Academy: Leading Digital Transformation
                                       and Innovation - Fall 2020'
                                 educationalFramework: Course_ID
-                                targetUrl: https://open.hpi.de/courses/digitrans2020-1
+                                targetUrl: 'https://open.hpi.de/courses/digitrans2020-1'
                         isPartOf:
-                          - identifier: 
-                              https://hpi.de/studium/im-studium/lehrveranstaltungen/it-systems-engineering-ba/lehrveranstaltung/sose-23-3723-introduction-to-deep-learning.html
+                          - identifier: 'https://hpi.de/studium/im-studium/lehrveranstaltungen/it-systems-engineering-ba/lehrveranstaltung/sose-23-3723-introduction-to-deep-learning.html'
                             type: Program
                             title: Introduction to Deep Learning
           headers:
             Sunset:
               schema:
                 type: string
-                example: Tue, 15 Aug 2017 00:00:00 GMT
-              description: This date signals the last day of support for the given
+                example: 'Tue, 15 Aug 2017 00:00:00 GMT'
+              description: 'This date signals the last day of support for the given
                 API version, according to RFC 8594. The client should upgrade to a
                 newer API version before this date. This header is only set if the
-                API version is / will be deprecated
+                API version is / will be deprecated'
         '404':
           description: Not Found
         '406':
           description: Not Acceptable
           content:
-            application / problem + json:
+            application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
               examples:
@@ -386,7 +372,7 @@ paths:
           description: The page that has been requested
         - schema:
             type: string
-            example: application/vnd.api + json; moochub-version = 3
+            example: application/vnd.api+json; moochub-version=3
           in: header
           name: Accept
           description: The last major API version that is supported by the client

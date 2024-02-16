@@ -89,36 +89,36 @@ paths:
                           license:
                             - *id001
                         instructor:
-                          name: Christoph Meinel
-                          honorificPrefix: Prof.Dr.
-                          identifier: https://www.wikidata.org/wiki/Q92706
-                          type: Person
-                          description: Prof.Dr.Christoph Meinel is professor at the
-                            HPI at the University of Potsdam. He teaches computational
-                            sciences at Bachelor and Master level and supervised Master
-                            and Doctoral theses.
-                          image:
-                            description: An image showing Prof.Dr.Christoph Meinel.
-                            type: ImageObject
-                            contentUrl: 
-                              https://imgproxy.services.openhpi.de/sgUb4IJNxAL_thQHYE-mI2jN-UDqOc7vKbsMmEPd_CM/fit/550/0/ce/false/aHR0cHM6Ly9vcGVu/aHBpLXB1YmxpYy5z/My5vcGVuaHBpY2xv/dWQuZGUvdGVhY2hl/cnMvNmVsMEMxQWZz/cDlZc2lONk55ODVJ/Ry92MS5wbmc.png
-                            license:
-                              - *id001
-                            affiliation:
-                              name: openHPI
-                              identifier: https://www.wikidata.org/wiki/Q10854783
-                              type: Organization
-                              description: openHPI is a digital educational platform
-                                situated at the HPI with a focus on topics regarding
-                                computational sciences, internet and world wide web
-                                and design thinking.
-                              image:
-                                description: The openHPI logo.
-                                type: ImageObject
-                                contentUrl: 
-                                  https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png
-                                license:
-                                  - *id001
+                          - name: Christoph Meinel
+                            honorificPrefix: Prof.Dr.
+                            identifier: https://www.wikidata.org/wiki/Q92706
+                            type: Person
+                            description: Prof.Dr.Christoph Meinel is professor at
+                              the HPI at the University of Potsdam. He teaches computational
+                              sciences at Bachelor and Master level and supervised
+                              Master and Doctoral theses.
+                            image:
+                              description: An image showing Prof.Dr.Christoph Meinel.
+                              type: ImageObject
+                              contentUrl: 
+                                https://imgproxy.services.openhpi.de/sgUb4IJNxAL_thQHYE-mI2jN-UDqOc7vKbsMmEPd_CM/fit/550/0/ce/false/aHR0cHM6Ly9vcGVu/aHBpLXB1YmxpYy5z/My5vcGVuaHBpY2xv/dWQuZGUvdGVhY2hl/cnMvNmVsMEMxQWZz/cDlZc2lONk55ODVJ/Ry92MS5wbmc.png
+                              license:
+                                - *id001
+                              affiliation:
+                                name: openHPI
+                                identifier: https://www.wikidata.org/wiki/Q10854783
+                                type: Organization
+                                description: openHPI is a digital educational platform
+                                  situated at the HPI with a focus on topics regarding
+                                  computational sciences, internet and world wide
+                                  web and design thinking.
+                                image:
+                                  description: The openHPI logo.
+                                  type: ImageObject
+                                  contentUrl: 
+                                    https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png
+                                  license:
+                                    - *id001
                         teaches:
                           - &id002
                             name:
@@ -415,6 +415,7 @@ components:
           enum:
             - Course
         attributes:
+          type: object
           description: The Attributes of the course.
           required:
             - name
@@ -566,7 +567,7 @@ components:
                   type: string
                   format: iri
                   description: The IRI pointing at the actual image.
-                  example:
+                  example: 
                     https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png
                 license: &id004
                   type: array
@@ -624,7 +625,7 @@ components:
                   type: string
                   format: iri
                   description: An IRI pointing at the actual video to be displayed.
-                  example:
+                  example: 
                     https://player.vimeo.com/progressive_redirect/playback/488129602/rendition/720p/file.mp4?loc=external&oauth2_token_id=1212898389&signature=4065e2228ebeaf1a20b88acbd735bdbb72a8535ac5612a6cba5e78599cdebdb0
                 type:
                   type: string
@@ -808,7 +809,7 @@ components:
                     description: An IRI pointing at the document which describes the
                       educational framework.
                     format: iri
-                    example:
+                    example: 
                       https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf
                   targetUrl:
                     type:
@@ -894,7 +895,7 @@ components:
                         format: iri
                         description: An IRI pointing at the document which describes
                           the educational framework.
-                        example:
+                        example: 
                           https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf
                       targetUrl:
                         type:
@@ -923,7 +924,7 @@ components:
               example: P2W
               type: string
               format: duration
-              pattern:
+              pattern: 
                 ^P(?!$)(\d+(?:\.\d+)?Y)?(\d+(?:\.\d+)?M)?(\d+(?:\.\d+)?W)?(\d+(?:\.\d+)?D)?(T(?=\d)(\d+(?:\.\d+)?H)?(\d+(?:\.\d+)?M)?(\d+(?:\.\d+)?S)?)?$
             contributor:
               type: array
@@ -1043,7 +1044,7 @@ components:
                     description: An IRI pointing at the document which describes the
                       educational framework.
                     format: iri
-                    example:
+                    example: 
                       http://uis.unesco.org/sites/default/files/documents/international-standard-classification-of-education-fields-of-education-and-training-2013-detailed-field-descriptions-2015-en.pdf
                   name:
                     type: array
@@ -1452,7 +1453,7 @@ components:
                       type: string
                       format: iri
                       description: An IRI pointing at the learning item.
-                      example:
+                      example: 
                         https://open.hpi.de/courses/confidentialcommunication2022/items/1uDqDl23eu0i2h6jrGR49p
                     name:
                       type:
@@ -1464,7 +1465,7 @@ components:
                       type:
                         - string
                         - 'null'
-                      pattern:
+                      pattern: 
                         ^P(?!$)(\d+(?:\.\d+)?Y)?(\d+(?:\.\d+)?M)?(\d+(?:\.\d+)?W)?(\d+(?:\.\d+)?D)?(T(?=\d)(\d+(?:\.\d+)?H)?(\d+(?:\.\d+)?M)?(\d+(?:\.\d+)?S)?)?$
                       description: ISO 8601 encoded duration.
                       example: PT19M21S

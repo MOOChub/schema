@@ -201,8 +201,8 @@ paths:
                               - inLanguage: en
                                 name: Computer use
                             alternateName:
-                              - '"use of computers"'
-                              - '"working with computers"'
+                              - 'use of computers'
+                              - 'working with computers'
                             shortCode: '0611'
                             targetUrl: null
                             type: EducationalAlignment
@@ -387,7 +387,7 @@ components:
       type: object
       nullable: false
       description: Serialized course object.
-      example: null
+      example:
         - *id003
       properties:
         id:
@@ -573,7 +573,7 @@ components:
                         format: iri
                         description: A license according to https://spdx.org/licenses/
                           or "null" if proprietary.
-                        example: https://creativecommons.org/publicdomain/zero/1.0
+                        example: 'https://creativecommons.org/publicdomain/zero/1.0'
                       contentUrl:
                         type: string
                         nullable: true
@@ -636,7 +636,7 @@ components:
                         description: An url for the organization. Can be a link to
                           a homepage, Wikidata,...
                         format: iri
-                        example: https://open.hpi.de/
+                        example: 'https://open.hpi.de/'
                       type:
                         type: string
                         description: The type of the object.
@@ -737,7 +737,7 @@ components:
                     type: array
                     nullable: true
                     description: A list of alternative names for the skill.
-                    example: null
+                    example:
                       - Understand Personal Privacy
                       - Use Privacy Policy
                     items:
@@ -828,7 +828,7 @@ components:
                         nullable: true
                         description: A list of alternative names for the educational
                           level.
-                        example: null
+                        example:
                           - independent use of concept
                           - use of concept for oneself
                         items:
@@ -906,7 +906,7 @@ components:
               type: string
               description: Link to the course detail page.
               format: iri
-              example: https://open.hpi.de/courses/confidentialcommunication2021
+              example: 'https://open.hpi.de/courses/confidentialcommunication2021'
             workload:
               type:
                 - object
@@ -1030,9 +1030,9 @@ components:
                     nullable: true
                     description: 'A list of alternative names for the educational
                       alignment. '
-                    example: null
-                      - "use of computers"
-                      - "working with computers"
+                    example:
+                      - use of computers
+                      - working with computers
                     items:
                       type: string
                   shortCode:
@@ -1144,7 +1144,7 @@ components:
                 url:
                   type: string
                   format: iri
-                  example: https://open.hpi.de
+                  example: 'https://open.hpi.de'
                   description: The url to the online address to the course e.g. virtual
                     room. Has to be given when course is "online" or "hybrid".
               required:
@@ -1277,7 +1277,7 @@ components:
                       targetUrl:
                         type: string
                         description: An IRI pointing at a course.
-                        example: https://open.hpi.de/courses/digitrans2020-1
+                        example: 'https://open.hpi.de/courses/digitrans2020-1'
                     required:
                       - name
                       - educationalFramework
@@ -1330,7 +1330,7 @@ components:
                     description: This is the day of the week according to https://schema.org/DayOfWeek
                       a course takes
                     pattern: https://schema.org/*
-                    example: https://schema.org/Friday
+                    example: 'https://schema.org/Friday'
                   startTime:
                     type: string
                     description: The time the course starts on the specified day.

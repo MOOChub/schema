@@ -1339,118 +1339,117 @@ components:
                   - byDay
                   - startTime
                   - endTime
-              dateCreated:
+            dateCreated:
+              type: string
+              nullable: true
+              description: The date the content was created. Given according to ISO
+                8601.
+              format: date-time
+              example: null
+            dateModified:
+              type: string
+              nullable: true
+              format: date-time
+              description: The date the content was changed last. Given according
+                to ISO 8601.
+              example: null
+            hollandCode:
+              type: array
+              nullable: true
+              description: The assessed competency described in Holland Code/RIASEC
+                Model. The allowed values are therefor "R", "I", "A", "S", "E", "C"
+                according to the Holland taxonomy.
+              uniqueItems: true
+              items:
                 type: string
-                nullable: true
-                description: The date the content was created. Given according to
-                  ISO 8601.
-                format: date-time
-                example: null
-              dateModified:
-                type: string
-                nullable: true
-                format: date-time
-                description: The date the content was changed last. Given according
-                  to ISO 8601.
-                example: null
-              hollandCode:
-                type: array
-                nullable: true
-                description: The assessed competency described in Holland Code/RIASEC
-                  Model. The allowed values are therefor "R", "I", "A", "S", "E",
-                  "C" according to the Holland taxonomy.
-                uniqueItems: true
-                items:
-                  type: string
-                  enum:
-                    - R
-                    - I
-                    - A
-                    - S
-                    - E
-                    - C
-              hasPart:
-                type: array
-                description: A list of the learning items like videos, lectures, quizzes,
-                  ... in the course.
-                uniqueItems: true
-                items:
-                  title: LearningItem
-                  type: object
-                  description: This schema describes the attributes of a learning
-                    item.
-                  properties:
-                    type:
-                      type: string
-                      description: The type of the object.
-                      enum:
-                        - Video
-                        - Quiz
-                        - Test
-                        - Podcast
-                        - Exercise
-                        - Text
-                        - other
-                    identifier:
-                      type: string
-                      format: iri
-                      description: An IRI pointing at the learning item.
-                      example: 
-                        https://open.hpi.de/courses/confidentialcommunication2022/items/1uDqDl23eu0i2h6jrGR49p
-                    name:
-                      type: string
-                      nullable: true
-                      description: The name of the learning item.
-                      example: 2.9 Certificate Standards
-                    duration:
-                      type: string
-                      nullable: true
-                      pattern: 
-                        ^P(?!$)(\d+(?:\.\d+)?Y)?(\d+(?:\.\d+)?M)?(\d+(?:\.\d+)?W)?(\d+(?:\.\d+)?D)?(T(?=\d)(\d+(?:\.\d+)?H)?(\d+(?:\.\d+)?M)?(\d+(?:\.\d+)?S)?)?$
-                      description: ISO 8601 encoded duration.
-                      example: PT19M21S
-                    competencyRequired:
-                      type: array
-                      description: A list of competencies that are required to successfully
-                        complete this item. This includes skills, certificated, (high)
-                        school degrees, other courses
-                      items:
-                        anyOf:
-                          - *id010
-                          - *id009
-                    required:
-                      - type
-                      - identifier
-              isPartOf:
-                type: array
-                description: A list of programs (preferable EducationalOccupationalPrograms)
-                  this course is part of. The given metadata shall at least contain
-                  a link to the program.
-                uniqueItems: true
-                example: null
-                items:
-                  title: Program
-                  type: object
-                  description: This schema describes the attributes of a course program
-                    to an extend that it links to a EducationalOccupationalProgram.
-                  properties:
-                    url:
-                      type: string
-                      description: An IRI pointing at the course program or a homepage
-                        of the program, ... etc.
-                      format: iri
-                    type:
-                      type: string
-                      description: The type of the object.
-                      enum:
-                        - Program
-                    title:
-                      type: string
-                      description: The title or name of the course program this course
-                        is part of.
+                enum:
+                  - R
+                  - I
+                  - A
+                  - S
+                  - E
+                  - C
+            hasPart:
+              type: array
+              description: A list of the learning items like videos, lectures, quizzes,
+                ... in the course.
+              uniqueItems: true
+              items:
+                title: LearningItem
+                type: object
+                description: This schema describes the attributes of a learning item.
+                properties:
+                  type:
+                    type: string
+                    description: The type of the object.
+                    enum:
+                      - Video
+                      - Quiz
+                      - Test
+                      - Podcast
+                      - Exercise
+                      - Text
+                      - other
+                  identifier:
+                    type: string
+                    format: iri
+                    description: An IRI pointing at the learning item.
+                    example: 
+                      https://open.hpi.de/courses/confidentialcommunication2022/items/1uDqDl23eu0i2h6jrGR49p
+                  name:
+                    type: string
+                    nullable: true
+                    description: The name of the learning item.
+                    example: 2.9 Certificate Standards
+                  duration:
+                    type: string
+                    nullable: true
+                    pattern: 
+                      ^P(?!$)(\d+(?:\.\d+)?Y)?(\d+(?:\.\d+)?M)?(\d+(?:\.\d+)?W)?(\d+(?:\.\d+)?D)?(T(?=\d)(\d+(?:\.\d+)?H)?(\d+(?:\.\d+)?M)?(\d+(?:\.\d+)?S)?)?$
+                    description: ISO 8601 encoded duration.
+                    example: PT19M21S
+                  competencyRequired:
+                    type: array
+                    description: A list of competencies that are required to successfully
+                      complete this item. This includes skills, certificated, (high)
+                      school degrees, other courses
+                    items:
+                      anyOf:
+                        - *id010
+                        - *id009
                   required:
-                    - identifier
                     - type
+                    - identifier
+            isPartOf:
+              type: array
+              description: A list of programs (preferable EducationalOccupationalPrograms)
+                this course is part of. The given metadata shall at least contain
+                a link to the program.
+              uniqueItems: true
+              example: null
+              items:
+                title: Program
+                type: object
+                description: This schema describes the attributes of a course program
+                  to an extend that it links to a EducationalOccupationalProgram.
+                properties:
+                  url:
+                    type: string
+                    description: An IRI pointing at the course program or a homepage
+                      of the program, ... etc.
+                    format: iri
+                  type:
+                    type: string
+                    description: The type of the object.
+                    enum:
+                      - Program
+                  title:
+                    type: string
+                    description: The title or name of the course program this course
+                      is part of.
+                required:
+                  - identifier
+                  - type
       required:
         - id
         - type

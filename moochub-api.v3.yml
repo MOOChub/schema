@@ -1511,13 +1511,13 @@ components:
           format: int32
           description: The HTTP status code of the error
           readOnly: true
-        required:
-          - title
-          - status
-        readOnly: true
-        x-examples:
-          Unsupported requested version:
-            title: Unsupported requested version
-            status: 406
+      required:
+        - title
+        - status
+      readOnly: true
+      x-examples:
+        Unsupported requested version:
+          title: Unsupported requested version
+          status: 406
 tags:
-  name: courses
+  - name: courses

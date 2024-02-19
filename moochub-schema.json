@@ -1662,47 +1662,42 @@
               },
               "license": {
                 "type": "array",
-                "description": "A list of licenses that one may choose from for this course. The schema allows for multi licensing.",
+                "description": "A list of licenses that apply for this resource. General licenses according to https://spdx.org/licenses/ (in the \"identifier\" and \"url\" attribute) or \"proprietary\" can be given. Additionally, it is possible to link to an optional, specific, own license document in the \"contentUrl\" attribute.",
                 "uniqueItems": true,
+                "minItems": 1,
                 "items": {
-                  "type": "array",
-                  "description": "A list of licenses that apply for this resource. General licenses according to https://spdx.org/licenses/ (in the \"identifier\" and \"url\" attribute) or \"proprietary\" can be given. Additionally, it is possible to link to an optional, specific, own license document in the \"contentUrl\" attribute.",
-                  "uniqueItems": true,
-                  "minItems": 1,
-                  "items": {
-                    "title": "License",
-                    "type": "object",
-                    "description": "This schema describes the attributes of a license.",
-                    "properties": {
-                      "identifier": {
-                        "description": "A license shortcode according to https://spdx.org/licenses/ or \"proprietary\".",
-                        "example": "CC-BY-SA-4.0",
-                        "type": "string"
-                      },
-                      "url": {
-                        "type": [
-                          "string",
-                          "null"
-                        ],
-                        "format": "iri",
-                        "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                        "example": "https://creativecommons.org/publicdomain/zero/1.0"
-                      },
-                      "contentUrl": {
-                        "type": [
-                          "string",
-                          "null"
-                        ],
-                        "format": "iri",
-                        "example": null,
-                        "description": "A link to the specific license document (if any, otherwise set to \"null\" - the identifier pointing at the general license is to be considered the license document then). Has to be \"null\" if identifier is \"proprietary\"."
-                      }
+                  "title": "License",
+                  "type": "object",
+                  "description": "This schema describes the attributes of a license.",
+                  "properties": {
+                    "identifier": {
+                      "description": "A license shortcode according to https://spdx.org/licenses/ or \"proprietary\".",
+                      "example": "CC-BY-SA-4.0",
+                      "type": "string"
                     },
-                    "required": [
-                      "identifier",
-                      "url"
-                    ]
-                  }
+                    "url": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "format": "iri",
+                      "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
+                      "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                    },
+                    "contentUrl": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "format": "iri",
+                      "example": null,
+                      "description": "A link to the specific license document (if any, otherwise set to \"null\" - the identifier pointing at the general license is to be considered the license document then). Has to be \"null\" if identifier is \"proprietary\"."
+                    }
+                  },
+                  "required": [
+                    "identifier",
+                    "url"
+                  ]
                 }
               },
               "access": {

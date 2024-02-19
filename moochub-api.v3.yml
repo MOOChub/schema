@@ -931,12 +931,7 @@ components:
               required:
                 - timeValue
                 - timeUnit
-            license:
-              type: array
-              description: A list of licenses that one may choose from for this course.
-                The schema allows for multi licensing.
-              uniqueItems: true
-              items: *id004
+            license: *id004
             access:
               type: array
               nullable: true

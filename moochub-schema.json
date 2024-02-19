@@ -3139,12 +3139,12 @@
                                                 }
                                             ]
                                         }
-                                    },
-                                    "required": [
-                                        "type",
-                                        "identifier"
-                                    ]
-                                }
+                                    }
+                                },
+                                "required": [
+                                    "type",
+                                    "identifier"
+                                ]
                             }
                         },
                         "isPartOf": {

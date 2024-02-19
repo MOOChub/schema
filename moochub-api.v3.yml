@@ -1417,9 +1417,9 @@ components:
                       anyOf:
                         - *id010
                         - *id009
-                  required:
-                    - type
-                    - identifier
+                required:
+                  - type
+                  - identifier
             isPartOf:
               type: array
               description: A list of programs (preferable EducationalOccupationalPrograms)

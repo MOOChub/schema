@@ -1063,7 +1063,12 @@ components:
                   - educationalFrameworkVersion
                   - name
                   - type
-            educationalLevel: *id008
+            educationalLevel:
+              type: array
+              description: List of categorization of competency level and the related
+                frameworks.
+              uniqueItems: true
+              items: *id008
             creator:
               type: array
               uniqueItems: true

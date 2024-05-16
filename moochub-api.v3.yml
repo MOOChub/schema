@@ -75,11 +75,11 @@ paths:
                         image:
                           description: A thumbnail image of the course
                           type: ImageObject
-                          contentUrl: 'https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png'
+                          contentUrl: 'https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png'
                           license:
                             - &id001
                               identifier: CC-BY-SA-4.0
-                              url: 'https://creativecommons.org/publicdomain/zero/1.0'
+                              url: 'https://spdx.org/licenses/CC-BY-SA-4.0.html'
                         trailer:
                           description: A short trailer for the course.
                           contentUrl: 'https://player.vimeo.com/progressive_redirect/playback/488129602/rendition/720p/file.mp4?loc=external&oauth2_token_id=1212898389&signature=4065e2228ebeaf1a20b88acbd735bdbb72a8535ac5612a6cba5e78599cdebdb0'
@@ -112,7 +112,7 @@ paths:
                               image:
                                 description: The openHPI logo.
                                 type: ImageObject
-                                contentUrl: 'https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png'
+                                contentUrl: 'https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png'
                                 license:
                                   - *id001
                         teaches:
@@ -167,7 +167,7 @@ paths:
                             image:
                               description: The openHPI logo.
                               type: ImageObject
-                              contentUrl: 'https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png'
+                              contentUrl: 'https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png'
                               license:
                                 - *id001
                         publisher:
@@ -180,7 +180,7 @@ paths:
                           image:
                             description: The openHPI logo.
                             type: ImageObject
-                            contentUrl: 'https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png'
+                            contentUrl: 'https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png'
                             license:
                               - *id001
                         url: 'https://open.hpi.de/courses/confidentialcommunication2021'
@@ -261,7 +261,7 @@ paths:
                               image:
                                 description: The openHPI logo.
                                 type: ImageObject
-                                contentUrl: 'https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png'
+                                contentUrl: 'https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png'
                                 license:
                                   - *id001
                         keywords:
@@ -547,7 +547,7 @@ components:
                   format: iri
                   description: The IRI pointing at the actual image.
                   example: 
-                    https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png
+                    https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png
                 license: &id004
                   type: array
                   description: A list of licenses that apply for this resource. General
@@ -573,7 +573,7 @@ components:
                         format: iri
                         description: A license according to https://spdx.org/licenses/
                           or "null" if proprietary.
-                        example: 'https://creativecommons.org/publicdomain/zero/1.0'
+                        example: 'https://spdx.org/licenses/CC-BY-SA-4.0.html'
                       contentUrl:
                         type: string
                         nullable: true

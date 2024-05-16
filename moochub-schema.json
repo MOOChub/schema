@@ -251,7 +251,7 @@
                           ],
                           "format": "iri",
                           "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                          "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                          "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                         },
                         "contentUrl": {
                           "type": [
@@ -319,7 +319,7 @@
                           ],
                           "format": "iri",
                           "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                          "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                          "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                         },
                         "contentUrl": {
                           "type": [
@@ -429,7 +429,7 @@
                                     ],
                                     "format": "iri",
                                     "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                    "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                    "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                   },
                                   "contentUrl": {
                                     "type": [
@@ -553,7 +553,7 @@
                                     ],
                                     "format": "iri",
                                     "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                    "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                    "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                   },
                                   "contentUrl": {
                                     "type": [
@@ -664,7 +664,7 @@
                                         ],
                                         "format": "iri",
                                         "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                        "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                        "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                       },
                                       "contentUrl": {
                                         "type": [
@@ -996,7 +996,7 @@
                                     ],
                                     "format": "iri",
                                     "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                    "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                    "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                   },
                                   "contentUrl": {
                                     "type": [
@@ -1120,7 +1120,7 @@
                                     ],
                                     "format": "iri",
                                     "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                    "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                    "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                   },
                                   "contentUrl": {
                                     "type": [
@@ -1231,7 +1231,7 @@
                                         ],
                                         "format": "iri",
                                         "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                        "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                        "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                       },
                                       "contentUrl": {
                                         "type": [
@@ -1352,7 +1352,7 @@
                                   ],
                                   "format": "iri",
                                   "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                  "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                  "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                 },
                                 "contentUrl": {
                                   "type": [
@@ -1476,7 +1476,7 @@
                                   ],
                                   "format": "iri",
                                   "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                  "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                  "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                 },
                                 "contentUrl": {
                                   "type": [
@@ -1587,7 +1587,7 @@
                                       ],
                                       "format": "iri",
                                       "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                      "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                      "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                     },
                                     "contentUrl": {
                                       "type": [
@@ -1682,7 +1682,7 @@
                       ],
                       "format": "iri",
                       "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                      "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                      "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                     },
                     "contentUrl": {
                       "type": [
@@ -2040,7 +2040,7 @@
                                     ],
                                     "format": "iri",
                                     "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                    "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                    "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                   },
                                   "contentUrl": {
                                     "type": [
@@ -2164,7 +2164,7 @@
                                     ],
                                     "format": "iri",
                                     "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                    "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                    "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                   },
                                   "contentUrl": {
                                     "type": [
@@ -2275,7 +2275,7 @@
                                         ],
                                         "format": "iri",
                                         "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                        "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                        "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                       },
                                       "contentUrl": {
                                         "type": [

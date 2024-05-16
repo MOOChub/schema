@@ -227,7 +227,7 @@
                     "type": "string",
                     "format": "iri",
                     "description": "The IRI pointing at the actual image.",
-                    "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                    "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                   },
                   "license": {
                     "type": "array",
@@ -405,7 +405,7 @@
                               "type": "string",
                               "format": "iri",
                               "description": "The IRI pointing at the actual image.",
-                              "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                              "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                             },
                             "license": {
                               "type": "array",
@@ -529,7 +529,7 @@
                               "type": "string",
                               "format": "iri",
                               "description": "The IRI pointing at the actual image.",
-                              "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                              "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                             },
                             "license": {
                               "type": "array",
@@ -640,7 +640,7 @@
                                   "type": "string",
                                   "format": "iri",
                                   "description": "The IRI pointing at the actual image.",
-                                  "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                                  "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                                 },
                                 "license": {
                                   "type": "array",
@@ -972,7 +972,7 @@
                               "type": "string",
                               "format": "iri",
                               "description": "The IRI pointing at the actual image.",
-                              "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                              "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                             },
                             "license": {
                               "type": "array",
@@ -1096,7 +1096,7 @@
                               "type": "string",
                               "format": "iri",
                               "description": "The IRI pointing at the actual image.",
-                              "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                              "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                             },
                             "license": {
                               "type": "array",
@@ -1207,7 +1207,7 @@
                                   "type": "string",
                                   "format": "iri",
                                   "description": "The IRI pointing at the actual image.",
-                                  "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                                  "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                                 },
                                 "license": {
                                   "type": "array",
@@ -1328,7 +1328,7 @@
                             "type": "string",
                             "format": "iri",
                             "description": "The IRI pointing at the actual image.",
-                            "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                            "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                           },
                           "license": {
                             "type": "array",
@@ -1452,7 +1452,7 @@
                             "type": "string",
                             "format": "iri",
                             "description": "The IRI pointing at the actual image.",
-                            "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                            "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                           },
                           "license": {
                             "type": "array",
@@ -1563,7 +1563,7 @@
                                 "type": "string",
                                 "format": "iri",
                                 "description": "The IRI pointing at the actual image.",
-                                "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                                "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                               },
                               "license": {
                                 "type": "array",
@@ -2016,7 +2016,7 @@
                               "type": "string",
                               "format": "iri",
                               "description": "The IRI pointing at the actual image.",
-                              "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                              "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                             },
                             "license": {
                               "type": "array",
@@ -2140,7 +2140,7 @@
                               "type": "string",
                               "format": "iri",
                               "description": "The IRI pointing at the actual image.",
-                              "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                              "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                             },
                             "license": {
                               "type": "array",
@@ -2251,7 +2251,7 @@
                                   "type": "string",
                                   "format": "iri",
                                   "description": "The IRI pointing at the actual image.",
-                                  "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                                  "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                                 },
                                 "license": {
                                   "type": "array",

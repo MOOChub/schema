@@ -1,6 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://github.com/moochub/schema/releases/tag/v3.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/moochub/schema/releases/tag/v3.0.1",
   "title": "JSON schema for MOOC providers integrated into moochub.org",
   "description": "This schema specifies the JSON format each MOOC provider must offer in order to be integrated into moochub.org",
   "type": "object",
@@ -128,7 +128,7 @@
                   }
                 }
               },
-              "courseMode" : {
+              "courseMode": {
                 "type": [
                   "array",
                   "null"
@@ -137,7 +137,7 @@
                 "uniqueItems": true,
                 "description": "This attribute describes the course mode. It is limited to \"blended\", \"online\", \"onsite\", \"synchronous\" and \"asynchronous\".",
                 "items": {
-                  "type":  "string",
+                  "type": "string",
                   "enum": [
                     "blended",
                     "onsite",
@@ -227,11 +227,11 @@
                     "type": "string",
                     "format": "iri",
                     "description": "The IRI pointing at the actual image.",
-                    "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                    "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                   },
                   "license": {
                     "type": "array",
-                    "description": "A list of licenses for the Image.",
+                    "description": "A list of licenses that apply for this resource. General licenses according to https://spdx.org/licenses/ (in the \"identifier\" and \"url\" attribute) or \"proprietary\" can be given. Additionally, it is possible to link to an optional, specific, own license document in the \"contentUrl\" attribute.",
                     "uniqueItems": true,
                     "minItems": 1,
                     "items": {
@@ -251,7 +251,7 @@
                           ],
                           "format": "iri",
                           "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                          "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                          "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                         },
                         "contentUrl": {
                           "type": [
@@ -299,9 +299,9 @@
                   },
                   "license": {
                     "type": "array",
+                    "description": "A list of licenses that apply for this resource. General licenses according to https://spdx.org/licenses/ (in the \"identifier\" and \"url\" attribute) or \"proprietary\" can be given. Additionally, it is possible to link to an optional, specific, own license document in the \"contentUrl\" attribute.",
                     "uniqueItems": true,
                     "minItems": 1,
-                    "description": "A list of licenses for the Image.",
                     "items": {
                       "title": "License",
                       "type": "object",
@@ -319,7 +319,7 @@
                           ],
                           "format": "iri",
                           "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                          "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                          "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                         },
                         "contentUrl": {
                           "type": [
@@ -405,11 +405,11 @@
                               "type": "string",
                               "format": "iri",
                               "description": "The IRI pointing at the actual image.",
-                              "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                              "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                             },
                             "license": {
                               "type": "array",
-                              "description": "A list of licenses for the Image.",
+                              "description": "A list of licenses that apply for this resource. General licenses according to https://spdx.org/licenses/ (in the \"identifier\" and \"url\" attribute) or \"proprietary\" can be given. Additionally, it is possible to link to an optional, specific, own license document in the \"contentUrl\" attribute.",
                               "uniqueItems": true,
                               "minItems": 1,
                               "items": {
@@ -429,7 +429,7 @@
                                     ],
                                     "format": "iri",
                                     "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                    "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                    "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                   },
                                   "contentUrl": {
                                     "type": [
@@ -529,11 +529,11 @@
                               "type": "string",
                               "format": "iri",
                               "description": "The IRI pointing at the actual image.",
-                              "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                              "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                             },
                             "license": {
                               "type": "array",
-                              "description": "A list of licenses for the Image.",
+                              "description": "A list of licenses that apply for this resource. General licenses according to https://spdx.org/licenses/ (in the \"identifier\" and \"url\" attribute) or \"proprietary\" can be given. Additionally, it is possible to link to an optional, specific, own license document in the \"contentUrl\" attribute.",
                               "uniqueItems": true,
                               "minItems": 1,
                               "items": {
@@ -553,7 +553,7 @@
                                     ],
                                     "format": "iri",
                                     "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                    "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                    "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                   },
                                   "contentUrl": {
                                     "type": [
@@ -640,11 +640,11 @@
                                   "type": "string",
                                   "format": "iri",
                                   "description": "The IRI pointing at the actual image.",
-                                  "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                                  "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                                 },
                                 "license": {
                                   "type": "array",
-                                  "description": "A list of licenses for the Image.",
+                                  "description": "A list of licenses that apply for this resource. General licenses according to https://spdx.org/licenses/ (in the \"identifier\" and \"url\" attribute) or \"proprietary\" can be given. Additionally, it is possible to link to an optional, specific, own license document in the \"contentUrl\" attribute.",
                                   "uniqueItems": true,
                                   "minItems": 1,
                                   "items": {
@@ -664,7 +664,7 @@
                                         ],
                                         "format": "iri",
                                         "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                        "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                        "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                       },
                                       "contentUrl": {
                                         "type": [
@@ -760,7 +760,7 @@
                         "null"
                       ],
                       "description": "A short description of the skill. Should be based on the framework used.",
-                      "example": "To protect personal data and privacy in digital environments. To understand how to use and share personally identifiable information while being able to protect oneself and others from damages. To understand that digital services use a “Privacy policy” to inform how personal data is used."
+                      "example": "To protect personal data and privacy in digital environments. To understand how to use and share personally identifiable information while being able to protect oneself and others from damages. To understand that digital services use a \"Privacy policy\" to inform how personal data is used."
                     },
                     "educationalFramework": {
                       "type": "string",
@@ -771,7 +771,7 @@
                         "GRETA"
                       ]
                     },
-                    "educationalFramework_version": {
+                    "educationalFrameworkVersion": {
                       "type": "string",
                       "description": "The version of the educational framework that describes the skill. Can also be the year the framework was released/published.",
                       "example": "2.2"
@@ -805,7 +805,7 @@
                             "null"
                           ],
                           "description": "A short description of the educational level. Should be based on the framework used.",
-                          "example": "Independently, according to my own needs, and solving well-defined and non-routine problems, I can: • discuss ways to protect my personal data and privacy in digital environments, and • discuss ways to use and share personally identifiable information while protecting myself and others from damages. • indicate privacy policy statements of how personal data is used in digital services."
+                          "example": "Independently, according to my own needs, and solving well-defined and non-routine problems, I can: - discuss ways to protect my personal data and privacy in digital environments, and - discuss ways to use and share personally identifiable information while protecting myself and others from damages. - indicate privacy policy statements of how personal data is used in digital services."
                         },
                         "name": {
                           "type": "array",
@@ -858,7 +858,7 @@
                             "GRETA"
                           ]
                         },
-                        "educationalFramework_version": {
+                        "educationalFrameworkVersion": {
                           "type": "string",
                           "description": "The version of the educational framework that describes the skill. Can also be the year the framework was released/published.",
                           "example": "2.2"
@@ -892,7 +892,7 @@
                       "required": [
                         "name",
                         "educationalFramework",
-                        "educationalFramework_version",
+                        "educationalFrameworkVersion",
                         "type"
                       ]
                     }
@@ -900,7 +900,7 @@
                   "required": [
                     "name",
                     "educationalFramework",
-                    "educationalFramework_version"
+                    "educationalFrameworkVersion"
                   ]
                 }
               },
@@ -972,11 +972,11 @@
                               "type": "string",
                               "format": "iri",
                               "description": "The IRI pointing at the actual image.",
-                              "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                              "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                             },
                             "license": {
                               "type": "array",
-                              "description": "A list of licenses for the Image.",
+                              "description": "A list of licenses that apply for this resource. General licenses according to https://spdx.org/licenses/ (in the \"identifier\" and \"url\" attribute) or \"proprietary\" can be given. Additionally, it is possible to link to an optional, specific, own license document in the \"contentUrl\" attribute.",
                               "uniqueItems": true,
                               "minItems": 1,
                               "items": {
@@ -996,7 +996,7 @@
                                     ],
                                     "format": "iri",
                                     "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                    "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                    "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                   },
                                   "contentUrl": {
                                     "type": [
@@ -1096,11 +1096,11 @@
                               "type": "string",
                               "format": "iri",
                               "description": "The IRI pointing at the actual image.",
-                              "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                              "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                             },
                             "license": {
                               "type": "array",
-                              "description": "A list of licenses for the Image.",
+                              "description": "A list of licenses that apply for this resource. General licenses according to https://spdx.org/licenses/ (in the \"identifier\" and \"url\" attribute) or \"proprietary\" can be given. Additionally, it is possible to link to an optional, specific, own license document in the \"contentUrl\" attribute.",
                               "uniqueItems": true,
                               "minItems": 1,
                               "items": {
@@ -1120,7 +1120,7 @@
                                     ],
                                     "format": "iri",
                                     "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                    "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                    "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                   },
                                   "contentUrl": {
                                     "type": [
@@ -1149,7 +1149,7 @@
                             "string",
                             "null"
                           ],
-                          "description": "A short description of the person. Can be a CV-like description. Should be provided in HTML.",
+                          "description": "A short description of the person. Can be a CV-like description. Should be provided in HTML",
                           "example": null
                         },
                         "affiliation": {
@@ -1207,11 +1207,11 @@
                                   "type": "string",
                                   "format": "iri",
                                   "description": "The IRI pointing at the actual image.",
-                                  "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                                  "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                                 },
                                 "license": {
                                   "type": "array",
-                                  "description": "A list of licenses for the Image.",
+                                  "description": "A list of licenses that apply for this resource. General licenses according to https://spdx.org/licenses/ (in the \"identifier\" and \"url\" attribute) or \"proprietary\" can be given. Additionally, it is possible to link to an optional, specific, own license document in the \"contentUrl\" attribute.",
                                   "uniqueItems": true,
                                   "minItems": 1,
                                   "items": {
@@ -1231,7 +1231,7 @@
                                         ],
                                         "format": "iri",
                                         "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                        "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                        "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                       },
                                       "contentUrl": {
                                         "type": [
@@ -1328,11 +1328,11 @@
                             "type": "string",
                             "format": "iri",
                             "description": "The IRI pointing at the actual image.",
-                            "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                            "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                           },
                           "license": {
                             "type": "array",
-                            "description": "A list of licenses for the Image.",
+                            "description": "A list of licenses that apply for this resource. General licenses according to https://spdx.org/licenses/ (in the \"identifier\" and \"url\" attribute) or \"proprietary\" can be given. Additionally, it is possible to link to an optional, specific, own license document in the \"contentUrl\" attribute.",
                             "uniqueItems": true,
                             "minItems": 1,
                             "items": {
@@ -1352,7 +1352,7 @@
                                   ],
                                   "format": "iri",
                                   "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                  "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                  "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                 },
                                 "contentUrl": {
                                   "type": [
@@ -1452,11 +1452,11 @@
                             "type": "string",
                             "format": "iri",
                             "description": "The IRI pointing at the actual image.",
-                            "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                            "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                           },
                           "license": {
                             "type": "array",
-                            "description": "A list of licenses for the Image.",
+                            "description": "A list of licenses that apply for this resource. General licenses according to https://spdx.org/licenses/ (in the \"identifier\" and \"url\" attribute) or \"proprietary\" can be given. Additionally, it is possible to link to an optional, specific, own license document in the \"contentUrl\" attribute.",
                             "uniqueItems": true,
                             "minItems": 1,
                             "items": {
@@ -1476,7 +1476,7 @@
                                   ],
                                   "format": "iri",
                                   "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                  "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                  "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                 },
                                 "contentUrl": {
                                   "type": [
@@ -1563,11 +1563,11 @@
                                 "type": "string",
                                 "format": "iri",
                                 "description": "The IRI pointing at the actual image.",
-                                "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                                "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                               },
                               "license": {
                                 "type": "array",
-                                "description": "A list of licenses for the Image.",
+                                "description": "A list of licenses that apply for this resource. General licenses according to https://spdx.org/licenses/ (in the \"identifier\" and \"url\" attribute) or \"proprietary\" can be given. Additionally, it is possible to link to an optional, specific, own license document in the \"contentUrl\" attribute.",
                                 "uniqueItems": true,
                                 "minItems": 1,
                                 "items": {
@@ -1587,7 +1587,7 @@
                                       ],
                                       "format": "iri",
                                       "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                      "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                      "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                     },
                                     "contentUrl": {
                                       "type": [
@@ -1662,8 +1662,9 @@
               },
               "license": {
                 "type": "array",
-                "description": "A list of licenses that one may choose from for this course. The schema allows for multi licensing.",
+                "description": "A list of licenses that apply for this resource. General licenses according to https://spdx.org/licenses/ (in the \"identifier\" and \"url\" attribute) or \"proprietary\" can be given. Additionally, it is possible to link to an optional, specific, own license document in the \"contentUrl\" attribute.",
                 "uniqueItems": true,
+                "minItems": 1,
                 "items": {
                   "title": "License",
                   "type": "object",
@@ -1681,7 +1682,7 @@
                       ],
                       "format": "iri",
                       "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                      "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                      "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                     },
                     "contentUrl": {
                       "type": [
@@ -1750,14 +1751,14 @@
                     },
                     "educationalFramework": {
                       "type": "string",
-                      "description": "The name of the educational framework that describes the educational alignment. Currently, only the standards ISCED-F and ÖFOS are allowed.",
+                      "description": "The name of the educational framework that describes the educational alignment. Currently, only the standards ISCED-F and OEFOS are allowed.",
                       "enum": [
                         "ISCED-F",
                         "OEFOS",
                         "BIRD Faechersystematik"
                       ]
                     },
-                    "educationalFramework_version": {
+                    "educationalFrameworkVersion": {
                       "type": "string",
                       "description": "The version of the educational framework that describes the skill. Can also be the year the framework was released/published.",
                       "example": "2013"
@@ -1840,7 +1841,7 @@
                   },
                   "required": [
                     "educationalFramework",
-                    "educationalFramework_version",
+                    "educationalFrameworkVersion",
                     "name",
                     "type"
                   ]
@@ -1861,11 +1862,11 @@
                         "null"
                       ],
                       "description": "A short description of the educational level. Should be based on the framework used.",
-                      "example": "Independently, according to my own needs, and solving well-defined and non-routine problems, I can: • discuss ways to protect my personal data and privacy in digital environments, and • discuss ways to use and share personally identifiable information while protecting myself and others from damages. • indicate privacy policy statements of how personal data is used in digital services."
+                      "example": "Independently, according to my own needs, and solving well-defined and non-routine problems, I can: - discuss ways to protect my personal data and privacy in digital environments, and - discuss ways to use and share personally identifiable information while protecting myself and others from damages. - indicate privacy policy statements of how personal data is used in digital services."
                     },
                     "name": {
                       "type": "array",
-                      "description": "List of names of the educational level. This array allows localized strings. A name AND a language have to be given in the respective object.",
+                      "description": "List of names of the educational level. This array allows localized strings. A name and a language have to be given in the respective field.",
                       "items": {
                         "type": "object",
                         "properties": {
@@ -1914,7 +1915,7 @@
                         "GRETA"
                       ]
                     },
-                    "educationalFramework_version": {
+                    "educationalFrameworkVersion": {
                       "type": "string",
                       "description": "The version of the educational framework that describes the skill. Can also be the year the framework was released/published.",
                       "example": "2.2"
@@ -1948,7 +1949,7 @@
                   "required": [
                     "name",
                     "educationalFramework",
-                    "educationalFramework_version",
+                    "educationalFrameworkVersion",
                     "type"
                   ]
                 }
@@ -2015,11 +2016,11 @@
                               "type": "string",
                               "format": "iri",
                               "description": "The IRI pointing at the actual image.",
-                              "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                              "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                             },
                             "license": {
                               "type": "array",
-                              "description": "A list of licenses for the Image.",
+                              "description": "A list of licenses that apply for this resource. General licenses according to https://spdx.org/licenses/ (in the \"identifier\" and \"url\" attribute) or \"proprietary\" can be given. Additionally, it is possible to link to an optional, specific, own license document in the \"contentUrl\" attribute.",
                               "uniqueItems": true,
                               "minItems": 1,
                               "items": {
@@ -2039,7 +2040,7 @@
                                     ],
                                     "format": "iri",
                                     "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                    "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                    "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                   },
                                   "contentUrl": {
                                     "type": [
@@ -2139,11 +2140,11 @@
                               "type": "string",
                               "format": "iri",
                               "description": "The IRI pointing at the actual image.",
-                              "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                              "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                             },
                             "license": {
                               "type": "array",
-                              "description": "A list of licenses for the Image.",
+                              "description": "A list of licenses that apply for this resource. General licenses according to https://spdx.org/licenses/ (in the \"identifier\" and \"url\" attribute) or \"proprietary\" can be given. Additionally, it is possible to link to an optional, specific, own license document in the \"contentUrl\" attribute.",
                               "uniqueItems": true,
                               "minItems": 1,
                               "items": {
@@ -2163,7 +2164,7 @@
                                     ],
                                     "format": "iri",
                                     "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                    "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                    "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                   },
                                   "contentUrl": {
                                     "type": [
@@ -2192,7 +2193,7 @@
                             "string",
                             "null"
                           ],
-                          "description": "A short description of the person. Can be a CV-like description. Should be provided in HTML.",
+                          "description": "A short description of the person. Can be a CV-like description. Should be provided in HTML",
                           "example": null
                         },
                         "affiliation": {
@@ -2250,11 +2251,11 @@
                                   "type": "string",
                                   "format": "iri",
                                   "description": "The IRI pointing at the actual image.",
-                                  "example": "https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png"
+                                  "example": "https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png"
                                 },
                                 "license": {
                                   "type": "array",
-                                  "description": "A list of licenses for the Image.",
+                                  "description": "A list of licenses that apply for this resource. General licenses according to https://spdx.org/licenses/ (in the \"identifier\" and \"url\" attribute) or \"proprietary\" can be given. Additionally, it is possible to link to an optional, specific, own license document in the \"contentUrl\" attribute.",
                                   "uniqueItems": true,
                                   "minItems": 1,
                                   "items": {
@@ -2274,7 +2275,7 @@
                                         ],
                                         "format": "iri",
                                         "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
-                                        "example": "https://creativecommons.org/publicdomain/zero/1.0"
+                                        "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
                                       },
                                       "contentUrl": {
                                         "type": [
@@ -2517,6 +2518,11 @@
                             "Course_ID"
                           ]
                         },
+                        "educationalFrameworkVersion": {
+                          "type": "string",
+                          "description": "This labels the object as a link to a course. It is needed to be compliant with a \"Skill\" ",
+                          "example": "Fall 2020"
+                        },
                         "targetUrl": {
                           "type": "string",
                           "description": "An IRI pointing at a course.",
@@ -2526,7 +2532,7 @@
                       "required": [
                         "name",
                         "educationalFramework",
-                        "educationalFramework_version"
+                        "educationalFrameworkVersion"
                       ]
                     },
                     {
@@ -2582,18 +2588,18 @@
                             "null"
                           ],
                           "description": "A short description of the skill. Should be based on the framework used.",
-                          "example": "To protect personal data and privacy in digital environments. To understand how to use and share personally identifiable information while being able to protect oneself and others from damages. To understand that digital services use a “Privacy policy” to inform how personal data is used."
+                          "example": "To protect personal data and privacy in digital environments. To understand how to use and share personally identifiable information while being able to protect oneself and others from damages. To understand that digital services use a \"Privacy policy\" to inform how personal data is used."
                         },
                         "educationalFramework": {
                           "type": "string",
-                          "description": "The name of the educational framework that describes the ski",
+                          "description": "The name of the educational framework that describes the skill.",
                           "enum": [
                             "ESCO",
                             "DigComp",
                             "GRETA"
                           ]
                         },
-                        "educationalFramework_version": {
+                        "educationalFrameworkVersion": {
                           "type": "string",
                           "description": "The version of the educational framework that describes the skill. Can also be the year the framework was released/published.",
                           "example": "2.2"
@@ -2627,11 +2633,11 @@
                                 "null"
                               ],
                               "description": "A short description of the educational level. Should be based on the framework used.",
-                              "example": "Independently, according to my own needs, and solving well-defined and non-routine problems, I can: • discuss ways to protect my personal data and privacy in digital environments, and • discuss ways to use and share personally identifiable information while protecting myself and others from damages. • indicate privacy policy statements of how personal data is used in digital services."
+                              "example": "Independently, according to my own needs, and solving well-defined and non-routine problems, I can: - discuss ways to protect my personal data and privacy in digital environments, and - discuss ways to use and share personally identifiable information while protecting myself and others from damages. - indicate privacy policy statements of how personal data is used in digital services."
                             },
                             "name": {
                               "type": "array",
-                              "description": "List of names of the educational level. This array allows localized strings. A name and a language have to be given in the respective",
+                              "description": "List of names of the educational level. This array allows localized strings. A name and a language have to be given in the respective field.",
                               "items": {
                                 "type": "object",
                                 "properties": {
@@ -2673,14 +2679,14 @@
                             },
                             "educationalFramework": {
                               "type": "string",
-                              "description": "The name of the educational framework that describes the educational l",
+                              "description": "The name of the educational framework that describes the educational level.",
                               "enum": [
                                 "ESCO",
                                 "DigComp",
                                 "GRETA"
                               ]
                             },
-                            "educationalFramework_version": {
+                            "educationalFrameworkVersion": {
                               "type": "string",
                               "description": "The version of the educational framework that describes the skill. Can also be the year the framework was released/published.",
                               "example": "2.2"
@@ -2714,7 +2720,7 @@
                           "required": [
                             "name",
                             "educationalFramework",
-                            "educationalFramework_version",
+                            "educationalFrameworkVersion",
                             "type"
                           ]
                         }
@@ -2722,7 +2728,7 @@
                       "required": [
                         "name",
                         "educationalFramework",
-                        "educationalFramework_version"
+                        "educationalFrameworkVersion"
                       ]
                     }
                   ]
@@ -2917,6 +2923,11 @@
                                   "Course_ID"
                                 ]
                               },
+                              "educationalFrameworkVersion": {
+                                "type": "string",
+                                "description": "This labels the object as a link to a course. It is needed to be compliant with a \"Skill\" ",
+                                "example": "Fall 2020"
+                              },
                               "targetUrl": {
                                 "type": "string",
                                 "description": "An IRI pointing at a course.",
@@ -2926,7 +2937,7 @@
                             "required": [
                               "name",
                               "educationalFramework",
-                              "educationalFramework_version"
+                              "educationalFrameworkVersion"
                             ]
                           },
                           {
@@ -2982,18 +2993,18 @@
                                   "null"
                                 ],
                                 "description": "A short description of the skill. Should be based on the framework used.",
-                                "example": "To protect personal data and privacy in digital environments. To understand how to use and share personally identifiable information while being able to protect oneself and others from damages. To understand that digital services use a “Privacy policy” to inform how personal data is used."
+                                "example": "To protect personal data and privacy in digital environments. To understand how to use and share personally identifiable information while being able to protect oneself and others from damages. To understand that digital services use a \"Privacy policy\" to inform how personal data is used."
                               },
                               "educationalFramework": {
                                 "type": "string",
-                                "description": "The name of the educational framework that describes the ski",
+                                "description": "The name of the educational framework that describes the skill.",
                                 "enum": [
                                   "ESCO",
                                   "DigComp",
                                   "GRETA"
                                 ]
                               },
-                              "educationalFramework_version": {
+                              "educationalFrameworkVersion": {
                                 "type": "string",
                                 "description": "The version of the educational framework that describes the skill. Can also be the year the framework was released/published.",
                                 "example": "2.2"
@@ -3027,11 +3038,11 @@
                                       "null"
                                     ],
                                     "description": "A short description of the educational level. Should be based on the framework used.",
-                                    "example": "Independently, according to my own needs, and solving well-defined and non-routine problems, I can: • discuss ways to protect my personal data and privacy in digital environments, and • discuss ways to use and share personally identifiable information while protecting myself and others from damages. • indicate privacy policy statements of how personal data is used in digital services."
+                                    "example": "Independently, according to my own needs, and solving well-defined and non-routine problems, I can: - discuss ways to protect my personal data and privacy in digital environments, and - discuss ways to use and share personally identifiable information while protecting myself and others from damages. - indicate privacy policy statements of how personal data is used in digital services."
                                   },
                                   "name": {
                                     "type": "array",
-                                    "description": "List of names of the educational level. This array allows localized strings. A name and a language have to be given in the respective",
+                                    "description": "List of names of the educational level. This array allows localized strings. A name and a language have to be given in the respective field.",
                                     "items": {
                                       "type": "object",
                                       "properties": {
@@ -3073,14 +3084,14 @@
                                   },
                                   "educationalFramework": {
                                     "type": "string",
-                                    "description": "The name of the educational framework that describes the educational l",
+                                    "description": "The name of the educational framework that describes the educational level.",
                                     "enum": [
                                       "ESCO",
                                       "DigComp",
                                       "GRETA"
                                     ]
                                   },
-                                  "educationalFramework_version": {
+                                  "educationalFrameworkVersion": {
                                     "type": "string",
                                     "description": "The version of the educational framework that describes the skill. Can also be the year the framework was released/published.",
                                     "example": "2.2"
@@ -3114,7 +3125,7 @@
                                 "required": [
                                   "name",
                                   "educationalFramework",
-                                  "educationalFramework_version",
+                                  "educationalFrameworkVersion",
                                   "type"
                                 ]
                               }
@@ -3122,7 +3133,7 @@
                             "required": [
                               "name",
                               "educationalFramework",
-                              "educationalFramework_version"
+                              "educationalFrameworkVersion"
                             ]
                           }
                         ]

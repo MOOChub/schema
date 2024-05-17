@@ -1,7 +1,7 @@
-openapi: 3.0.0
+openapi: 3.0.1
 info:
   title: MOOChub API
-  version: '3.0'
+  version: '3.0.1'
   description: API for MOOChub to access public course information.
   contact:
     name: openHPI
@@ -60,7 +60,10 @@ paths:
                           identifier: 'https://w3id.org/kim/hcrt/course'
                           type: Concept
                           inScheme: 'https://w3id.org/kim/hcrt/scheme'
-                        description: <p>This is an example of an complete course. Here all fields will be filled with data. Also the data is <b> NOT REAL</b> it will help to understand how this metadata format works.</p>\n
+                        description: "<p> This is an example of an complete course.
+                          Here all fields will be filled with data. Also the data
+                          is <b>NOT REAL</b> it will help to understand how this metadata
+                          format works.</p>\n"
                         inLanguage:
                           - en
                         startDate:
@@ -72,42 +75,48 @@ paths:
                         image:
                           description: A thumbnail image of the course
                           type: ImageObject
-                          contentUrl: 'https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png'
+                          contentUrl: 'https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png'
                           license:
-                            - identifier: 'https://creativecommons.org/publicdomain/zero/1.0'
-                              url: null
+                            - identifier: CC-BY-SA-4.0
+                              url: 'https://spdx.org/licenses/CC-BY-SA-4.0.html'
                         trailer:
                           description: A short trailer for the course.
                           contentUrl: 'https://player.vimeo.com/progressive_redirect/playback/488129602/rendition/720p/file.mp4?loc=external&oauth2_token_id=1212898389&signature=4065e2228ebeaf1a20b88acbd735bdbb72a8535ac5612a6cba5e78599cdebdb0'
                           type: VideoObject
                           license:
-                            - identifier: 'https://creativecommons.org/publicdomain/zero/1.0'
-                              url: null
+                            - identifier: CC-BY-SA-4.0
+                              url: 'https://spdx.org/licenses/CC-BY-SA-4.0.html'
                         instructor:
                           - name: Christoph Meinel
                             honorificPrefix: Prof. Dr.
                             identifier: 'https://www.wikidata.org/wiki/Q92706'
                             type: Person
-                            description: Prof. Dr. Christoph Meinel is professor at the HPI at the University of Potsdam. He teaches computational sciences at Bachelor and Master level and supervised Master and Doctoral theses.
+                            description: Prof. Dr. Christoph Meinel is professor at
+                              the HPI at the University of Potsdam. He teaches computational
+                              sciences at Bachelor and Master level and supervised
+                              Master and Doctoral theses.
                             image:
                               description: An image showing Prof. Dr. Christoph Meinel.
                               type: ImageObject
                               contentUrl: 'https://imgproxy.services.openhpi.de/sgUb4IJNxAL_thQHYE-mI2jN-UDqOc7vKbsMmEPd_CM/fit/550/0/ce/false/aHR0cHM6Ly9vcGVu/aHBpLXB1YmxpYy5z/My5vcGVuaHBpY2xv/dWQuZGUvdGVhY2hl/cnMvNmVsMEMxQWZz/cDlZc2lONk55ODVJ/Ry92MS5wbmc.png'
                               license:
-                                - identifier: 'https://creativecommons.org/publicdomain/zero/1.0'
-                                  url: null
+                                - identifier: CC-BY-SA-4.0
+                                  url: 'https://spdx.org/licenses/CC-BY-SA-4.0.html'
                             affiliation:
                               name: openHPI
                               identifier: 'https://www.wikidata.org/wiki/Q10854783'
                               type: Organization
-                              description: 'openHPI is a digital educational platform situated at the HPI with a focus on topics regarding computational sciences, internet and world wide web and design thinking.'
+                              description: 'openHPI is a digital educational platform
+                                situated at the HPI with a focus on topics regarding
+                                computational sciences, internet and world wide web
+                                and design thinking.'
                               image:
                                 description: The openHPI logo.
                                 type: ImageObject
-                                contentUrl: 'https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png'
+                                contentUrl: 'https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png'
                                 license:
-                                  - identifier: 'https://creativecommons.org/publicdomain/zero/1.0'
-                                    url: null
+                                  - identifier: CC-BY-SA-4.0
+                                    url: 'https://spdx.org/licenses/CC-BY-SA-4.0.html'
                         teaches:
                           - name:
                               - inLanguage: en
@@ -116,20 +125,34 @@ paths:
                               - 'Personal Privacy'
                               - 'Privacy Policy'
                             shortCode: '4.2'
-                            description: To protect personal data and privacy in digital environments. To understand how to use and share personally identifiable information while being able to protect oneself and others from damages. To understand that digital services use a “Privacy policy” to inform how personal data is used.
-                            educationalFramework: DigComp 2.2
+                            description: To protect personal data and privacy in digital
+                              environments.To understand how to use and share personally
+                              identifiable information while being able to protect
+                              oneself and others from damages.To understand that digital
+                              services use a "Privacy policy" to inform how personal
+                              data is used.
+                            educationalFramework: DigComp
+                            educationalFrameworkVersion: '2.2'
                             url: 'https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf'
                             targetUrl: null
                             educationalLevel:
-                              description: 'Independently, according to my own needs, and solving well-defined and non-routine problems, I can: • discuss ways to protect my personal data and privacy in digital environments, and • discuss ways to use and share personally identifiable information while protecting myself and others from damages. • indicate privacy policy statements of how personal data is used in digital services.'
+                              description: 'Independently, according to my own needs,
+                                and solving well-defined and non-routine problems,
+                                I can: - discuss ways to protect my personal data
+                                and privacy in digital environments, and - discuss
+                                ways to use and share personally identifiable information
+                                while protecting myself and others from damages. -
+                                indicate privacy policy statements of how personal
+                                data is used in digital services.'
                               name:
                                 - inLanguage: en
                                   name: INTERMEDIATE
-                              alternatName:
+                              alternateName:
                                 - 'independent use of concept'
                                 - 'using concept for oneself'
                               shortCode: '4'
-                              educationalFramework: DigComp 2.2
+                              educationalFramework: DigComp
+                              educationalFrameworkVersion: '2.2'
                               url: 'https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf'
                               targetUrl: null
                               type: EducationalLevel
@@ -138,33 +161,38 @@ paths:
                           - name: openHPI
                             identifier: 'https://open.hpi.de/'
                             type: Organization
-                            description: 'openHPI is a digital educational platform situated at the HPI with a focus on topics regarding computational sciences, internet and world wide web and design thinking.'
+                            description: 'openHPI is a digital educational platform
+                              situated at the HPI with a focus on topics regarding
+                              computational sciences, internet and world wide web
+                              and design thinking.'
                             image:
                               description: The openHPI logo.
                               type: ImageObject
-                              contentUrl: 'https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png'
+                              contentUrl: 'https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png'
                               license:
-                                - identifier: 'https://creativecommons.org/publicdomain/zero/1.0'
-                                  url: null
+                                - identifier: CC-BY-SA-4.0
+                                  url: 'https://spdx.org/licenses/CC-BY-SA-4.0.html'
                         publisher:
                           name: openHPI
                           identifier: 'https://open.hpi.de/'
                           type: Organization
-                          description: 'openHPI is a digital educational platform situated at the HPI with a focus on topics regarding computational sciences, internet and world wide web and design thinking.'
+                          description: 'openHPI is a digital educational platform
+                            situated at the HPI with a focus on topics regarding computational
+                            sciences, internet and world wide web and design thinking.'
                           image:
                             description: The openHPI logo.
                             type: ImageObject
-                            contentUrl: 'https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png'
+                            contentUrl: 'https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png'
                             license:
-                              - identifier: 'https://creativecommons.org/publicdomain/zero/1.0'
-                                url: null
+                              - identifier: CC-BY-SA-4.0
+                                url: 'https://spdx.org/licenses/CC-BY-SA-4.0.html'
                         url: 'https://open.hpi.de/courses/confidentialcommunication2021'
                         workload:
                           timeValue: 3
                           timeUnit: h/week
                         license:
-                          - identifier: 'https://creativecommons.org/publicdomain/zero/1.0'
-                            url: null
+                          - identifier: CC-BY-SA-4.0
+                            url: 'https://spdx.org/licenses/CC-BY-SA-4.0.html'
                         access:
                           - free
                         audience:
@@ -177,14 +205,28 @@ paths:
                               - inLanguage: en
                                 name: Computer use
                             alternateName:
-                              - "use of computers"
-                              - "working with computers"
+                              - 'use of computers'
+                              - 'working with computers'
                             shortCode: '0611'
                             targetUrl: null
                             type: EducationalAlignment
-                            description: 'Computer use is the study of using computers and computer software and applications for different purposes. These programmes are generally of short duration. Programmes and qualifications with the following main content are classified here: Computer use Use of software for calculating (spread sheets) Use of software for data processing Use of software for desk top publishing Use of software for word processing Use of Internet'
+                            description: 'Computer use is the study of using computers
+                              and computer software and applications for different
+                              purposes. These programmes are generally of short duration.
+                              Programmes and qualifications with the following main
+                              content are classified here: Computer use Use of software
+                              for calculating (spread sheets) Use of software for
+                              data processing Use of software for desk top publishing
+                              Use of software for word processing Use of Internet'
                         educationalLevel:
-                          - description: 'Independently, according to my own needs, and solving well-defined and non-routine problems, I can: • discuss ways to protect my personal data and privacy in digital environments, and • discuss ways to use and share personally identifiable information while protecting myself and others from damages. • indicate privacy policy statements of how personal data is used in digital services.'
+                          - description: 'Independently, according to my own needs,
+                              and solving well-defined and non-routine problems, I
+                              can: - discuss ways to protect my personal data and
+                              privacy in digital environments, and - discuss ways
+                              to use and share personally identifiable information
+                              while protecting myself and others from damages. - indicate
+                              privacy policy statements of how personal data is used
+                              in digital services.'
                             name:
                               - inLanguage: en
                                 name: INTERMEDIATE
@@ -192,7 +234,8 @@ paths:
                               - 'independent use of concept'
                               - 'use concept for oneself'
                             shortCode: '4'
-                            educationalFramework: DigComp 2.2
+                            educationalFramework: DigComp
+                            educationalFrameworkVersion: '2.2'
                             url: 'https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf'
                             targetUrl: null
                             type: EducationalLevel
@@ -201,26 +244,32 @@ paths:
                             honorificPrefix: Prof. Dr.
                             identifier: 'https://www.wikidata.org/wiki/Q92706'
                             type: Person
-                            description: Prof. Dr. Christoph Meinel is professor at the HPI at the University of Potsdam. He teaches computational sciences at Bachelor and Master level and supervised Master and Doctoral theses.
+                            description: Prof. Dr. Christoph Meinel is professor at
+                              the HPI at the University of Potsdam. He teaches computational
+                              sciences at Bachelor and Master level and supervised
+                              Master and Doctoral theses.
                             image:
                               description: An image showing Prof. Dr. Christoph Meinel.
                               type: ImageObject
                               contentUrl: 'https://imgproxy.services.openhpi.de/sgUb4IJNxAL_thQHYE-mI2jN-UDqOc7vKbsMmEPd_CM/fit/550/0/ce/false/aHR0cHM6Ly9vcGVu/aHBpLXB1YmxpYy5z/My5vcGVuaHBpY2xv/dWQuZGUvdGVhY2hl/cnMvNmVsMEMxQWZz/cDlZc2lONk55ODVJ/Ry92MS5wbmc.png'
                               license:
-                                - identifier: 'https://creativecommons.org/publicdomain/zero/1.0'
-                                  url: null
+                                - identifier: CC-BY-SA-4.0
+                                  url: 'https://spdx.org/licenses/CC-BY-SA-4.0.html'
                             affiliation:
                               name: openHPI
                               identifier: 'https://www.wikidata.org/wiki/Q10854783'
                               type: Organization
-                              description: 'openHPI is a digital educational platform situated at the HPI with a focus on topics regarding computational sciences, internet and world wide web and design thinking.'
+                              description: openHPI is a digital educational platform
+                                situated at the HPI with a focus on topics regarding
+                                computational sciences, internet and world wide web
+                                and design thinking.
                               image:
                                 description: The openHPI logo.
                                 type: ImageObject
-                                contentUrl: 'https://openhpi.azureedge.net/assets/defaults/course-bb5a40d888217b3563ca4da5d868e770f43bb9ed70f1619147af98162b86ec3e.png'
+                                contentUrl: 'https://imgproxy.services.openhpi.de/BTTB8dtdudOl-9rC9_BH3blZE8Y6lPOYCeDwOrM3MtA/rs:fill:314:195:0/g:ce/plain/https://openhpi-public.s3.openhpicloud.de/courses/4H0PlIvB5Pl3LVRzqcZF8x/6xCHlCi7Kj4QQCnoNlk3Hl/07_2x_green.png'
                                 license:
-                                  - identifier: 'https://creativecommons.org/publicdomain/zero/1.0'
-                                    url: null
+                                  - identifier: CC-BY-SA-4.0
+                                    url: 'https://spdx.org/licenses/CC-BY-SA-4.0.html'
                         keywords:
                           - cyber security
                           - internet
@@ -254,9 +303,11 @@ paths:
                         competencyRequired:
                           - name:
                               - inLanguage: en
-                                name: 'HPI Academy: Leading Digital Transformation and Innovation - Fall 2020'
+                                name: 'HPI Academy: Leading Digital Transformation
+                                  and Innovation - Fall 2020'
                               - inLanguage: de
-                                name: 'HPI Academy: Digitale Transformation und Innovation anführen - Herbst 2020'
+                                name: 'HPI Academy: Digitale Transformation und Innovation
+                                  anfuehren - Herbst 2020'
                             educationalFramework: Course_ID
                             targetUrl: 'https://open.hpi.de/courses/digitrans2020-1'
                           - name:
@@ -307,7 +358,8 @@ paths:
                             competencyRequired:
                               - name:
                                   - inLanguage: en
-                                    name: 'HPI Academy: Leading Digital Transformation and Innovation - Fall 2020'
+                                    name: 'HPI Academy: Leading Digital Transformation
+                                      and Innovation - Fall 2020'
                                 educationalFramework: Course_ID
                                 targetUrl: 'https://open.hpi.de/courses/digitrans2020-1'
                         isPartOf:
@@ -319,7 +371,10 @@ paths:
               schema:
                 type: string
                 example: 'Tue, 15 Aug 2017 00:00:00 GMT'
-              description: 'This date signals the last day of support for the given API version, according to RFC 8594. The client should upgrade to a newer API version before this date. This header is only set if the API version is / will be deprecated'
+              description: 'This date signals the last day of support for the given
+                API version, according to RFC 8594. The client should upgrade to a
+                newer API version before this date. This header is only set if the
+                API version is / will be deprecated'
         '404':
           description: Not Found
         '406':
@@ -349,7 +404,9 @@ paths:
             example: application/vnd.api+json; moochub-version=3
           in: header
           name: Accept
-          description: The last major API version that is supported by the client and requested from the server. The newest version will be used if no version is included in the original request.
+          description: The last major API version that is supported by the client
+            and requested from the server.The newest version will be used if no version
+            is included in the original request.
 security: []
 components:
   securitySchemes: {}
@@ -813,7 +870,8 @@ components:
           enum:
             - Course
         attributes:
-          description: The Attributes of the object.
+          type: object
+          description: The Attributes of the course.
           required:
             - name
             - learningResourceType
@@ -829,11 +887,14 @@ components:
             courseCode:
               type: string
               nullable: true
-              description: An internal short code of the course. Also possible to give internal codes for templates here.
+              description: An internal short code of the course. Also possible to
+                give internal codes for templates here.
               example: confidentialcommunication2021
             learningResourceType:
               type: object
-              description: 'The learning resource type as listed at https://w3id.org/kim/hcrt/scheme. This describes the resource according to HCRT (Higher Education Resource Type).'
+              description: The learning resource type as listed at https://w3id.org/kim/hcrt/scheme.
+                This describes the resource according to HCRT (Higher Education Resource
+                Type).
               required:
                 - identifier
                 - type
@@ -841,7 +902,9 @@ components:
               properties:
                 identifier:
                   type: string
-                  description: 'This is an IRI pointing at a node describing the learning resource type. Currently, only https://w3id.org/kim/hcrt/course is allowed.'
+                  description: This is an IRI pointing at a node describing the learning
+                    resource type. Currently, only https://w3id.org/kim/hcrt/course
+                    is allowed.
                   format: iri
                   enum:
                     - 'https://w3id.org/kim/hcrt/course'
@@ -853,19 +916,50 @@ components:
                 inScheme:
                   type: string
                   format: iri
-                  description: 'A pointer to the used scheme. Currently, only https://w3id.org/kim/hcrt/scheme is allowed.'
+                  description: A pointer to the used scheme. Currently, only https://w3id.org/kim/hcrt/scheme
+                    is allowed.
                   enum:
                     - 'https://w3id.org/kim/hcrt/scheme'
+            courseMode:
+              type: array
+              nullable: true
+              minItems: 0
+              uniqueItems: true
+              description: This attribute describes the course mode. It is limited
+                to "blended", "online", "onsite", "synchronous" and "asynchronous".
+              items:
+                type: string
+                enum:
+                  - blended
+                  - onsite
+                  - online
+                  - synchronous
+                  - asynchronous
             description:
               type: string
               nullable: true
               description: Description of the course as an HTML document
-              example: '<p>A message on the Internet is sent through several networks and via different stations on its way to the target system. The individual stations are responsible for ensuring that the message is properly forwarded and finally delivered to the correct recipient. Each of these stations, if the message is sent in plain text, can receive the message and read its content. This means that a potential attacker, if he controls one of these intermediate systems, can also read the content of the message and even modify it before retransmitting it. Such attacks can have extreme effects on communication.</p>\n\n<p>In this course we will look at how and whether your connection to online banking is secure or whether the content of an e-mail is trustworthy. For this purpose we will deal with the basics of cryptography, security objectives and different types of encryption. In addition, we will provide insights into different models and standards that are used in practice.</p>\n'
+              example: <p>A message on the Internet is sent through several networks
+                and via different stations on its way to the target system. The individual
+                stations are responsible for ensuring that the message is properly
+                forwarded and finally delivered to the correct recipient. Each of
+                these stations, if the message is sent in plain text, can receive
+                the message and read its content. This means that a potential attacker,
+                if he controls one of these intermediate systems, can also read the
+                content of the message and even modify it before retransmitting it.
+                Such attacks can have extreme effects on communication.</p>\n\n<p>In
+                this course we will look at how and whether your connection to online
+                banking is secure or whether the content of an e-mail is trustworthy.
+                For this purpose we will deal with the basics of cryptography, security
+                objectives and different types of encryption. In addition, we will
+                provide insights into different models and standards that are used
+                in practice.</p>\n
             inLanguage:
               type: array
               nullable: true
               uniqueItems: true
-              description: 'List of languages in which the course is offered. Each language should be abbreviated in accordance with BCP 47: https://tools.ietf.org/html/bcp47.'
+              description: 'List of languages in which the course is offered. Each
+                language should be abbreviated in accordance with BCP 47: https://tools.ietf.org/html/bcp47.'
               items:
                 type: string
                 example: en
@@ -873,7 +967,9 @@ components:
               type: array
               nullable: true
               uniqueItems: true
-              description: The time and date the course starts. It is possible to give several date-times for repetitive courses. The date-time to be given according to ISO 8601.
+              description: The time the course starts. It is possible to give several
+                date-times for repetitive courses. The date-time to be given according
+                to ISO 8601.
               items:
                 type: string
                 format: date-time
@@ -882,7 +978,9 @@ components:
               type: array
               nullable: true
               uniqueItems: true
-              description: The time and date the course ends. It is possible to give several date-times for repetitive courses. The date-time to be given according to ISO 8601.
+              description: The time the course ends. It is possible to give several
+                date-times for repetitive courses. The date-time to be given according
+                to ISO 8601.
               items:
                 type: string
                 format: date-time
@@ -891,8 +989,9 @@ components:
               type: array
               nullable: true
               uniqueItems: true
-              description: |
-                The time and date the course is no longer available. It is possible to give several date-times for repetitive courses. The date-time to be given according to ISO 8601.
+              description: The time and date the course is no longer available. It
+                is possible to give several date-times for repetitive courses. The
+                date-time to be given according to ISO 8601.
               items:
                 type: string
                 format: date-time
@@ -906,7 +1005,8 @@ components:
             instructor:
               type: array
               uniqueItems: true
-              description: List of instructors of the course. Also organizations can be given.
+              description: List of instructors of the course. Also organizations can
+                be given.
               items:
                 anyOf:
                   - $ref: ./Organization.yaml
@@ -916,7 +1016,8 @@ components:
             teaches:
               type: array
               uniqueItems: true
-              description: List of learning objectives for this course as an array of Skill objects.
+              description: List of learning objectives for this course as an array
+                of Skill objects.
               items:
                 $ref: ./Skill.yaml
             duration:
@@ -924,17 +1025,19 @@ components:
               example: P2W
               type: string
               format: duration
-              pattern: '^P(?!$)(\d+(?:\.\d+)?Y)?(\d+(?:\.\d+)?M)?(\d+(?:\.\d+)?W)?(\d+(?:\.\d+)?D)?(T(?=\d)(\d+(?:\.\d+)?H)?(\d+(?:\.\d+)?M)?(\d+(?:\.\d+)?S)?)?$'
+              pattern: 
+                ^P(?!$)(\d+(?:\.\d+)?Y)?(\d+(?:\.\d+)?M)?(\d+(?:\.\d+)?W)?(\d+(?:\.\d+)?D)?(T(?=\d)(\d+(?:\.\d+)?H)?(\d+(?:\.\d+)?M)?(\d+(?:\.\d+)?S)?)?$
             contributor:
               type: array
-              description: A List of partner institutes or persons contributed to this course.
+              description: A List of partner institutes or persons contributed to
+                this course.
               uniqueItems: true
               items:
                 anyOf:
                   - $ref: ./Organization.yaml
-                    #description: An organization contributing to the course.
+                    #description: An organization participating in creating the course.
                   - $ref: ./Person.yaml
-                    #description: A person contributing to the course.
+                    #description: A person participating in creating the course.
             publisher:
               description: The publisher of the course. Can be a person or an organization.
               anyOf:
@@ -948,17 +1051,20 @@ components:
             workload:
               type: object
               nullable: true
-              description: Specifies the amount of time course participants should plan with when taking the course.
+              description: Specifies the amount of time course participants should
+                plan with when taking the course.
               minProperties: 0
               example: null
               properties:
                 timeValue:
                   type: integer
-                  description: The numeric value of time course participants should plan with when taking the course.
+                  description: The numeric value of time course participants should
+                    plan with when taking the course.
                   minimum: 0
                 timeUnit:
                   type: string
-                  description: 'The unit of time course participants should plan with when taking the course (e.g. h/month, h/week).'
+                  description: The unit of time course participants should plan with
+                    when taking the course (e.g. h/month, h/week).
                   enum:
                     - h/month
                     - h/week
@@ -975,7 +1081,10 @@ components:
             access:
               type: array
               nullable: true
-              description: Specifies how this course can be accessed by learners. The different access options shall not be used to transport differences between available content under this access option but rather annotate the course track or certificate that can be achieved.
+              description: Specifies how this course can be accessed by learners.
+                The different access options shall not be used to transport differences
+                between available content under this access option but rather annotate
+                the course track or certificate that can be achieved.
               uniqueItems: true
               items:
                 type: string
@@ -987,7 +1096,9 @@ components:
             audience:
               type: array
               nullable: true
-              description: 'A list of audiences the course is intended for. The audience type is chosen by giving a node of the DublinCore vocabulary from https://www.dublincore.org/specifications/lrmi/concept_schemes/educationalAudienceRole/.'
+              description: A list of audiences the course is intended for. The audience
+                type is chosen by giving a node of the DublinCore vocabulary from
+                https://www.dublincore.org/specifications/lrmi/concept_schemes/educationalAudienceRole/.
               uniqueItems: true
               items:
                 type: string
@@ -995,13 +1106,15 @@ components:
                 format: iri
             educationalAlignment:
               type: array
-              description: This list describes the topics or subjects of the course and the frameworks which are used for determination.
+              description: This list describes the topics or subjects of the course
+                and the frameworks which are used for determination.
               uniqueItems: true
               items:
                 $ref: ./EducationalAlignment.yaml
             educationalLevel:
               type: array
-              description: List of categorization of competencylevel and the related frameworks.
+              description: List of categorization of competency level and the related
+                frameworks.
               uniqueItems: true
               items:
                 $ref: ./EducationalLevel.yaml
@@ -1009,7 +1122,8 @@ components:
               type: array
               uniqueItems: true
               minItems: 1
-              description: List of creators of the course. Also organizations can be given.
+              description: List of creators of the course. Also organizations can
+                be given.
               items:
                 anyOf:
                   - $ref: ./Organization.yaml
@@ -1029,20 +1143,25 @@ components:
               #description: The place where the content/course can be found.
             offer:
               type: array
-              description: 'List of offers. An Offer object includes the price, currency and frequency of the payment.'
+              description: List of offers. An Offer object includes the price, currency
+                and frequency of the payment.
               uniqueItems: true
               items:
                 $ref: ./Offer.yaml
             numberOfCredits:
               type: number
               nullable: true
-              description: 'The number of credits received for successfully completing the course. Currently, credits are given according the European Credit Transfer System (ECTS)'
+              description: The number of credits received for successfully completing
+                the course. Currently, credits are given according the European Credit
+                Transfer System (ECTS)
               example: null
               minimum: 0
             educationalCredentialsAwarded:
               type: array
               nullable: true
-              description: Clarification which kinds of awards for successfully completing the course are given. ECTS are awarded if numberOfCredits > 0 (No explicit information given here).
+              description: Clarification which kinds of awards for successfully completing
+                the course are given. ECTS are awarded if numberOfCredits > 0 (No
+                explicit information given here).
               uniqueItems: true
               items:
                 type: string
@@ -1053,7 +1172,9 @@ components:
                 example: record of achievement
             competencyRequired:
               type: array
-              description: 'A list of competencies that are required to successfully complete the course. This includes skills, certificated, (high) school degrees, other courses, etc.'
+              description: A list of competencies that are required to successfully
+                complete the course. This includes skills, certificated, (high) school
+                degrees, other courses, etc.
               uniqueItems: true
               example: null
               items:
@@ -1065,19 +1186,23 @@ components:
             applicationStartDate:
               type: string
               nullable: true
-              description: The time and date the period to enroll or hand in an application for the course begins. Given according to ISO 8601.
+              description: The time and date the period to enroll or hand in an application
+                for the course begins. Given according to ISO 8601.
               format: date-time
               example: null
             applicationDeadline:
               type: string
               nullable: true
               format: date-time
-              description: The time end date the enrolment and application period for the course ends. Given according to ISO 8601.
+              description: The time end date the enrolment and application period
+                for the course ends. Given according to ISO 8601.
               example: null
             accessMode:
               type: array
               nullable: true
-              description: 'Listing of accessModes e.g. audio-descriptive (for deaf people) and other handicaps, uses vocabulary from https://www.w3.org/2021/a11y-discov-vocab/latest/#accessModeSufficient-vocabulary.'
+              description: Listing of accessModes e.g. audio-descriptive (for deaf
+                people) and other handicaps, uses vocabulary from 
+                https://www.w3.org/2021/a11y-discov-vocab/latest/#accessModeSufficient-vocabulary.
               uniqueItems: true
               items:
                 type: string
@@ -1088,26 +1213,32 @@ components:
                   - auditory
             repeatFrequency:
               type: array
-              description: 'A list of schedule objects describing in which frequency course units take place, e.g. every Tuesday 7pm to 9pm and every Thursday 6pm to 8pm.'
+              description: A list of schedule objects describing in which frequency
+                course units take place, e.g. every Tuesday 7pm to 9pm and every Thursday
+                6pm to 8pm.
               example: null
               items:
                 $ref: ./Schedule.yaml
             dateCreated:
               type: string
               nullable: true
-              description: The date the content was created. Given according to ISO 8601.
+              description: The date the content was created. Given according to ISO
+                8601.
               format: date-time
               example: null
             dateModified:
               type: string
               nullable: true
               format: date-time
-              description: The date the content was changed last. Given according to ISO 8601.
+              description: The date the content was changed last. Given according
+                to ISO 8601.
               example: null
             hollandCode:
               type: array
               nullable: true
-              description: 'The assessed competency described in Holland Code/RIASEC Model. The allowed values are therefor \"R\", \"I\", \"A\", \"S\", \"E\", \"C\" according to the Holland taxonomy.'
+              description: The assessed competency described in Holland Code/RIASEC
+                Model. The allowed values are therefor "R", "I", "A", "S", "E", "C"
+                according to the Holland taxonomy.
               uniqueItems: true
               items:
                 type: string
@@ -1120,13 +1251,16 @@ components:
                   - C
             hasPart:
               type: array
-              description: 'A list of the learning items like videos, lectures, quizzes, ... in the course.'
+              description: A list of the learning items like videos, lectures, quizzes,
+                ... in the course.
               uniqueItems: true
               items:
                 $ref: ./LearningItem.yaml
             isPartOf:
               type: array
-              description: A list of programs (preferable EducationalOccupationalPrograms) this course is part of. The given metadata shall at least contain a link to the program.
+              description: A list of programs (preferable EducationalOccupationalPrograms)
+                this course is part of. The given metadata shall at least contain
+                a link to the program.
               uniqueItems: true
               example: null
               items:

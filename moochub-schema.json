@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/moochub/schema/releases/tag/v3.0",
+  "$id": "https://github.com/moochub/schema/releases/tag/v3.0.1",
   "title": "JSON schema for MOOC providers integrated into moochub.org",
   "description": "This schema specifies the JSON format each MOOC provider must offer in order to be integrated into moochub.org",
   "type": "object",

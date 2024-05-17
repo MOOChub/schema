@@ -1,7 +1,7 @@
-openapi: 3.0.0
+openapi: 3.0.1
 info:
   title: MOOChub API
-  version: '3.0'
+  version: '3.0.1'
   description: API for MOOChub to access public course information.
   contact:
     name: openHPI

@@ -1,0 +1,102 @@
+### Added
+- root['properties']['data']['items']['properties']['id']['format']: Added field.
+- root['properties']['data']['items']['properties']['id']['example']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['learningResourceType']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['inLanguage']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['expires']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['trailer']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['instructor']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['teaches']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['contributor']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['publisher']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['license']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['audience']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['educationalAlignment']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['educationalLevel']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['creator']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['keywords']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['contentLocation']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['offer']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['numberOfCredits']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['educationalCredentialsAwarded']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['competencyRequired']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['applicationStartDate']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['applicationDeadline']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['accessMode']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['repeatFrequency']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['dateCreated']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['dateModified']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['hollandCode']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['hasPart']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['isPartOf']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['name']['example']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['courseCode']['example']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['courseMode']['minItems']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['courseMode']['uniqueItems']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['courseMode']['items']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['description']['example']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['startDate']['uniqueItems']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['startDate']['items']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['endDate']['uniqueItems']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['endDate']['items']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['image']['properties']['description']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['image']['properties']['type']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['image']['properties']['contentUrl']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['image']['properties']['license']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['duration']['example']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['duration']['format']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['url']['example']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['workload']['minProperties']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['workload']['example']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['workload']['properties']: Added field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['workload']['required']: Added field.
+### Removed
+- root['required']: Removed field.
+- root['properties']['data']['items']['properties']['id']['minLength']: Removed field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['abstract']: Removed field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['languages']: Removed field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['availableUntil']: Removed field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['video']: Removed field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['instructors']: Removed field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['learningObjectives']: Removed field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['partnerInstitutes']: Removed field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['moocProvider']: Removed field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['courseLicenses']: Removed field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['courseMode']['enum']: Removed field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['startDate']['format']: Removed field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['endDate']['format']: Removed field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['image']['properties']['url']: Removed field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['image']['properties']['licenses']: Removed field.
+- root['properties']['data']['items']['properties']['attributes']['properties']['access']['minItems']: Removed field.
+### Modified
+- root['$schema']: Modified field from http://json-schema.org/draft-07/schema to https://json-schema.org/draft/2020-12/schema.
+- root['$id']: Modified field from https://github.com/moochub/schema/releases/tag/v2.3 to https://github.com/moochub/schema/releases/tag/v3.0.1.
+- root['properties']['data']['items']['properties']['id']['description']: Modified field from ID of the object, UUID is preferred to The ID of the course as an UUID..
+- root['properties']['data']['items']['properties']['type']['description']: Modified field from Type of the object to Type of the object..
+- root['properties']['data']['items']['properties']['attributes']['description']: Modified field from Attributes of the object to The Attributes of the course..
+- root['properties']['data']['items']['properties']['attributes']['properties']['name']['description']: Modified field from Promoted course title to The title of the course..
+- root['properties']['data']['items']['properties']['attributes']['properties']['courseCode']['description']: Modified field from Course code, slug or human visible identifier for the course to An internal short code of the course. Also possible to give internal codes for templates here..
+- root['properties']['data']['items']['properties']['attributes']['properties']['courseMode']['description']: Modified field from Mode of the course to This attribute describes the course mode. It is limited to "blended", "online", "onsite", "synchronous" and "asynchronous"..
+- root['properties']['data']['items']['properties']['attributes']['properties']['startDate']['description']: Modified field from Start date with time of the course as shown on the course detail page in ISO 8601 format to The time the course starts. It is possible to give several date-times for repetitive courses. The date-time to be given according to ISO 8601..
+- root['properties']['data']['items']['properties']['attributes']['properties']['endDate']['description']: Modified field from End date with time of the course as shown on the course detail page in ISO 8601 format to The time the course ends. It is possible to give several date-times for repetitive courses. The date-time to be given according to ISO 8601..
+- root['properties']['data']['items']['properties']['attributes']['properties']['image']['title']: Modified field from Visual to ImageObject.
+- root['properties']['data']['items']['properties']['attributes']['properties']['image']['description']: Modified field from Details of the visual (image / video depending on the context) to This schema describes the attributes of an image..
+- root['properties']['data']['items']['properties']['attributes']['properties']['duration']['description']: Modified field from ISO 8601 encoded duration to ISO 8601 encoded duration of the course..
+- root['properties']['data']['items']['properties']['attributes']['properties']['url']['description']: Modified field from Link to the course detail page to Link to the course detail page..
+- root['properties']['data']['items']['properties']['attributes']['properties']['workload']['description']: Modified field from Specifies the amount of weekly hours course participants should plan with when taking the course to Specifies the amount of time course participants should plan with when taking the course..
+- root['properties']['data']['items']['properties']['attributes']['properties']['access']['description']: Modified field from Specifies how this course can be accessed by learners. The different access options shall not be used to transport differences between available content under this access option but rather annotate the course track or certificate that can be achieved to Specifies how this course can be accessed by learners. The different access options shall not be used to transport differences between available content under this access option but rather annotate the course track or certificate that can be achieved..
+- root['properties']['data']['items']['properties']['attributes']['properties']['image']['required'][0]: Modified field from url to contentUrl.
+- root['properties']['data']['items']['properties']['attributes']['required'][1]: Modified field from courseMode to learningResourceType.
+- root['properties']['data']['items']['properties']['attributes']['properties']['startDate']['type'][0]: Modified field from string to array.
+- root['properties']['data']['items']['properties']['attributes']['required'][5]: Modified field from courseLicenses to creator.
+- root['properties']['data']['items']['properties']['attributes']['properties']['workload']['type'][0]: Modified field from integer to object.
+- root['properties']['data']['items']['properties']['attributes']['properties']['image']['required'][1]: Modified field from licenses to license.
+- root['properties']['data']['items']['properties']['attributes']['properties']['endDate']['type'][0]: Modified field from string to array.
+- root['properties']['data']['items']['properties']['attributes']['properties']['access']['items']['enum'][2]: Modified field from member-only to student.
+- root['properties']['data']['items']['properties']['attributes']['required'][2]: Modified field from instructors to publisher.
+- root['properties']['data']['items']['properties']['type']['enum'][0]: Modified field from courses to Course.
+### Type Changes
+- root['properties']['data']['items']['properties']['attributes']['properties']['courseMode']['type']: Changed type from <class 'str'> to <class 'list'>.
+- root['properties']['data']['items']['properties']['attributes']['properties']['image']['type']: Changed type from <class 'list'> to <class 'str'>.
+- root['properties']['data']['items']['properties']['attributes']['properties']['duration']['type']: Changed type from <class 'list'> to <class 'str'>.
+- root['properties']['data']['items']['properties']['attributes']['properties']['access']['type']: Changed type from <class 'str'> to <class 'list'>.

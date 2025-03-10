@@ -51,7 +51,7 @@ paths:
                       next: 'https://open.hpi.de/bridges/moochub/courses?page=3'
                       prev: 'https://open.hpi.de/bridges/moochub/courses?page=1'
                     data:
-                      id: '123'
+                      id: 8978f51e-770c-4d0a-a2e3-23fae8f6aa79
                       type: Course
                       attributes:
                         name: Course - the complete example
@@ -595,7 +595,7 @@ components:
                     educationalFramework: Course_ID
                     targetUrl: 'https://open.hpi.de/courses/digitrans2020-1'
             isPartOf: null
-        - id: '123'
+        - id: 8978f51e-770c-4d0a-a2e3-23fae8f6aa79
           type: Course
           attributes:
             name: Course - the complete example
@@ -862,7 +862,7 @@ components:
         id:
           type: string
           description: The ID of the course as an UUID.
-          minLength: 1
+          format: uuid
           example: 8978f51e-770c-4d0a-a2e3-23fae8f6aa79
         type:
           type: string

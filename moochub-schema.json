@@ -4,6 +4,93 @@
   "title": "JSON schema for MOOC providers integrated into moochub.org",
   "description": "This schema specifies the JSON format each MOOC provider must offer in order to be integrated into moochub.org",
   "type": "object",
+  "$defs": {
+    "LangString": {
+      "title": "Localized Text",
+      "description": "A localized text string with a language code",
+      "type": "object",
+      "properties": {
+        "language": {
+          "type": "string",
+          "pattern": "^[a-z]{2,3}(-[A-Z]{2})?(-[a-z0-9]{1,8})*$",
+          "description": "Language code following BCP 47 standard"
+        },
+        "string": {
+          "type": "string",
+          "description": "The actual text content",
+          "contentMediaType": "text/plain"
+        }
+      },
+      "required": [
+        "string",
+        "language"
+      ]
+    },
+    "LangContent": {
+      "title": "Localized Content",
+      "description": "A localized content string with a language code and media type",
+      "type": "object",
+      "properties": {
+        "language": true,
+        "string": true,
+        "contentMediaType": {
+          "enum": [
+            "text/plain",
+            "text/html",
+            "text/markdown"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/$defs/LangString"
+        }
+      ],
+      "required": [
+        "contentMediaType"
+      ]
+    },
+    "MultilingualString": {
+      "title": "Multilingual String",
+      "description": "A string that can be provided in multiple languages",
+      "anyOf": [
+        {
+          "type": "string",
+          "description": "Legacy format: plain string",
+          "contentMediaType": "text/plain",
+          "deprecated": true
+        },
+        {
+          "type": "array",
+          "description": "Array of localized text entries",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/LangString"
+          }
+        }
+      ]
+    },
+    "MultilingualContent": {
+      "title": "Multilingual Content",
+      "description": "A content string that can be provided in multiple languages and different text formats",
+      "anyOf": [
+        {
+          "type": "string",
+          "description": "Legacy format: plain string",
+          "contentMediaType": "text/plain",
+          "deprecated": true
+        },
+        {
+          "type": "array",
+          "description": "Array of localized content entries",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/LangContent"
+          }
+        }
+      ]
+    }
+  },
   "properties": {
     "links": {
       "title": "Links",
@@ -82,8 +169,8 @@
             ],
             "properties": {
               "name": {
-                "type": "string",
-                "description": "The title of the course.",
+                "$ref": "#/$defs/MultilingualString",
+                "description": "The title of the course. Can be provided as a simple string (legacy) or as a multilingual object.",
                 "example": "Confidential Communication in the Internet"
               },
               "courseCode": {
@@ -148,11 +235,15 @@
                 }
               },
               "description": {
-                "type": [
-                  "string",
-                  "null"
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "$ref": "#/$defs/MultilingualContent"
+                  }
                 ],
-                "description": "Description of the course as an HTML document",
+                "description": "Description of the course. Can be provided as HTML string (legacy) or as a multilingual object with format specification.",
                 "example": "<p>A message on the Internet is sent through several networks and via different stations on its way to the target system. The individual stations are responsible for ensuring that the message is properly forwarded and finally delivered to the correct recipient. Each of these stations, if the message is sent in plain text, can receive the message and read its content. This means that a potential attacker, if he controls one of these intermediate systems, can also read the content of the message and even modify it before retransmitting it. Such attacks can have extreme effects on communication.</p>\\n\\n<p>In this course we will look at how and whether your connection to online banking is secure or whether the content of an e-mail is trustworthy. For this purpose we will deal with the basics of cryptography, security objectives and different types of encryption. In addition, we will provide insights into different models and standards that are used in practice.</p>\\n"
               },
               "inLanguage": {

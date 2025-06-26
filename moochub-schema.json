@@ -3232,14 +3232,11 @@
                     },
                     "type": {
                       "type": "string",
-                      "description": "The type of relationship between this course and the related course. Uses a 2-dimensional approach combining sequence (foundation/continuation/complementary/elective) with requirement level (mandatory/recommended).",
+                      "description": "The type of relationship between this course and the related course. Defines the nature of the relationship, such as whether it is a prerequisite, a follow-up, or complementary.",
                       "enum": [
-                        "foundation_mandatory",
-                        "foundation_recommended",
-                        "continuation_mandatory",
-                        "continuation_recommended",
-                        "complementary_mandatory",
-                        "complementary_recommended"
+                        "foundation",
+                        "continuation",
+                        "complementary"
                       ]
                     }
                   },

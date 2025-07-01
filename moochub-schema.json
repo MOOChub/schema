@@ -131,7 +131,6 @@
       },
       "required": [
         "contentUrl",
-        "type",
         "license"
       ]
     },
@@ -163,7 +162,6 @@
       },
       "required": [
         "contentUrl",
-        "type",
         "license"
       ]
     },

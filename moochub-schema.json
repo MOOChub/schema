@@ -39,12 +39,6 @@
         "inScheme"
       ]
     },
-    "DateTime": {
-      "type": "string",
-      "format": "date-time",
-      "description": "A date-time according to ISO 8601.",
-      "example": "2021-01-13T08:00:00Z"
-    },
     "NullableDateTime": {
       "type": [
         "string",
@@ -62,7 +56,10 @@
       "description": "A list of date-times according to ISO 8601.",
       "uniqueItems": true,
       "items": {
-        "$ref": "#/$defs/DateTime"
+        "type": "string",
+        "format": "date-time",
+        "description": "A date-time according to ISO 8601.",
+        "example": "2021-01-13T08:00:00Z"
       }
     },
     "License": {

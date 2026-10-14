@@ -8,6 +8,10 @@
     "id": {
       "$ref": "https://w3id.org/moochub/draft/schemas/id.json"
     },
+    "url": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/url.json",
+      "description": "A detail page for this specific course offering."
+    },
     "type": {
       "const": "CourseInstance"
     },

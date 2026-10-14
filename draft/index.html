@@ -349,11 +349,21 @@ Vary: Accept
     <section data-dfn-for="Course">
       <h3><dfn>Course</dfn></h3>
 
-      Ein <code>Course</code>-Objekt ist eine einzelne Lernressource. Die
-      Eigenschaften beschreiben Identität, Darstellung, fachlichen Inhalt und
-      konkrete Kursangebote. Verschachtelte Objekte wie Medien, Angebote oder
-      Kursinstanzen haben eigene Strukturen, die in der Property-Referenz und
-      den verlinkten Schemas erläutert werden.
+      Ein <code>Course</code>-Objekt beschreibt ein fachlich zusammengehöriges
+      Lernangebot. Die Eigenschaften beschreiben dessen Identität, Darstellung
+      und fachlichen Inhalt. Konkrete zeitliche, örtliche oder anderweitig
+      unterschiedliche Durchführungen werden als <code>CourseInstance</code>
+      über <code>hasCourseInstance</code> angegeben.
+
+      <p>
+        Wenn sich der fachliche Inhalt eines Kurses zwischen Semestern oder
+        Durchführungen nicht wesentlich ändert, wird empfohlen, diese
+        Durchführungen demselben <code>Course</code> zuzuordnen. Ändern sich die
+        Inhalte wesentlich, kann ein eigener <code>Course</code> angemessener
+        sein. Der Anbieter entscheidet anhand seiner fachlichen Daten, ob eine
+        neue Durchführung zu einem bestehenden Kurs gehört oder einen neuen
+        Kurs darstellt.
+      </p>
 
       <table class="def">
         <thead>
@@ -384,12 +394,6 @@ Vary: Accept
             <td>URI der fachlichen Identität.</td>
           </tr>
           <tr>
-            <td><code>url</code></td>
-            <td>ja</td>
-            <td><code>string (URL)</code></td>
-            <td>Öffentlich erreichbare Kursseite.</td>
-          </tr>
-          <tr>
             <td><code>name</code></td>
             <td>ja</td>
             <td><a><code>LocalizedString</code></a></td>
@@ -412,6 +416,13 @@ Vary: Accept
             <td>ja</td>
             <td><a><code>License</code></a></td>
             <td>Rechteangabe.</td>
+          </tr>
+          <tr>
+            <td><code>url</code></td>
+            <td>nein</td>
+            <td><code>string (URL)</code></td>
+            <td>Öffentlich erreichbare Kursseite. Kann entfallen, wenn es stattdessen Detailseiten einer einzelnen
+              Durchführung gibt.</td>
           </tr>
           <tr>
             <td><code>courseCode</code></td>
@@ -736,7 +747,10 @@ Vary: Accept
       <h3><dfn>CourseInstance</dfn></h3>
 
       Eine <code>CourseInstance</code> beschreibt eine konkrete
-      Durchführung oder Angebotsform eines Kurses.
+      Durchführung oder Angebotsform eines Kurses. Mehrere Durchführungen
+      desselben fachlichen Kurses werden als separate Instanzen über
+      <code>hasCourseInstance</code> am zugehörigen <code>Course</code>
+      veröffentlicht.
 
       <table class="def">
         <thead>
@@ -759,6 +773,13 @@ Vary: Accept
             <td>ja</td>
             <td><a><code>ID</code></a></td>
             <td>URI der Kursinstanz</td>
+          </tr>
+          <tr>
+            <td><code>url</code></td>
+            <td>nein</td>
+            <td><code>string (URL)</code></td>
+            <td>Detailseite dieser konkreten Kursdurchführung. KANN entfallen, wenn es eine übergreifende Kursseite
+              gibt.</td>
           </tr>
           <tr>
             <td><code>name</code></td>
@@ -845,6 +866,7 @@ Vary: Accept
 "hasCourseInstance": [{
   "type": "CourseInstance",
   "id": "https://example.org/courses/python/summer-2026",
+  "url": "https://example.org/courses/python/summer-2026",
   "courseMode": ["onsite", "synchronous"],
   "startDate": "2026-03-01T00:00:00Z",
   "endDate": "2026-07-31T23:59:59Z",

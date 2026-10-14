@@ -38,7 +38,7 @@
     },
     "url": {
       "$ref": "https://w3id.org/moochub/draft/schemas/url.json",
-      "description": "A booking, checkout, enrollment, or access URL for this offer that differs from the main course URL."
+      "description": "A booking, checkout, enrollment, or access URL for this offer."
     }
   },
   "required": ["type", "price", "priceCurrency", "category"]

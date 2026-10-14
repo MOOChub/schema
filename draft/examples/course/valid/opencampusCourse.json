@@ -6,52 +6,82 @@
     }
   ],
   "type": ["LearningResource", "Course"],
-  "id": "urn:uuid:ece708a9-2592-501c-8401-e88b59f803b1",
-  "url": "https://edu.opencampus.sh/course/624?source=moochub&provider=opencampus-sh&feed_version=3.0.1",
-  "courseCode": "624",
+  "id": "urn:uuid:4a86e515-312d-4718-a18f-a772c2bf033e",
+  "courseCode": "702",
   "name": {
-    "de": "Social Media Sessions"
+    "en": "Pentesting with AI?"
   },
   "description": [
     {
       "type": "TextObject",
-      "inLanguage": "de",
-      "text": "\u003Cp\u003EHier erfährst du, wie Social Media in der Praxis verstanden, geplant und angewendet wird.\u003C/p\u003E\u003Ch3\u003ELernziele:\u003C/h3\u003E\u003Cul\u003E\u003Cli\u003EGrundlagen, Methoden und Strategien von Social Media Marketing\u003C/li\u003E\u003Cli\u003EBest Practices von Akteuren aus der Praxis im Bereich Social Media\u003C/li\u003E\u003Cli\u003EVerschiedene Anwendungsbereiche und Tools für Social Media\u003C/li\u003E\u003C/ul\u003E\u003Ch3\u003EFür wen ist der Kurs geeignet?\u003C/h3\u003E\u003Cp\u003EDu interessierst dich für das Thema Social Media und möchtest gerne wissen, wie Unternehmen, Institutionen und Selbstständige auf verschiedenen Kanälen agieren? Du kannst dir vorstellen später im Bereich Online-/Social-Media-Marketing tätig zu werden? Vielleicht bist du auch sogar schon im Social-Media-Bereich für ein Unternehmen oder ein eigenes Projekt unterwegs und möchtest dich mit anderen darüber austauschen? In allen Fällen bist du hier richtig!\u003C/p\u003E\u003Ch3\u003EWas erwartet dich?\u003C/h3\u003E\u003Cp\u003EUnternehmen und Referen:tinnen verschiedenster Branchen geben dir ein ganzes Wochenende verschiedene Einblicke und bieten dir so die Möglichkeit, in ihre Social-Media-Praxis einzutauchen.\nWann ist der richtige Zeitpunkt für ein Posting? Wie erreiche ich meine Zielgruppe und wozu muss ich diese überhaupt genau definieren? Was mache ich, wenn ein Shitstorm über meinen Post hereinbricht? Welche Werkzeuge bieten mir eine bestmögliche Auswertung? Welche sprachliche Form ist angebracht? Was mache ich, wenn es nicht so läuft wie erwünscht? Und wie bekomme ich eigentlich maximale Reichweite?\u003Cbr /\u003E\nDiese und viele weitere Fragen werden dir im Rahmen der Social Media Sessions beantwortet. So lernst du einfache, aber wirkungsvolle Mechanismen für Aktivitäten in sozialen Netzwerken zu nutzen.\n&nbsp;\u003Cbr /\u003E\n&nbsp;  \u003C/p\u003E",
+      "inLanguage": "en",
+      "text": "\u003Cp\u003EA hands-on introduction to finding vulnerabilities in web apps and to how AI agents are reshaping both attack and defense. We will break three CTF challenges on OWASP Juice Shop by hand, then compare how AI pentesting agents tackle the same targets. Covers red, blue and purple teaming, recent incidents, and small-scale automation. Ethics and rules of engagement up front; all work on sanctioned, self-hosted targets only.\u003C/p\u003E\u003Ch3\u003ELearning Goals:\u003C/h3\u003E\u003Cul\u003E\u003Cli\u003EPlanning and running security tests within a sanctioned scope and agreed rules of engagement.\u003C/li\u003E\u003Cli\u003EFinding and exploiting vulnerabilities by hand in a deliberately vulnerable web app like OWASP Juice Shop.\u003C/li\u003E\u003Cli\u003EApplying open-source AI pentesting agents and comparing their findings with the manual approach.\u003C/li\u003E\u003Cli\u003EAssessing what AI agents contribute to red, blue and purple teaming, using concrete incidents.\u003C/li\u003E\u003Cli\u003ECarrying out a pentesting project of their own and documenting the findings in a vulnerability report.\u003C/li\u003E\u003C/ul\u003E\u003Ch3\u003EWhat you get\u003C/h3\u003E\u003Cp\u003EThe course instruction is hybrid, which means you can participate either online or in person in Kiel (see location listed in the dates).\u003C/p\u003E\n\u003Cp\u003EEach challenge follows the same rhythm: you attack our deliberately vulnerable Juiceshop web-app by hand first, we discuss and show-and-tell what everyone found, and only then, once thoroughly understood, will we discuss AI/LLM-based approaches against the same target.\u003C/p\u003E\n\u003Cp\u003EYou get your own access to a safe-to-attack CTF environment (self-hosted, network-isolated), reachable via VPN, plus an introduction to current open-source AI pentesting agents/frameworks.\u003C/p\u003E\n\u003Cp\u003EThe course will offer real-world context and a capstone project where you apply what you've learned end to end.\u003C/p\u003E\n\u003Cp\u003EAll needed software is free and open-source.\u003C/p\u003E\u003Ch3\u003EWhat you should bring\u003C/h3\u003E\u003Cp\u003EAll tests stays inside the course's defined, sanctioned scope — you'll sign a commitment to the rules of engagement up front.\u003C/p\u003E\n\u003Cp\u003EYou don't need prior pentesting experience, but you should be comfortable with a computer: running a terminal, installing software (git, Docker, a VPN client, SSH), and getting Docker and a VPN client running on your own machine.\u003C/p\u003E\n\u003Cp\u003EYou should bring sufficient time and a willingness to show your work, including dead ends: the format runs on show-and-tell, not polished results or AI slop. We are as interested in this topic as you are. Between sessions you'll work on CTF homework challenges. Expect a written note after each manual challenge (what you found, how, how long it took, what dead ends you hit) — this is what makes the later manual-vs-AI comparison possible, and doubles as practice for writing the vulnerability report.\u003C/p\u003E\n\u003Cp\u003EIn order to receive a certificate of achievement (Leistungszertifikat / 2.5 ECTS) for this course, active participation is expected, and you have to conduct a practice project and submit a finished report. \u003C/p\u003E",
       "encodingFormat": "text/html"
     }
   ],
-  "inLanguage": ["de"],
+  "inLanguage": ["en"],
   "keywords": ["DLC-Original"],
   "hasCourseInstance": [
     {
-      "id": "urn:uuid:a0db07ec-bd85-4cdb-ad36-4d3b0c35413a",
+      "id": "urn:uuid:a357e80f-c0d0-5ecf-9108-4b5d1fd9250f",
       "type": "CourseInstance",
+      "url": "https://edu.opencampus.sh/course/702?source=moochub&provider=opencampus-sh&feed_version=4.0.0",
       "courseMode": ["onsite"],
       "subEvent": [
         {
           "type": "Event",
-          "startDate": "2026-06-12T13:00:00+00:00",
-          "endDate": "2026-06-12T16:00:00+00:00"
+          "startDate": "2026-11-10T16:00:00+00:00",
+          "endDate": "2026-11-10T18:00:00+00:00"
         },
         {
           "type": "Event",
-          "startDate": "2026-06-13T09:00:00+00:00",
-          "endDate": "2026-06-13T16:00:00+00:00"
+          "startDate": "2026-11-17T16:00:00+00:00",
+          "endDate": "2026-11-17T18:00:00+00:00"
         },
         {
           "type": "Event",
-          "startDate": "2026-06-14T09:00:00+00:00",
-          "endDate": "2026-06-14T12:00:00+00:00"
+          "startDate": "2026-11-24T16:00:00+00:00",
+          "endDate": "2026-11-24T18:00:00+00:00"
+        },
+        {
+          "type": "Event",
+          "startDate": "2026-12-01T16:00:00+00:00",
+          "endDate": "2026-12-01T18:00:00+00:00"
+        },
+        {
+          "type": "Event",
+          "startDate": "2026-12-08T16:00:00+00:00",
+          "endDate": "2026-12-08T18:00:00+00:00"
+        },
+        {
+          "type": "Event",
+          "startDate": "2026-12-15T16:00:00+00:00",
+          "endDate": "2026-12-15T18:00:00+00:00"
+        },
+        {
+          "type": "Event",
+          "startDate": "2026-12-22T16:00:00+00:00",
+          "endDate": "2026-12-22T18:00:00+00:00"
+        },
+        {
+          "type": "Event",
+          "startDate": "2027-01-05T15:00:00+00:00",
+          "endDate": "2027-01-05T17:00:00+00:00"
+        },
+        {
+          "type": "Event",
+          "startDate": "2027-01-12T16:00:00+00:00",
+          "endDate": "2027-01-12T18:00:00+00:00"
         }
       ],
-      "applicationStartDate": "2026-03-01T00:00:00Z",
-      "applicationDeadline": "2026-04-10T00:00:00Z",
+      "applicationStartDate": "2026-10-23T00:00:00Z",
+      "applicationDeadline": "2026-09-01T00:00:00Z",
       "location": [
         {
           "id": "urn:uuid:f988cf9e-d10e-4847-8c0f-d87e88ff4f2a",
           "type": "Place",
           "name": {
-            "de": "Eventraum"
+            "de": "Konferenzraum"
           },
           "description": [
             {
@@ -67,6 +97,83 @@
             "streetAddress": "Kuhnkestr. 6"
           }
         }
+      ],
+      "offers": [
+        {
+          "type": "Offer",
+          "price": 0,
+          "priceCurrency": "EUR",
+          "category": "complete",
+          "url": "https://edu.opencampus.sh/course/a357e80f-c0d0-5ecf-9108-4b5d1fd9250f/enroll",
+          "availabilityStarts": "2026-10-23T00:00:00Z",
+          "availabilityEnds": "2026-09-01T00:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:4b5457ae-f511-58bf-b984-77637155071a",
+      "type": "CourseInstance",
+      "url": "https://edu.opencampus.sh/course/702?source=moochub&provider=opencampus-sh&feed_version=4.0.0",
+      "courseMode": ["online"],
+      "subEvent": [
+        {
+          "type": "Event",
+          "startDate": "2026-11-10T16:00:00+00:00",
+          "endDate": "2026-11-10T18:00:00+00:00"
+        },
+        {
+          "type": "Event",
+          "startDate": "2026-11-17T16:00:00+00:00",
+          "endDate": "2026-11-17T18:00:00+00:00"
+        },
+        {
+          "type": "Event",
+          "startDate": "2026-11-24T16:00:00+00:00",
+          "endDate": "2026-11-24T18:00:00+00:00"
+        },
+        {
+          "type": "Event",
+          "startDate": "2026-12-01T16:00:00+00:00",
+          "endDate": "2026-12-01T18:00:00+00:00"
+        },
+        {
+          "type": "Event",
+          "startDate": "2026-12-08T16:00:00+00:00",
+          "endDate": "2026-12-08T18:00:00+00:00"
+        },
+        {
+          "type": "Event",
+          "startDate": "2026-12-15T16:00:00+00:00",
+          "endDate": "2026-12-15T18:00:00+00:00"
+        },
+        {
+          "type": "Event",
+          "startDate": "2026-12-22T16:00:00+00:00",
+          "endDate": "2026-12-22T18:00:00+00:00"
+        },
+        {
+          "type": "Event",
+          "startDate": "2027-01-05T15:00:00+00:00",
+          "endDate": "2027-01-05T17:00:00+00:00"
+        },
+        {
+          "type": "Event",
+          "startDate": "2027-01-12T16:00:00+00:00",
+          "endDate": "2027-01-12T18:00:00+00:00"
+        }
+      ],
+      "applicationStartDate": "2026-10-23T00:00:00Z",
+      "applicationDeadline": "2026-09-01T00:00:00Z",
+      "offers": [
+        {
+          "type": "Offer",
+          "price": 0,
+          "priceCurrency": "EUR",
+          "category": "complete",
+          "url": "https://edu.opencampus.sh/course/4b5457ae-f511-58bf-b984-77637155071a/enroll",
+          "availabilityStarts": "2026-10-23T00:00:00Z",
+          "availabilityEnds": "2026-09-01T00:00:00Z"
+        }
       ]
     }
   ],
@@ -75,21 +182,35 @@
       "id": "urn:uuid:9626e693-44a1-48d9-b2b3-0866058354a6",
       "type": "Competency",
       "name": {
-        "de": "Grundlagen, Methoden und Strategien von Social Media Marketing"
+        "en": "Planning and running security tests within a sanctioned scope and agreed rules of engagement."
       }
     },
     {
       "id": "urn:uuid:75cfc6d9-6c29-4e7d-a405-09dc5dc39a2b",
       "type": "Competency",
       "name": {
-        "de": "Best Practices von Akteuren aus der Praxis im Bereich Social Media"
+        "en": "Finding and exploiting vulnerabilities by hand in a deliberately vulnerable web app like OWASP Juice Shop."
       }
     },
     {
       "id": "urn:uuid:7049f6f9-44a6-440f-985d-1511aa822e44",
       "type": "Competency",
       "name": {
-        "de": "Verschiedene Anwendungsbereiche und Tools für Social Media"
+        "en": "Applying open-source AI pentesting agents and comparing their findings with the manual approach."
+      }
+    },
+    {
+      "id": "urn:uuid:45572642-d25e-4565-9706-aec6723e28c8",
+      "type": "Competency",
+      "name": {
+        "en": "Assessing what AI agents contribute to red, blue and purple teaming, using concrete incidents."
+      }
+    },
+    {
+      "id": "urn:uuid:ea7f4258-904c-45aa-a713-884521ac336b",
+      "type": "Competency",
+      "name": {
+        "en": "Carrying out a pentesting project of their own and documenting the findings in a vulnerability report."
       }
     }
   ],
@@ -133,7 +254,7 @@
   ],
   "image": {
     "type": "ImageObject",
-    "contentUrl": "https://storage.googleapis.com/eduhub-production/courses/course-624/public/cover-image/Social%20Media%20Session.png",
+    "contentUrl": "https://storage.googleapis.com/eduhub-production/courses/course-702/public/cover-image/Screenshot_2026-02-27_at_10.27.09.png",
     "description": {
       "de": "© Jan Konitzki / opencampus.sh"
     },

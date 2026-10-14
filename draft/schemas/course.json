@@ -136,5 +136,5 @@
       "format": "date-time"
     }
   },
-  "required": ["id", "type", "url", "name", "publisher", "creator", "license"]
+  "required": ["id", "type", "name", "publisher", "creator", "license"]
 }

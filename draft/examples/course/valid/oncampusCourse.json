@@ -28,6 +28,7 @@
     {
       "id": "urn:uuid:59ecc481-5de7-47ab-9071-7c029c1c20d1",
       "type": "CourseInstance",
+      "inLanguage": ["de"],
       "startDate": "2016-03-06T00:00:00+00:00",
       "duration": "P4W",
       "instructor": [

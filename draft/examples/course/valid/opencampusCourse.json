@@ -19,7 +19,7 @@
       "encodingFormat": "text/html"
     }
   ],
-  "inLanguage": ["en"],
+  "inLanguage": ["de", "en"],
   "keywords": ["DLC-Original"],
   "hasCourseInstance": [
     {
@@ -27,6 +27,7 @@
       "type": "CourseInstance",
       "url": "https://edu.opencampus.sh/course/702?source=moochub&provider=opencampus-sh&feed_version=4.0.0",
       "courseMode": ["onsite"],
+      "inLanguage": ["en"],
       "subEvent": [
         {
           "type": "Event",
@@ -115,6 +116,7 @@
       "type": "CourseInstance",
       "url": "https://edu.opencampus.sh/course/702?source=moochub&provider=opencampus-sh&feed_version=4.0.0",
       "courseMode": ["online"],
+      "inLanguage": ["de", "en"],
       "subEvent": [
         {
           "type": "Event",

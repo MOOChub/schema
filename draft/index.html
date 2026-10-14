@@ -453,7 +453,7 @@ Vary: Accept
             <td><code>inLanguage</code></td>
             <td>nein</td>
             <td><code>array[string]</code></td>
-            <td>Sprachen, in denen der Kurs angeboten wird. Die Werte MÜSSEN BCP-47-kompatibel sein.</td>
+            <td>Sprachen, in denen der Kurs insgesamt belegbar ist, gegebenenfalls als Zusammenfassung seiner Durchführungen. Die Werte MÜSSEN BCP-47-kompatibel sein. Unterscheiden sich die Sprachen einzelner Durchführungen, SOLLTEN diese bei <code>CourseInstance.inLanguage</code> angegeben werden. Ist <code>Course.inLanguage</code> angegeben, MÜSSEN die dort genannten Instanzsprachen darin enthalten sein.</td>
           </tr>
           <tr>
             <td><code>timeRequired</code></td>
@@ -794,10 +794,22 @@ Vary: Accept
             <td>Arten der Bereitstellung oder Durchführung des Kurses</td>
           </tr>
           <tr>
+            <td><code>inLanguage</code></td>
+            <td>nein</td>
+            <td><code>array[string]</code></td>
+            <td>Sprachen, in denen diese konkrete Durchführung belegbar ist, als BCP-47-Sprachcodes. Ist <code>Course.inLanguage</code> angegeben, MUSS jede hier genannte Sprache auch dort enthalten sein.</td>
+          </tr>
+          <tr>
             <td><code>maximumAttendeeCapacity</code></td>
             <td>nein</td>
             <td><code>integer</code></td>
-            <td>Maximale Teilnehmerzahl</td>
+            <td>Maximale Teilnehmerzahl. Der Wert <code>0</code> bedeutet, dass keine Begrenzung besteht.</td>
+          </tr>
+          <tr>
+            <td><code>remainingAttendeeCapacity</code></td>
+            <td>nein</td>
+            <td><code>integer</code></td>
+            <td>Noch verfügbare Plätze. Der Wert <code>0</code> bedeutet, dass keine Plätze mehr verfügbar sind.</td>
           </tr>
           <tr>
             <td><code>subEvent</code></td>
@@ -868,6 +880,9 @@ Vary: Accept
   "id": "https://example.org/courses/python/summer-2026",
   "url": "https://example.org/courses/python/summer-2026",
   "courseMode": ["onsite", "synchronous"],
+  "inLanguage": ["de"],
+  "maximumAttendeeCapacity": 20,
+  "remainingAttendeeCapacity": 0,
   "startDate": "2026-03-01T00:00:00Z",
   "endDate": "2026-07-31T23:59:59Z",
   "duration": "P5M",

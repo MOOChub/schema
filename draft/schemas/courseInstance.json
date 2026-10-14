@@ -22,10 +22,19 @@
     "courseMode": {
       "$ref": "https://w3id.org/moochub/draft/schemas/courseMode.json"
     },
+    "inLanguage": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/inLanguage.json",
+      "description": "The language or languages in which learners can participate in this specific course offering."
+    },
     "maximumAttendeeCapacity": {
       "type": "integer",
       "minimum": 0,
-      "description": "The maximum number of attendees who can participate in this offering."
+      "description": "The maximum number of attendees who can participate in this offering; zero means no limit."
+    },
+    "remainingAttendeeCapacity": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "The number of attendee places for this offering that remain unallocated; zero means no places remain available."
     },
     "subEvent": {
       "$ref": "https://w3id.org/moochub/draft/schemas/subEvent.json"

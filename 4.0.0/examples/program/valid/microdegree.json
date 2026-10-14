@@ -11,6 +11,7 @@
   "name": {
     "en": "Digital Skills Microdegree"
   },
+  "keywords": ["digital skills", "microdegree"],
   "inLanguage": ["en"],
   "educationalLevel": [
     {
@@ -48,8 +49,26 @@
       "en": "Example University"
     }
   },
+  "funder": [
+    {
+      "id": "https://provider.example/organizations/digital-skills-fund",
+      "type": "Organization",
+      "name": {
+        "en": "Digital Skills Fund"
+      }
+    }
+  ],
   "applicationStartDate": "2026-01-01T00:00:00Z",
   "applicationDeadline": "2026-03-31T23:59:59Z",
+  "offers": [
+    {
+      "type": "Offer",
+      "price": 0,
+      "priceCurrency": "EUR",
+      "category": "complete",
+      "url": "https://example.edu/programs/digital-skills/enroll"
+    }
+  ],
   "educationalProgramMode": ["online", "asynchronous"],
   "timeToComplete": "P3M",
   "numberOfCredits": 10,
@@ -88,6 +107,43 @@
           "type": ["LearningResource", "Course"],
           "name": {
             "en": "Digital Communication"
+          }
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Additional courses"
+      },
+      "description": [
+        {
+          "type": "TextObject",
+          "inLanguage": "en",
+          "text": "Complete at least three of the courses listed for this program area.",
+          "encodingFormat": "text/plain"
+        }
+      ],
+      "numberOfCredits": 0,
+      "hasCourse": [
+        {
+          "id": "https://provider.example/courses/digital-security",
+          "type": ["LearningResource", "Course"],
+          "name": {
+            "en": "Digital Security"
+          }
+        },
+        {
+          "id": "https://provider.example/courses/data-literacy",
+          "type": ["LearningResource", "Course"],
+          "name": {
+            "en": "Data Literacy"
+          }
+        },
+        {
+          "id": "https://provider.example/courses/digital-accessibility",
+          "type": ["LearningResource", "Course"],
+          "name": {
+            "en": "Digital Accessibility"
           }
         }
       ]

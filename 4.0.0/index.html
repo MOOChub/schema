@@ -349,11 +349,21 @@ Vary: Accept
     <section data-dfn-for="Course">
       <h3><dfn>Course</dfn></h3>
 
-      Ein <code>Course</code>-Objekt ist eine einzelne Lernressource. Die
-      Eigenschaften beschreiben Identität, Darstellung, fachlichen Inhalt und
-      konkrete Kursangebote. Verschachtelte Objekte wie Medien, Angebote oder
-      Kursinstanzen haben eigene Strukturen, die in der Property-Referenz und
-      den verlinkten Schemas erläutert werden.
+      Ein <code>Course</code>-Objekt beschreibt ein fachlich zusammengehöriges
+      Lernangebot. Die Eigenschaften beschreiben dessen Identität, Darstellung
+      und fachlichen Inhalt. Konkrete zeitliche, örtliche oder anderweitig
+      unterschiedliche Durchführungen werden als <code>CourseInstance</code>
+      über <code>hasCourseInstance</code> angegeben.
+
+      <p>
+        Wenn sich der fachliche Inhalt eines Kurses zwischen Semestern oder
+        Durchführungen nicht wesentlich ändert, wird empfohlen, diese
+        Durchführungen demselben <code>Course</code> zuzuordnen. Ändern sich die
+        Inhalte wesentlich, kann ein eigener <code>Course</code> angemessener
+        sein. Der Anbieter entscheidet anhand seiner fachlichen Daten, ob eine
+        neue Durchführung zu einem bestehenden Kurs gehört oder einen neuen
+        Kurs darstellt.
+      </p>
 
       <table class="def">
         <thead>
@@ -385,9 +395,9 @@ Vary: Accept
           </tr>
           <tr>
             <td><code>url</code></td>
-            <td>ja</td>
+            <td>nein</td>
             <td><code>string (URL)</code></td>
-            <td>Öffentlich erreichbare Kursseite.</td>
+            <td>Optionale übergreifende Kursseite; keine Detailseite einer einzelnen Durchführung.</td>
           </tr>
           <tr>
             <td><code>name</code></td>
@@ -442,7 +452,11 @@ Vary: Accept
             <td><code>inLanguage</code></td>
             <td>nein</td>
             <td><code>array[string]</code></td>
-            <td>Sprachen, in denen der Kurs angeboten wird. Die Werte MÜSSEN BCP-47-kompatibel sein.</td>
+            <td>Sprachen, in denen der Kurs insgesamt belegbar ist, gegebenenfalls als Zusammenfassung seiner
+              Durchführungen. Die Werte MÜSSEN BCP-47-kompatibel sein. Unterscheiden sich die Sprachen einzelner
+              Durchführungen, SOLLTEN diese bei <code>CourseInstance.inLanguage</code> angegeben werden. Ist
+              <code>Course.inLanguage</code> angegeben, MÜSSEN die dort genannten Instanzsprachen darin enthalten sein.
+            </td>
           </tr>
           <tr>
             <td><code>timeRequired</code></td>
@@ -736,7 +750,10 @@ Vary: Accept
       <h3><dfn>CourseInstance</dfn></h3>
 
       Eine <code>CourseInstance</code> beschreibt eine konkrete
-      Durchführung oder Angebotsform eines Kurses.
+      Durchführung oder Angebotsform eines Kurses. Mehrere Durchführungen
+      desselben fachlichen Kurses werden als separate Instanzen über
+      <code>hasCourseInstance</code> am zugehörigen <code>Course</code>
+      veröffentlicht.
 
       <table class="def">
         <thead>
@@ -761,6 +778,13 @@ Vary: Accept
             <td>URI der Kursinstanz</td>
           </tr>
           <tr>
+            <td><code>url</code></td>
+            <td>nein</td>
+            <td><code>string (URL)</code></td>
+            <td>Detailseite dieser konkreten Kursdurchführung. KANN entfallen, wenn es eine übergreifende Kursseite
+              gibt.</td>
+          </tr>
+          <tr>
             <td><code>name</code></td>
             <td>nein</td>
             <td><a><code>LocalizedString</code></a></td>
@@ -773,10 +797,23 @@ Vary: Accept
             <td>Arten der Bereitstellung oder Durchführung des Kurses</td>
           </tr>
           <tr>
+            <td><code>inLanguage</code></td>
+            <td>nein</td>
+            <td><code>array[string]</code></td>
+            <td>Sprachen, in denen diese konkrete Durchführung belegbar ist, als BCP-47-Sprachcodes. Ist
+              <code>Course.inLanguage</code> angegeben, MUSS jede hier genannte Sprache auch dort enthalten sein.</td>
+          </tr>
+          <tr>
             <td><code>maximumAttendeeCapacity</code></td>
             <td>nein</td>
             <td><code>integer</code></td>
-            <td>Maximale Teilnehmerzahl</td>
+            <td>Maximale Teilnehmerzahl. Der Wert <code>0</code> bedeutet, dass keine Begrenzung besteht.</td>
+          </tr>
+          <tr>
+            <td><code>remainingAttendeeCapacity</code></td>
+            <td>nein</td>
+            <td><code>integer</code></td>
+            <td>Noch verfügbare Plätze. Der Wert <code>0</code> bedeutet, dass keine Plätze mehr verfügbar sind.</td>
           </tr>
           <tr>
             <td><code>subEvent</code></td>
@@ -845,7 +882,11 @@ Vary: Accept
 "hasCourseInstance": [{
   "type": "CourseInstance",
   "id": "https://example.org/courses/python/summer-2026",
+  "url": "https://example.org/courses/python/summer-2026",
   "courseMode": ["onsite", "synchronous"],
+  "inLanguage": ["de"],
+  "maximumAttendeeCapacity": 20,
+  "remainingAttendeeCapacity": 0,
   "startDate": "2026-03-01T00:00:00Z",
   "endDate": "2026-07-31T23:59:59Z",
   "duration": "P5M",
@@ -1145,6 +1186,12 @@ Vary: Accept
             <td>Ausführliche Beschreibung des Programms</td>
           </tr>
           <tr>
+            <td><code>keywords</code></td>
+            <td>nein</td>
+            <td><code>array[string]</code></td>
+            <td>Schlagworte, Tags oder Stichworte, die das Programm beschreiben.</td>
+          </tr>
+          <tr>
             <td><code>inLanguage</code></td>
             <td>nein</td>
             <td><code>array[string]</code></td>
@@ -1202,6 +1249,12 @@ Vary: Accept
             <td>Fristende der Bewerbungsphase</td>
           </tr>
           <tr>
+            <td><code>offers</code></td>
+            <td>nein</td>
+            <td><code>array[<a><code>Offer</code></a>]</code></td>
+            <td>Angebote für die Teilnahme oder Buchung des Programms.</td>
+          </tr>
+          <tr>
             <td><code>image</code></td>
             <td>nein</td>
             <td><a><code>ImageObject</code></a></td>
@@ -1212,6 +1265,12 @@ Vary: Accept
             <td>ja</td>
             <td><a><code>Organization</code></a>|<a><code>Person</code></a></td>
             <td>Anbietende Organisation oder Person</td>
+          </tr>
+          <tr>
+            <td><code>funder</code></td>
+            <td>nein</td>
+            <td><code>array[<a>Organization</a>|<a>Person</a>]</code></td>
+            <td>Organisationen oder Personen, die das Programm finanziell unterstützen.</td>
           </tr>
           <tr>
             <td><code>hasPart</code></td>
@@ -1245,7 +1304,7 @@ Vary: Accept
   "@context": [
     "https://w3id.org/moochub/4.0.0/context.jsonld",
     { "@language": "de" }
-  ]
+  ],
   "type": "EducationalOccupationalProgram",
   "id": "https://example.org/programs/python-bootcamp",
   "url": "https://example.org/programs/python-bootcamp",
@@ -1253,6 +1312,7 @@ Vary: Accept
     "de": "Python-Bootcamp",
     "en": "Python Bootcamp"
   },
+  "keywords": ["Python", "Bootcamp"],
   "provider": {
     "type": "Organization",
     "name": {
@@ -1260,6 +1320,13 @@ Vary: Accept
       "en": "Example University"
     }
   },
+  "funder": [{
+    "type": "Organization",
+    "name": {
+      "de": "Beispiel-Förderwerk",
+      "en": "Example Funding Organization"
+    }
+  }],
   "hasPart": [
     {
       "name": { "de": "Pflichtbereich" },
@@ -1298,7 +1365,14 @@ Vary: Accept
   }],
   "applicationStartDate": "2026-01-01T00:00:00Z",
   "applicationDeadline": "2026-02-01T23:59:59Z",
-  "educationalCredentialAwarded": [{,
+  "offers": [{
+    "type": "Offer",
+    "price": 0,
+    "priceCurrency": "EUR",
+    "category": "complete",
+    "url": "https://example.org/programs/python-bootcamp/enroll"
+  }],
+  "educationalCredentialAwarded": [{
     "type": "EducationalOccupationalCredential",
     "id": "https://example.org/credentials/python-bootcamp-certificate",
     "name": {"de": "Urkunde für den Abschluss des Python-Bootcamps"}
@@ -1326,6 +1400,13 @@ Vary: Accept
         <p><code>ProgramPart</code> beschreibt einen Modulbereich eines
           Bildungsprogramms, einschließlich seiner Credit-Anforderung und der
           zugehörigen Kurse.</p>
+        <p>
+          Weitere Bedingungen, die sich nicht als Credits ausdrücken lassen,
+          SOLLTEN in <code>description</code> beschrieben werden. Zum Beispiel
+          kann ein Bereich mit <code>numberOfCredits</code> gleich
+          <code>0</code> festlegen, dass mindestens eine bestimmte Anzahl der
+          aufgeführten Kurse abgeschlossen werden muss.
+        </p>
 
         <table class="def">
           <thead>
@@ -1364,12 +1445,12 @@ Vary: Accept
           </tbody>
         </table>
 
-        <pre class="example json" title="Beispiel für einen ProgramCourse">
+        <pre class="example json" title="Beispiel für einen Pflichtbereich">
   {
     "name": {
       "de": "Pflichtbereich"
     },
-    "description": [{ "..." }]
+    "description": [{ "..." }],
     "numberOfCredits": 30,
     "hasCourse": [{
       "id": "https://example.org/courses/python",
@@ -1378,6 +1459,33 @@ Vary: Accept
         "de": "Einführung in Python"
       }
     }]
+  }
+        </pre>
+
+        <pre class="example json" title="Beispiel für einen Wahlbereich mit besonderen Anforderungen">
+  {
+    "name": {
+      "de": "Zusätzliche Kurse"
+    },
+    "description": [{
+      "type": "TextObject",
+      "inLanguage": "de",
+      "text": "Mindestens zwei der aufgeführten Kurse müssen erfolgreich abgeschlossen werden.",
+      "encodingFormat": "text/plain"
+    }],
+    "numberOfCredits": 0,
+    "hasCourse": [
+      {
+        "id": "https://example.org/courses/python",
+        "type": ["LearningResource", "Course"],
+        "name": { "de": "Einführung in Python" }
+      },
+      {
+        "id": "https://example.org/courses/data-literacy",
+        "type": ["LearningResource", "Course"],
+        "name": { "de": "Datenkompetenz" }
+      }
+    ]
   }
         </pre>
 

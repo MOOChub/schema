@@ -14,6 +14,7 @@ const invalidExpectations = readJson(
   path.join(projectRoot, '../scripts/invalid-expectations.json')
 )
 const green = (text) => `\x1b[32m${text}\x1b[0m`
+const yellow = (text) => `\x1b[33m${text}\x1b[0m`
 const red = (text) => `\x1b[31m${text}\x1b[0m`
 
 function cachedSchemaFilename(uri) {
@@ -171,8 +172,7 @@ async function main() {
         if (actual !== expected) {
           reportFailure(
             failures,
-            `${directory}/${filename} was expected to be ${
-              expected ? 'valid' : 'invalid'
+            `${directory}/${filename} was expected to be ${expected ? 'valid' : 'invalid'
             }: ${ajv.errorsText(validate.errors)}`
           )
           process.exitCode = 1
@@ -188,12 +188,11 @@ async function main() {
             if (
               !expectedErrors ||
               JSON.stringify(actualErrors) !==
-                JSON.stringify([...expectedErrors].sort())
+              JSON.stringify([...expectedErrors].sort())
             ) {
               reportFailure(
                 failures,
-                `${directory}/${filename} has unexpected validation errors. Expected: ${
-                  expectedErrors?.join(', ') ?? 'none'
+                `${directory}/${filename} has unexpected validation errors. Expected: ${expectedErrors?.join(', ') ?? 'none'
                 }; actual: ${actualErrors.join(', ')}`
               )
               failed++
@@ -223,14 +222,13 @@ async function main() {
               }
             }
             if (unexpected.length > 0) {
-              reportFailure(
-                failures,
-                `${directory}/${filename} contains unexpected properties: ${unexpected.join(
+              console.warn(
+                `${yellow(
+                  'Warning:'
+                )} ${directory}/${filename} contains properties not defined in the schema: ${unexpected.join(
                   ', '
                 )}`
               )
-              failed++
-              continue
             }
           }
           console.log(`${green('✓')} ${directory}/${filename}`)

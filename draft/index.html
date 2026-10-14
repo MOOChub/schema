@@ -1167,6 +1167,12 @@ Vary: Accept
             <td>Ausführliche Beschreibung des Programms</td>
           </tr>
           <tr>
+            <td><code>keywords</code></td>
+            <td>nein</td>
+            <td><code>array[string]</code></td>
+            <td>Schlagworte, Tags oder Stichworte, die das Programm beschreiben.</td>
+          </tr>
+          <tr>
             <td><code>inLanguage</code></td>
             <td>nein</td>
             <td><code>array[string]</code></td>
@@ -1224,6 +1230,12 @@ Vary: Accept
             <td>Fristende der Bewerbungsphase</td>
           </tr>
           <tr>
+            <td><code>offers</code></td>
+            <td>nein</td>
+            <td><code>array[<a><code>Offer</code></a>]</code></td>
+            <td>Angebote für die Teilnahme oder Buchung des Programms.</td>
+          </tr>
+          <tr>
             <td><code>image</code></td>
             <td>nein</td>
             <td><a><code>ImageObject</code></a></td>
@@ -1234,6 +1246,12 @@ Vary: Accept
             <td>ja</td>
             <td><a><code>Organization</code></a>|<a><code>Person</code></a></td>
             <td>Anbietende Organisation oder Person</td>
+          </tr>
+          <tr>
+            <td><code>funder</code></td>
+            <td>nein</td>
+            <td><code>array[<a>Organization</a>|<a>Person</a>]</code></td>
+            <td>Organisationen oder Personen, die das Programm finanziell unterstützen.</td>
           </tr>
           <tr>
             <td><code>hasPart</code></td>
@@ -1267,7 +1285,7 @@ Vary: Accept
   "@context": [
     "https://w3id.org/moochub/draft/context.jsonld",
     { "@language": "de" }
-  ]
+  ],
   "type": "EducationalOccupationalProgram",
   "id": "https://example.org/programs/python-bootcamp",
   "url": "https://example.org/programs/python-bootcamp",
@@ -1275,6 +1293,7 @@ Vary: Accept
     "de": "Python-Bootcamp",
     "en": "Python Bootcamp"
   },
+  "keywords": ["Python", "Bootcamp"],
   "provider": {
     "type": "Organization",
     "name": {
@@ -1282,6 +1301,13 @@ Vary: Accept
       "en": "Example University"
     }
   },
+  "funder": [{
+    "type": "Organization",
+    "name": {
+      "de": "Beispiel-Förderwerk",
+      "en": "Example Funding Organization"
+    }
+  }],
   "hasPart": [
     {
       "name": { "de": "Pflichtbereich" },
@@ -1320,7 +1346,14 @@ Vary: Accept
   }],
   "applicationStartDate": "2026-01-01T00:00:00Z",
   "applicationDeadline": "2026-02-01T23:59:59Z",
-  "educationalCredentialAwarded": [{,
+  "offers": [{
+    "type": "Offer",
+    "price": 0,
+    "priceCurrency": "EUR",
+    "category": "complete",
+    "url": "https://example.org/programs/python-bootcamp/enroll"
+  }],
+  "educationalCredentialAwarded": [{
     "type": "EducationalOccupationalCredential",
     "id": "https://example.org/credentials/python-bootcamp-certificate",
     "name": {"de": "Urkunde für den Abschluss des Python-Bootcamps"}
@@ -1348,6 +1381,13 @@ Vary: Accept
         <p><code>ProgramPart</code> beschreibt einen Modulbereich eines
           Bildungsprogramms, einschließlich seiner Credit-Anforderung und der
           zugehörigen Kurse.</p>
+        <p>
+          Weitere Bedingungen, die sich nicht als Credits ausdrücken lassen,
+          SOLLTEN in <code>description</code> beschrieben werden. Zum Beispiel
+          kann ein Bereich mit <code>numberOfCredits</code> gleich
+          <code>0</code> festlegen, dass mindestens eine bestimmte Anzahl der
+          aufgeführten Kurse abgeschlossen werden muss.
+        </p>
 
         <table class="def">
           <thead>
@@ -1386,7 +1426,7 @@ Vary: Accept
           </tbody>
         </table>
 
-        <pre class="example json" title="Beispiel für einen ProgramCourse">
+        <pre class="example json" title="Beispiel für einen Pflichtbereich">
   {
     "name": {
       "de": "Pflichtbereich"
@@ -1400,6 +1440,38 @@ Vary: Accept
         "de": "Einführung in Python"
       }
     }]
+  }
+        </pre>
+
+        <pre class="example json" title="Beispiel für einen Wahlbereich mit besonderen Anforderungen">
+  {
+    "name": {
+      "de": "Zusätzliche Kurse"
+    },
+    "description": [{
+      "type": "TextObject",
+      "inLanguage": "de",
+      "text": "Mindestens zwei der aufgeführten Kurse müssen erfolgreich abgeschlossen werden.",
+      "encodingFormat": "text/plain"
+    }],
+    "numberOfCredits": 0,
+    "hasCourse": [
+      {
+        "id": "https://example.org/courses/python",
+        "type": ["LearningResource", "Course"],
+        "name": { "de": "Einführung in Python" }
+      },
+      {
+        "id": "https://example.org/courses/data-literacy",
+        "type": ["LearningResource", "Course"],
+        "name": { "de": "Datenkompetenz" }
+      },
+      {
+        "id": "https://example.org/courses/advanced-python",
+        "type": ["LearningResource", "Course"],
+        "name": { "de": "Fortgeschrittenes Python" }
+      }
+    ]
   }
         </pre>
 

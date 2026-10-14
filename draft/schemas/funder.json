@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://w3id.org/moochub/draft/schemas/funder.json",
   "title": "Funder",
-  "description": "A person or organization that supports or supported this course through some kind of financial contribution.",
+  "description": "A person or organization that supports or supported a learning resource or educational program through a financial contribution.",
   "type": "array",
   "uniqueItems": true,
   "minItems": 1,

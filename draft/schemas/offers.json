@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://w3id.org/moochub/draft/schemas/offers.json",
-  "title": "Course offers",
-  "description": "A list of offers for a course instance.",
+  "title": "Offers",
+  "description": "A list of offers associated with a course instance or educational program.",
   "type": "array",
   "minItems": 1,
   "uniqueItems": true,

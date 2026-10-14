@@ -26,6 +26,9 @@
     "description": {
       "$ref": "https://w3id.org/moochub/draft/schemas/richText.json"
     },
+    "keywords": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/keywords.json"
+    },
     "inLanguage": {
       "$ref": "https://w3id.org/kim/amb/20231019/schemas/inLanguage.json"
     },
@@ -53,11 +56,17 @@
     "applicationDeadline": {
       "$ref": "https://w3id.org/moochub/draft/schemas/applicationDeadline.json"
     },
+    "offers": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/offers.json"
+    },
     "image": {
       "$ref": "https://w3id.org/moochub/draft/schemas/image.json"
     },
     "provider": {
       "$ref": "https://w3id.org/moochub/draft/schemas/publisher.json"
+    },
+    "funder": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/funder.json"
     },
     "hasPart": {
       "$ref": "https://w3id.org/moochub/draft/schemas/programParts.json"

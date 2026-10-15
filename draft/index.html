@@ -453,7 +453,11 @@ Vary: Accept
             <td><code>inLanguage</code></td>
             <td>nein</td>
             <td><code>array[string]</code></td>
-            <td>Sprachen, in denen der Kurs insgesamt belegbar ist, gegebenenfalls als Zusammenfassung seiner Durchführungen. Die Werte MÜSSEN BCP-47-kompatibel sein. Unterscheiden sich die Sprachen einzelner Durchführungen, SOLLTEN diese bei <code>CourseInstance.inLanguage</code> angegeben werden. Ist <code>Course.inLanguage</code> angegeben, MÜSSEN die dort genannten Instanzsprachen darin enthalten sein.</td>
+            <td>Sprachen, in denen der Kurs insgesamt belegbar ist, gegebenenfalls als Zusammenfassung seiner
+              Durchführungen. Die Werte MÜSSEN BCP-47-kompatibel sein. Unterscheiden sich die Sprachen einzelner
+              Durchführungen, SOLLTEN diese bei <code>CourseInstance.inLanguage</code> angegeben werden. Ist
+              <code>Course.inLanguage</code> angegeben, MÜSSEN die dort genannten Instanzsprachen darin enthalten sein.
+            </td>
           </tr>
           <tr>
             <td><code>timeRequired</code></td>
@@ -797,7 +801,9 @@ Vary: Accept
             <td><code>inLanguage</code></td>
             <td>nein</td>
             <td><code>array[string]</code></td>
-            <td>Sprachen, in denen diese konkrete Durchführung belegbar ist, als BCP-47-Sprachcodes. Ist <code>Course.inLanguage</code> angegeben, MUSS jede hier genannte Sprache auch dort enthalten sein.</td>
+            <td>Sprachen, in denen diese konkrete Durchführung belegbar ist, als BCP-47-Sprachcodes. Ist
+              <code>Course.inLanguage</code> angegeben, MUSS jede hier genannte Sprache auch dort enthalten sein.
+            </td>
           </tr>
           <tr>
             <td><code>maximumAttendeeCapacity</code></td>
@@ -1446,7 +1452,7 @@ Vary: Accept
     "name": {
       "de": "Pflichtbereich"
     },
-    "description": [{ "..." }]
+    "description": [{ "..." }],
     "numberOfCredits": 30,
     "hasCourse": [{
       "id": "https://example.org/courses/python",
@@ -1886,9 +1892,9 @@ Vary: Accept
   },
   {
     "type": "TextObject",
-    "text": "This is an **example text**.",
+    "text": "&lt;p&gt;This is an &lt;strong&gt;example text&lt;/strong&gt;.&lt;/p&gt;",
     "inLanguage": "en",
-    "encodingFormat": "text/markdown"
+    "encodingFormat": "text/html"
   }
 ]
       </pre>
@@ -1964,7 +1970,7 @@ Vary: Accept
         <pre class="example json" title="Beispiel für ein TextObject mit HTML-Formatierung">
 {
   "type": "TextObject",
-  "text": "<p>Dies ist ein <strong>Beispieltext</strong>.</p>",
+  "text": "&lt;p&gt;Dies ist ein &lt;strong&gt;Beispieltext&lt;/strong&gt;.&lt;/p&gt;",
   "inLanguage": "de",
   "encodingFormat": "text/html"
 }

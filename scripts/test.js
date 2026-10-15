@@ -172,7 +172,8 @@ async function main() {
         if (actual !== expected) {
           reportFailure(
             failures,
-            `${directory}/${filename} was expected to be ${expected ? 'valid' : 'invalid'
+            `${directory}/${filename} was expected to be ${
+              expected ? 'valid' : 'invalid'
             }: ${ajv.errorsText(validate.errors)}`
           )
           process.exitCode = 1
@@ -188,11 +189,12 @@ async function main() {
             if (
               !expectedErrors ||
               JSON.stringify(actualErrors) !==
-              JSON.stringify([...expectedErrors].sort())
+                JSON.stringify([...expectedErrors].sort())
             ) {
               reportFailure(
                 failures,
-                `${directory}/${filename} has unexpected validation errors. Expected: ${expectedErrors?.join(', ') ?? 'none'
+                `${directory}/${filename} has unexpected validation errors. Expected: ${
+                  expectedErrors?.join(', ') ?? 'none'
                 }; actual: ${actualErrors.join(', ')}`
               )
               failed++

@@ -129,7 +129,7 @@
           href: "https://github.com/MOOChub/schema"
         }]
       }],
-      publishDate: "2026-08-16",
+      publishDate: "2026-10-15",
       specStatus: "base"
     };
   </script>
@@ -394,12 +394,6 @@ Vary: Accept
             <td>URI der fachlichen Identität.</td>
           </tr>
           <tr>
-            <td><code>url</code></td>
-            <td>nein</td>
-            <td><code>string (URL)</code></td>
-            <td>Optionale übergreifende Kursseite; keine Detailseite einer einzelnen Durchführung.</td>
-          </tr>
-          <tr>
             <td><code>name</code></td>
             <td>ja</td>
             <td><a><code>LocalizedString</code></a></td>
@@ -422,6 +416,13 @@ Vary: Accept
             <td>ja</td>
             <td><a><code>License</code></a></td>
             <td>Rechteangabe.</td>
+          </tr>
+          <tr>
+            <td><code>url</code></td>
+            <td>nein</td>
+            <td><code>string (URL)</code></td>
+            <td>Öffentlich erreichbare Kursseite. Kann entfallen, wenn es stattdessen Detailseiten einer einzelnen
+              Durchführung gibt.</td>
           </tr>
           <tr>
             <td><code>courseCode</code></td>
@@ -1484,6 +1485,11 @@ Vary: Accept
         "id": "https://example.org/courses/data-literacy",
         "type": ["LearningResource", "Course"],
         "name": { "de": "Datenkompetenz" }
+      },
+      {
+        "id": "https://example.org/courses/advanced-python",
+        "type": ["LearningResource", "Course"],
+        "name": { "de": "Fortgeschrittenes Python" }
       }
     ]
   }
@@ -1885,9 +1891,9 @@ Vary: Accept
   },
   {
     "type": "TextObject",
-    "text": "This is an **example text**.",
+    "text": "&lt;p&gt;This is an &lt;strong&gt;example text&lt;/strong&gt;.&lt;/p&gt;",
     "inLanguage": "en",
-    "encodingFormat": "text/markdown"
+    "encodingFormat": "text/html"
   }
 ]
       </pre>
@@ -1963,7 +1969,7 @@ Vary: Accept
         <pre class="example json" title="Beispiel für ein TextObject mit HTML-Formatierung">
 {
   "type": "TextObject",
-  "text": "<p>Dies ist ein <strong>Beispieltext</strong>.</p>",
+  "text": "&lt;p&gt;Dies ist ein &lt;strong&gt;Beispieltext&lt;/strong&gt;.&lt;/p&gt;",
   "inLanguage": "de",
   "encodingFormat": "text/html"
 }

@@ -9,10 +9,12 @@
   "scripts": {
     "format": "prettier . --write",
     "lint:prettier": "prettier .",
+    "diagrams": "node scripts/generate-diagrams.js",
     "test": "node scripts/test.js",
     "test:jsonld": "node scripts/jsonld-context-test.js"
   },
   "devDependencies": {
+    "@mermaid-js/mermaid-cli": "10.9.1",
     "ajv": "^8.20.0",
     "ajv-formats": "^2.1.1",
     "jsonld": "^9.0.0",

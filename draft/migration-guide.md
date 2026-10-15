@@ -52,10 +52,10 @@ They may be equal, but providers must not assume that they are interchangeable.
   `educationalCredentialAwarded` from a course or program, and use `hasPart`,
   `isPartOf` for credential relationships, and `isAwardedBy` from a credential to the awarding course or program.
 - `persons`, `organizations`, and `locations` allow stable shared entities
-  instead of repeating full objects in every course, by setting `type`, `id`, and optionally `name` in a compact reference. Use the full object when the entity is not shared.
+  instead of repeating full objects in every course, by setting `type`, `id`, and `name` in a compact reference. Use the full object when the entity is not shared.
 
 `courses`, `programs`, `credentials`, `persons`, `organizations`, and `locations` may now also be published independently, with their own `id`, `type`, and JSON-LD `@context`. This allows a provider to publish a catalog of shared entities that can be referenced by multiple courses, programs, or credentials.
 Independent publication is optional, but every independently harvestable object
 must have a stable semantic ID and matching `type`. Compact references may use
-only `id`, `type`, and optionally `name`; they must not erase data already
+only `id`, `type`, and `name`; they must not erase data already
 stored from a full representation.

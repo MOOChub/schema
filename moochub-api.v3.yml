@@ -28,7 +28,9 @@ paths:
             application/vnd.api+json; moochub-version=3.0:
               schema:
                 type: object
-                description: 'A response following the JSON:API schema (https://jsonapi.org/)'
+                description:
+                  'A response following the JSON:API schema
+                  (https://jsonapi.org/)'
                 properties:
                   links:
                     $ref: '#/components/schemas/Links'
@@ -60,10 +62,11 @@ paths:
                           identifier: 'https://w3id.org/kim/hcrt/course'
                           type: Concept
                           inScheme: 'https://w3id.org/kim/hcrt/scheme'
-                        description: "<p> This is an example of an complete course.
-                          Here all fields will be filled with data. Also the data
-                          is <b>NOT REAL</b> it will help to understand how this metadata
-                          format works.</p>\n"
+                        description:
+                          "<p> This is an example of an complete course. Here
+                          all fields will be filled with data. Also the data is
+                          <b>NOT REAL</b> it will help to understand how this
+                          metadata format works.</p>\n"
                         inLanguage:
                           - en
                         startDate:
@@ -91,12 +94,14 @@ paths:
                             honorificPrefix: Prof. Dr.
                             identifier: 'https://www.wikidata.org/wiki/Q92706'
                             type: Person
-                            description: Prof. Dr. Christoph Meinel is professor at
-                              the HPI at the University of Potsdam. He teaches computational
-                              sciences at Bachelor and Master level and supervised
-                              Master and Doctoral theses.
+                            description:
+                              Prof. Dr. Christoph Meinel is professor at the HPI
+                              at the University of Potsdam. He teaches
+                              computational sciences at Bachelor and Master
+                              level and supervised Master and Doctoral theses.
                             image:
-                              description: An image showing Prof. Dr. Christoph Meinel.
+                              description:
+                                An image showing Prof. Dr. Christoph Meinel.
                               type: ImageObject
                               contentUrl: 'https://imgproxy.services.openhpi.de/sgUb4IJNxAL_thQHYE-mI2jN-UDqOc7vKbsMmEPd_CM/fit/550/0/ce/false/aHR0cHM6Ly9vcGVu/aHBpLXB1YmxpYy5z/My5vcGVuaHBpY2xv/dWQuZGUvdGVhY2hl/cnMvNmVsMEMxQWZz/cDlZc2lONk55ODVJ/Ry92MS5wbmc.png'
                               license:
@@ -106,10 +111,11 @@ paths:
                               name: openHPI
                               identifier: 'https://www.wikidata.org/wiki/Q10854783'
                               type: Organization
-                              description: 'openHPI is a digital educational platform
-                                situated at the HPI with a focus on topics regarding
-                                computational sciences, internet and world wide web
-                                and design thinking.'
+                              description:
+                                'openHPI is a digital educational platform
+                                situated at the HPI with a focus on topics
+                                regarding computational sciences, internet and
+                                world wide web and design thinking.'
                               image:
                                 description: The openHPI logo.
                                 type: ImageObject
@@ -125,25 +131,28 @@ paths:
                               - 'Personal Privacy'
                               - 'Privacy Policy'
                             shortCode: '4.2'
-                            description: To protect personal data and privacy in digital
-                              environments.To understand how to use and share personally
-                              identifiable information while being able to protect
-                              oneself and others from damages.To understand that digital
-                              services use a "Privacy policy" to inform how personal
-                              data is used.
+                            description:
+                              To protect personal data and privacy in digital
+                              environments.To understand how to use and share
+                              personally identifiable information while being
+                              able to protect oneself and others from damages.To
+                              understand that digital services use a "Privacy
+                              policy" to inform how personal data is used.
                             educationalFramework: DigComp
                             educationalFrameworkVersion: '2.2'
                             url: 'https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf'
                             targetUrl: null
                             educationalLevel:
-                              description: 'Independently, according to my own needs,
-                                and solving well-defined and non-routine problems,
-                                I can: - discuss ways to protect my personal data
-                                and privacy in digital environments, and - discuss
-                                ways to use and share personally identifiable information
-                                while protecting myself and others from damages. -
-                                indicate privacy policy statements of how personal
-                                data is used in digital services.'
+                              description:
+                                'Independently, according to my own needs, and
+                                solving well-defined and non-routine problems, I
+                                can: - discuss ways to protect my personal data
+                                and privacy in digital environments, and -
+                                discuss ways to use and share personally
+                                identifiable information while protecting myself
+                                and others from damages. - indicate privacy
+                                policy statements of how personal data is used
+                                in digital services.'
                               name:
                                 - inLanguage: en
                                   name: INTERMEDIATE
@@ -161,10 +170,11 @@ paths:
                           - name: openHPI
                             identifier: 'https://open.hpi.de/'
                             type: Organization
-                            description: 'openHPI is a digital educational platform
-                              situated at the HPI with a focus on topics regarding
-                              computational sciences, internet and world wide web
-                              and design thinking.'
+                            description:
+                              'openHPI is a digital educational platform
+                              situated at the HPI with a focus on topics
+                              regarding computational sciences, internet and
+                              world wide web and design thinking.'
                             image:
                               description: The openHPI logo.
                               type: ImageObject
@@ -176,9 +186,11 @@ paths:
                           name: openHPI
                           identifier: 'https://open.hpi.de/'
                           type: Organization
-                          description: 'openHPI is a digital educational platform
-                            situated at the HPI with a focus on topics regarding computational
-                            sciences, internet and world wide web and design thinking.'
+                          description:
+                            'openHPI is a digital educational platform situated
+                            at the HPI with a focus on topics regarding
+                            computational sciences, internet and world wide web
+                            and design thinking.'
                           image:
                             description: The openHPI logo.
                             type: ImageObject
@@ -210,23 +222,27 @@ paths:
                             shortCode: '0611'
                             targetUrl: null
                             type: EducationalAlignment
-                            description: 'Computer use is the study of using computers
-                              and computer software and applications for different
-                              purposes. These programmes are generally of short duration.
-                              Programmes and qualifications with the following main
-                              content are classified here: Computer use Use of software
-                              for calculating (spread sheets) Use of software for
-                              data processing Use of software for desk top publishing
-                              Use of software for word processing Use of Internet'
+                            description:
+                              'Computer use is the study of using computers and
+                              computer software and applications for different
+                              purposes. These programmes are generally of short
+                              duration. Programmes and qualifications with the
+                              following main content are classified here:
+                              Computer use Use of software for calculating
+                              (spread sheets) Use of software for data
+                              processing Use of software for desk top publishing
+                              Use of software for word processing Use of
+                              Internet'
                         educationalLevel:
-                          - description: 'Independently, according to my own needs,
-                              and solving well-defined and non-routine problems, I
-                              can: - discuss ways to protect my personal data and
-                              privacy in digital environments, and - discuss ways
-                              to use and share personally identifiable information
-                              while protecting myself and others from damages. - indicate
-                              privacy policy statements of how personal data is used
-                              in digital services.'
+                          - description:
+                              'Independently, according to my own needs, and
+                              solving well-defined and non-routine problems, I
+                              can: - discuss ways to protect my personal data
+                              and privacy in digital environments, and - discuss
+                              ways to use and share personally identifiable
+                              information while protecting myself and others
+                              from damages. - indicate privacy policy statements
+                              of how personal data is used in digital services.'
                             name:
                               - inLanguage: en
                                 name: INTERMEDIATE
@@ -244,12 +260,14 @@ paths:
                             honorificPrefix: Prof. Dr.
                             identifier: 'https://www.wikidata.org/wiki/Q92706'
                             type: Person
-                            description: Prof. Dr. Christoph Meinel is professor at
-                              the HPI at the University of Potsdam. He teaches computational
-                              sciences at Bachelor and Master level and supervised
-                              Master and Doctoral theses.
+                            description:
+                              Prof. Dr. Christoph Meinel is professor at the HPI
+                              at the University of Potsdam. He teaches
+                              computational sciences at Bachelor and Master
+                              level and supervised Master and Doctoral theses.
                             image:
-                              description: An image showing Prof. Dr. Christoph Meinel.
+                              description:
+                                An image showing Prof. Dr. Christoph Meinel.
                               type: ImageObject
                               contentUrl: 'https://imgproxy.services.openhpi.de/sgUb4IJNxAL_thQHYE-mI2jN-UDqOc7vKbsMmEPd_CM/fit/550/0/ce/false/aHR0cHM6Ly9vcGVu/aHBpLXB1YmxpYy5z/My5vcGVuaHBpY2xv/dWQuZGUvdGVhY2hl/cnMvNmVsMEMxQWZz/cDlZc2lONk55ODVJ/Ry92MS5wbmc.png'
                               license:
@@ -259,10 +277,11 @@ paths:
                               name: openHPI
                               identifier: 'https://www.wikidata.org/wiki/Q10854783'
                               type: Organization
-                              description: openHPI is a digital educational platform
-                                situated at the HPI with a focus on topics regarding
-                                computational sciences, internet and world wide web
-                                and design thinking.
+                              description:
+                                openHPI is a digital educational platform
+                                situated at the HPI with a focus on topics
+                                regarding computational sciences, internet and
+                                world wide web and design thinking.
                               image:
                                 description: The openHPI logo.
                                 type: ImageObject
@@ -303,11 +322,13 @@ paths:
                         competencyRequired:
                           - name:
                               - inLanguage: en
-                                name: 'HPI Academy: Leading Digital Transformation
+                                name:
+                                  'HPI Academy: Leading Digital Transformation
                                   and Innovation - Fall 2020'
                               - inLanguage: de
-                                name: 'HPI Academy: Digitale Transformation und Innovation
-                                  anfuehren - Herbst 2020'
+                                name:
+                                  'HPI Academy: Digitale Transformation und
+                                  Innovation anfuehren - Herbst 2020'
                             educationalFramework: Course_ID
                             targetUrl: 'https://open.hpi.de/courses/digitrans2020-1'
                           - name:
@@ -317,12 +338,27 @@ paths:
                               - 'Personal Privacy'
                               - 'Privacy Policy'
                             shortCode: '4.2'
-                            description: To protect personal data and privacy in digital environments. To understand how to use and share personally identifiable information while being able to protect oneself and others from damages. To understand that digital services use a “Privacy policy” to inform how personal data is used.
+                            description:
+                              To protect personal data and privacy in digital
+                              environments. To understand how to use and share
+                              personally identifiable information while being
+                              able to protect oneself and others from damages.
+                              To understand that digital services use a “Privacy
+                              policy” to inform how personal data is used.
                             educationalFramework: DigComp 2.2
                             url: 'https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf'
                             targetUrl: null
                             educationalLevel:
-                              description: 'Independently, according to my own needs, and solving well-defined and non-routine problems, I can: • discuss ways to protect my personal data and privacy in digital environments, and • discuss ways to use and share personally identifiable information while protecting myself and others from damages. • indicate privacy policy statements of how personal data is used in digital services.'
+                              description:
+                                'Independently, according to my own needs, and
+                                solving well-defined and non-routine problems, I
+                                can: • discuss ways to protect my personal data
+                                and privacy in digital environments, and •
+                                discuss ways to use and share personally
+                                identifiable information while protecting myself
+                                and others from damages. • indicate privacy
+                                policy statements of how personal data is used
+                                in digital services.'
                               name:
                                 - inLanguage: en
                                   name: INTERMEDIATE
@@ -358,8 +394,9 @@ paths:
                             competencyRequired:
                               - name:
                                   - inLanguage: en
-                                    name: 'HPI Academy: Leading Digital Transformation
-                                      and Innovation - Fall 2020'
+                                    name:
+                                      'HPI Academy: Leading Digital
+                                      Transformation and Innovation - Fall 2020'
                                 educationalFramework: Course_ID
                                 targetUrl: 'https://open.hpi.de/courses/digitrans2020-1'
                         isPartOf:
@@ -371,10 +408,11 @@ paths:
               schema:
                 type: string
                 example: 'Tue, 15 Aug 2017 00:00:00 GMT'
-              description: 'This date signals the last day of support for the given
-                API version, according to RFC 8594. The client should upgrade to a
-                newer API version before this date. This header is only set if the
-                API version is / will be deprecated'
+              description:
+                'This date signals the last day of support for the given API
+                version, according to RFC 8594. The client should upgrade to a
+                newer API version before this date. This header is only set if
+                the API version is / will be deprecated'
         '404':
           description: Not Found
         '406':
@@ -404,9 +442,10 @@ paths:
             example: application/vnd.api+json; moochub-version=3
           in: header
           name: Accept
-          description: The last major API version that is supported by the client
-            and requested from the server.The newest version will be used if no version
-            is included in the original request.
+          description:
+            The last major API version that is supported by the client and
+            requested from the server.The newest version will be used if no
+            version is included in the original request.
 security: []
 components:
   securitySchemes: {}
@@ -426,7 +465,23 @@ components:
               identifier: 'https://w3id.org/kim/hcrt/course'
               type: Concept
               inScheme: 'https://w3id.org/kim/hcrt/scheme'
-            description: '<p>A message on the Internet is sent through several networks and via different stations on its way to the target system. The individual stations are responsible for ensuring that the message is properly forwarded and finally delivered to the correct recipient. Each of these stations, if the message is sent in plain text, can receive the message and read its content. This means that a potential attacker, if he controls one of these intermediate systems, can also read the content of the message and even modify it before retransmitting it. Such attacks can have extreme effects on communication.</p>\n\n<p>In this course we will look at how and whether your connection to online banking is secure or whether the content of an e-mail is trustworthy. For this purpose we will deal with the basics of cryptography, security objectives and different types of encryption. In addition, we will provide insights into different models and standards that are used in practice.</p>\n'
+            description:
+              '<p>A message on the Internet is sent through several networks and
+              via different stations on its way to the target system. The
+              individual stations are responsible for ensuring that the message
+              is properly forwarded and finally delivered to the correct
+              recipient. Each of these stations, if the message is sent in plain
+              text, can receive the message and read its content. This means
+              that a potential attacker, if he controls one of these
+              intermediate systems, can also read the content of the message and
+              even modify it before retransmitting it. Such attacks can have
+              extreme effects on communication.</p>\n\n<p>In this course we will
+              look at how and whether your connection to online banking is
+              secure or whether the content of an e-mail is trustworthy. For
+              this purpose we will deal with the basics of cryptography,
+              security objectives and different types of encryption. In
+              addition, we will provide insights into different models and
+              standards that are used in practice.</p>\n'
             inLanguage:
               - en
             startDate:
@@ -469,12 +524,24 @@ components:
                   - 'Personal Privacy'
                   - 'Privacy Policy'
                 shortCode: '4.2'
-                description: To protect personal data and privacy in digital environments. To understand how to use and share personally identifiable information while being able to protect oneself and others from damages. To understand that digital services use a “Privacy policy” to inform how personal data is used.
+                description:
+                  To protect personal data and privacy in digital environments.
+                  To understand how to use and share personally identifiable
+                  information while being able to protect oneself and others
+                  from damages. To understand that digital services use a
+                  “Privacy policy” to inform how personal data is used.
                 educationalFramework: DigComp 2.2
                 url: 'https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf'
                 targetUrl: null
                 educationalLevel:
-                  description: 'Independently, according to my own needs, and solving well-defined and non-routine problems, I can: • discuss ways to protect my personal data and privacy in digital environments, and • discuss ways to use and share personally identifiable information while protecting myself and others from damages. • indicate privacy policy statements of how personal data is used in digital services.'
+                  description:
+                    'Independently, according to my own needs, and solving
+                    well-defined and non-routine problems, I can: • discuss ways
+                    to protect my personal data and privacy in digital
+                    environments, and • discuss ways to use and share personally
+                    identifiable information while protecting myself and others
+                    from damages. • indicate privacy policy statements of how
+                    personal data is used in digital services.'
                   name:
                     - inLanguage: en
                       name: INTERMEDIATE
@@ -528,14 +595,29 @@ components:
                   - inLanguage: en
                     name: Computer use
                 alternateName:
-                  - "use of computers"
-                  - "working with computers"
+                  - 'use of computers'
+                  - 'working with computers'
                 shortCode: '0611'
                 targetUrl: null
                 type: EducationalAlignment
-                description: 'Computer use is the study of using computers and computer software and applications for different purposes. These programmes are generally of short duration. Programmes and qualifications with the following main content are classified here: Computer use Use of software for calculating (spread sheets) Use of software for data processing Use of software for desk top publishing Use of software for word processing Use of Internet'
+                description:
+                  'Computer use is the study of using computers and computer
+                  software and applications for different purposes. These
+                  programmes are generally of short duration. Programmes and
+                  qualifications with the following main content are classified
+                  here: Computer use Use of software for calculating (spread
+                  sheets) Use of software for data processing Use of software
+                  for desk top publishing Use of software for word processing
+                  Use of Internet'
             educationalLevel:
-              - description: 'Independently, according to my own needs, and solving well-defined and non-routine problems, I can: • discuss ways to protect my personal data and privacy in digital environments, and • discuss ways to use and share personally identifiable information while protecting myself and others from damages. • indicate privacy policy statements of how personal data is used in digital services.'
+              - description:
+                  'Independently, according to my own needs, and solving
+                  well-defined and non-routine problems, I can: • discuss ways
+                  to protect my personal data and privacy in digital
+                  environments, and • discuss ways to use and share personally
+                  identifiable information while protecting myself and others
+                  from damages. • indicate privacy policy statements of how
+                  personal data is used in digital services.'
                 name:
                   - inLanguage: en
                     name: INTERMEDIATE
@@ -591,7 +673,9 @@ components:
                 competencyRequired:
                   - name:
                       - inLanguage: en
-                        name: 'HPI Academy: Leading Digital Transformation and Innovation - Fall 2020'
+                        name:
+                          'HPI Academy: Leading Digital Transformation and
+                          Innovation - Fall 2020'
                     educationalFramework: Course_ID
                     targetUrl: 'https://open.hpi.de/courses/digitrans2020-1'
             isPartOf: null
@@ -604,7 +688,10 @@ components:
               identifier: 'https://w3id.org/kim/hcrt/course'
               type: Concept
               inScheme: 'https://w3id.org/kim/hcrt/scheme'
-            description: <p>This is an example of an complete course. Here all fields will be filled with data. Also the data is <b> NOT REAL</b> it will help to understand how this metadata format works.</p>\n
+            description:
+              <p>This is an example of an complete course. Here all fields will
+              be filled with data. Also the data is <b> NOT REAL</b> it will
+              help to understand how this metadata format works.</p>\n
             inLanguage:
               - en
             startDate:
@@ -632,7 +719,11 @@ components:
                 honorificPrefix: Prof. Dr.
                 identifier: 'https://www.wikidata.org/wiki/Q92706'
                 type: Person
-                description: Prof. Dr. Christoph Meinel is professor at the HPI at the University of Potsdam. He teaches computational sciences at Bachelor and Master level and supervised Master and Doctoral theses.
+                description:
+                  Prof. Dr. Christoph Meinel is professor at the HPI at the
+                  University of Potsdam. He teaches computational sciences at
+                  Bachelor and Master level and supervised Master and Doctoral
+                  theses.
                 image:
                   description: An image showing Prof. Dr. Christoph Meinel.
                   type: ImageObject
@@ -644,7 +735,10 @@ components:
                   name: openHPI
                   identifier: 'https://www.wikidata.org/wiki/Q10854783'
                   type: Organization
-                  description: 'openHPI is a digital educational platform situated at the HPI with a focus on topics regarding computational sciences, internet and world wide web and design thinking.'
+                  description:
+                    'openHPI is a digital educational platform situated at the
+                    HPI with a focus on topics regarding computational sciences,
+                    internet and world wide web and design thinking.'
                   image:
                     description: The openHPI logo.
                     type: ImageObject
@@ -660,12 +754,24 @@ components:
                   - 'Personal Privacy'
                   - 'Privacy Policy'
                 shortCode: '4.2'
-                description: To protect personal data and privacy in digital environments. To understand how to use and share personally identifiable information while being able to protect oneself and others from damages. To understand that digital services use a “Privacy policy” to inform how personal data is used.
+                description:
+                  To protect personal data and privacy in digital environments.
+                  To understand how to use and share personally identifiable
+                  information while being able to protect oneself and others
+                  from damages. To understand that digital services use a
+                  “Privacy policy” to inform how personal data is used.
                 educationalFramework: DigComp 2.2
                 url: 'https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf'
                 targetUrl: null
                 educationalLevel:
-                  description: 'Independently, according to my own needs, and solving well-defined and non-routine problems, I can: • discuss ways to protect my personal data and privacy in digital environments, and • discuss ways to use and share personally identifiable information while protecting myself and others from damages. • indicate privacy policy statements of how personal data is used in digital services.'
+                  description:
+                    'Independently, according to my own needs, and solving
+                    well-defined and non-routine problems, I can: • discuss ways
+                    to protect my personal data and privacy in digital
+                    environments, and • discuss ways to use and share personally
+                    identifiable information while protecting myself and others
+                    from damages. • indicate privacy policy statements of how
+                    personal data is used in digital services.'
                   name:
                     - inLanguage: en
                       name: INTERMEDIATE
@@ -682,7 +788,10 @@ components:
               - name: openHPI
                 identifier: 'https://open.hpi.de/'
                 type: Organization
-                description: 'openHPI is a digital educational platform situated at the HPI with a focus on topics regarding computational sciences, internet and world wide web and design thinking.'
+                description:
+                  'openHPI is a digital educational platform situated at the HPI
+                  with a focus on topics regarding computational sciences,
+                  internet and world wide web and design thinking.'
                 image:
                   description: The openHPI logo.
                   type: ImageObject
@@ -694,7 +803,10 @@ components:
               name: openHPI
               identifier: 'https://open.hpi.de/'
               type: Organization
-              description: 'openHPI is a digital educational platform situated at the HPI with a focus on topics regarding computational sciences, internet and world wide web and design thinking.'
+              description:
+                'openHPI is a digital educational platform situated at the HPI
+                with a focus on topics regarding computational sciences,
+                internet and world wide web and design thinking.'
               image:
                 description: The openHPI logo.
                 type: ImageObject
@@ -721,14 +833,29 @@ components:
                   - inLanguage: en
                     name: Computer use
                 alternateName:
-                  - "use of computers"
-                  - "working with computers"
+                  - 'use of computers'
+                  - 'working with computers'
                 shortCode: '0611'
                 targetUrl: null
                 type: EducationalAlignment
-                description: 'Computer use is the study of using computers and computer software and applications for different purposes. These programmes are generally of short duration. Programmes and qualifications with the following main content are classified here: Computer use Use of software for calculating (spread sheets) Use of software for data processing Use of software for desk top publishing Use of software for word processing Use of Internet'
+                description:
+                  'Computer use is the study of using computers and computer
+                  software and applications for different purposes. These
+                  programmes are generally of short duration. Programmes and
+                  qualifications with the following main content are classified
+                  here: Computer use Use of software for calculating (spread
+                  sheets) Use of software for data processing Use of software
+                  for desk top publishing Use of software for word processing
+                  Use of Internet'
             educationalLevel:
-              - description: 'Independently, according to my own needs, and solving well-defined and non-routine problems, I can: • discuss ways to protect my personal data and privacy in digital environments, and • discuss ways to use and share personally identifiable information while protecting myself and others from damages. • indicate privacy policy statements of how personal data is used in digital services.'
+              - description:
+                  'Independently, according to my own needs, and solving
+                  well-defined and non-routine problems, I can: • discuss ways
+                  to protect my personal data and privacy in digital
+                  environments, and • discuss ways to use and share personally
+                  identifiable information while protecting myself and others
+                  from damages. • indicate privacy policy statements of how
+                  personal data is used in digital services.'
                 name:
                   - inLanguage: en
                     name: INTERMEDIATE
@@ -745,7 +872,11 @@ components:
                 honorificPrefix: Prof. Dr.
                 identifier: 'https://www.wikidata.org/wiki/Q92706'
                 type: Person
-                description: Prof. Dr. Christoph Meinel is professor at the HPI at the University of Potsdam. He teaches computational sciences at Bachelor and Master level and supervised Master and Doctoral theses.
+                description:
+                  Prof. Dr. Christoph Meinel is professor at the HPI at the
+                  University of Potsdam. He teaches computational sciences at
+                  Bachelor and Master level and supervised Master and Doctoral
+                  theses.
                 image:
                   description: An image showing Prof. Dr. Christoph Meinel.
                   type: ImageObject
@@ -757,7 +888,10 @@ components:
                   name: openHPI
                   identifier: 'https://www.wikidata.org/wiki/Q10854783'
                   type: Organization
-                  description: 'openHPI is a digital educational platform situated at the HPI with a focus on topics regarding computational sciences, internet and world wide web and design thinking.'
+                  description:
+                    'openHPI is a digital educational platform situated at the
+                    HPI with a focus on topics regarding computational sciences,
+                    internet and world wide web and design thinking.'
                   image:
                     description: The openHPI logo.
                     type: ImageObject
@@ -798,9 +932,13 @@ components:
             competencyRequired:
               - name:
                   - inLanguage: en
-                    name: 'HPI Academy: Leading Digital Transformation and Innovation - Fall 2020'
+                    name:
+                      'HPI Academy: Leading Digital Transformation and
+                      Innovation - Fall 2020'
                   - inLanguage: de
-                    name: 'HPI Academy: Digitale Transformation und Innovation anführen - Herbst 2020'
+                    name:
+                      'HPI Academy: Digitale Transformation und Innovation
+                      anführen - Herbst 2020'
                 educationalFramework: Course_ID
                 targetUrl: 'https://open.hpi.de/courses/digitrans2020-1'
               - name:
@@ -810,12 +948,24 @@ components:
                   - 'Personal Privacy'
                   - 'Privacy Policy'
                 shortCode: '4.2'
-                description: To protect personal data and privacy in digital environments. To understand how to use and share personally identifiable information while being able to protect oneself and others from damages. To understand that digital services use a “Privacy policy” to inform how personal data is used.
+                description:
+                  To protect personal data and privacy in digital environments.
+                  To understand how to use and share personally identifiable
+                  information while being able to protect oneself and others
+                  from damages. To understand that digital services use a
+                  “Privacy policy” to inform how personal data is used.
                 educationalFramework: DigComp 2.2
                 url: 'https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf'
                 targetUrl: null
                 educationalLevel:
-                  description: 'Independently, according to my own needs, and solving well-defined and non-routine problems, I can: • discuss ways to protect my personal data and privacy in digital environments, and • discuss ways to use and share personally identifiable information while protecting myself and others from damages. • indicate privacy policy statements of how personal data is used in digital services.'
+                  description:
+                    'Independently, according to my own needs, and solving
+                    well-defined and non-routine problems, I can: • discuss ways
+                    to protect my personal data and privacy in digital
+                    environments, and • discuss ways to use and share personally
+                    identifiable information while protecting myself and others
+                    from damages. • indicate privacy policy statements of how
+                    personal data is used in digital services.'
                   name:
                     - inLanguage: en
                       name: INTERMEDIATE
@@ -851,7 +1001,9 @@ components:
                 competencyRequired:
                   - name:
                       - inLanguage: en
-                        name: 'HPI Academy: Leading Digital Transformation and Innovation - Fall 2020'
+                        name:
+                          'HPI Academy: Leading Digital Transformation and
+                          Innovation - Fall 2020'
                     educationalFramework: Course_ID
                     targetUrl: 'https://open.hpi.de/courses/digitrans2020-1'
             isPartOf:
@@ -887,14 +1039,16 @@ components:
             courseCode:
               type: string
               nullable: true
-              description: An internal short code of the course. Also possible to
-                give internal codes for templates here.
+              description:
+                An internal short code of the course. Also possible to give
+                internal codes for templates here.
               example: confidentialcommunication2021
             learningResourceType:
               type: object
-              description: The learning resource type as listed at https://w3id.org/kim/hcrt/scheme.
-                This describes the resource according to HCRT (Higher Education Resource
-                Type).
+              description:
+                The learning resource type as listed at
+                https://w3id.org/kim/hcrt/scheme. This describes the resource
+                according to HCRT (Higher Education Resource Type).
               required:
                 - identifier
                 - type
@@ -902,9 +1056,10 @@ components:
               properties:
                 identifier:
                   type: string
-                  description: This is an IRI pointing at a node describing the learning
-                    resource type. Currently, only https://w3id.org/kim/hcrt/course
-                    is allowed.
+                  description:
+                    This is an IRI pointing at a node describing the learning
+                    resource type. Currently, only
+                    https://w3id.org/kim/hcrt/course is allowed.
                   format: iri
                   enum:
                     - 'https://w3id.org/kim/hcrt/course'
@@ -916,8 +1071,9 @@ components:
                 inScheme:
                   type: string
                   format: iri
-                  description: A pointer to the used scheme. Currently, only https://w3id.org/kim/hcrt/scheme
-                    is allowed.
+                  description:
+                    A pointer to the used scheme. Currently, only
+                    https://w3id.org/kim/hcrt/scheme is allowed.
                   enum:
                     - 'https://w3id.org/kim/hcrt/scheme'
             courseMode:
@@ -925,8 +1081,9 @@ components:
               nullable: true
               minItems: 0
               uniqueItems: true
-              description: This attribute describes the course mode. It is limited
-                to "blended", "online", "onsite", "synchronous" and "asynchronous".
+              description:
+                This attribute describes the course mode. It is limited to
+                "blended", "online", "onsite", "synchronous" and "asynchronous".
               items:
                 type: string
                 enum:
@@ -939,27 +1096,31 @@ components:
               type: string
               nullable: true
               description: Description of the course as an HTML document
-              example: <p>A message on the Internet is sent through several networks
-                and via different stations on its way to the target system. The individual
-                stations are responsible for ensuring that the message is properly
-                forwarded and finally delivered to the correct recipient. Each of
-                these stations, if the message is sent in plain text, can receive
-                the message and read its content. This means that a potential attacker,
-                if he controls one of these intermediate systems, can also read the
-                content of the message and even modify it before retransmitting it.
-                Such attacks can have extreme effects on communication.</p>\n\n<p>In
-                this course we will look at how and whether your connection to online
-                banking is secure or whether the content of an e-mail is trustworthy.
-                For this purpose we will deal with the basics of cryptography, security
-                objectives and different types of encryption. In addition, we will
-                provide insights into different models and standards that are used
-                in practice.</p>\n
+              example:
+                <p>A message on the Internet is sent through several networks
+                and via different stations on its way to the target system. The
+                individual stations are responsible for ensuring that the
+                message is properly forwarded and finally delivered to the
+                correct recipient. Each of these stations, if the message is
+                sent in plain text, can receive the message and read its
+                content. This means that a potential attacker, if he controls
+                one of these intermediate systems, can also read the content of
+                the message and even modify it before retransmitting it. Such
+                attacks can have extreme effects on communication.</p>\n\n<p>In
+                this course we will look at how and whether your connection to
+                online banking is secure or whether the content of an e-mail is
+                trustworthy. For this purpose we will deal with the basics of
+                cryptography, security objectives and different types of
+                encryption. In addition, we will provide insights into different
+                models and standards that are used in practice.</p>\n
             inLanguage:
               type: array
               nullable: true
               uniqueItems: true
-              description: 'List of languages in which the course is offered. Each
-                language should be abbreviated in accordance with BCP 47: https://tools.ietf.org/html/bcp47.'
+              description:
+                'List of languages in which the course is offered. Each language
+                should be abbreviated in accordance with BCP 47:
+                https://tools.ietf.org/html/bcp47.'
               items:
                 type: string
                 example: en
@@ -967,9 +1128,10 @@ components:
               type: array
               nullable: true
               uniqueItems: true
-              description: The time the course starts. It is possible to give several
-                date-times for repetitive courses. The date-time to be given according
-                to ISO 8601.
+              description:
+                The time the course starts. It is possible to give several
+                date-times for repetitive courses. The date-time to be given
+                according to ISO 8601.
               items:
                 type: string
                 format: date-time
@@ -978,9 +1140,10 @@ components:
               type: array
               nullable: true
               uniqueItems: true
-              description: The time the course ends. It is possible to give several
-                date-times for repetitive courses. The date-time to be given according
-                to ISO 8601.
+              description:
+                The time the course ends. It is possible to give several
+                date-times for repetitive courses. The date-time to be given
+                according to ISO 8601.
               items:
                 type: string
                 format: date-time
@@ -989,8 +1152,9 @@ components:
               type: array
               nullable: true
               uniqueItems: true
-              description: The time and date the course is no longer available. It
-                is possible to give several date-times for repetitive courses. The
+              description:
+                The time and date the course is no longer available. It is
+                possible to give several date-times for repetitive courses. The
                 date-time to be given according to ISO 8601.
               items:
                 type: string
@@ -1005,8 +1169,9 @@ components:
             instructor:
               type: array
               uniqueItems: true
-              description: List of instructors of the course. Also organizations can
-                be given.
+              description:
+                List of instructors of the course. Also organizations can be
+                given.
               items:
                 anyOf:
                   - $ref: ./Organization.yaml
@@ -1016,8 +1181,9 @@ components:
             teaches:
               type: array
               uniqueItems: true
-              description: List of learning objectives for this course as an array
-                of Skill objects.
+              description:
+                List of learning objectives for this course as an array of Skill
+                objects.
               items:
                 $ref: ./Skill.yaml
             duration:
@@ -1025,12 +1191,12 @@ components:
               example: P2W
               type: string
               format: duration
-              pattern: 
-                ^P(?!$)(\d+(?:\.\d+)?Y)?(\d+(?:\.\d+)?M)?(\d+(?:\.\d+)?W)?(\d+(?:\.\d+)?D)?(T(?=\d)(\d+(?:\.\d+)?H)?(\d+(?:\.\d+)?M)?(\d+(?:\.\d+)?S)?)?$
+              pattern: ^P(?!$)(\d+(?:\.\d+)?Y)?(\d+(?:\.\d+)?M)?(\d+(?:\.\d+)?W)?(\d+(?:\.\d+)?D)?(T(?=\d)(\d+(?:\.\d+)?H)?(\d+(?:\.\d+)?M)?(\d+(?:\.\d+)?S)?)?$
             contributor:
               type: array
-              description: A List of partner institutes or persons contributed to
-                this course.
+              description:
+                A List of partner institutes or persons contributed to this
+                course.
               uniqueItems: true
               items:
                 anyOf:
@@ -1039,7 +1205,8 @@ components:
                   - $ref: ./Person.yaml
                     #description: A person participating in creating the course.
             publisher:
-              description: The publisher of the course. Can be a person or an organization.
+              description:
+                The publisher of the course. Can be a person or an organization.
               anyOf:
                 - $ref: ./Organization.yaml
                 - $ref: ./Person.yaml
@@ -1051,20 +1218,23 @@ components:
             workload:
               type: object
               nullable: true
-              description: Specifies the amount of time course participants should
-                plan with when taking the course.
+              description:
+                Specifies the amount of time course participants should plan
+                with when taking the course.
               minProperties: 0
               example: null
               properties:
                 timeValue:
                   type: integer
-                  description: The numeric value of time course participants should
-                    plan with when taking the course.
+                  description:
+                    The numeric value of time course participants should plan
+                    with when taking the course.
                   minimum: 0
                 timeUnit:
                   type: string
-                  description: The unit of time course participants should plan with
-                    when taking the course (e.g. h/month, h/week).
+                  description:
+                    The unit of time course participants should plan with when
+                    taking the course (e.g. h/month, h/week).
                   enum:
                     - h/month
                     - h/week
@@ -1074,17 +1244,21 @@ components:
                 - timeUnit
             license:
               type: array
-              description: A list of licenses that one may choose from for this course. The schema allows for multi licensing.
+              description:
+                A list of licenses that one may choose from for this course. The
+                schema allows for multi licensing.
               uniqueItems: true
               items:
                 $ref: ./License.yaml
             access:
               type: array
               nullable: true
-              description: Specifies how this course can be accessed by learners.
-                The different access options shall not be used to transport differences
-                between available content under this access option but rather annotate
-                the course track or certificate that can be achieved.
+              description:
+                Specifies how this course can be accessed by learners. The
+                different access options shall not be used to transport
+                differences between available content under this access option
+                but rather annotate the course track or certificate that can be
+                achieved.
               uniqueItems: true
               items:
                 type: string
@@ -1096,8 +1270,10 @@ components:
             audience:
               type: array
               nullable: true
-              description: A list of audiences the course is intended for. The audience
-                type is chosen by giving a node of the DublinCore vocabulary from
+              description:
+                A list of audiences the course is intended for. The audience
+                type is chosen by giving a node of the DublinCore vocabulary
+                from
                 https://www.dublincore.org/specifications/lrmi/concept_schemes/educationalAudienceRole/.
               uniqueItems: true
               items:
@@ -1106,14 +1282,16 @@ components:
                 format: iri
             educationalAlignment:
               type: array
-              description: This list describes the topics or subjects of the course
-                and the frameworks which are used for determination.
+              description:
+                This list describes the topics or subjects of the course and the
+                frameworks which are used for determination.
               uniqueItems: true
               items:
                 $ref: ./EducationalAlignment.yaml
             educationalLevel:
               type: array
-              description: List of categorization of competency level and the related
+              description:
+                List of categorization of competency level and the related
                 frameworks.
               uniqueItems: true
               items:
@@ -1122,8 +1300,8 @@ components:
               type: array
               uniqueItems: true
               minItems: 1
-              description: List of creators of the course. Also organizations can
-                be given.
+              description:
+                List of creators of the course. Also organizations can be given.
               items:
                 anyOf:
                   - $ref: ./Organization.yaml
@@ -1143,25 +1321,28 @@ components:
               #description: The place where the content/course can be found.
             offer:
               type: array
-              description: List of offers. An Offer object includes the price, currency
-                and frequency of the payment.
+              description:
+                List of offers. An Offer object includes the price, currency and
+                frequency of the payment.
               uniqueItems: true
               items:
                 $ref: ./Offer.yaml
             numberOfCredits:
               type: number
               nullable: true
-              description: The number of credits received for successfully completing
-                the course. Currently, credits are given according the European Credit
-                Transfer System (ECTS)
+              description:
+                The number of credits received for successfully completing the
+                course. Currently, credits are given according the European
+                Credit Transfer System (ECTS)
               example: null
               minimum: 0
             educationalCredentialsAwarded:
               type: array
               nullable: true
-              description: Clarification which kinds of awards for successfully completing
-                the course are given. ECTS are awarded if numberOfCredits > 0 (No
-                explicit information given here).
+              description:
+                Clarification which kinds of awards for successfully completing
+                the course are given. ECTS are awarded if numberOfCredits > 0
+                (No explicit information given here).
               uniqueItems: true
               items:
                 type: string
@@ -1172,9 +1353,10 @@ components:
                 example: record of achievement
             competencyRequired:
               type: array
-              description: A list of competencies that are required to successfully
-                complete the course. This includes skills, certificated, (high) school
-                degrees, other courses, etc.
+              description:
+                A list of competencies that are required to successfully
+                complete the course. This includes skills, certificated, (high)
+                school degrees, other courses, etc.
               uniqueItems: true
               example: null
               items:
@@ -1186,7 +1368,8 @@ components:
             applicationStartDate:
               type: string
               nullable: true
-              description: The time and date the period to enroll or hand in an application
+              description:
+                The time and date the period to enroll or hand in an application
                 for the course begins. Given according to ISO 8601.
               format: date-time
               example: null
@@ -1194,14 +1377,16 @@ components:
               type: string
               nullable: true
               format: date-time
-              description: The time end date the enrolment and application period
-                for the course ends. Given according to ISO 8601.
+              description:
+                The time end date the enrolment and application period for the
+                course ends. Given according to ISO 8601.
               example: null
             accessMode:
               type: array
               nullable: true
-              description: Listing of accessModes e.g. audio-descriptive (for deaf
-                people) and other handicaps, uses vocabulary from 
+              description:
+                Listing of accessModes e.g. audio-descriptive (for deaf people)
+                and other handicaps, uses vocabulary from
                 https://www.w3.org/2021/a11y-discov-vocab/latest/#accessModeSufficient-vocabulary.
               uniqueItems: true
               items:
@@ -1213,31 +1398,34 @@ components:
                   - auditory
             repeatFrequency:
               type: array
-              description: A list of schedule objects describing in which frequency
-                course units take place, e.g. every Tuesday 7pm to 9pm and every Thursday
-                6pm to 8pm.
+              description:
+                A list of schedule objects describing in which frequency course
+                units take place, e.g. every Tuesday 7pm to 9pm and every
+                Thursday 6pm to 8pm.
               example: null
               items:
                 $ref: ./Schedule.yaml
             dateCreated:
               type: string
               nullable: true
-              description: The date the content was created. Given according to ISO
-                8601.
+              description:
+                The date the content was created. Given according to ISO 8601.
               format: date-time
               example: null
             dateModified:
               type: string
               nullable: true
               format: date-time
-              description: The date the content was changed last. Given according
-                to ISO 8601.
+              description:
+                The date the content was changed last. Given according to ISO
+                8601.
               example: null
             hollandCode:
               type: array
               nullable: true
-              description: The assessed competency described in Holland Code/RIASEC
-                Model. The allowed values are therefor "R", "I", "A", "S", "E", "C"
+              description:
+                The assessed competency described in Holland Code/RIASEC Model.
+                The allowed values are therefor "R", "I", "A", "S", "E", "C"
                 according to the Holland taxonomy.
               uniqueItems: true
               items:
@@ -1251,16 +1439,18 @@ components:
                   - C
             hasPart:
               type: array
-              description: A list of the learning items like videos, lectures, quizzes,
-                ... in the course.
+              description:
+                A list of the learning items like videos, lectures, quizzes, ...
+                in the course.
               uniqueItems: true
               items:
                 $ref: ./LearningItem.yaml
             isPartOf:
               type: array
-              description: A list of programs (preferable EducationalOccupationalPrograms)
-                this course is part of. The given metadata shall at least contain
-                a link to the program.
+              description:
+                A list of programs (preferable EducationalOccupationalPrograms)
+                this course is part of. The given metadata shall at least
+                contain a link to the program.
               uniqueItems: true
               example: null
               items:
@@ -1342,28 +1532,40 @@ components:
     Course_ID:
       title: Course_ID
       type: object
-      description: This schema describes the attributes of a course id. It is used to point at a specific course.
+      description:
+        This schema describes the attributes of a course id. It is used to point
+        at a specific course.
       properties:
         name:
           type: array
-          description: List of names of the course. This array allows localized strings. A name and a language have to be given in the respective element.
+          description:
+            List of names of the course. This array allows localized strings. A
+            name and a language have to be given in the respective element.
           items:
             type: object
             properties:
               inLanguage:
                 type: string
-                description: The language the name is given in. Has to be a shortcode according to BCP 47.
+                description:
+                  The language the name is given in. Has to be a shortcode
+                  according to BCP 47.
                 example: en
               name:
                 type: string
-                description: The name of the course in the given language by the \"inLanguage\" attribute.
-                example: 'HPI Academy: Leading Digital Transformation and Innovation - Fall 2020'
+                description:
+                  The name of the course in the given language by the
+                  \"inLanguage\" attribute.
+                example:
+                  'HPI Academy: Leading Digital Transformation and Innovation -
+                  Fall 2020'
             required:
               - inLanguage
               - name
         educationalFramework:
           type: string
-          description: 'This labels the object as a link to a course. It is needed to be compliant with a \"Skill\" '
+          description:
+            'This labels the object as a link to a course. It is needed to be
+            compliant with a \"Skill\" '
           enum:
             - Course_ID
         targetUrl:
@@ -1376,39 +1578,54 @@ components:
     EducationalAlignment:
       title: EducationalAlignment
       type: object
-      description: 'This schema describes the attributes of an educational alignment. It represents the topic, field of study, subject, ... of a course.'
+      description:
+        'This schema describes the attributes of an educational alignment. It
+        represents the topic, field of study, subject, ... of a course.'
       properties:
         alignmentType:
           type: string
           nullable: true
-          description: The type of the alignment. Can only be \"educationalSubject\"
+          description:
+            The type of the alignment. Can only be \"educationalSubject\"
           enum:
             - educationalSubject
         educationalFramework:
           type: string
-          description: 'The name of the educational framework that describes the educational alignment. Currently, only the standards ISCED-F and ÖFOS are '
+          description:
+            'The name of the educational framework that describes the
+            educational alignment. Currently, only the standards ISCED-F and
+            ÖFOS are '
           enum:
             - ISCED-F
             - OEFOS
         url:
           type: string
           nullable: true
-          description: An IRI pointing at the document which describes the educational framework.
+          description:
+            An IRI pointing at the document which describes the educational
+            framework.
           format: iri
           example: 'http://uis.unesco.org/sites/default/files/documents/international-standard-classification-of-education-fields-of-education-and-training-2013-detailed-field-descriptions-2015-en.pdf'
         name:
           type: array
-          description: List of names of the educational alignment. This array allows localized strings. A name and a language have to be given in the respective element
+          description:
+            List of names of the educational alignment. This array allows
+            localized strings. A name and a language have to be given in the
+            respective element
           items:
             type: object
             properties:
               inLanguage:
                 type: string
-                description: The language the name is given in. Has to be a shortcode according to BCP 47.
+                description:
+                  The language the name is given in. Has to be a shortcode
+                  according to BCP 47.
                 example: en
               name:
                 type: string
-                description: The name of the educational alignment in the given language by the \"inLanguage\" attrib
+                description:
+                  The name of the educational alignment in the given language by
+                  the \"inLanguage\" attrib
                 example: Computer use
             required:
               - inLanguage
@@ -1416,7 +1633,8 @@ components:
         alternateName:
           type: array
           nullable: true
-          description: 'A list of alternative names for the educational alignment. '
+          description:
+            'A list of alternative names for the educational alignment. '
           example:
             - 'use of computers'
             - 'working with computers'
@@ -1424,12 +1642,15 @@ components:
             type: string
         shortCode:
           type: string
-          description: The short code for the Field of study if it is provided by the framework.
+          description:
+            The short code for the Field of study if it is provided by the
+            framework.
           example: '0611'
         targetUrl:
           type: string
           nullable: true
-          description: An IRI pointing at the framework node of the educational alignment.
+          description:
+            An IRI pointing at the framework node of the educational alignment.
           format: iri
           example: 'http://data.europa.eu/esco/isced-f/0611'
         type:
@@ -1440,8 +1661,17 @@ components:
         description:
           type: string
           nullable: true
-          description: A short description of the educational alignment. Should be based on the framework used.
-          example: 'Computer use is the study of using computers and computer software and applications for different purposes. These programmes are generally of short duration. Programmes and qualifications with the following main content are classified here: Computer use Use of software for calculating (spread sheets) Use of software for data processing Use of software for desk top publishing Use of software for word processing Use of Internet'
+          description:
+            A short description of the educational alignment. Should be based on
+            the framework used.
+          example:
+            'Computer use is the study of using computers and computer software
+            and applications for different purposes. These programmes are
+            generally of short duration. Programmes and qualifications with the
+            following main content are classified here: Computer use Use of
+            software for calculating (spread sheets) Use of software for data
+            processing Use of software for desk top publishing Use of software
+            for word processing Use of Internet'
       required:
         - educationalFramework
         - name
@@ -1454,21 +1684,35 @@ components:
         description:
           type: string
           nullable: true
-          description: A short description of the educational level. Should be based on the framework used.
-          example: 'Independently, according to my own needs, and solving well-defined and non-routine problems, I can: • discuss ways to protect my personal data and privacy in digital environments, and • discuss ways to use and share personally identifiable information while protecting myself and others from damages. • indicate privacy policy statements of how personal data is used in digital services.'
+          description:
+            A short description of the educational level. Should be based on the
+            framework used.
+          example:
+            'Independently, according to my own needs, and solving well-defined
+            and non-routine problems, I can: • discuss ways to protect my
+            personal data and privacy in digital environments, and • discuss
+            ways to use and share personally identifiable information while
+            protecting myself and others from damages. • indicate privacy policy
+            statements of how personal data is used in digital services.'
         name:
           type: array
-          description: List of names of the educational level. This array allows localized strings. A name and a language have to be given in the respective
+          description:
+            List of names of the educational level. This array allows localized
+            strings. A name and a language have to be given in the respective
           items:
             type: object
             properties:
               inLanguage:
                 type: string
-                description: The language the name is given in. Has to be a shortcode according to BCP 47.
+                description:
+                  The language the name is given in. Has to be a shortcode
+                  according to BCP 47.
                 example: en
               name:
                 type: string
-                description: The name of the educational level in the given language by the \"inLanguage\" attribute.
+                description:
+                  The name of the educational level in the given language by the
+                  \"inLanguage\" attribute.
                 example: INTERMEDIATE
             required:
               - inLanguage
@@ -1485,22 +1729,29 @@ components:
         shortCode:
           type: string
           example: '4'
-          description: A short code for the educational level if it is provided by the used framework.
+          description:
+            A short code for the educational level if it is provided by the used
+            framework.
         educationalFramework:
           type: string
-          description: The name of the educational framework that describes the educational l
+          description:
+            The name of the educational framework that describes the educational
+            l
           example: DigComp 2.2
         url:
           type: string
           nullable: true
           format: iri
-          description: An IRI pointing at the document which describes the educational framework.
+          description:
+            An IRI pointing at the document which describes the educational
+            framework.
           example: 'https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf'
         targetUrl:
           type: string
           nullable: true
           format: iri
-          description: An IRI pointing at the framework node of the educational level.
+          description:
+            An IRI pointing at the framework node of the educational level.
           example: null
         type:
           type: string
@@ -1518,7 +1769,9 @@ components:
       properties:
         description:
           type: string
-          description: 'A short description of the image. Can be used as an alternative text, if the image cannot be displayed.'
+          description:
+            'A short description of the image. Can be used as an alternative
+            text, if the image cannot be displayed.'
           example: This is an image. It shows ...
         type:
           type: string
@@ -1574,7 +1827,10 @@ components:
           example: PT19M21S
         competencyRequired:
           type: array
-          description: 'A list of competencies that are required to successfully complete this item. This includes skills, certificated, (high) school degrees, other courses'
+          description:
+            'A list of competencies that are required to successfully complete
+            this item. This includes skills, certificated, (high) school
+            degrees, other courses'
           items:
             anyOf:
               - $ref: ./Course_ID.yaml
@@ -1591,13 +1847,17 @@ components:
         This schema describes the attributes of a license.
       properties:
         identifier:
-          description: 'A license according to https://spdx.org/licenses/ or \"proprietary\".'
+          description:
+            'A license according to https://spdx.org/licenses/ or
+            \"proprietary\".'
           example: 'https://creativecommons.org/publicdomain/zero/1.0'
           format: iri
           oneOf:
             - format: iri
               example: 'https://creativecommons.org/publicdomain/zero/1.0'
-              description: 'A generic, general license according to https://spdx.org/licenses/.'
+              description:
+                'A generic, general license according to
+                https://spdx.org/licenses/.'
             - enum:
                 - proprietary
               example: proprietary
@@ -1608,22 +1868,35 @@ components:
           nullable: true
           format: iri
           example: null
-          description: 'A link to the specific license document (if any, otherwise set to \"null" - the identifier pointing at the general license is to be considered the license document then). Has to be \"null" if identifier is \"proprietary".'
+          description:
+            'A link to the specific license document (if any, otherwise set to
+            \"null" - the identifier pointing at the general license is to be
+            considered the license document then). Has to be \"null" if
+            identifier is \"proprietary".'
       required:
         - identifier
     Offer:
       title: Offer
       type: object
-      description: 'This schema describes the attributes of an offer. ATTENTION: If the course has "free" in the accessMode array, one item in offers has to have price "0.0". If the course has several options, e.g. course in general is free but there is a certification fee: there has to be one Offer object for each case. The category field is used to give information if the offer is for the course or only certification.'
+      description:
+        'This schema describes the attributes of an offer. ATTENTION: If the
+        course has "free" in the accessMode array, one item in offers has to
+        have price "0.0". If the course has several options, e.g. course in
+        general is free but there is a certification fee: there has to be one
+        Offer object for each case. The category field is used to give
+        information if the offer is for the course or only certification.'
       properties:
         price:
           type: number
-          description: The price in numbers according to the respective currency.
+          description:
+            The price in numbers according to the respective currency.
           example: 0.00
           minimum: 0
         priceCurrency:
           type: string
-          description: The currency the price is given in. Has to be given in ISO 4217 standards format
+          description:
+            The currency the price is given in. Has to be given in ISO 4217
+            standards format
           example: EUR
         paymentFrequency:
           type: string
@@ -1640,7 +1913,11 @@ components:
             - other
         category:
           type: string
-          description: 'The category of the offer. Can either be "course" (the costs for taking the course), "certificate" (the costs for the certification only) or "complete" (all costs for a course including certification).'
+          description:
+            'The category of the offer. Can either be "course" (the costs for
+            taking the course), "certificate" (the costs for the certification
+            only) or "complete" (all costs for a course including
+            certification).'
           enum:
             - course
             - certificate
@@ -1662,7 +1939,9 @@ components:
         identifier:
           type: string
           nullable: true
-          description: 'An identifier for the organization. Can be a link to a homepage, Wikidata,...'
+          description:
+            'An identifier for the organization. Can be a link to a homepage,
+            Wikidata,...'
           format: iri
           example: 'https://open.hpi.de/'
         type:
@@ -1673,8 +1952,12 @@ components:
         description:
           type: string
           nullable: false
-          description: A short description of the organization. Should be provided in HTML.
-          example: 'openHPI is a digital educational platform situated at the HPI with a focus on topics regarding computational sciences, internet and world wide web and design thinking.'
+          description:
+            A short description of the organization. Should be provided in HTML.
+          example:
+            'openHPI is a digital educational platform situated at the HPI with
+            a focus on topics regarding computational sciences, internet and
+            world wide web and design thinking.'
         image:
           $ref: ./ImageObject.yaml
           #description: A logo or image of the organization.
@@ -1684,16 +1967,20 @@ components:
     Person:
       title: Person
       type: object
-      description: This object describes a natural person in the context of a course.
+      description:
+        This object describes a natural person in the context of a course.
       properties:
         name:
           type: string
-          description: The name of the person. Honorific prefix and suffix have to be excluded.
+          description:
+            The name of the person. Honorific prefix and suffix have to be
+            excluded.
           example: Christoph Meinel
         honorificPrefix:
           type: string
           nullable: true
-          description: 'The honorific prefix of the person (e.g. Dr., Prof., ...).'
+          description:
+            'The honorific prefix of the person (e.g. Dr., Prof., ...).'
           example: 'Prof. Dr. '
         honorificSuffix:
           type: string
@@ -1704,7 +1991,9 @@ components:
           type: string
           nullable: true
           format: iri
-          description: 'An unique identifier e.g. IRI. Can be a link to a homepage, Wikidata, ORCID,...'
+          description:
+            'An unique identifier e.g. IRI. Can be a link to a homepage,
+            Wikidata, ORCID,...'
           example: null
         type:
           type: string
@@ -1722,7 +2011,9 @@ components:
         description:
           type: string
           nullable: true
-          description: A short description of the person. Can be a CV-like description. Should be provided in HTML
+          description:
+            A short description of the person. Can be a CV-like description.
+            Should be provided in HTML
           example: null
         affiliation:
           $ref: ./Organization.yaml
@@ -1737,11 +2028,15 @@ components:
       properties:
         address:
           type: object
-          description: 'The physical address where a course takes place. A room can be given here, too.'
+          description:
+            'The physical address where a course takes place. A room can be
+            given here, too.'
           properties:
             addressCountry:
               type: string
-              description: Country where the course takes place in accordance with ISO 3166-1.
+              description:
+                Country where the course takes place in accordance with ISO
+                3166-1.
               example: null
             streetAddress:
               type: string
@@ -1752,16 +2047,21 @@ components:
               description: The city the course takes place.
             postalCode:
               type: string
-              description: The postal code of the place where the course takes place.
+              description:
+                The postal code of the place where the course takes place.
               example: null
             description:
               type: string
-              description: More detailed description of the place e.g. a room number/identifier to find the course location.
+              description:
+                More detailed description of the place e.g. a room
+                number/identifier to find the course location.
               example: null
         name:
           type: string
           nullable: true
-          description: 'The name of the place, university, etc. where the course is given. Also, information for \"online\" or \"hybrid\" can be given here.'
+          description:
+            'The name of the place, university, etc. where the course is given.
+            Also, information for \"online\" or \"hybrid\" can be given here.'
           example: online
         latitude:
           type: number
@@ -1779,17 +2079,23 @@ components:
           type: string
           format: iri
           example: 'https://open.hpi.de'
-          description: The url to the online address to the course e.g. virtual room. Has to be given when course is "online" or "hybrid".
+          description:
+            The url to the online address to the course e.g. virtual room. Has
+            to be given when course is "online" or "hybrid".
       required:
         - name
     Program:
       title: Program
       type: object
-      description: This schema describes the attributes of a course program to an extend that it links to a EducationalOccupationalProgram.
+      description:
+        This schema describes the attributes of a course program to an extend
+        that it links to a EducationalOccupationalProgram.
       properties:
         identifier:
           type: string
-          description: 'An IRI pointing at the course program or a homepage of the program, ... et'
+          description:
+            'An IRI pointing at the course program or a homepage of the program,
+            ... et'
           format: iri
         type:
           type: string
@@ -1798,18 +2104,25 @@ components:
             - Program
         title:
           type: string
-          description: The title or name of the course program this course is part of
+          description:
+            The title or name of the course program this course is part of
       required:
         - identifier
         - type
     Schedule:
       title: Schedule
       type: object
-      description: 'This schema describes the attributes of a schedule for a course. If a course takes place on several days of a week, individual entries for each day need to be created. The same is true for several time slots on the same day.'
+      description:
+        'This schema describes the attributes of a schedule for a course. If a
+        course takes place on several days of a week, individual entries for
+        each day need to be created. The same is true for several time slots on
+        the same day.'
       properties:
         byDay:
           type: string
-          description: 'This is the day of the week according to https://schema.org/DayOfWeek a course takes'
+          description:
+            'This is the day of the week according to
+            https://schema.org/DayOfWeek a course takes'
           pattern: 'https://schema.org/*'
           example: 'https://schema.org/Friday'
         startTime:
@@ -1831,17 +2144,23 @@ components:
       properties:
         name:
           type: array
-          description: List of names of the skill. This array allows localized strings. A name and a language have to be given in the respective element.
+          description:
+            List of names of the skill. This array allows localized strings. A
+            name and a language have to be given in the respective element.
           items:
             type: object
             properties:
               inLanguage:
                 type: string
-                description: The language the name is given in. Has to be a shortcode according to BCP 47.
+                description:
+                  The language the name is given in. Has to be a shortcode
+                  according to BCP 47.
                 example: en
               name:
                 type: string
-                description: The name of the skill in the given language by the \"inLanguage\" attribute.
+                description:
+                  The name of the skill in the given language by the
+                  \"inLanguage\" attribute.
                 example: PROTECTING PERSONAL DATA AND PRIVACY
             required:
               - inLanguage
@@ -1857,21 +2176,32 @@ components:
             type: string
         shortCode:
           type: string
-          description: The short code of the skill if the used framework provides one.
+          description:
+            The short code of the skill if the used framework provides one.
           example: '4.2'
         description:
           type: string
           nullable: true
-          description: A short description of the skill. Should be based on the framework used.
-          example: To protect personal data and privacy in digital environments. To understand how to use and share personally identifiable information while being able to protect oneself and others from damages. To understand that digital services use a “Privacy policy” to inform how personal data is used.
+          description:
+            A short description of the skill. Should be based on the framework
+            used.
+          example:
+            To protect personal data and privacy in digital environments. To
+            understand how to use and share personally identifiable information
+            while being able to protect oneself and others from damages. To
+            understand that digital services use a “Privacy policy” to inform
+            how personal data is used.
         educationalFramework:
           type: string
-          description: The name of the educational framework that describes the ski
+          description:
+            The name of the educational framework that describes the ski
           example: DigComp 2.2
         url:
           type: string
           nullable: true
-          description: An IRI pointing at the document which describes the educational framework.
+          description:
+            An IRI pointing at the document which describes the educational
+            framework.
           format: iri
           example: 'https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf'
         targetUrl:
@@ -1893,7 +2223,9 @@ components:
       properties:
         description:
           type: string
-          description: 'A short description of the content of the video. Can be used as an alternative text, if the video cannot be displayed.'
+          description:
+            'A short description of the content of the video. Can be used as an
+            alternative text, if the video cannot be displayed.'
         contentUrl:
           type: string
           format: iri

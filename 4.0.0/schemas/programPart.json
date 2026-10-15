@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/programPart.json",
+  "title": "Program part",
+  "description": "A module area within an educational program with its credit requirement and courses.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json"
+    },
+    "description": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/richText.json"
+    },
+    "numberOfCredits": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/numberOfCredits.json"
+    },
+    "hasCourse": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "https://w3id.org/moochub/4.0.0/schemas/courseReference.json"
+      }
+    }
+  },
+  "required": ["name", "numberOfCredits", "hasCourse"]
+}

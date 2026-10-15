@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/educationalAlignment.json",
+  "title": "Educational alignment",
+  "description": "An alignment to an established educational framework. It is recommended to use one of the specialized alignment schemas for specific frameworks, e.g. iscedFAlignment, oefosAlignment, hochschulfaechersystematikAlignment, schulfaecherAlignment or hollandCodesAlignment, but other frameworks may be alligned as well.",
+  "type": "array",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "anyOf": [
+      {
+        "$ref": "https://w3id.org/moochub/4.0.0/schemas/alignmentObject.json"
+      },
+      {
+        "$ref": "https://w3id.org/moochub/4.0.0/schemas/iscedFAlignment.json"
+      },
+      {
+        "$ref": "https://w3id.org/moochub/4.0.0/schemas/oefosAlignment.json"
+      },
+      {
+        "$ref": "https://w3id.org/moochub/4.0.0/schemas/hochschulfaechersystematikAlignment.json"
+      },
+      {
+        "$ref": "https://w3id.org/moochub/4.0.0/schemas/schulfaecherAlignment.json"
+      },
+      {
+        "$ref": "https://w3id.org/moochub/4.0.0/schemas/hollandCodesAlignment.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/4.0.0/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "type": ["LearningResource", "Course"],
+  "id": "urn:uuid:90c77c77-affd-5dcc-954d-760edf02b890",
+  "url": "https://moodle.egov-campus.org/course/view.php?id=1",
+  "name": {
+    "de": "eGov-Campus"
+  },
+  "description": [
+    {
+      "type": "TextObject",
+      "inLanguage": "de",
+      "text": "\u003Cp\u003EDer eGov-Campus, die Lernplattform für E-Government\u003C/p\u003E",
+      "encodingFormat": "text/html"
+    }
+  ],
+  "isAccessibleForFree": true,
+  "creator": [
+    {
+      "id": "https://egov-campus.org/",
+      "type": "Organization",
+      "name": {
+        "de": "eGov-Campus"
+      }
+    }
+  ],
+  "publisher": {
+    "id": "https://egov-campus.org/",
+    "type": "Organization",
+    "name": {
+      "de": "eGov-Campus"
+    },
+    "sameAs": ["https://egov-campus.org/"]
+  },
+  "license": {
+    "type": "License",
+    "identifier": "proprietary"
+  },
+  "aggregateRating": {
+    "ratingValue": 0,
+    "ratingCount": 0,
+    "bestRating": 5,
+    "worstRating": 1
+  }
+}

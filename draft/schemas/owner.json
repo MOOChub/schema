@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/draft/schemas/owner.json",
+  "title": "Owner",
+  "type": "object",
+  "description": "The owner of a thing. This can be a person or an organization.",
+  "oneOf": [
+    {
+      "$ref": "https://w3id.org/moochub/draft/schemas/person.json"
+    },
+    {
+      "$ref": "https://w3id.org/moochub/draft/schemas/organization.json"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/timeRequired.json",
+  "title": "Time required",
+  "description": "The approximate or typical time required to work through the course, expressed as an ISO 8601 duration for schema.org/timeRequired.",
+  "type": "string",
+  "format": "duration"
+}

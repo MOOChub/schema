@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/image.json",
+  "title": "ImageObject",
+  "type": "object",
+  "description": "A licensed cover image for a course or other learning resource. It is a schema.org ImageObject and can be exported as the course's image property.",
+  "properties": {
+    "type": {
+      "const": "ImageObject"
+    },
+    "contentUrl": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/url.json",
+      "description": "An URL pointing at the actual image. Third parties may use this URI to embed or display the course cover."
+    },
+    "license": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/license.json"
+    },
+    "description": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json",
+      "description": "A short description of the image. It can be used as alternative text when the image cannot be displayed."
+    }
+  },
+  "required": ["contentUrl", "license"]
+}

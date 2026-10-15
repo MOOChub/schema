@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/hollandCodesAlignment.json",
+  "title": "Holland Codes AlignmentObject",
+  "description": "An AlignmentObject for a Holland Code / RIASEC learner interest.",
+  "allOf": [
+    {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/alignmentObject.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "alignmentType": {
+          "const": "educationalSubject"
+        },
+        "educationalFramework": {
+          "const": "Holland Codes"
+        },
+        "identifier": {
+          "enum": ["R", "I", "A", "S", "E", "C"]
+        }
+      },
+      "required": ["identifier"]
+    }
+  ]
+}

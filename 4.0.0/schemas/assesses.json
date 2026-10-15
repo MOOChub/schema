@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/assesses.json",
+  "title": "Assessed competencies",
+  "description": "A list of competencies that must be demonstrated by a person to complete the LearningResource.",
+  "type": "array",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "$ref": "https://w3id.org/moochub/4.0.0/schemas/competency.json"
+  }
+}

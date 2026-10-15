@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/publisher.json",
+  "title": "Publisher",
+  "description": "The publisher of the course. Can be a person or an organization.",
+  "anyOf": [
+    {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/organization.json"
+    },
+    {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/person.json"
+    }
+  ]
+}

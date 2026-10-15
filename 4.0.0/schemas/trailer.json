@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/trailer.json",
+  "title": "Trailer",
+  "description": "A licensed video or audio trailer or teaser of the learning resource. It is intended for third-party players or embeds used to market the course.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/trailer.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "license": {
+          "$ref": "https://w3id.org/moochub/4.0.0/schemas/license.json"
+        },
+        "description": {
+          "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json",
+          "description": "A short description of the video teaser. It can be used as alternative text when the video cannot be displayed."
+        }
+      },
+      "required": ["license"]
+    }
+  ]
+}

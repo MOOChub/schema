@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/draft/schemas/creator.json",
+  "title": "Creator",
+  "description": "List of creators of the course. Also organizations can be given.",
+  "type": "array",
+  "uniqueItems": true,
+  "minItems": 1,
+  "items": {
+    "anyOf": [
+      {
+        "$ref": "https://w3id.org/moochub/draft/schemas/organization.json"
+      },
+      {
+        "$ref": "https://w3id.org/moochub/draft/schemas/person.json"
+      }
+    ]
+  }
+}

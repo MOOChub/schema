@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/draft/schemas/contributor.json",
+  "title": "Contributor",
+  "description": "A List of partner institutes or persons that contributed to this course.",
+  "type": "array",
+  "uniqueItems": true,
+  "minItems": 1,
+  "items": {
+    "anyOf": [
+      {
+        "$ref": "https://w3id.org/moochub/draft/schemas/organization.json"
+      },
+      {
+        "$ref": "https://w3id.org/moochub/draft/schemas/person.json"
+      }
+    ]
+  }
+}

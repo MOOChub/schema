@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/4.0.0/context.jsonld",
+    {
+      "@language": "en"
+    }
+  ],
+  "type": ["LearningResource", "Course"],
+  "id": "urn:uuid:bb1761a4-8019-5371-bd32-b45ace07f6b1",
+  "url": "https://moodle.ki-campus.org/course/view.php?id=6",
+  "name": {
+    "en": "Introduction to Machine Learning Part 1: Foundations"
+  },
+  "description": [
+    {
+      "type": "TextObject",
+      "inLanguage": "en",
+      "text": "\u003Ch5\u003E\u003Cspan style=\"\"\u003E\u003Cspan class=\"\" style=\"font-weight: normal; color: rgb(0, 0, 0);\"\u003E\r\n\u003Cp\u003E\u003Cstrong\u003EMachine Learning (ML)&nbsp;\u003C/strong\u003Eis at the core of many applications of \u003Cstrong\u003Eartificial intelligence\u003C/strong\u003E. A key goal of this course series is to teach the \u003Cstrong\u003Efundamental building blocks \u003C/strong\u003Ebehind\u003Cstrong\u003E supervised ML\u003C/strong\u003E. Additional to \u003Cstrong\u003Eunderstanding\u003C/strong\u003E the theoretical basics, participants will learn how to \u003Cstrong\u003Eapply\u003C/strong\u003E and evaluate different ML algorithms in \u003Cstrong\u003ER and Python \u003C/strong\u003Ewith a focus on tabular data.\u003C/p\u003E\r\n\u003Cp\u003EAfter a general \u003Cstrong\u003Eintroduction to the basics of ML\u003C/strong\u003E in part 1/3, participants will get in touch with several \u003Cstrong\u003Elearning algorithms\u003C/strong\u003E&nbsp;in part 2/3. Finally, we will cover the \u003Cstrong\u003Eevaluation and tuning of ML models\u003C/strong\u003E in depth in part 3/3.\u003C/p\u003E\u003C/span\u003E\u003C/span\u003E\u003C/h5\u003E",
+      "encodingFormat": "text/html"
+    }
+  ],
+  "isAccessibleForFree": true,
+  "creator": [
+    {
+      "id": "https://ki-campus.org/",
+      "type": "Organization",
+      "name": {
+        "en": "KI Campus"
+      }
+    }
+  ],
+  "publisher": {
+    "id": "https://ki-campus.org/",
+    "type": "Organization",
+    "name": {
+      "en": "KI Campus"
+    },
+    "sameAs": ["https://ki-campus.org/"]
+  },
+  "license": {
+    "type": "License",
+    "identifier": "proprietary"
+  },
+  "aggregateRating": {
+    "ratingValue": 4.67,
+    "ratingCount": 3,
+    "bestRating": 5,
+    "worstRating": 1
+  }
+}

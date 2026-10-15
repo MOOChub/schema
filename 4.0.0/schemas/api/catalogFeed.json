@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/api/catalogFeed.json",
+  "title": "MOOChub catalog feed",
+  "description": "A paginated JSON:API feed of independently harvestable MOOChub entities.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "links": {
+      "type": "object",
+      "description": "Page information for the API",
+      "additionalProperties": false,
+      "properties": {
+        "self": {
+          "type": "string",
+          "format": "uri"
+        },
+        "first": {
+          "type": "string",
+          "format": "uri"
+        },
+        "last": {
+          "type": "string",
+          "format": "uri"
+        },
+        "next": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "prev": {
+          "type": ["string", "null"],
+          "format": "uri"
+        }
+      },
+      "required": ["self", "first", "last"]
+    },
+    "meta": {
+      "type": "object",
+      "description": "A meta object that contains non-standard meta-information.",
+      "additionalProperties": true
+    },
+    "data": {
+      "type": "array",
+      "description": "The actual data of the response",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "https://w3id.org/moochub/4.0.0/schemas/api/catalogResource.json"
+      }
+    }
+  },
+  "required": ["links", "data"]
+}

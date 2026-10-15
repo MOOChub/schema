@@ -1,0 +1,35 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/4.0.0/context.jsonld",
+    {
+      "@language": "en"
+    }
+  ],
+  "id": "https://provider.example/programs/incomplete-program",
+  "type": "EducationalOccupationalProgram",
+  "url": "https://provider.example/programs/incomplete-program",
+  "name": {
+    "en": "Incomplete Program"
+  },
+  "provider": {
+    "id": "https://example.org/organizations/example-university",
+    "type": "Organization",
+    "name": {
+      "en": "Example University"
+    }
+  },
+  "hasPart": [
+    {
+      "name": {
+        "en": "Core module"
+      },
+      "numberOfCredits": 5,
+      "hasCourse": [
+        {
+          "id": "https://provider.example/courses/intro-digital-skills",
+          "type": ["LearningResource", "Course"]
+        }
+      ]
+    }
+  ]
+}

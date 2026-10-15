@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/courseMode.json",
+  "title": "Course mode",
+  "description": "The means of delivery or the mode of study of the course instance as a list of controlled values.",
+  "type": "array",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "$ref": "https://w3id.org/moochub/4.0.0/schemas/learningMode.json"
+  }
+}

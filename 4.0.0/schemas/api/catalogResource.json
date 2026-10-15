@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/api/catalogResource.json",
+  "title": "Catalog resource",
+  "description": "A JSON:API resource representing an independently harvestable MOOChub entity.",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "courses"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The provider-local JSON:API resource identifier."
+        },
+        "attributes": {
+          "$ref": "https://w3id.org/moochub/4.0.0/schemas/course.json"
+        }
+      },
+      "required": ["type", "id", "attributes"]
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "programs"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The provider-local JSON:API resource identifier."
+        },
+        "attributes": {
+          "$ref": "https://w3id.org/moochub/4.0.0/schemas/program.json"
+        }
+      },
+      "required": ["type", "id", "attributes"]
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "credentials"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The provider-local JSON:API resource identifier."
+        },
+        "attributes": {
+          "$ref": "https://w3id.org/moochub/4.0.0/schemas/educationalOccupationalCredential.json"
+        }
+      },
+      "required": ["type", "id", "attributes"]
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "persons"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The provider-local JSON:API resource identifier."
+        },
+        "attributes": {
+          "$ref": "https://w3id.org/moochub/4.0.0/schemas/person.json"
+        }
+      },
+      "required": ["type", "id", "attributes"]
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "organizations"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The provider-local JSON:API resource identifier."
+        },
+        "attributes": {
+          "$ref": "https://w3id.org/moochub/4.0.0/schemas/organization.json"
+        }
+      },
+      "required": ["type", "id", "attributes"]
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "locations"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The provider-local JSON:API resource identifier."
+        },
+        "attributes": {
+          "$ref": "https://w3id.org/moochub/4.0.0/schemas/location.json"
+        }
+      },
+      "required": ["type", "id", "attributes"]
+    }
+  ]
+}

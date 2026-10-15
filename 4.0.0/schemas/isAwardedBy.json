@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/isAwardedBy.json",
+  "title": "Credential awarding learning opportunities",
+  "description": "A list of courses or educational programs through which this credential may be awarded. It does not imply that these are the only pathways to the credential.",
+  "type": "array",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "anyOf": [
+      {
+        "$ref": "https://w3id.org/moochub/4.0.0/schemas/courseReference.json"
+      },
+      {
+        "$ref": "https://w3id.org/moochub/4.0.0/schemas/programReference.json"
+      }
+    ]
+  }
+}

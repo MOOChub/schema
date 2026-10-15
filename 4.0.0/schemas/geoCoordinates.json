@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/geoCoordinates.json",
+  "title": "Geo coordinates",
+  "description": "Geographic coordinates for a location.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "GeoCoordinates"
+    },
+    "latitude": {
+      "type": "number",
+      "minimum": -90,
+      "maximum": 90
+    },
+    "longitude": {
+      "type": "number",
+      "minimum": -180,
+      "maximum": 180
+    }
+  },
+  "required": ["type", "latitude", "longitude"]
+}

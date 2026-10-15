@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/offerCategory.json",
+  "title": "Offer category",
+  "description": "Whether the offer covers the course, certification only, or both.",
+  "type": "string",
+  "enum": ["course", "certificate", "complete"]
+}

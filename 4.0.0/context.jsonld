@@ -1,0 +1,29 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "@vocab": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "prefLabel": {
+            "@id": "skos:prefLabel",
+            "@container": "@language"
+        },
+        "definition": {
+            "@id": "skos:definition",
+            "@container": "@language"
+        },
+        "inScheme": "skos:inScheme",
+        "Concept": "skos:Concept",
+        "prerequisiteCourses": "https://schema.org/coursePrerequisites",
+        "paymentFrequency": "https://w3id.org/moochub/4.0.0/paymentFrequency",
+        "name": {
+            "@id": "https://schema.org/name",
+            "@container": "@language"
+        },
+        "Competency": "http://data.europa.eu/snb/model/ontology/LearningOutcome",
+        "learningOutcomeSummary": "http://data.europa.eu/snb/model/ontology/learningOutcomeSummary",
+        "relatedSkill": "http://data.europa.eu/snb/model/ontology/relatedSkill",
+        "proficiencyLevel": "https://w3id.org/moochub/4.0.0/proficiencyLevel",
+        "isAwardedBy": "https://w3id.org/moochub/4.0.0/isAwardedBy"
+    }
+}

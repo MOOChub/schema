@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/programReference.json",
+  "title": "Educational program reference",
+  "description": "A compact reference to an educational program.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/id.json"
+    },
+    "name": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json"
+    },
+    "type": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/programType.json"
+    }
+  },
+  "required": ["id", "name", "type"]
+}

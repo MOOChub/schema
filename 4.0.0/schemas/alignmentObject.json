@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/alignmentObject.json",
+  "title": "AlignmentObject",
+  "description": "An intangible item that describes an alignment between a learning resource and a node in an educational framework. Should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource teaches or assesses a competency.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "AlignmentObject"
+    },
+    "alignmentType": {
+      "type": "string",
+      "description": "A category of alignment between the learning resource and the framework node. Recommended values include 'educationalSubject' or 'complexityLevel' from the LRMI alignmentType vocabulary: https://www.dublincore.org/specifications/lrmi/concept_schemes/alignmentType/, but other values may be used as well."
+    },
+    "educationalFramework": {
+      "type": "string",
+      "description": "The framework to which the resource being described is aligned."
+    },
+    "targetUrl": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/url.json",
+      "description": "The URL of a node in an established educational framework."
+    },
+    "identifier": {
+      "type": "string",
+      "description": "An identifier for the alignment target, such as a code or ID from the educational framework."
+    },
+    "targetDescription": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json",
+      "description": "The description of a node in an established educational framework."
+    },
+    "targetName": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json",
+      "description": "The name of a node in an established educational framework."
+    }
+  },
+  "required": ["type", "alignmentType", "educationalFramework", "targetName"],
+  "anyOf": [
+    {
+      "required": ["targetUrl"]
+    },
+    {
+      "required": ["identifier"]
+    }
+  ]
+}

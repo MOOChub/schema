@@ -1,0 +1,129 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/4.0.0/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "type": ["LearningResource", "Course"],
+  "id": "urn:uuid:25616c90-ff84-43cc-9198-e20b3e569d8a",
+  "url": "https://futurelearnlab.de/hub/blocks/ildmetaselect/detailpage.php?id=444",
+  "name": {
+    "de": "Digitalisierung mit Struktur: Der Diamant-Prozess"
+  },
+  "description": [
+    {
+      "type": "TextObject",
+      "inLanguage": "de",
+      "text": "\u003Cdiv class='teasertext'\u003E\u003Cspan class=\"multilang\" lang=\"DE\"\u003EIn diesem Kurs lernen Sie, wie Sie in Ihrem Unternehmen digitale Transformationsprozesse planen und umsetzen können, indem Sie konkrete Digitalisierungsbedarfe in Ihrem Unternehmen identifizieren und adressieren.\u003C/span\u003E\r\n\u003Cbr\u003E\r\n\u003Cbr\u003E\r\n\u003Cspan class=\"multilang\" lang=\"EN\"\u003EIn this course, you will learn how to plan and implement digital transformation processes in your company by identifying and addressing specific digitalization needs in your company.\u003Cbr\u003E\u003C/span\u003E\r\n\u003Cbr\u003E\r\n\u003Cbr\u003E\r\n\u003Ch4\u003E\u003Cspan class=\"multilang\" lang=\"DE\"\u003E\u003Cstrong\u003E\r\n            Die Autor*Innen\r\n        \u003C/strong\u003E\u003C/span\u003E\u003C/h4\u003E\r\n\u003Ch5\u003E\u003C/h5\u003E\u003Cspan class=\"multilang\" lang=\"DE\"\u003E\u003Cstrong\u003EHenrik Welp\u003C/strong\u003E Ist Digitalberater beim European-Digital-Innovation Hub Schleswig-Holstein. In dieser Rolle unterstützt er kleine und mittlere Unternehmen, Organisationen der öffentlichen Verwaltung und Startups bei der Umsetzung ihrer Digitalisierungsvorhaben mit verschiedenen Workshop-Angeboten und wirkt so aktiv an de Gestaltung neuer digitaler Infrastrukturen mit. \u003Cbr\u003E\u003Cbr\u003E\u003Cstrong\u003EAnna Lena Möller\u003C/strong\u003E Ist Instructional Designerin am Institut für Interaktive Systeme der Technischen Hochschule Lübeck. Im Kontext des European Digital Innovation Hub entwickelt und beforscht Sie innovative Lehr-Lern-Angebote. Ihre Schwerpunkte liegen in Lernszenarien die abseits des klassischen Schreibtisch-Kontextes funktionieren (Microlearning) und in der Erforschung von Transferstrategien in digitalen Lernprozessen.\r\n    \u003Cbr\u003E\u003C/span\u003E\r\n\u003Cbr\u003E\r\n\u003Cbr\u003E\r\n\u003Ch4\u003E\u003Cspan class=\"multilang\" lang=\"EN\"\u003EThe authors \u003C/span\u003E\u003C/h4\u003E\u003Cspan class=\"multilang\" lang=\"EN\"\u003E\u003Cstrong\u003EHenrik Welp\u003C/strong\u003E&nbsp;is digital consultant in the project European Digital Innovation Hub Schleswig-Holstein. In this role, he supports small and medium-sized enterprises, public administration organizations and start-ups in the implementation of their digitisation projects with various workshop offers and thus actively participates in the design of new digital infrastructures. \u003Cbr\u003E\u003Cbr\u003E\u003Cstrong\u003EAnna Lena Möller\u003C/strong\u003E&nbsp;is an instructional designer at the Institute for Interactive Systems at Lübeck University of Applied Sciences. In the context of the European Digital Innovation Hub Schleswig-Holstein, she develops and researches innovative teaching and learning designs. Her focus are learning scenarios that work outside the classic office context (microlearning) and on researching transfer strategies in digital learning processes.\r\n\u003C/span\u003E\u003C/div\u003E\u003Cdiv class='learninggoals'\u003E\u003Ch3\u003ELernziele\u003C/h3\u003E\u003Cspan class=\"multilang\" lang=\"DE\"\u003EZiel dieses Lernangebotes ist es Sie zu befähigen, die für Ihr Unternehmen kritischen Digitalisierungsbedarfe mithilfe des Diamant-Prozesses strukturiert angehen und Lösungsansätze hierfür entwickeln zu können.\u003C/span\u003E\r\n\u003Cbr\u003E\r\n\u003Cbr\u003E\r\n\u003Cspan class=\"multilang\" lang=\"EN\"\u003EThe aim of this course is&nbsp; to enable you to address the critical digitalization needs of your company in a structured way using the Diamond Process and to develop solutions for them.\u003C/span\u003E\u003C/div\u003E",
+      "encodingFormat": "text/html"
+    }
+  ],
+  "inLanguage": ["de"],
+  "isAccessibleForFree": true,
+  "hasCourseInstance": [
+    {
+      "id": "urn:uuid:bf3307cf-d5de-4256-8f07-f91ece671a9e",
+      "type": "CourseInstance",
+      "courseMode": ["online", "asynchronous"],
+      "duration": "PT2H"
+    }
+  ],
+  "teaches": [
+    {
+      "type": "Competency",
+      "id": "urn:uuid:4364929a-2844-46d0-837f-626f8998fa95",
+      "name": {
+        "de": "Digitale Transformation in Unternehmen planen und umsetzen"
+      },
+      "relatedSkill": [
+        {
+          "type": "Concept",
+          "id": "http://data.europa.eu/esco/skill/0458f6a0-cb54-4ff5-a543-b2c5354e17c0",
+          "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+          "prefLabel": {
+            "de": "beim digitalen Wandel industrieller Prozesse auf dem neuesten Stand sein",
+            "en": "keep up with digital transformation of industrial processes"
+          }
+        },
+        {
+          "type": "Concept",
+          "id": "http://data.europa.eu/esco/skill/553ad092-b799-44c9-a94c-65a84fdc7526",
+          "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+          "prefLabel": {
+            "de": "Verfahren für innerbetrieblichen Strukturwandel ermitteln",
+            "en": "identify processes for re-engineering"
+          }
+        },
+        {
+          "type": "Concept",
+          "id": "http://data.europa.eu/esco/skill/f5308e60-d763-4ead-be95-88c96fb3e02b",
+          "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+          "prefLabel": {
+            "de": "beim digitalen Wandel industrieller Prozesse auf dem neuesten Stand sein",
+            "en": "sich an Veränderungen in Technologieentwicklungsplänen anpassen"
+          }
+        }
+      ],
+      "proficiencyLevel": [
+        {
+          "type": "Concept",
+          "id": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/DIGCOMP/DIGCOMP3.0/DigComp%203.0%20Data%20Supplement%2024%20Nov%202025.jsonld#ProficiencyLevel/Basic_2",
+          "inScheme": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/DIGCOMP/DIGCOMP3.0/DigComp%203.0%20Data%20Supplement%2024%20Nov%202025.jsonld",
+          "prefLabel": {
+            "en": "Grundlagen (Level 2)"
+          }
+        }
+      ]
+    }
+  ],
+  "publisher": {
+    "id": "https://www.th-luebeck.de",
+    "type": "Organization",
+    "name": {
+      "de": "Technische Hochschule Lübeck"
+    },
+    "sameAs": ["https://www.th-luebeck.de"],
+    "image": {
+      "type": "ImageObject",
+      "contentUrl": "https://futurelearnlab.de/hub/pluginfile.php/1/local_ildmeta/provider/2/fhl-intern-logo.png",
+      "license": {
+        "type": "License",
+        "identifier": "Proprietary"
+      }
+    }
+  },
+  "contributor": [
+    {
+      "id": "https://www.th-luebeck.de/isy",
+      "type": "Organization",
+      "name": {
+        "de": "Institut für Interaktive Systeme"
+      },
+      "sameAs": ["https://www.th-luebeck.de/isy"]
+    }
+  ],
+  "creator": [
+    {
+      "id": "https://www.th-luebeck.de",
+      "type": "Organization",
+      "name": {
+        "de": "Technische Hochschule Lübeck"
+      }
+    }
+  ],
+  "image": {
+    "type": "ImageObject",
+    "contentUrl": "https://futurelearnlab.de/hub/pluginfile.php/47429/course/overviewfiles/Kursgrafik_100x100.png",
+    "license": {
+      "type": "License",
+      "identifier": "Proprietary"
+    }
+  },
+  "license": {
+    "type": "License",
+    "identifier": "CC-BY-NC-SA-4.0",
+    "id": "https://spdx.org/licenses/CC-BY-NC-SA-4.0.html"
+  },
+  "expires": "2025-06-17T00:00:00+02:00"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/instructor.json",
+  "title": "Instructor",
+  "description": "List of people who instruct the course or a course instance.",
+  "type": "array",
+  "uniqueItems": true,
+  "minItems": 1,
+  "items": {
+    "$ref": "https://w3id.org/moochub/4.0.0/schemas/person.json"
+  }
+}

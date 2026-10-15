@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/hasPart.json",
+  "title": "Course part",
+  "description": "A list of resources that are part of the course. Can be other courses or learning items.",
+  "type": "array",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "anyOf": [
+      {
+        "$ref": "https://w3id.org/moochub/4.0.0/schemas/courseReference.json"
+      },
+      {
+        "$ref": "https://w3id.org/moochub/4.0.0/schemas/learningItem.json"
+      }
+    ]
+  }
+}

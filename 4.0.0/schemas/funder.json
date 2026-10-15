@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/funder.json",
+  "title": "Funder",
+  "description": "A person or organization that supports or supported a learning resource or educational program through a financial contribution.",
+  "type": "array",
+  "uniqueItems": true,
+  "minItems": 1,
+  "items": {
+    "anyOf": [
+      {
+        "$ref": "https://w3id.org/moochub/4.0.0/schemas/organization.json"
+      },
+      {
+        "$ref": "https://w3id.org/moochub/4.0.0/schemas/person.json"
+      }
+    ]
+  }
+}

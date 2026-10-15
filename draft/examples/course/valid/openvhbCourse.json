@@ -1,0 +1,94 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/draft/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "type": ["LearningResource", "Course"],
+  "id": "urn:uuid:c5e871f6-58b0-45bb-9c15-b0bdb890a6c4",
+  "url": "https://open.vhb.org/blocks/occoursemetaselect/detailpage.php?id=44",
+  "name": {
+    "de": "Medienrecht für Journalisten und Blogger"
+  },
+  "description": [
+    {
+      "type": "TextObject",
+      "inLanguage": "de",
+      "text": "\r\nDass das Internet kein rechtsfreier Raum ist, soll nicht davor verschrecken, die Online-Möglichkeiten der Kommunikation und Verbreitung von Inhalten aktiv zu nutzen. Doch für das Bloggen und für die Inhalte-Verbreitung gibt es Vorgaben, die man kennen muss. Der Kurs „Medienrecht für Journalisten und Blogger“ möchte weniger das große Mediensystem erklären als die alltäglichen Fragen beantworten. Hierfür ist der schon länger existierende und bewährte CLASSIC vhb-Kurs „Konvergentes Medienrecht“ um seine theoretischen Teile gekürzt, auf die praktische Perspektive des Einzelnen fokussiert und um interaktive und multimediale Elemente ergänzt worden.\r\nDer Kurs soll und kann seiner Leserschaft Ängste und Sorgen vor rechtlichen Stolpersteinen nehmen. \r\n",
+      "encodingFormat": "text/plain"
+    }
+  ],
+  "inLanguage": ["de"],
+  "hasCourseInstance": [
+    {
+      "id": "urn:uuid:2df09c03-0718-4482-bfd3-8899899a1099",
+      "type": "CourseInstance",
+      "startDate": "2019-07-08T22:00:00+00:00",
+      "instructor": [
+        {
+          "id": "urn:uuid:7b8c11b9-3f4c-4a91-8382-2b7c9e687ee6",
+          "type": "Person",
+          "name": "Kai von Lewinski",
+          "honorificPrefix": "Prof. Dr. "
+        },
+        {
+          "id": "urn:uuid:f8613d01-675b-4f8b-8c5c-b20258fc14c7",
+          "type": "Person",
+          "name": "Christoph Neuberger (LMU)",
+          "honorificPrefix": "Prof. Dr. "
+        }
+      ]
+    }
+  ],
+  "image": {
+    "type": "ImageObject",
+    "contentUrl": "https://open.vhb.org/vhb_logo-OPEN_vhb.jpg",
+    "license": {
+      "type": "License",
+      "identifier": "Proprietary"
+    }
+  },
+  "trailer": {
+    "type": "VideoObject",
+    "contentUrl": "https://youtu.be/aXwOK_fJ8cI",
+    "license": {
+      "type": "License",
+      "identifier": "Proprietary"
+    }
+  },
+  "license": {
+    "type": "License",
+    "identifier": "All rights reserved",
+    "id": "https://en.wikipedia.org/wiki/All_rights_reserved"
+  },
+  "publisher": {
+    "id": "https://open.vhb.org",
+    "type": "Organization",
+    "name": {
+      "de": "OPEN vhb"
+    },
+    "sameAs": ["https://open.vhb.org"],
+    "image": {
+      "type": "ImageObject",
+      "contentUrl": "https://open.vhb.org/vhb_logo-OPEN_vhb.jpg",
+      "description": {
+        "de": "The OPEN vhb logo"
+      },
+      "license": {
+        "type": "License",
+        "identifier": "Proprietary"
+      }
+    }
+  },
+  "creator": [
+    {
+      "id": "https://open.vhb.org",
+      "type": "Organization",
+      "name": {
+        "de": "OPEN vhb"
+      }
+    }
+  ],
+  "isAccessibleForFree": true
+}

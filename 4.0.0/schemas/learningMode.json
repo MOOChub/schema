@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/learningMode.json",
+  "title": "Learning mode",
+  "description": "A mode of delivery or study for a course or educational program.",
+  "type": "string",
+  "enum": ["online", "onsite", "blended", "synchronous", "asynchronous"]
+}

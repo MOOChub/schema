@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/courseType.json",
+  "title": "MOOChub course type",
+  "description": "The RDF types required for a MOOChub v4 course. LearningResource is required by AMB and Course is required to identify this resource as a course.",
+  "allOf": [
+    {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/type.json"
+    },
+    {
+      "contains": {
+        "const": "Course"
+      }
+    },
+    {
+      "uniqueItems": true
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/4.0.0/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "id": "urn:uuid:8c2b5e73-4e90-4ef2-8efb-1ad4c4d46f6e",
+  "url": "https://example.org/courses/abstract-text-object",
+  "name": {
+    "de": "Ungültiges Abstract"
+  },
+  "abstract": {
+    "type": "TextObject",
+    "inLanguage": "de",
+    "text": "Knappe Zusammenfassung",
+    "encodingFormat": "text/plain"
+  },
+  "type": ["LearningResource", "Course"],
+  "publisher": {
+    "id": "https://example.org/organizations/example-university",
+    "name": {
+      "de": "Beispielanbieter"
+    },
+    "type": "Organization"
+  },
+  "creator": [
+    {
+      "id": "https://example.org/people/example-person",
+      "type": "Person",
+      "name": "Beispielperson"
+    }
+  ],
+  "license": {
+    "type": "License",
+    "id": "https://spdx.org/licenses/CC-BY-4.0.html",
+    "identifier": "CC-BY-4.0"
+  }
+}

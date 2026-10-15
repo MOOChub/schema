@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/draft/schemas/url.json",
+  "title": "URL",
+  "description": "A publicly reachable HTTP or HTTPS URL that delivers a resource.",
+  "type": "string",
+  "format": "uri",
+  "pattern": "^https?://"
+}

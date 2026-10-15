@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/draft/schemas/offer.json",
+  "title": "Offer",
+  "description": "A commercial offer for an educational program, course, or certification.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "Offer"
+    },
+    "price": {
+      "type": "number",
+      "minimum": 0,
+      "description": "The price of the offer in the specified currency."
+    },
+    "priceCurrency": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$",
+      "description": "The ISO 4217 currency code for the price."
+    },
+    "category": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/offerCategory.json",
+      "description": "Whether the offer covers the course, certification only, or both."
+    },
+    "paymentFrequency": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/paymentFrequency.json",
+      "description": "The payment frequency used by the MOOChub profile."
+    },
+    "availabilityStarts": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The RFC 3339 date-time at which the offer becomes available."
+    },
+    "availabilityEnds": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The RFC 3339 date-time at which the offer is no longer available."
+    },
+    "url": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/url.json",
+      "description": "A booking, checkout, enrollment, or access URL for this offer."
+    }
+  },
+  "required": ["type", "price", "priceCurrency", "category"]
+}

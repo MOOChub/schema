@@ -1,0 +1,176 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/4.0.0/context.jsonld",
+    {
+      "@language": "en"
+    }
+  ],
+  "type": ["LearningResource", "Course"],
+  "id": "urn:uuid:167ef801-924a-4472-8f42-268b52b3c1dc",
+  "url": "https://lms.open.german-uds.de/courses/course-v1:LMS+INVN_designthinking+2025_Q3/about",
+  "courseCode": "INVN_designthinking",
+  "name": {
+    "en": "Design Thinking"
+  },
+  "abstract": {
+    "en": "Design Thinking introduces the user-centric approach to innovation. Students learn Design Thinking principles, techniques, and processes, applying them to real-world challenges. The module emphasizes teamwork, collaboration, and effective presentation skills."
+  },
+  "description": [
+    {
+      "type": "TextObject",
+      "inLanguage": "en",
+      "text": "\u003Csection class=\"about\"\u003E\n  \u003Ch2\u003EAbout This Course\u003C/h2\u003E\n  \u003Cp\u003EThis module is part of the “Rootcamp” which onboards students to the program, the teaching and learning methods. It teaches the principles, techniques and processes of Design Thinking, a user-centric approach to generating innovations. The Design Thinking process combines methods and tools from the fields of design, engineering, the social sciences and business administration. The approach uses these tools to determine the latent desires and needs of future customers. This user-orientation is combined with the perspective of technological feasibility and economic viability. A team-based approach, it not only relies on the creativity of the individual, but also on collaboration and cooperation.\u003C/p\u003E\n\u003C/section\u003E\n\u003Csection class=\"prerequisites\"\u003E\n  \u003Ch2\u003ELearning Objectives\u003C/h2\u003E\n  \u003Cul\u003E\n    \u003Cli\u003EAcquire subject-specific theoretical and methodological knowledge\u003C/li\u003E\n\u003Cli\u003EExplore, understand and apply the methods and mindsets of Design Thinking\u003C/li\u003E\n\u003Cli\u003EPractice techniques using concrete project challenges\u003C/li\u003E\n\u003Cli\u003ELearn how to effectively and productively contribute to a collaborative team\u003C/li\u003E\n\u003Cli\u003EPractice teamwork and conflict management\u003C/li\u003E\n\u003Cli\u003EPresent in front of an audience and in the face of critique\u003C/li\u003E\n  \u003C/ul\u003E\n\u003C/section\u003E\n\u003Csection class=\"prerequisites\"\u003E\n  \u003Ch2\u003EStudy Programs\u003C/h2\u003E\n  \u003Cp\u003EThis course is mandatory for the following study programs.\u003C/p\u003E\n  \u003Cul\u003E\n    \u003Cli\u003EM.Sc. Advanced Digital Reality\u003C/li\u003E \n    \u003Cli\u003EM.Sc. Applied AI\u003C/li\u003E  \n    \u003Cli\u003EM.Sc. Cybersecurity\u003C/li\u003E\n    \u003Cli\u003EM.Sc. Digital Leadership\u003C/li\u003E \n  \u003C/ul\u003E\n  \u003Cp\u003EThis course is offered as an elective for the following study programs.\u003C/p\u003E\n  \u003Cul\u003E\n    \u003Cli\u003EMBA Digital Technologies\u003C/li\u003E \n    \u003Cli\u003EMBA Digital Transformation\u003C/li\u003E  \n  \u003C/ul\u003E\n  \u003Ch2\u003EMicro Degree\u003C/h2\u003E\n  \u003Cul\u003E\n  \t\u003Cli\u003EThis course is offered as a micro degree.\u003C/li\u003E\n  \t\u003Cli\u003EGerman UDS Micro Degrees are compatible with the European MOOC Consortiums Common Micro Credentials Framework.\u003C/li\u003E\n  \t\u003Cli\u003EMicro Degrees will be rewarded with an equivalent of 5 ECTS.\u003C/li\u003E\n  \t\u003Cli\u003EMicro Degrees are offered to non-regular students and require a fee of €900.\u003C/li\u003E\n  \u003C/ul\u003E\n\u003C/section\u003E\n\u003Csection class=\"prerequisites\"\u003E\n  \u003Ch2\u003ERequirements\u003C/h2\u003E\n  \u003Cp\u003EKnowledge and skills as provided in the Prep courses.\u003C/p\u003E\n\u003C/section\u003E\n\n\u003Csection class=\"prerequisites\"\u003E\n  \u003Ch2\u003EGeneral Information\u003C/h2\u003E  \n  \u003Cul\u003E\n  \t\u003Cli\u003ETeaching Format: Experience\u003C/li\u003E\n    \u003Cli\u003ETotal Workload Master: 125h (40h/85h) / 5 ECTS\u003C/li\u003E\n    \u003Cli\u003ETotal Workload MBA: 100h (30h/70h) / 4 ECTS\u003C/li\u003E\n    \u003Cli\u003ETotal Workload Micro Degree: 125h (40h/85h) / Equivalent to 5 ECTS\u003C/li\u003E\n  \t\u003Cli\u003EModule coordinator: Dr. Steven Ney\u003C/li\u003E\n  \t\u003Cli\u003EExaminations: Quizzes, presentation(s), essay(s)/paper(s), project report(s), written exam (tbd) - Details will be announced with course start.\u003C/li\u003E\n    \u003Cli\u003EOffered: Odd quarters\u003C/li\u003E\n  \u003C/ul\u003E\n\u003C/section\u003E\n\n\u003Csection class=\"course-staff\"\u003E\n  \u003Ch2\u003ECourse Staff\u003C/h2\u003E\n  \u003Carticle class=\"teacher\"\u003E\n    \u003Cdiv class=\"teacher-image\"\u003E\n      \u003Cimg src=\"/static/Steven_Ney.jpg\" align=\"left\" style=\"margin: 0px;\" alt=\"Dr. Steven Ney\" /\u003E\n    \u003C/div\u003E\n\n    \u003Ch3\u003EDr. Steven Ney\u003C/h3\u003E\n    \u003Cp\u003ESteven completed his doctorate in the policy sciences at the Department of Comparative Politics in the University of Bergen. Trained as a policy analyst at the University of London, Steven Ney has worked on a wide range of policy issues in a number of research institutes including the LOS Center in Bergen, ICCR in Vienna and the International Institute for Applied Systems Analysis in Laxenburg. After spending four years from 2005 as an Assistant Professor of Political Science at Singapore Management University, Steven Ney took up the Chair of Social Entrepreneurship at Jacobs University, Bremen in August 2009. From 2014-2018, Steven Ney designed, led and implemented continuing education formats at the HPI Academy and the HPI School of Design Thinking in Potsdam. In November 2018, Steven joined T-Systems International, a subsidiary of Deutsche Telekom. Working with both internal and external T-Systems customers, Steven designed and delivered co-creation processes to help develop innovative digital products, organizational strategies, and new business models. Most recently, Steven was involved in designing and delivering the X-Creation format in which he supports diverse teams from cross-industry eco-systems in tackling pressing common challenges.\u003C/p\u003E\n  \u003C/article\u003E\n\u003C/section\u003E\n\n\u003Csection class=\"faq\"\u003E\n  \u003Csection class=\"responses\"\u003E\n    \u003Ch2\u003EFrequently Asked Questions\u003C/h2\u003E\n    \u003Carticle class=\"response\"\u003E\n      \u003Ch3\u003EWhat web browser should I use?\u003C/h3\u003E\n      \u003Cp\u003EOur German-UDS.academy platform works best with current versions of Chrome, Edge, Firefox, or Safari.\u003C/p\u003E\n      \u003Cp\u003ESee our \u003Ca href=\"https://edx.readthedocs.org/projects/open-edx-learner-guide/en/latest/front_matter/browsers.html\"\u003Elist of supported browsers\u003C/a\u003E for the most up-to-date information.\u003C/p\u003E\n    \u003C/article\u003E\n  \u003C/section\u003E\n\u003C/section\u003E\n",
+      "encodingFormat": "text/html"
+    }
+  ],
+  "keywords": [
+    "Design Thinking",
+    "Innovation",
+    "User-centric",
+    "Creativity",
+    "Collaboration",
+    "Teamwork",
+    "Problem-solving",
+    "Innovation process",
+    "Methods",
+    "Tools"
+  ],
+  "inLanguage": ["en"],
+  "isAccessibleForFree": false,
+  "timeRequired": "PT130H",
+  "hasCourseInstance": [
+    {
+      "id": "urn:uuid:f367f76c-2b47-49ff-9ee0-8d0311aafe77",
+      "type": "CourseInstance",
+      "courseMode": ["online", "synchronous"],
+      "startDate": "2025-07-01T05:00:00Z",
+      "endDate": "2025-09-30T23:55:00Z",
+      "duration": "P91DT18H55M",
+      "applicationDeadline": "2025-07-16T23:55:00Z",
+      "offers": [
+        {
+          "type": "Offer",
+          "price": 900,
+          "priceCurrency": "EUR",
+          "paymentFrequency": "one-time",
+          "category": "course"
+        }
+      ],
+      "instructor": [
+        {
+          "id": "urn:uuid:031c7251-d3a7-4e17-bb5a-1f9cb3ca4774",
+          "type": "Person",
+          "honorificPrefix": "Dr.",
+          "name": "Steven Ney"
+        }
+      ]
+    }
+  ],
+  "teaches": [
+    {
+      "type": "Competency",
+      "id": "urn:uuid:4364929a-2844-46d0-837f-626f8998fa95",
+      "name": {
+        "en": "Apply Design Thinking principles and methods to real-world challenges"
+      },
+      "relatedSkill": [
+        {
+          "type": "Concept",
+          "id": "https://w3id.org/kim/digcomp/g_3",
+          "inScheme": "https://w3id.org/kim/digcomp/digcomp",
+          "prefLabel": {
+            "en": "EVALUATING DATA, INFORMATION AND DIGITAL CONTENT"
+          }
+        },
+        {
+          "type": "Concept",
+          "id": "https://w3id.org/kim/digcomp/g_6",
+          "inScheme": "https://w3id.org/kim/digcomp/digcomp",
+          "prefLabel": {
+            "en": "INTERACTING THROUGH DIGITAL TECHNOLOGIES"
+          }
+        },
+        {
+          "type": "Concept",
+          "id": "https://w3id.org/kim/digcomp/g_9",
+          "inScheme": "https://w3id.org/kim/digcomp/digcomp",
+          "prefLabel": {
+            "en": "COLLABORATING THROUGH DIGITAL TECHNOLOGIES"
+          }
+        },
+        {
+          "type": "Concept",
+          "id": "https://w3id.org/kim/digcomp/g_13",
+          "inScheme": "https://w3id.org/kim/digcomp/digcomp",
+          "prefLabel": {
+            "en": "DEVELOPING DIGITAL CONTENT"
+          }
+        }
+      ]
+    }
+  ],
+  "educationalAlignment": [
+    {
+      "type": "AlignmentObject",
+      "alignmentType": "educationalSubject",
+      "educationalFramework": "ISCED-F",
+      "targetName": {
+        "en": "business, administration and law not elsewhere classified"
+      },
+      "targetUrl": "http://data.europa.eu/esco/isced-f/0499"
+    }
+  ],
+  "image": {
+    "type": "ImageObject",
+    "contentUrl": "https://lms.open.german-uds.de/asset-v1:LMS+INVN_designthinking+2025_Q3+type@asset+block@Rootcamp_Design_Thinking.png",
+    "license": {
+      "type": "License",
+      "identifier": "proprietary"
+    }
+  },
+  "publisher": {
+    "id": "https://lms.open.german-uds.de",
+    "type": "Organization",
+    "name": {
+      "en": "German UDS"
+    },
+    "sameAs": ["https://open.german-uds.de"],
+    "image": {
+      "type": "ImageObject",
+      "contentUrl": "https://open.german-uds.de/static/uds-academy-theme/images/logo.508ea8eb6c2e.png",
+      "license": {
+        "type": "License",
+        "identifier": "proprietary"
+      }
+    }
+  },
+  "creator": [
+    {
+      "id": "urn:uuid:031c7251-d3a7-4e17-bb5a-1f9cb3ca4774",
+      "type": "Person",
+      "honorificPrefix": "Dr.",
+      "name": "Steven Ney",
+      "description": [
+        {
+          "type": "TextObject",
+          "inLanguage": "de",
+          "text": "Steven completed his doctorate in the policy sciences at the Department of Comparative Politics in the University of Bergen. Trained as a policy analyst at the University of London, Steven Ney has worked on a wide range of policy issues in a number of research institutes including the LOS Center in Bergen, ICCR in Vienna and the International Institute for Applied Systems Analysis in Laxenburg. After spending four years from 2005 as an Assistant Professor of Political Science at Singapore Management University, Steven Ney took up the Chair of Social Entrepreneurship at Jacobs University, Bremen in August 2009. From 2014-2018, Steven Ney designed, led and implemented continuing education formats at the HPI Academy and the HPI School of Design Thinking in Potsdam. In November 2018, Steven joined T-Systems International, a subsidiary of Deutsche Telekom. Working with both internal and external T-Systems customers, Steven designed and delivered co-creation processes to help develop innovative digital products, organizational strategies, and new business models. Most recently, Steven was involved in designing and delivering the X-Creation format in which he supports diverse teams from cross-industry eco-systems in tackling pressing common challenges.",
+          "encodingFormat": "text/plain"
+        }
+      ],
+      "image": {
+        "type": "ImageObject",
+        "contentUrl": "https://german-uds.academy/asset-v1:LMS+INVN_designthinking+2025_Q3+type@asset+block@Steven_Ney.jpg",
+        "license": {
+          "type": "License",
+          "identifier": "proprietary"
+        }
+      }
+    }
+  ],
+  "license": {
+    "type": "License",
+    "identifier": "proprietary"
+  },
+  "expires": "2025-09-30T23:55:00Z"
+}

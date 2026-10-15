@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/location.json",
+  "title": "Location",
+  "description": "A physical or virtual location. A location can be either a url in case of a virtual location or a postal address or geocoordinates in case of a physical location.",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/context-schema.json"
+    },
+    "id": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/id.json"
+    },
+    "type": {
+      "enum": ["Place", "VirtualLocation"]
+    },
+    "name": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json"
+    },
+    "description": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/richText.json"
+    },
+    "address": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/postalAddress.json"
+    },
+    "url": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/url.json"
+    },
+    "geo": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/geoCoordinates.json"
+    },
+    "publicAccess": {
+      "type": "boolean"
+    },
+    "photo": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/image.json"
+    },
+    "openingHoursSpecification": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "https://w3id.org/moochub/4.0.0/schemas/openingHoursSpecification.json"
+      }
+    },
+    "owner": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/owner.json"
+    },
+    "maximumAttendeeCapacity": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "sameAs": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "https://w3id.org/moochub/4.0.0/schemas/url.json"
+      },
+      "description": "A list of URLs of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website."
+    },
+    "dateModified": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["id", "type", "name"],
+  "anyOf": [
+    {
+      "required": ["address"]
+    },
+    {
+      "required": ["url"]
+    },
+    {
+      "required": ["geo"]
+    }
+  ]
+}

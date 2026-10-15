@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/learningItem.json",
+  "title": "LearningItem",
+  "type": "object",
+  "description": "A learning item is a resource that is part of a course or learning opportunity. It can be a video, a reading, an assignment, or any other type of educational content.",
+  "properties": {
+    "id": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/id.json"
+    },
+    "type": {
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/type.json"
+    },
+    "name": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json"
+    },
+    "description": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/richText.json"
+    },
+    "timeRequired": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/timeRequired.json"
+    },
+    "assesses": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/assesses.json"
+    },
+    "competencyRequired": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/competencyRequired.json"
+    },
+    "teaches": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/teaches.json"
+    },
+    "license": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/license.json"
+    },
+    "creator": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/creator.json"
+    },
+    "publisher": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/publisher.json"
+    }
+  },
+  "required": ["id", "type", "name"]
+}

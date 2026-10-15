@@ -1,0 +1,140 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/draft/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "type": ["LearningResource", "Course"],
+  "id": "urn:uuid:2bcef8e3-35f3-4cb6-badd-e2220919bdc9",
+  "url": "https://lernen.dlc.sh/course/view.php?id=34",
+  "name": {
+    "de": "Customer Experience Management"
+  },
+  "description": [
+    {
+      "type": "TextObject",
+      "inLanguage": "de",
+      "text": "\u003Cdiv class='teasertext'\u003E\u003Cp\u003EProdukte und Dienstleistungen werden durch die digitale Transformation zunehmend komplexer. Der Kern des Angebotes wird für Kunden durch die Parallelität von analogen und digitalen Komponenten schwerer greifbar – die Wahrnehmung richtet sich stärker auf das Gesamterlebnis, welches Kunden mit einem Angebot haben. Pine und Gilmore (1998) sprechen daher auch von der „Experience Economy“. Diese ökonomisch relevanten Erlebnisse sollten gesteuert, bzw. gemanaged werden.\u003C/p\u003E\r\n\u003Cp\u003EIn diesem MOOC erfahrt Ihr die Gründe und lernt die Mechanismen, die hinter diesen komplexen Angeboten stecken. Ziel ist es, über dieses Verständnis Wege aufzuzeigen, wie man komplexe Angebote – im Sinne eines Management-Ansatzes – lenken kann.\u003C/p\u003E\u003C/div\u003E\u003Cdiv class='learninggoals'\u003E\u003Ch3\u003ELernziele\u003C/h3\u003E\u003Col\u003E\r\n\u003Cli\u003EDu kannst die Komplexität von Angeboten in der „Experience Economy“ nachvollziehen und diese in einem wirtschaftlichen Kontext einordnen.\u003C/li\u003E\r\n\u003Cli\u003EDu kannst komplexe Angebote in Geschäftsmodelle überführen und deren Potenzial analysieren sowie eine Optimierung verschiedener Geschäftsmodelle vorschlagen.\u003C/li\u003E\r\n\u003Cli\u003EDu verstehst die unterschiedlichen Arten von Innovation und kannst auf deren Basis entscheiden, welche Form der Geschäftsmodellierung sinnvoll ist. Du kannst in einem Innovationsportfolio aus unterschiedlichen Angeboten Geschäftsmodellen entwickeln.\u003C/li\u003E\r\n\u003Cli\u003EDu verstehst die Herausforderungen, die sich für Unternehmen aus der Entwicklung unterschiedlicher und immer wieder neuer Angebote ergeben und kannst einschätzen, welche Veränderungen in der Organisationsstruktur sowie in der Unternehmenskultur notwendig sind, um sowohl das Entwickeln von neuen Angeboten als auch deren Umsetzung innerhalb eines oder mehrerer Geschäftsmodelle umzusetzen\u003C/li\u003E\r\n\u003Cli\u003EDu kennst unterschiedliche operative Ansätze, um innovative Angebote zu entwickeln und diese in Geschäftsmodelle zu überführen. Du bist in der Lage, auf Basis dieser Kenntnisse spezifische Ansätze (Design Thinking, Lean Start-up, etc.) vorzuschlagen und deren Vor- und Nachteile im jeweiligen Anwendungsfall gegeneinander abzuwägen.\u003C/li\u003E\r\n\u003C/ol\u003E\u003C/div\u003E\u003Cdiv class='structure'\u003E\u003Ch3\u003EKursaufbau\u003C/h3\u003E\u003Col\u003E\r\n\u003Cli\u003EGrundlagen des Customer Experience Management und Charakteristika von (digitalen) Angeboten\u003C/li\u003E\r\n\u003Cli\u003EGeschäftsmodelle in der digitalen Ökonomie\u003C/li\u003E\r\n\u003Cli\u003EInnovationsmanagement in der digitalen Welt\u003C/li\u003E\r\n\u003Cli\u003EWandel von Organisationsstrukturen durch dynamische Anforderungen an Customer Experiences\u003C/li\u003E\r\n\u003C/ol\u003E\u003C/div\u003E",
+      "encodingFormat": "text/html"
+    }
+  ],
+  "keywords": ["CEM", "Customer Experience Management"],
+  "inLanguage": ["de"],
+  "timeRequired": "PT45H",
+  "isAccessibleForFree": true,
+  "hasCourseInstance": [
+    {
+      "id": "urn:uuid:63dc73a1-3aa3-4f5c-bb96-364d0c25423b",
+      "type": "CourseInstance",
+      "courseMode": ["online", "asynchronous"],
+      "instructor": [
+        {
+          "id": "urn:uuid:563d8254-bfb4-4769-bfaf-ca6f69c345b4",
+          "type": "Person",
+          "name": "Prof. Dr. Eric Horster"
+        }
+      ]
+    }
+  ],
+  "teaches": [
+    {
+      "type": "Competency",
+      "id": "urn:uuid:4364929a-2844-46d0-837f-626f8998fa95",
+      "name": {
+        "de": "Fähigkeit zur Analyse und Optimierung von Geschäftsmodellen in der Experience Economy"
+      },
+      "relatedSkill": [
+        {
+          "type": "Concept",
+          "id": "http://data.europa.eu/esco/skill/7bb5d9af-0a7e-48a7-a860-0e1ded0f6e75",
+          "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+          "prefLabel": {
+            "de": "Kundenerlebnisse gestalten",
+            "en": "design customer experiences"
+          }
+        },
+        {
+          "type": "Concept",
+          "id": "http://data.europa.eu/esco/skill/d63f49de-cb72-4ce3-9553-a374a4f32f52",
+          "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+          "prefLabel": {
+            "de": "Kundendaten analysieren",
+            "en": "analyse data about clients"
+          }
+        }
+      ],
+      "proficiencyLevel": [
+        {
+          "type": "Concept",
+          "id": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/DIGCOMP/DIGCOMP3.0/DigComp%203.0%20Data%20Supplement%2024%20Nov%202025.jsonld#ProficiencyLevel/Intermediate_3",
+          "inScheme": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/DIGCOMP/DIGCOMP3.0/DigComp%203.0%20Data%20Supplement%2024%20Nov%202025.jsonld",
+          "prefLabel": {
+            "en": "Fortgeschritten (Level 3)"
+          }
+        }
+      ]
+    }
+  ],
+  "publisher": {
+    "id": "https://dlc.sh",
+    "type": "Organization",
+    "name": {
+      "de": "Digital Learning Campus"
+    },
+    "sameAs": ["https://dlc.sh"],
+    "image": {
+      "type": "ImageObject",
+      "contentUrl": "https://lernen.dlc.sh/pluginfile.php/1/local_ildmeta/provider/1/logo_dlc.svg",
+      "license": {
+        "type": "License",
+        "identifier": "Proprietary"
+      }
+    }
+  },
+  "creator": [
+    {
+      "id": "urn:uuid:563d8254-bfb4-4769-bfaf-ca6f69c345b4",
+      "type": "Person",
+      "name": "Prof. Dr. Eric Horster",
+      "description": [
+        {
+          "type": "TextObject",
+          "inLanguage": "de",
+          "text": "\u003Cp\u003EProf. Dr. Eric Horster ist Professor im Studiengang International Tourism Management an der \u003Ca href=\"http://www.fh-westkueste.de/startseite/fachbereich-wirtschaft/ansprechpartner/professoren/horster/\"\u003EFachhochschule Westküste\u003C/a\u003E in Heide. Seine Arbeits- und Forschungsschwerpunkte sind der Themenkomplex Linked Open Data sowie das Customer Experience Management. Diese Themen setzt er in zahlreichen Projekten auch für die Praxis um.\u003C/p\u003E",
+          "encodingFormat": "text/html"
+        }
+      ],
+      "image": {
+        "type": "ImageObject",
+        "contentUrl": "https://lernen.dlc.sh/pluginfile.php/1820/local_ildmeta/detailslecturer_image_1/0/56398b92ab5f8b49e4f2885924a2f8fc56b4c445.png",
+        "license": {
+          "type": "License",
+          "identifier": "Proprietary"
+        }
+      }
+    }
+  ],
+  "image": {
+    "type": "ImageObject",
+    "contentUrl": "https://lernen.dlc.sh/pluginfile.php/1820/course/overviewfiles/c4c7.PNG",
+    "license": {
+      "type": "License",
+      "identifier": "Proprietary"
+    }
+  },
+  "trailer": {
+    "type": "VideoObject",
+    "contentUrl": "https://www.youtube.com/watch?v=jr7XGpT-71c",
+    "license": {
+      "type": "License",
+      "identifier": "Proprietary"
+    }
+  },
+  "license": {
+    "type": "License",
+    "identifier": "CC-BY-4.0",
+    "id": "https://spdx.org/licenses/CC-BY-4.0.html"
+  },
+  "expires": "2025-12-02T00:00:00+01:00"
+}

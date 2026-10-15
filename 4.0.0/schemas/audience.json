@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/audience.json",
+  "title": "Intended audience",
+  "description": "The intended audience of the course.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "Audience"
+    },
+    "audienceType": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/audienceType.json"
+    },
+    "description": {
+      "title": "Description",
+      "description": "A description text of the intended audience.",
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/richText.json"
+    },
+    "suggestedAge": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/suggestedAge.json"
+    }
+  },
+  "required": ["type"],
+  "anyOf": [
+    {
+      "required": ["audienceType"]
+    },
+    {
+      "required": ["description"]
+    },
+    {
+      "required": ["suggestedAge"]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/affiliation.json",
+  "title": "Organization",
+  "description": "Organizations that the person is affiliated with, such as an employer or a university.",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "$ref": "https://w3id.org/moochub/4.0.0/schemas/organization.json"
+  },
+  "uniqueItems": true
+}

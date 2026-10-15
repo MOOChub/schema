@@ -1,0 +1,45 @@
+{
+  "links": {
+    "self": "https://provider.example/api/v4/catalog",
+    "first": "https://provider.example/api/v4/catalog",
+    "last": "https://provider.example/api/v4/catalog"
+  },
+  "data": [
+    {
+      "type": "courses",
+      "id": 5234,
+      "attributes": {
+        "@context": [
+          "https://w3id.org/moochub/4.0.0/context.jsonld",
+          {
+            "@language": "en"
+          }
+        ],
+        "id": "https://provider.example/courses/intro-digital-skills",
+        "url": "https://provider.example/courses/intro-digital-skills",
+        "name": {
+          "en": "Introduction to Digital Skills"
+        },
+        "type": ["LearningResource", "Course"],
+        "publisher": {
+          "id": "https://example.org/organizations/example-university",
+          "type": "Organization",
+          "name": {
+            "en": "Example University"
+          }
+        },
+        "creator": [
+          {
+            "id": "https://example.org/people/example-author",
+            "type": "Person",
+            "name": "Example Author"
+          }
+        ],
+        "license": {
+          "type": "License",
+          "identifier": "Proprietary"
+        }
+      }
+    }
+  ]
+}

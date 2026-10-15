@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/applicationDeadline.json",
+  "title": "Application deadline date-time",
+  "description": "The RFC 3339 date-time by which applications for a course instance must be submitted.",
+  "type": "string",
+  "format": "date-time"
+}

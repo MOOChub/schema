@@ -1,0 +1,144 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/4.0.0/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "id": "urn:uuid:c96a2376-bdf2-4307-a21f-19a4ff141b5f",
+  "url": "https://futurelearnlab.de/detailpage.php?id=18",
+  "name": {
+    "de": "Digital Trainer (Gesamtkurs)"
+  },
+  "type": ["LearningResource", "Course"],
+  "publisher": {
+    "id": "https://example.org/organizations/isy",
+    "name": {
+      "de": "Institut für Interaktive Systeme"
+    },
+    "type": "Organization"
+  },
+  "creator": [
+    {
+      "id": "https://example.org/people/beispielperson",
+      "type": "Person",
+      "name": "Beispielperson"
+    }
+  ],
+  "license": {
+    "type": "License",
+    "identifier": "Propriatary"
+  },
+  "teaches": [
+    {
+      "id": "urn:uuid:9e7c1b64-c460-4672-b666-cb64dc2d3921",
+      "type": "Competency",
+      "name": {
+        "en": "Communication, collaboration and creativity"
+      },
+      "relatedSkill": [
+        {
+          "id": "http://data.europa.eu/esco/skill/326809fc-238d-40c2-881e-40042f7f2f0d",
+          "type": "Concept",
+          "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+          "prefLabel": {
+            "en": "establish collaborative relations"
+          }
+        },
+        {
+          "id": "http://data.europa.eu/esco/skill/80f308e6-0e09-404a-80cd-ec5f50f6f304",
+          "type": "Concept",
+          "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+          "prefLabel": {
+            "en": "communicate with target community"
+          }
+        },
+        {
+          "id": "http://data.europa.eu/esco/skill/ccdf3597-5c80-410f-896d-e1bdfa223de9",
+          "type": "Concept",
+          "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+          "prefLabel": {
+            "en": "stimulate creativity in the team"
+          }
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:3f9f5899-c3cd-43a9-aecb-266483fcbf6a",
+      "type": "Competency",
+      "name": {
+        "en": "Developing digital content"
+      },
+      "relatedSkill": [
+        {
+          "id": "http://data.europa.eu/esco/skill/5fd5c985-eaaa-47aa-8314-62359c54505a",
+          "type": "Concept",
+          "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+          "prefLabel": {
+            "en": "develop digital content"
+          }
+        },
+        {
+          "id": "http://data.europa.eu/snb/dcf/u69o196gu6",
+          "type": "Concept",
+          "inScheme": "http://data.europa.eu/snb/dcf/25831c2",
+          "prefLabel": {
+            "en": "Developing digital content"
+          }
+        },
+        {
+          "id": "http://data.europa.eu/snb/dcf/3ol5wi3605",
+          "type": "Concept",
+          "inScheme": "http://data.europa.eu/snb/dcf/25831c2",
+          "prefLabel": {
+            "en": "Developing digital content Level 4"
+          }
+        }
+      ]
+    }
+  ],
+  "learningOutcomeSummary": [
+    {
+      "type": "TextObject",
+      "inLanguage": "en",
+      "text": "Stduents will be able to communicate, collaborate and stimulate creativity in the team. They will also be able to develop digital content.",
+      "encodingFormat": "text/plain"
+    }
+  ],
+  "coursePrerequisites": [
+    {
+      "type": "TextObject",
+      "inLanguage": "en",
+      "text": "Basic digital literacy and familiarity with online learning platforms and English B2 level.",
+      "encodingFormat": "text/plain"
+    }
+  ],
+  "prerequisiteCourses": [
+    {
+      "id": "urn:uuid:1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+      "type": ["LearningResource", "Course"],
+      "name": {
+        "en": "Introduction to Digital Skills"
+      }
+    }
+  ],
+  "competencyRequired": [
+    {
+      "id": "urn:uuid:7e8f9g0h-1i2j-3k4l-5m6n-7o8p9q0r1s2t",
+      "type": "Competency",
+      "name": {
+        "en": "Englisch B2"
+      },
+      "relatedSkill": [
+        {
+          "id": "http://data.europa.eu/esco/skill/7ee20fe2-facd-4cc5-837b-927429e0e7ac",
+          "type": "Concept",
+          "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+          "prefLabel": {
+            "en": "understand written English"
+          }
+        }
+      ]
+    }
+  ]
+}

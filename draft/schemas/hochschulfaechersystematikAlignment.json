@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/draft/schemas/hochschulfaechersystematikAlignment.json",
+  "title": "Hochschulfächersystematik AlignmentObject",
+  "description": "An AlignmentObject for the Hochschulfächersystematik framework.",
+  "allOf": [
+    {
+      "$ref": "https://w3id.org/moochub/draft/schemas/alignmentObject.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "alignmentType": {
+          "const": "educationalSubject"
+        },
+        "educationalFramework": {
+          "const": "Hochschulfächersystematik"
+        },
+        "targetUrl": {
+          "$ref": "https://w3id.org/moochub/draft/schemas/url.json",
+          "pattern": "^https://w3id.org/kim/hochschulfaechersystematik/.*$"
+        }
+      },
+      "required": ["targetUrl"]
+    }
+  ]
+}

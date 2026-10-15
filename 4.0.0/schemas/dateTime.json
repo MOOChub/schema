@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/dateTime.json",
+  "title": "RFC 3339 date-time",
+  "description": "An RFC 3339 date-time with a UTC offset or offset equivalent.",
+  "type": "string",
+  "format": "date-time"
+}

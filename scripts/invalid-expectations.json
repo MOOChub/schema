@@ -24,7 +24,6 @@
     "type:/data/0/id"
   ],
   "catalog/invalid/resourceTypeMismatch.json": [
-    "additionalProperties:/data/0/attributes/hasPart/0",
     "anyOf:/data/0/attributes/hasPart/0",
     "const:/data/0/attributes/type",
     "const:/data/0/type",

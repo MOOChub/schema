@@ -4,7 +4,6 @@
   "title": "Educational program reference",
   "description": "A compact reference to an educational program.",
   "type": "object",
-  "additionalProperties": false,
   "properties": {
     "id": {
       "$ref": "https://w3id.org/moochub/draft/schemas/id.json"

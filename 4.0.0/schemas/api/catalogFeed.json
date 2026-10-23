@@ -4,12 +4,10 @@
   "title": "MOOChub catalog feed",
   "description": "A paginated JSON:API feed of independently harvestable MOOChub entities.",
   "type": "object",
-  "additionalProperties": false,
   "properties": {
     "links": {
       "type": "object",
       "description": "Page information for the API",
-      "additionalProperties": false,
       "properties": {
         "self": {
           "type": "string",

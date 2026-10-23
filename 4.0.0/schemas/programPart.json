@@ -4,7 +4,6 @@
   "title": "Program part",
   "description": "A module area within an educational program with its credit requirement and courses.",
   "type": "object",
-  "additionalProperties": false,
   "properties": {
     "name": {
       "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json"

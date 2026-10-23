@@ -4,7 +4,6 @@
   "title": "Aggregate rating",
   "description": "An aggregate rating for a course based on ratings from multiple providers or users.",
   "type": "object",
-  "additionalProperties": false,
   "properties": {
     "ratingValue": {
       "type": "number",

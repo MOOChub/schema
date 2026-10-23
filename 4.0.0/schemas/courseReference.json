@@ -4,7 +4,6 @@
   "title": "Course reference",
   "description": "A compact reference to another course.",
   "type": "object",
-  "additionalProperties": false,
   "properties": {
     "id": {
       "$ref": "https://w3id.org/moochub/4.0.0/schemas/id.json"

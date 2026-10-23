@@ -4,7 +4,6 @@
   "title": "Formatted text object",
   "description": "A formatted text representation. The content must be processed according to encodingFormat before it is displayed by a client.",
   "type": "object",
-  "additionalProperties": false,
   "properties": {
     "id": {
       "$ref": "https://w3id.org/moochub/4.0.0/schemas/id.json"

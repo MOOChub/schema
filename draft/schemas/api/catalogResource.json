@@ -6,7 +6,6 @@
   "oneOf": [
     {
       "type": "object",
-      "additionalProperties": false,
       "properties": {
         "type": {
           "const": "courses"
@@ -24,7 +23,6 @@
     },
     {
       "type": "object",
-      "additionalProperties": false,
       "properties": {
         "type": {
           "const": "programs"
@@ -42,7 +40,6 @@
     },
     {
       "type": "object",
-      "additionalProperties": false,
       "properties": {
         "type": {
           "const": "credentials"
@@ -60,7 +57,6 @@
     },
     {
       "type": "object",
-      "additionalProperties": false,
       "properties": {
         "type": {
           "const": "persons"
@@ -78,7 +74,6 @@
     },
     {
       "type": "object",
-      "additionalProperties": false,
       "properties": {
         "type": {
           "const": "organizations"
@@ -96,7 +91,6 @@
     },
     {
       "type": "object",
-      "additionalProperties": false,
       "properties": {
         "type": {
           "const": "locations"

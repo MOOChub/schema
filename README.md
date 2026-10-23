@@ -15,7 +15,7 @@ The draft profile is compatible with the pinned AMB `20231019` release.
 The v4 draft exposes courses, programs, credentials, persons, organizations,
 and locations through a common, paginated JSON:API catalog. The resource types,
 pagination rules, and harvesting behavior are documented normatively in the
-[catalog section of the German specification](draft/index.html#catalog). The
+[catalog section of the English draft specification](draft/index.html#catalog). The
 complete feed example is available in
 [draft/examples/catalog/valid/catalog.json](draft/examples/catalog/valid/catalog.json).
 The 4.0.0 release is available from

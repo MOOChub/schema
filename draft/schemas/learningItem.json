@@ -9,7 +9,7 @@
       "$ref": "https://w3id.org/moochub/draft/schemas/id.json"
     },
     "type": {
-      "$ref": "https://w3id.org/kim/amb/draft/schemas/type.json"
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/type.json"
     },
     "name": {
       "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json"

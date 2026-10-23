@@ -2,7 +2,11 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://w3id.org/moochub/draft/schemas/numberOfCredits.json",
   "title": "Number of credits",
-  "description": "The number of credits awarded for successfully completing the course. Fractional values are allowed for systems such as ECTS.",
-  "type": "number",
-  "minimum": 0
+  "description": "Credits awarded for successfully completing a learning opportunity. Each CreditPoint identifies the amount and its credit framework, allowing multiple frameworks to be represented.",
+  "type": "array",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "$ref": "https://w3id.org/moochub/draft/schemas/creditPoint.json"
+  }
 }

@@ -71,7 +71,20 @@
   ],
   "educationalProgramMode": ["online", "asynchronous"],
   "timeToComplete": "P3M",
-  "numberOfCredits": 10,
+  "numberOfCredits": [
+    {
+      "type": "CreditPoint",
+      "framework": {
+        "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+        "type": "Concept",
+        "prefLabel": {
+          "en": "ECTS"
+        },
+        "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+      },
+      "point": 10
+    }
+  ],
   "programPrerequisites": [
     {
       "type": "TextObject",
@@ -85,7 +98,20 @@
       "name": {
         "en": "Core module"
       },
-      "numberOfCredits": 5,
+      "numberOfCredits": [
+        {
+          "type": "CreditPoint",
+          "framework": {
+            "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+            "type": "Concept",
+            "prefLabel": {
+              "en": "ECTS"
+            },
+            "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+          },
+          "point": 5
+        }
+      ],
       "hasCourse": [
         {
           "id": "https://provider.example/courses/intro-digital-skills",
@@ -100,7 +126,20 @@
       "name": {
         "en": "Elective module"
       },
-      "numberOfCredits": 5,
+      "numberOfCredits": [
+        {
+          "type": "CreditPoint",
+          "framework": {
+            "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+            "type": "Concept",
+            "prefLabel": {
+              "en": "ECTS"
+            },
+            "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+          },
+          "point": 5
+        }
+      ],
       "hasCourse": [
         {
           "id": "https://provider.example/courses/digital-communication",
@@ -123,7 +162,20 @@
           "encodingFormat": "text/plain"
         }
       ],
-      "numberOfCredits": 0,
+      "numberOfCredits": [
+        {
+          "type": "CreditPoint",
+          "framework": {
+            "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+            "type": "Concept",
+            "prefLabel": {
+              "en": "ECTS"
+            },
+            "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+          },
+          "point": 0
+        }
+      ],
       "hasCourse": [
         {
           "id": "https://provider.example/courses/digital-security",

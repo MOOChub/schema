@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/draft/schemas/creditPoint.json",
+  "title": "Credit point",
+  "description": "A credit amount expressed in a framework identified by a Concept.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "CreditPoint"
+    },
+    "framework": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/concept.json"
+    },
+    "point": {
+      "type": "number",
+      "minimum": 0,
+      "description": "A non-negative credit amount. Consumers determine localized display formatting."
+    }
+  },
+  "required": ["type", "framework", "point"]
+}

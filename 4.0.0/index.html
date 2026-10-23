@@ -453,8 +453,8 @@ Vary: Accept
           <tr>
             <td><code>numberOfCredits</code></td>
             <td>no</td>
-            <td><code>number</code></td>
-            <td>Number of ECTS credits awarded for the course.</td>
+            <td><code>array[<a>CreditPoint</a>]</code></td>
+            <td>Credits awarded for the course. Each entry includes a numeric point and a concept identifying its framework.</td>
           </tr>
           <tr>
             <td><code>interactivityType</code></td>
@@ -642,7 +642,16 @@ Vary: Accept
   "keywords": ["Python", "Programming", "Introduction"],
   "inLanguage": ["de", "en"],
   "timeRequired": "P20H",
-  "numberOfCredits": 5,
+  "numberOfCredits": [{
+    "type": "CreditPoint",
+    "framework": {
+      "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+      "type": "Concept",
+      "prefLabel": { "en": "ECTS" },
+      "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+    },
+    "point": 5
+  }],
   "interactivityType": { "..." },
   "isAccessibleForFree": true,
   "conditionsOfAccess": { "..." },
@@ -1199,8 +1208,8 @@ Vary: Accept
           <tr>
             <td><code>numberOfCredits</code></td>
             <td>no</td>
-            <td><code>number</code></td>
-            <td>Number of ECTS credits awarded for the programme.</td>
+            <td><code>array[<a>CreditPoint</a>]</code></td>
+            <td>Credits awarded for the programme. Each entry includes a numeric point and a concept identifying its framework.</td>
           </tr>
           <tr>
             <td><code>programPrerequisites</code></td>
@@ -1315,7 +1324,16 @@ Vary: Accept
   "hasPart": [
     {
       "name": { "en": "Required component" },
-      "numberOfCredits": 30,
+      "numberOfCredits": [{
+        "type": "CreditPoint",
+        "framework": {
+          "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+          "type": "Concept",
+          "prefLabel": { "en": "ECTS" },
+          "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+        },
+        "point": 30
+      }],
       "hasCourse": [{
         "type": ["LearningResource", "Course"],
         "id": "https://example.org/courses/python",
@@ -1327,7 +1345,16 @@ Vary: Accept
     },
     {
       "name": { "en": "Elective component" },
-      "numberOfCredits": 30,
+      "numberOfCredits": [{
+        "type": "CreditPoint",
+        "framework": {
+          "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+          "type": "Concept",
+          "prefLabel": { "en": "ECTS" },
+          "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+        },
+        "point": 30
+      }],
       "hasCourse": [{
         "type": ["LearningResource", "Course"],
         "id": "https://example.org/courses/python-advanced",
@@ -1364,7 +1391,16 @@ Vary: Accept
   }],
   "educationalProgramMode": ["online", "asynchronous"],
   "timeToComplete": "P2M",
-  "numberOfCredits": 5,
+  "numberOfCredits": [{
+    "type": "CreditPoint",
+    "framework": {
+      "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+      "type": "Concept",
+      "prefLabel": { "en": "ECTS" },
+      "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+    },
+    "point": 5
+  }],
   "programPrerequisites": [{
     "type": "TextObject",
     "text": "Basic programming knowledge is required to participate in the bootcamp.",
@@ -1387,8 +1423,9 @@ Vary: Accept
         <p>
           Further requirements that cannot be expressed as credits SHOULD be
           described in <code>description</code>. For example, a component with
-          <code>numberOfCredits</code> set to <code>0</code> can specify that
-          a minimum number of the listed courses must be completed.
+          <code>numberOfCredits</code> entry with a <code>value</code> of
+          <code>0</code> can specify that a minimum number of the listed courses
+          must be completed.
         </p>
 
         <table class="def">
@@ -1416,8 +1453,8 @@ Vary: Accept
             <tr>
               <td><code>numberOfCredits</code></td>
               <td>yes</td>
-              <td><code>number</code></td>
-              <td>Number of credits required for the component.</td>
+              <td><code>array[<a>CreditPoint</a>]</code></td>
+              <td>Credit amount required for the component; zero may indicate a non-credit completion requirement.</td>
             </tr>
             <tr>
               <td><code>hasCourse</code></td>
@@ -1434,7 +1471,16 @@ Vary: Accept
       "en": "Required component"
     },
     "description": [{ "..." }],
-    "numberOfCredits": 30,
+    "numberOfCredits": [{
+      "type": "CreditPoint",
+      "framework": {
+        "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+        "type": "Concept",
+        "prefLabel": { "en": "ECTS" },
+        "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+      },
+      "point": 30
+    }],
     "hasCourse": [{
       "id": "https://example.org/courses/python",
       "type": ["LearningResource", "Course"],
@@ -1456,7 +1502,16 @@ Vary: Accept
       "text": "At least two of the listed courses must be completed successfully.",
       "encodingFormat": "text/plain"
     }],
-    "numberOfCredits": 0,
+    "numberOfCredits": [{
+      "type": "CreditPoint",
+      "framework": {
+        "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+        "type": "Concept",
+        "prefLabel": { "en": "ECTS" },
+        "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+      },
+      "point": 0
+    }],
     "hasCourse": [
       {
         "id": "https://example.org/courses/python",
@@ -1631,8 +1686,8 @@ Vary: Accept
           <tr>
             <td><code>numberOfCredits</code></td>
             <td>no</td>
-            <td><code>number</code></td>
-            <td>Number of ECTS credits awarded for the credential.</td>
+            <td><code>array[<a>CreditPoint</a>]</code></td>
+            <td>Credits awarded for the credential. Each entry includes a numeric point and a concept identifying its framework.</td>
           </tr>
           <tr>
             <td><code>competencyRequired</code></td>
@@ -3812,6 +3867,113 @@ Vary: Accept
               conditionsOfAccess.json</a></dd>
         </dl>
       </section>
+    </section>
+
+    <section data-dfn-for="CreditPoint">
+      <h3><dfn>CreditPoint</dfn></h3>
+      <p>A <code>CreditPoint</code> records a numeric credit amount in a
+        particular framework. The <code>framework</code> is a
+        <a><code>Concept</code></a>; consumers SHOULD use its stable
+        <code>id</code> to identify and compare credit systems. Credit amounts
+        from different frameworks are not directly comparable unless an
+        explicit conversion rule exists.</p>
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"CreditPoint"</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>point</code></td>
+            <td>yes</td>
+            <td><code>number</code></td>
+            <td>Non-negative numeric amount. Display formatting is determined by consumers.</td>
+          </tr>
+          <tr>
+            <td><code>framework</code></td>
+            <td>yes</td>
+            <td><a><code>Concept</code></a></td>
+            <td>Concept identifying the credit framework.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><code>numberOfCredits</code> is a non-empty array of
+        <code>CreditPoint</code> objects. Add one entry per credit framework.
+        If no shared concept URI exists, providers MAY use a stable,
+        provider-controlled URI for <code>framework.id</code>. Such identifiers
+        only match across providers when those providers reuse the same URI or
+        maintain an explicit mapping.</p>
+
+      <pre class="example json" title="ECTS CreditPoint using the published ELM concept">
+{
+  "numberOfCredits": [{
+    "type": "CreditPoint",
+    "point": 6,
+    "framework": {
+      "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+      "type": "Concept",
+      "prefLabel": {
+        "en": "ECTS"
+      },
+      "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+    }
+  }]
+}
+      </pre>
+
+      <pre class="example json" title="Illustrative UK CATS and provider-defined CME credit frameworks">
+{
+  "numberOfCredits": [
+    {
+      "type": "CreditPoint",
+      "point": 15,
+      "framework": {
+        "id": "urn:example:provider:creditscheme:cats",
+        "type": "Concept",
+        "prefLabel": {
+          "en": "CATS"
+        }
+      }
+    },
+    {
+      "type": "CreditPoint",
+      "point": 3,
+      "framework": {
+        "id": "urn:example:provider:creditscheme:cme",
+        "type": "Concept",
+        "prefLabel": {
+          "en": "CME"
+        }
+      }
+    }
+  ]
+}
+      </pre>
+      <p>The <code>urn:example</code> identifiers and credit amounts above are
+        illustrative only, not published framework identifiers or a claim
+        that these amounts are equivalent.</p>
+
+      <dl>
+        <dt>References</dt>
+        <dd><code><a>Course</a> (numberOfCredits)</code>,
+          <code><a>EducationalOccupationalProgram</a> (numberOfCredits)</code>,
+          <code><a>ProgramPart</a> (numberOfCredits)</code>, and
+          <code><a>EducationalOccupationalCredential</a> (numberOfCredits)</code></dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/creditPoint.json">JSON Schema: creditPoint.json</a></dd>
+      </dl>
     </section>
 
     <section data-dfn-for="Competency">

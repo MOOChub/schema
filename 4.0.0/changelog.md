@@ -22,6 +22,10 @@ field-by-field migration instructions are in [migration-guide.md](migration-guid
 
 ### Course profile
 
+- Changed `numberOfCredits` to an array of ELM-style `CreditPoint` objects with
+  a framework `Concept`, allowing multiple credit systems to be identified by
+  their concept URIs. MOOChub models `point` as a JSON number, leaving display
+  formatting to consumers.
 - Added required course `id` and JSON-LD `type`; `url`, `name`, `publisher`,
   `creator`, and `license` remain required.
 - name is now a localized string; `description` is now rich text. `abstract` is a new optional localized string for short summaries.

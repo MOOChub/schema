@@ -24,7 +24,20 @@
   ],
   "courseCode": "DIGITAL-TRAINER",
   "timeRequired": "PT42H",
-  "numberOfCredits": 3.5,
+  "numberOfCredits": [
+    {
+      "type": "CreditPoint",
+      "framework": {
+        "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+        "type": "Concept",
+        "prefLabel": {
+          "en": "ECTS"
+        },
+        "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+      },
+      "point": 3.5
+    }
+  ],
   "accessMode": ["auditory", "textual", "visual"],
   "aggregateRating": {
     "ratingValue": 4.5,

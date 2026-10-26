@@ -1,0 +1,806 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/4.0.0/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "type": ["LearningResource", "Course"],
+  "id": "urn:uuid:c96a2376-bdf2-4307-a21f-19a4ff141b5f",
+  "url": "https://futurelearnlab.de/detailpage.php?id=18",
+  "name": {
+    "de": "Digital Trainer (Gesamtkurs)"
+  },
+  "abstract": {
+    "de": "Digitalisierung von Arbeits- und Geschäftsprozessen, Stärkung der digitalen Kompetenz und Methodik, Verbesserung der Selbstvermarktung, Erkennen neuer Handlungsoptionen."
+  },
+  "description": [
+    {
+      "type": "TextObject",
+      "inLanguage": "de",
+      "text": "<div><p>Der Kurs verfolgt im Zuge der fortschreitenden Digitalisierung von Arbeits- und Geschäftsprozessen das Ziel, deine digitale Kompetenz und Methodik zu stärken und ein vertieftes Bewusstsein für neue digitale Lernfelder zu entwickeln. Zugleich steht eine\r\n    Verbesserung der Selbstvermarktung und ein Erkennen neuer Handlungsoptionen im Vordergrund.</p>\r\n</div>",
+      "encodingFormat": "text/html"
+    }
+  ],
+  "courseCode": "DIGITAL-TRAINER",
+  "timeRequired": "PT42H",
+  "numberOfCredits": [
+    {
+      "type": "CreditPoint",
+      "framework": {
+        "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+        "type": "Concept",
+        "prefLabel": {
+          "en": "ECTS"
+        },
+        "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+      },
+      "point": 3.5
+    }
+  ],
+  "accessMode": ["auditory", "textual", "visual"],
+  "aggregateRating": {
+    "ratingValue": 4.5,
+    "ratingCount": 24,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "hasCourseInstance": [
+    {
+      "id": "https://futurelearnlab.de/course-instances/digital-trainer-summer-2026",
+      "type": "CourseInstance",
+      "name": {
+        "de": "Sommersemester 2026"
+      },
+      "courseMode": ["blended", "synchronous"],
+      "startDate": "2026-05-04T00:00:00Z",
+      "endDate": "2026-06-12T23:59:59Z",
+      "duration": "P6W",
+      "maximumAttendeeCapacity": 20,
+      "subEvent": [
+        {
+          "type": "Event",
+          "name": {
+            "de": "Practical phase"
+          },
+          "eventSchedule": [
+            {
+              "type": "Schedule",
+              "byDay": [
+                "https://schema.org/Monday",
+                "https://schema.org/Wednesday"
+              ],
+              "startTime": "18:00:00",
+              "endTime": "20:00:00",
+              "repeatFrequency": "P1W",
+              "startDate": "2026-05-04",
+              "endDate": "2026-05-22",
+              "scheduleTimezone": "Europe/Berlin"
+            }
+          ],
+          "location": [
+            {
+              "id": "urn:uuid:f988cf9e-d10e-4847-8c0f-d87e88ff4f2a",
+              "type": "Place",
+              "name": {
+                "en": "Campus Luebeck, Building A, Room 101"
+              },
+              "description": [
+                {
+                  "type": "TextObject",
+                  "inLanguage": "de",
+                  "text": "Der Campus der Technischen Hochschule Lübeck befindet sich in der Nähe des Stadtzentrums von Lübeck und ist gut mit öffentlichen Verkehrsmitteln erreichbar. Die Buslinie 1 hält direkt vor dem Campus.",
+                  "encodingFormat": "text/plain"
+                }
+              ],
+              "address": {
+                "type": "PostalAddress",
+                "streetAddress": "Mönkhofer Weg 239",
+                "postalCode": "23562",
+                "addressLocality": "Luebeck",
+                "addressCountry": "Germany"
+              },
+              "geo": {
+                "type": "GeoCoordinates",
+                "latitude": 53.8695,
+                "longitude": 10.6861
+              },
+              "publicAccess": true,
+              "photo": {
+                "type": "ImageObject",
+                "contentUrl": "https://futurelearnlab.de/hub/pluginfile.php/1/local_ildmeta/provider/2/fhl-intern-logo.png",
+                "description": {
+                  "de": "Logo der Technischen Hochschule Lübeck"
+                },
+                "license": {
+                  "type": "License",
+                  "identifier": "Proprietary"
+                }
+              },
+              "openingHoursSpecification": [
+                {
+                  "type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "https://schema.org/Monday",
+                    "https://schema.org/Wednesday"
+                  ],
+                  "opens": "08:00:00",
+                  "closes": "18:00:00"
+                }
+              ],
+              "owner": {
+                "id": "https://www.th-luebeck.de",
+                "type": "Organization",
+                "name": {
+                  "de": "Technische Hochschule Lübeck"
+                }
+              },
+              "maximumAttendeeCapacity": 20,
+              "sameAs": ["https://pubdoc.th-luebeck.de/1af09392ff"]
+            }
+          ]
+        },
+        {
+          "type": "Event",
+          "name": {
+            "de": "Online phase"
+          },
+          "eventSchedule": [
+            {
+              "type": "Schedule",
+              "byDay": [
+                "https://schema.org/Monday",
+                "https://schema.org/Wednesday"
+              ],
+              "startTime": "18:00:00",
+              "endTime": "20:00:00",
+              "repeatFrequency": "P1W",
+              "startDate": "2026-05-25",
+              "endDate": "2026-06-12",
+              "scheduleTimezone": "Europe/Berlin"
+            }
+          ],
+          "location": [
+            {
+              "id": "https://example.org/locations/webinar-room",
+              "type": "VirtualLocation",
+              "name": {
+                "de": "Webinarraum"
+              },
+              "url": "https://bbb.futurelearnlab.de/b/digtrainer-2026"
+            }
+          ]
+        },
+        {
+          "type": "Event",
+          "name": {
+            "de": "Oral exam"
+          },
+          "startDate": "2026-06-15T10:00:00Z",
+          "endDate": "2026-06-15T12:00:00Z",
+          "location": [
+            {
+              "id": "https://example.org/locations/webinar-room",
+              "type": "VirtualLocation",
+              "name": {
+                "de": "Webinarraum"
+              },
+              "url": "https://bbb.futurelearnlab.de/b/digtrainer-2026"
+            }
+          ]
+        },
+        {
+          "type": "Event",
+          "name": {
+            "de": "Written exam"
+          },
+          "startDate": "2026-06-20T10:00:00Z",
+          "endDate": "2026-06-20T12:00:00Z",
+          "location": [
+            {
+              "id": "urn:uuid:f988cf9e-d10e-4847-8c0f-d87e88ff4f2a",
+              "type": "Place",
+              "name": {
+                "en": "Campus Luebeck, Building A, Room 101"
+              },
+              "address": {
+                "type": "PostalAddress",
+                "streetAddress": "Mönkhofer Weg 239",
+                "postalCode": "23562",
+                "addressLocality": "Luebeck",
+                "addressCountry": "Germany"
+              }
+            }
+          ]
+        }
+      ],
+      "applicationStartDate": "2026-02-01T00:00:00Z",
+      "applicationDeadline": "2026-04-30T23:59:59Z",
+      "offers": [
+        {
+          "type": "Offer",
+          "price": 125,
+          "priceCurrency": "EUR",
+          "category": "complete",
+          "paymentFrequency": "one-time",
+          "url": "https://futurelearnlab.de/enroll/digital-trainer-summer-2026",
+          "availabilityStarts": "2026-02-01T00:00:00Z",
+          "availabilityEnds": "2026-04-30T23:59:59Z"
+        }
+      ],
+      "instructor": [
+        {
+          "id": "https://example.org/people/beispielperson",
+          "name": "Beispielperson",
+          "type": "Person"
+        }
+      ]
+    },
+    {
+      "id": "https://futurelearnlab.de/course-instances/digital-trainer-winter-2025",
+      "type": "CourseInstance",
+      "name": {
+        "de": "Wintersemester 2025"
+      },
+      "courseMode": ["online", "asynchronous"],
+      "startDate": "2025-01-13T00:00:00Z",
+      "endDate": "2025-02-28T23:59:59Z"
+    }
+  ],
+  "dateCreated": "2019-07-03T13:13:13Z",
+  "datePublished": "2019-07-03T13:13:13Z",
+  "dateModified": "2022-03-26T08:35:37Z",
+  "expires": "2026-12-31T23:59:59Z",
+  "inLanguage": ["de", "en"],
+  "audience": {
+    "type": "Audience",
+    "audienceType": [
+      {
+        "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/student",
+        "type": "Concept",
+        "prefLabel": {
+          "en": "Student",
+          "de": "Studierende"
+        },
+        "inScheme": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole"
+      }
+    ],
+    "description": [
+      {
+        "type": "TextObject",
+        "inLanguage": "de",
+        "text": "Studierende, die ihre digitale Kompetenz und Methodik stärken und ein vertieftes Bewusstsein für neue digitale Lernfelder entwickeln möchten.",
+        "encodingFormat": "text/plain"
+      },
+      {
+        "type": "TextObject",
+        "inLanguage": "en",
+        "text": "Students who want to strengthen their digital competence and methodology and develop a deeper awareness of new digital learning fields.",
+        "encodingFormat": "text/plain"
+      }
+    ],
+    "suggestedAge": {
+      "minValue": 16,
+      "maxValue": 50
+    }
+  },
+  "keywords": ["Digitale Kompetenzen", "Digitalisierung"],
+  "conditionsOfAccess": {
+    "prefLabel": {
+      "de": "Anmeldung erforderlich"
+    },
+    "id": "http://w3id.org/kim/conditionsOfAccess/login",
+    "type": "Concept"
+  },
+  "assesses": [
+    {
+      "id": "urn:uuid:9e7c1b64-c460-4672-b666-cb64dc2d3921",
+      "type": "Competency",
+      "name": {
+        "en": "Communication, collaboration and creativity"
+      },
+      "relatedSkill": [
+        {
+          "id": "http://data.europa.eu/esco/skill/326809fc-238d-40c2-881e-40042f7f2f0d",
+          "type": "Concept",
+          "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+          "prefLabel": {
+            "en": "establish collaborative relations"
+          }
+        },
+        {
+          "id": "http://data.europa.eu/esco/skill/80f308e6-0e09-404a-80cd-ec5f50f6f304",
+          "type": "Concept",
+          "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+          "prefLabel": {
+            "en": "communicate with target community"
+          }
+        },
+        {
+          "id": "http://data.europa.eu/esco/skill/ccdf3597-5c80-410f-896d-e1bdfa223de9",
+          "type": "Concept",
+          "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+          "prefLabel": {
+            "en": "stimulate creativity in the team"
+          }
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:3f9f5899-c3cd-43a9-aecb-266483fcbf6a",
+      "type": "Competency",
+      "name": {
+        "en": "Developing digital content"
+      },
+      "relatedSkill": [
+        {
+          "id": "http://data.europa.eu/esco/skill/5fd5c985-eaaa-47aa-8314-62359c54505a",
+          "type": "Concept",
+          "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+          "prefLabel": {
+            "en": "develop digital content"
+          }
+        },
+        {
+          "id": "http://data.europa.eu/snb/dcf/u69o196gu6",
+          "type": "Concept",
+          "inScheme": "http://data.europa.eu/snb/dcf/25831c2",
+          "prefLabel": {
+            "en": "Developing digital content"
+          }
+        },
+        {
+          "id": "http://data.europa.eu/snb/dcf/3ol5wi3605",
+          "type": "Concept",
+          "inScheme": "http://data.europa.eu/snb/dcf/25831c2",
+          "prefLabel": {
+            "en": "Developing digital content Level 4"
+          }
+        }
+      ]
+    }
+  ],
+  "teaches": [
+    {
+      "id": "urn:uuid:9e7c1b64-c460-4672-b666-cb64dc2d3921",
+      "type": "Competency",
+      "name": {
+        "en": "Communication, collaboration and creativity"
+      },
+      "relatedSkill": [
+        {
+          "id": "http://data.europa.eu/esco/skill/326809fc-238d-40c2-881e-40042f7f2f0d",
+          "type": "Concept",
+          "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+          "prefLabel": {
+            "en": "establish collaborative relations"
+          }
+        },
+        {
+          "id": "http://data.europa.eu/esco/skill/80f308e6-0e09-404a-80cd-ec5f50f6f304",
+          "type": "Concept",
+          "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+          "prefLabel": {
+            "en": "communicate with target community"
+          }
+        },
+        {
+          "id": "http://data.europa.eu/esco/skill/ccdf3597-5c80-410f-896d-e1bdfa223de9",
+          "type": "Concept",
+          "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+          "prefLabel": {
+            "en": "stimulate creativity in the team"
+          }
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:3f9f5899-c3cd-43a9-aecb-266483fcbf6a",
+      "type": "Competency",
+      "name": {
+        "en": "Developing digital content"
+      },
+      "relatedSkill": [
+        {
+          "id": "http://data.europa.eu/esco/skill/5fd5c985-eaaa-47aa-8314-62359c54505a",
+          "type": "Concept",
+          "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+          "prefLabel": {
+            "en": "develop digital content"
+          }
+        },
+        {
+          "id": "http://data.europa.eu/snb/dcf/u69o196gu6",
+          "type": "Concept",
+          "inScheme": "http://data.europa.eu/snb/dcf/25831c2",
+          "prefLabel": {
+            "en": "Developing digital content"
+          }
+        },
+        {
+          "id": "http://data.europa.eu/snb/dcf/3ol5wi3605",
+          "type": "Concept",
+          "inScheme": "http://data.europa.eu/snb/dcf/25831c2",
+          "prefLabel": {
+            "en": "Developing digital content Level 4"
+          }
+        }
+      ]
+    }
+  ],
+  "learningOutcomeSummary": [
+    {
+      "type": "TextObject",
+      "inLanguage": "en",
+      "text": "Stduents will be able to communicate, collaborate and stimulate creativity in the team. They will also be able to develop digital content.",
+      "encodingFormat": "text/plain"
+    }
+  ],
+  "coursePrerequisites": [
+    {
+      "type": "TextObject",
+      "inLanguage": "en",
+      "text": "Basic digital literacy and familiarity with online learning platforms and English B2 level.",
+      "encodingFormat": "text/plain"
+    }
+  ],
+  "prerequisiteCourses": [
+    {
+      "id": "urn:uuid:1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+      "type": ["LearningResource", "Course"],
+      "name": {
+        "en": "Introduction to Digital Skills"
+      }
+    }
+  ],
+  "competencyRequired": [
+    {
+      "id": "urn:uuid:7e8f9g0h-1i2j-3k4l-5m6n-7o8p9q0r1s2t",
+      "type": "Competency",
+      "name": {
+        "en": "Englisch B2"
+      },
+      "relatedSkill": [
+        {
+          "id": "http://data.europa.eu/esco/skill/7ee20fe2-facd-4cc5-837b-927429e0e7ac",
+          "type": "Concept",
+          "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+          "prefLabel": {
+            "en": "understand written English"
+          }
+        }
+      ]
+    }
+  ],
+  "educationalAlignment": [
+    {
+      "type": "AlignmentObject",
+      "alignmentType": "educationalSubject",
+      "educationalFramework": "ISCED-F",
+      "targetName": {
+        "en": "Computer use"
+      },
+      "targetUrl": "http://data.europa.eu/esco/isced-f/0611"
+    },
+    {
+      "type": "AlignmentObject",
+      "alignmentType": "educationalSubject",
+      "educationalFramework": "OEFOS",
+      "targetName": {
+        "en": "Computer use"
+      },
+      "identifier": "0611"
+    },
+    {
+      "type": "AlignmentObject",
+      "alignmentType": "educationalSubject",
+      "educationalFramework": "Hochschulfächersystematik",
+      "targetName": {
+        "en": "Medieninformatik"
+      },
+      "targetUrl": "https://w3id.org/kim/hochschulfaechersystematik/n121"
+    },
+    {
+      "type": "AlignmentObject",
+      "alignmentType": "educationalSubject",
+      "educationalFramework": "Schulfächer",
+      "targetName": {
+        "en": "Informatik"
+      },
+      "targetUrl": "http://w3id.org/kim/schulfaecher/s1013"
+    },
+    {
+      "type": "AlignmentObject",
+      "alignmentType": "educationalSubject",
+      "educationalFramework": "Holland Codes",
+      "targetName": {
+        "en": "Artistic (A)"
+      },
+      "targetUrl": "https://www.onetcenter.org/rdf/resources/onet/Element/52c657cb-1b12-11ea-8239-782bcb5df6ac",
+      "identifier": "A"
+    }
+  ],
+  "educationalCredentialAwarded": [
+    {
+      "id": "urn:uuid:8f0f1b44-94c1-4f44-a3e1-0f06f7c6b2af",
+      "type": "EducationalOccupationalCredential",
+      "name": {
+        "de": "Computer Structures Certificate"
+      },
+      "credentialCategory": {
+        "id": "http://data.europa.eu/snb/credential/48b514e72a",
+        "prefLabel": {
+          "de": "Lernaktivität"
+        },
+        "type": "Concept",
+        "inScheme": "http://data.europa.eu/snb/credential/25831c2"
+      },
+      "recognizedBy": [
+        {
+          "id": "https://example.org/organizations/isy",
+          "name": {
+            "de": "Institut für Interaktive Systeme"
+          },
+          "type": "Organization"
+        }
+      ],
+      "competencyRequired": [
+        {
+          "id": "urn:uuid:9e7c1b64-c460-4672-b666-cb64dc2d3921",
+          "type": "Competency",
+          "name": {
+            "en": "Communication, collaboration and creativity"
+          },
+          "relatedSkill": [
+            {
+              "id": "http://data.europa.eu/esco/skill/326809fc-238d-40c2-881e-40042f7f2f0d",
+              "type": "Concept",
+              "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+              "prefLabel": {
+                "en": "establish collaborative relations"
+              }
+            },
+            {
+              "id": "http://data.europa.eu/esco/skill/80f308e6-0e09-404a-80cd-ec5f50f6f304",
+              "type": "Concept",
+              "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+              "prefLabel": {
+                "en": "communicate with target community"
+              }
+            },
+            {
+              "id": "http://data.europa.eu/esco/skill/ccdf3597-5c80-410f-896d-e1bdfa223de9",
+              "type": "Concept",
+              "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+              "prefLabel": {
+                "en": "stimulate creativity in the team"
+              }
+            }
+          ]
+        },
+        {
+          "id": "urn:uuid:3f9f5899-c3cd-43a9-aecb-266483fcbf6a",
+          "type": "Competency",
+          "name": {
+            "en": "Developing digital content"
+          },
+          "relatedSkill": [
+            {
+              "id": "http://data.europa.eu/esco/skill/5fd5c985-eaaa-47aa-8314-62359c54505a",
+              "type": "Concept",
+              "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+              "prefLabel": {
+                "en": "develop digital content"
+              }
+            },
+            {
+              "id": "http://data.europa.eu/snb/dcf/u69o196gu6",
+              "type": "Concept",
+              "inScheme": "http://data.europa.eu/snb/dcf/25831c2",
+              "prefLabel": {
+                "en": "Developing digital content"
+              }
+            },
+            {
+              "id": "http://data.europa.eu/snb/dcf/3ol5wi3605",
+              "type": "Concept",
+              "inScheme": "http://data.europa.eu/snb/dcf/25831c2",
+              "prefLabel": {
+                "en": "Developing digital content Level 4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "isPartOf": [
+    {
+      "id": "https://oer.gitlab.io/OS",
+      "type": ["LearningResource", "Course"],
+      "name": {
+        "de": "Computer Structures and Operating Systems"
+      }
+    },
+    {
+      "id": "https://example-hochschule.de/programs/digital-trainer",
+      "type": "EducationalOccupationalProgram",
+      "name": {
+        "de": "Digital Trainer Program"
+      }
+    }
+  ],
+  "hasPart": [
+    {
+      "id": "https://oer.gitlab.io/OS-Basics",
+      "type": ["LearningResource", "Course"],
+      "name": {
+        "de": "Computer Structures and Operating Systems - Basics"
+      }
+    },
+    {
+      "id": "https://oer.gitlab.io/OS/figures/OS/hail_f0613_with_embedded_frame_nos.png",
+      "type": ["LearningResource", "ImageObject"],
+      "name": {
+        "de": "A-32 two-level page table"
+      }
+    }
+  ],
+  "isBasedOn": [
+    {
+      "id": "https://oer.gitlab.io/OS/wiki/concept.pdf",
+      "type": ["LearningResource", "PresentationDigitalDocument"],
+      "name": {
+        "de": "Digital Trainer Kurskonzept"
+      },
+      "creator": [
+        {
+          "id": "https://example.org/people/beispielperson",
+          "type": "Person",
+          "name": "Beispielperson"
+        }
+      ],
+      "license": {
+        "type": "License",
+        "id": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "identifier": "CC-BY-SA-3.0"
+      }
+    }
+  ],
+  "educationalLevel": [
+    {
+      "id": "https://w3id.org/kim/educationalLevel/level_6",
+      "type": "Concept",
+      "prefLabel": {
+        "de": "Bachelor oder äquivalent",
+        "en": "Bachelor or equivalent"
+      }
+    }
+  ],
+  "isAccessibleForFree": true,
+  "interactivityType": {
+    "id": "http://purl.org/dcx/lrmi-vocabs/interactivityType/active",
+    "type": "Concept",
+    "prefLabel": {
+      "de": "aktiv (eher selbstgesteuert)",
+      "en": "active"
+    }
+  },
+  "publisher": {
+    "id": "https://example.org/organizations/isy",
+    "type": "Organization",
+    "name": {
+      "de": "Institut für Interaktive Systeme"
+    },
+    "sameAs": ["https://www.th-luebeck.de"],
+    "image": {
+      "description": {
+        "de": "Logo der Technischen Hochschule Lübeck"
+      },
+      "type": "ImageObject",
+      "contentUrl": "https://futurelearnlab.de/hub/pluginfile.php/1/local_ildmeta/provider/2/fhl-intern-logo.png",
+      "license": {
+        "type": "License",
+        "identifier": "Proprietary"
+      }
+    }
+  },
+  "creator": [
+    {
+      "id": "https://example.org/people/beispielperson",
+      "type": "Person",
+      "name": "Beispielperson",
+      "sameAs": ["https://example.org/people/beispielperson"],
+      "image": {
+        "description": {
+          "de": "Foto von Beispielperson"
+        },
+        "type": "ImageObject",
+        "contentUrl": "https://example.org/images/beispielperson.jpg",
+        "license": {
+          "type": "License",
+          "identifier": "Proprietary"
+        }
+      },
+      "affiliation": [
+        {
+          "id": "https://example.org/organizations/isy",
+          "name": {
+            "de": "Institut für Interaktive Systeme"
+          },
+          "type": "Organization"
+        }
+      ]
+    }
+  ],
+  "contributor": [
+    {
+      "id": "https://example.org/organizations/isy",
+      "name": {
+        "de": "Institut für Interaktive Systeme"
+      },
+      "sameAs": ["https://www.th-luebeck.de"],
+      "type": "Organization",
+      "image": {
+        "description": {
+          "de": "Logo der Technischen Hochschule Lübeck"
+        },
+        "type": "ImageObject",
+        "contentUrl": "https://futurelearnlab.de/hub/pluginfile.php/1/local_ildmeta/provider/2/fhl-intern-logo.png",
+        "license": {
+          "type": "License",
+          "identifier": "Proprietary"
+        }
+      }
+    }
+  ],
+  "funder": [
+    {
+      "id": "https://example.org/organizations/isy",
+      "name": {
+        "de": "Institut für Interaktive Systeme"
+      },
+      "sameAs": ["https://www.th-luebeck.de/isy"],
+      "type": "Organization",
+      "image": {
+        "description": {
+          "de": "Logo der Technischen Hochschule Lübeck"
+        },
+        "type": "ImageObject",
+        "contentUrl": "https://futurelearnlab.de/hub/pluginfile.php/1/local_ildmeta/provider/2/fhl-intern-logo.png",
+        "license": {
+          "type": "License",
+          "identifier": "Proprietary"
+        }
+      }
+    }
+  ],
+  "license": {
+    "type": "License",
+    "identifier": "CC0 1.0 Universal",
+    "id": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "image": {
+    "type": "ImageObject",
+    "contentUrl": "https://futurelearnlab.de/0/Kachel_Vorseite2.png",
+    "description": {
+      "en": "A cover image of the course"
+    },
+    "license": {
+      "type": "License",
+      "identifier": "CC0 1.0 Universal",
+      "id": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  },
+  "trailer": {
+    "type": "VideoObject",
+    "contentUrl": "https://futurelearnlab.de/trailer.mp4",
+    "description": {
+      "en": "A teaser video of the course"
+    },
+    "license": {
+      "type": "License",
+      "identifier": "Proprietary"
+    }
+  }
+}

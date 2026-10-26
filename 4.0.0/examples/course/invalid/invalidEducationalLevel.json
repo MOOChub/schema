@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/4.0.0/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "id": "urn:uuid:c96a2376-bdf2-4307-a21f-19a4ff141b5f",
+  "url": "https://futurelearnlab.de/detailpage.php?id=18",
+  "name": {
+    "de": "Digital Trainer (Gesamtkurs)"
+  },
+  "type": ["LearningResource", "Course"],
+  "publisher": {
+    "id": "https://example.org/organizations/example-university",
+    "name": {
+      "de": "Institut für Interaktive Systeme"
+    },
+    "type": "Organization"
+  },
+  "creator": [
+    {
+      "id": "https://example.org/people/example-person",
+      "type": "Person",
+      "name": "Beispielperson"
+    }
+  ],
+  "license": {
+    "type": "License",
+    "identifier": "Propriatary"
+  },
+  "educationalLevel": [
+    {
+      "id": "https://example.org/education-levels/advanced",
+      "type": "Concept",
+      "prefLabel": {
+        "en": "Advanced"
+      }
+    }
+  ]
+}

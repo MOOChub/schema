@@ -13,46 +13,30 @@
           "type": "string",
           "description": "This is an IRI pointing at a node describing the learning resource type. Currently, only https://w3id.org/kim/hcrt/course is allowed.",
           "format": "iri",
-          "enum": [
-            "https://w3id.org/kim/hcrt/course"
-          ]
+          "enum": ["https://w3id.org/kim/hcrt/course"]
         },
         "type": {
           "type": "string",
-          "enum": [
-            "Concept"
-          ],
+          "enum": ["Concept"],
           "description": "The type of the object according to AMB standard."
         },
         "inScheme": {
           "type": "string",
           "format": "iri",
           "description": "A pointer to the used scheme. Currently, only https://w3id.org/kim/hcrt/scheme is allowed.",
-          "enum": [
-            "https://w3id.org/kim/hcrt/scheme"
-          ]
+          "enum": ["https://w3id.org/kim/hcrt/scheme"]
         }
       },
-      "required": [
-        "identifier",
-        "type",
-        "inScheme"
-      ]
+      "required": ["identifier", "type", "inScheme"]
     },
     "NullableDateTime": {
-      "type": [
-        "string",
-        "null"
-      ],
+      "type": ["string", "null"],
       "format": "date-time",
       "description": "A date-time according to ISO 8601, or null.",
       "example": "2021-01-13T08:00:00Z"
     },
     "DateTimeSeries": {
-      "type": [
-        "array",
-        "null"
-      ],
+      "type": ["array", "null"],
       "description": "A list of date-times according to ISO 8601.",
       "uniqueItems": true,
       "items": {
@@ -66,10 +50,7 @@
       "title": "License",
       "type": "object",
       "description": "This schema describes the attributes of a license.",
-      "required": [
-        "identifier",
-        "url"
-      ],
+      "required": ["identifier", "url"],
       "properties": {
         "identifier": {
           "description": "A license shortcode according to https://spdx.org/licenses/ or \"proprietary\".",
@@ -77,19 +58,13 @@
           "type": "string"
         },
         "url": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "format": "iri",
           "description": "A license according to https://spdx.org/licenses/ or \"null\" if proprietary.",
           "example": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
         },
         "contentUrl": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "format": "iri",
           "example": null,
           "description": "A link to the specific license document (if any, otherwise set to \"null\" - the identifier pointing at the general license is to be considered the license document then). Has to be \"null\" if identifier is \"proprietary\"."
@@ -119,9 +94,7 @@
         "type": {
           "type": "string",
           "description": "The type of the object.",
-          "enum": [
-            "ImageObject"
-          ]
+          "enum": ["ImageObject"]
         },
         "license": {
           "$ref": "#/$defs/LicenseArray"
@@ -132,10 +105,7 @@
           "example": "This is an image. It shows ..."
         }
       },
-      "required": [
-        "contentUrl",
-        "license"
-      ]
+      "required": ["contentUrl", "license"]
     },
     "Video": {
       "title": "VideoObject",
@@ -154,20 +124,14 @@
         },
         "type": {
           "type": "string",
-          "enum": [
-            "VideoObject"
-          ],
+          "enum": ["VideoObject"],
           "description": "The type of the object."
         },
         "license": {
           "$ref": "#/$defs/LicenseArray"
         }
       },
-      "required": [
-        "contentUrl",
-        "type",
-        "license"
-      ]
+      "required": ["contentUrl", "type", "license"]
     },
     "Organization": {
       "title": "Organization",
@@ -177,9 +141,7 @@
         "type": {
           "type": "string",
           "description": "The type of the object.",
-          "enum": [
-            "Organization"
-          ]
+          "enum": ["Organization"]
         },
         "name": {
           "type": "string",
@@ -187,19 +149,13 @@
           "example": "openHPI"
         },
         "url": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "description": "An url for the organization. Can be a link to a homepage, Wikidata,...",
           "format": "iri",
           "example": "https://open.hpi.de/"
         },
         "description": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "description": "A short description of the organization. Should be provided in HTML.",
           "example": "openHPI is a digital educational platform situated at the HPI with a focus on topics regarding computational sciences, internet and world wide web and design thinking."
         },
@@ -207,10 +163,7 @@
           "$ref": "#/$defs/Image"
         }
       },
-      "required": [
-        "name",
-        "type"
-      ]
+      "required": ["name", "type"]
     },
     "Person": {
       "title": "Person",
@@ -222,26 +175,17 @@
           "example": "Christoph Meinel"
         },
         "honorificPrefix": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "description": "The honorific prefix of the person (e.g. Dr., Prof., ...).",
           "example": "Prof. Dr. "
         },
         "honorificSuffix": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "description": "The honorific suffix of the person (e.g. PhD, MD, ...).",
           "example": null
         },
         "url": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "format": "iri",
           "description": "Can be a link to a homepage, Wikidata, ORCID,...",
           "example": null
@@ -249,26 +193,18 @@
         "type": {
           "type": "string",
           "description": "The type of the object.",
-          "enum": [
-            "Person"
-          ]
+          "enum": ["Person"]
         },
         "jobTitle": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "description": "The job title of the person.",
           "example": null
         },
         "image": {
-          "ref": "#/$defs/Image"
+          "$ref": "#/$defs/Image"
         },
         "description": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "description": "A short description of the person. Can be a CV-like description. Should be provided in HTML",
           "example": null
         },
@@ -276,10 +212,7 @@
           "$ref": "#/$defs/Organization"
         }
       },
-      "required": [
-        "name",
-        "type"
-      ]
+      "required": ["name", "type"]
     },
     "MultilingualLabel": {
       "type": "array",
@@ -298,10 +231,7 @@
             "example": "INTERMEDIATE"
           }
         },
-        "required": [
-          "inLanguage",
-          "name"
-        ]
+        "required": ["inLanguage", "name"]
       }
     },
     "EducationalLevel": {
@@ -310,10 +240,7 @@
       "description": "This schema describes the attributes of an educational level.",
       "properties": {
         "description": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "description": "A short description of the educational level. Should be based on the framework used.",
           "example": "Independently, according to my own needs, and solving well-defined and non-routine problems, I can: - discuss ways to protect my personal data and privacy in digital environments, and - discuss ways to use and share personally identifiable information while protecting myself and others from damages. - indicate privacy policy statements of how personal data is used in digital services."
         },
@@ -322,10 +249,7 @@
           "description": "List of names of the educational level. This array allows localized strings. A name and a language have to be given in the respective field."
         },
         "alternateName": {
-          "type": [
-            "array",
-            "null"
-          ],
+          "type": ["array", "null"],
           "description": "A list of alternative names for the educational level.",
           "example": [
             "independent use of concept",
@@ -343,9 +267,7 @@
         "educationalFramework": {
           "type": "string",
           "description": "The name of the educational framework that describes the educational level.",
-          "enum": [
-            "DigComp"
-          ]
+          "enum": ["DigComp"]
         },
         "educationalFrameworkVersion": {
           "type": "string",
@@ -353,19 +275,13 @@
           "example": "2.2"
         },
         "url": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "format": "iri",
           "description": "An IRI pointing at the document which describes the educational framework.",
           "example": "https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf"
         },
         "targetUrl": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "format": "iri",
           "description": "An IRI pointing at the framework node of the educational level.",
           "example": null
@@ -373,9 +289,7 @@
         "type": {
           "type": "string",
           "description": "The type of the object.",
-          "enum": [
-            "EducationalLevel"
-          ]
+          "enum": ["EducationalLevel"]
         }
       },
       "required": [
@@ -395,15 +309,9 @@
           "description": "List of names of the skill. This array allows localized strings. A name and a language have to be given in the respective element."
         },
         "alternateName": {
-          "type": [
-            "array",
-            "null"
-          ],
+          "type": ["array", "null"],
           "description": "A list of alternative names for the skill.",
-          "example": [
-            "Understand Personal Privacy",
-            "Use Privacy Policy"
-          ],
+          "example": ["Understand Personal Privacy", "Use Privacy Policy"],
           "items": {
             "type": "string"
           }
@@ -414,21 +322,14 @@
           "example": "4.2"
         },
         "description": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "description": "A short description of the skill. Should be based on the framework used.",
           "example": "To protect personal data and privacy in digital environments. To understand how to use and share personally identifiable information while being able to protect oneself and others from damages. To understand that digital services use a \"Privacy policy\" to inform how personal data is used."
         },
         "educationalFramework": {
           "type": "string",
           "description": "The name of the educational framework that describes the skill.",
-          "enum": [
-            "ESCO",
-            "DigComp",
-            "GRETA"
-          ]
+          "enum": ["ESCO", "DigComp", "GRETA"]
         },
         "educationalFrameworkVersion": {
           "type": "string",
@@ -436,19 +337,13 @@
           "example": "2.2"
         },
         "url": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "description": "An IRI pointing at the document which describes the educational framework.",
           "format": "iri",
           "example": "https://publications.jrc.ec.europa.eu/repository/bitstream/JRC128415/JRC128415_01.pdf"
         },
         "targetUrl": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "format": "iri",
           "description": "An IRI pointing at the framework node of the skill.",
           "example": null
@@ -464,10 +359,7 @@
       ]
     },
     "EducationalAudienceRole": {
-      "type": [
-        "array",
-        "null"
-      ],
+      "type": ["array", "null"],
       "description": "A list of audiences the course is intended for. The audience type is chosen by giving a node of the DublinCore vocabulary from https://www.dublincore.org/specifications/lrmi/concept_schemes/educationalAudienceRole/.",
       "uniqueItems": true,
       "items": {
@@ -482,23 +374,14 @@
       "description": "This schema describes the attributes of an educational alignment. It represents the topic, field of study, subject, ... of a course.",
       "properties": {
         "alignmentType": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "description": "The type of the alignment. Can only be \"educationalSubject\"",
-          "enum": [
-            "educationalSubject"
-          ]
+          "enum": ["educationalSubject"]
         },
         "educationalFramework": {
           "type": "string",
           "description": "The name of the educational framework that describes the educational alignment. Currently, only the standards ISCED-F and OEFOS are allowed.",
-          "enum": [
-            "ISCED-F",
-            "OEFOS",
-            "BIRD Faechersystematik"
-          ]
+          "enum": ["ISCED-F", "OEFOS", "BIRD Faechersystematik"]
         },
         "educationalFrameworkVersion": {
           "type": "string",
@@ -506,10 +389,7 @@
           "example": "2013"
         },
         "url": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "description": "An IRI pointing at the document which describes the educational framework.",
           "format": "iri",
           "example": "http://uis.unesco.org/sites/default/files/documents/international-standard-classification-of-education-fields-of-education-and-training-2013-detailed-field-descriptions-2015-en.pdf"
@@ -519,15 +399,9 @@
           "description": "List of names of the educational alignment. This array allows localized strings. A name and a language have to be given in the respective element."
         },
         "alternateName": {
-          "type": [
-            "array",
-            "null"
-          ],
+          "type": ["array", "null"],
           "description": "A list of alternative names for the educational alignment. ",
-          "example": [
-            "use of computers",
-            "working with computers"
-          ],
+          "example": ["use of computers", "working with computers"],
           "items": {
             "type": "string"
           }
@@ -538,10 +412,7 @@
           "example": "0611"
         },
         "targetUrl": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "description": "An IRI pointing at the framework node of the educational alignment.",
           "format": "iri",
           "example": "http://data.europa.eu/esco/isced-f/0611"
@@ -549,15 +420,10 @@
         "type": {
           "type": "string",
           "description": "The type of the object.",
-          "enum": [
-            "EducationalAlignment"
-          ]
+          "enum": ["EducationalAlignment"]
         },
         "description": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "description": "A short description of the educational alignment. Should be based on the framework used.",
           "example": "Computer use is the study of using computers and computer software and applications for different purposes. These programmes are generally of short duration. Programmes and qualifications with the following main content are classified here: Computer use Use of software for calculating (spread sheets) Use of software for data processing Use of software for desk top publishing Use of software for word processing Use of Internet"
         }
@@ -590,18 +456,13 @@
                 "example": "HPI Academy: Leading Digital Transformation and Innovation - Fall 2020"
               }
             },
-            "required": [
-              "inLanguage",
-              "name"
-            ]
+            "required": ["inLanguage", "name"]
           }
         },
         "educationalFramework": {
           "type": "string",
           "description": "This labels the object as a link to a course. It is needed to be compliant with a \"Skill\" ",
-          "enum": [
-            "Course_ID"
-          ]
+          "enum": ["Course_ID"]
         },
         "educationalFrameworkVersion": {
           "type": "string",
@@ -633,19 +494,14 @@
         "type": {
           "type": "string",
           "description": "The type of the object.",
-          "enum": [
-            "Program"
-          ]
+          "enum": ["Program"]
         },
         "title": {
           "type": "string",
           "description": "The title or name of the course program this course is part of."
         }
       },
-      "required": [
-        "url",
-        "type"
-      ]
+      "required": ["url", "type"]
     },
     "CompetencyRequirement": {
       "type": "array",
@@ -686,18 +542,12 @@
           "example": "https://open.hpi.de/courses/confidentialcommunication2022/items/1uDqDl23eu0i2h6jrGR49p"
         },
         "name": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "description": "The name of the learning item.",
           "example": "2.9 Certificate Standards"
         },
         "duration": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "pattern": "^P(?!$)(\\d+(?:\\.\\d+)?Y)?(\\d+(?:\\.\\d+)?M)?(\\d+(?:\\.\\d+)?W)?(\\d+(?:\\.\\d+)?D)?(T(?=\\d)(\\d+(?:\\.\\d+)?H)?(\\d+(?:\\.\\d+)?M)?(\\d+(?:\\.\\d+)?S)?)?$",
           "description": "ISO 8601 encoded duration.",
           "example": "PT19M21S"
@@ -706,10 +556,7 @@
           "$ref": "#/$defs/CompetencyRequirement"
         }
       },
-      "required": [
-        "type",
-        "identifier"
-      ]
+      "required": ["type", "identifier"]
     },
     "CredentialType": {
       "type": "string",
@@ -754,19 +601,10 @@
         "category": {
           "type": "string",
           "description": "The category of the offer. Can either be \"course\" (the costs for taking the course), \"certificate\" (the costs for the certification only) or \"complete\" (all costs for a course including certification).",
-          "enum": [
-            "course",
-            "certificate",
-            "complete"
-          ]
+          "enum": ["course", "certificate", "complete"]
         }
       },
-      "required": [
-        "price",
-        "priceCurrency",
-        "paymentFrequency",
-        "category"
-      ]
+      "required": ["price", "priceCurrency", "paymentFrequency", "category"]
     },
     "Address": {
       "type": "object",
@@ -807,27 +645,18 @@
           "$ref": "#/$defs/Address"
         },
         "name": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "description": "The name of the place, university, etc. where the course is given. Also, information for \"online\" or \"hybrid\" can be given here.",
           "example": "online"
         },
         "latitude": {
-          "type": [
-            "number",
-            "null"
-          ],
+          "type": ["number", "null"],
           "description": "The geo coordinate latitude of the place.",
           "format": "float",
           "example": null
         },
         "longitude": {
-          "type": [
-            "number",
-            "null"
-          ],
+          "type": ["number", "null"],
           "description": "The geo coordinate longitude of the place.",
           "format": "float",
           "example": null
@@ -839,15 +668,10 @@
           "description": "The url to the online address to the course e.g. virtual room. Has to be given when course is \"online\" or \"hybrid\"."
         }
       },
-      "required": [
-        "name"
-      ]
+      "required": ["name"]
     },
     "Workload": {
-      "type": [
-        "object",
-        "null"
-      ],
+      "type": ["object", "null"],
       "minProperties": 0,
       "example": null,
       "properties": {
@@ -859,28 +683,14 @@
         "timeUnit": {
           "type": "string",
           "description": "The unit of time course participants should plan with when taking the course (e.g. h/month, h/week).",
-          "enum": [
-            "h/month",
-            "h/week",
-            "h/day"
-          ]
+          "enum": ["h/month", "h/week", "h/day"]
         }
       },
-      "required": [
-        "timeValue",
-        "timeUnit"
-      ]
+      "required": ["timeValue", "timeUnit"]
     },
     "HollandCode": {
       "type": "string",
-      "enum": [
-        "R",
-        "I",
-        "A",
-        "S",
-        "E",
-        "C"
-      ]
+      "enum": ["R", "I", "A", "S", "E", "C"]
     },
     "Schedule": {
       "title": "Schedule",
@@ -904,63 +714,34 @@
           "format": "time"
         }
       },
-      "required": [
-        "byDay",
-        "startTime",
-        "endTime"
-      ]
+      "required": ["byDay", "startTime", "endTime"]
     },
     "CourseMode": {
-      "type": [
-        "array",
-        "null"
-      ],
+      "type": ["array", "null"],
       "minItems": 0,
       "uniqueItems": true,
       "description": "This attribute describes the course mode. It is limited to \"blended\", \"online\", \"onsite\", \"synchronous\" and \"asynchronous\".",
       "items": {
         "type": "string",
-        "enum": [
-          "blended",
-          "onsite",
-          "online",
-          "synchronous",
-          "asynchronous"
-        ]
+        "enum": ["blended", "onsite", "online", "synchronous", "asynchronous"]
       }
     },
     "Access": {
-      "type": [
-        "array",
-        "null"
-      ],
+      "type": ["array", "null"],
       "description": "Specifies how this course can be accessed by learners. The different access options shall not be used to transport differences between available content under this access option but rather annotate the course track or certificate that can be achieved.",
       "uniqueItems": true,
       "items": {
         "type": "string",
-        "enum": [
-          "free",
-          "paid",
-          "student",
-          "other"
-        ]
+        "enum": ["free", "paid", "student", "other"]
       }
     },
     "AccessMode": {
-      "type": [
-        "array",
-        "null"
-      ],
+      "type": ["array", "null"],
       "description": "Listing of accessModes e.g. audio-descriptive (for deaf people) and other handicaps, uses vocabulary from https://www.w3.org/2021/a11y-discov-vocab/latest/#accessModeSufficient-vocabulary.",
       "uniqueItems": true,
       "items": {
         "type": "string",
-        "enum": [
-          "visual",
-          "tactile",
-          "textual",
-          "auditory"
-        ]
+        "enum": ["visual", "tactile", "textual", "auditory"]
       }
     }
   },
@@ -969,11 +750,7 @@
       "title": "Links",
       "type": "object",
       "description": "Page information for the API",
-      "required": [
-        "self",
-        "first",
-        "last"
-      ],
+      "required": ["self", "first", "last"],
       "properties": {
         "self": {
           "type": "string",
@@ -1010,11 +787,7 @@
         "title": "Course",
         "type": "object",
         "description": "Serialized course object",
-        "required": [
-          "id",
-          "type",
-          "attributes"
-        ],
+        "required": ["id", "type", "attributes"],
         "properties": {
           "id": {
             "type": "string",
@@ -1025,9 +798,7 @@
           "type": {
             "type": "string",
             "description": "Type of the object.",
-            "enum": [
-              "Course"
-            ]
+            "enum": ["Course"]
           },
           "attributes": {
             "type": "object",
@@ -1047,10 +818,7 @@
                 "example": "Confidential Communication in the Internet"
               },
               "courseCode": {
-                "type": [
-                  "string",
-                  "null"
-                ],
+                "type": ["string", "null"],
                 "description": "An internal short code of the course. Also possible to give internal codes for templates here.",
                 "example": "confidentialcommunication2021"
               },
@@ -1061,18 +829,12 @@
                 "$ref": "#/$defs/CourseMode"
               },
               "description": {
-                "type": [
-                  "string",
-                  "null"
-                ],
+                "type": ["string", "null"],
                 "description": "Description of the course as an HTML document",
                 "example": "<p>A message on the Internet is sent through several networks and via different stations on its way to the target system. The individual stations are responsible for ensuring that the message is properly forwarded and finally delivered to the correct recipient. Each of these stations, if the message is sent in plain text, can receive the message and read its content. This means that a potential attacker, if he controls one of these intermediate systems, can also read the content of the message and even modify it before retransmitting it. Such attacks can have extreme effects on communication.</p>\\n\\n<p>In this course we will look at how and whether your connection to online banking is secure or whether the content of an e-mail is trustworthy. For this purpose we will deal with the basics of cryptography, security objectives and different types of encryption. In addition, we will provide insights into different models and standards that are used in practice.</p>\\n"
               },
               "inLanguage": {
-                "type": [
-                  "array",
-                  "null"
-                ],
+                "type": ["array", "null"],
                 "uniqueItems": true,
                 "description": "List of languages in which the course is offered. Each language should be abbreviated in accordance with BCP 47: https://tools.ietf.org/html/bcp47.",
                 "items": {
@@ -1207,10 +969,7 @@
                 }
               },
               "keywords": {
-                "type": [
-                  "array",
-                  "null"
-                ],
+                "type": ["array", "null"],
                 "description": "Keywords describing the course.",
                 "uniqueItems": true,
                 "items": {
@@ -1230,19 +989,13 @@
                 }
               },
               "numberOfCredits": {
-                "type": [
-                  "number",
-                  "null"
-                ],
+                "type": ["number", "null"],
                 "description": "The number of credits received for successfully completing the course. Currently, credits are given according the European Credit Transfer System (ECTS)",
                 "example": null,
                 "minimum": 0
               },
               "educationalCredentialsAwarded": {
-                "type": [
-                  "array",
-                  "null"
-                ],
+                "type": ["array", "null"],
                 "description": "Clarification which kinds of awards for successfully completing the course are given. ECTS are awarded if numberOfCredits > 0 (No explicit information given here).",
                 "uniqueItems": true,
                 "items": {
@@ -1285,10 +1038,7 @@
                 "example": null
               },
               "hollandCode": {
-                "type": [
-                  "array",
-                  "null"
-                ],
+                "type": ["array", "null"],
                 "description": "The assessed competency described in Holland Code/RIASEC Model. The allowed values are therefor \"R\", \"I\", \"A\", \"S\", \"E\", \"C\" according to the Holland taxonomy.",
                 "uniqueItems": true,
                 "items": {

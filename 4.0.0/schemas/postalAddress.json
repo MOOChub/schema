@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/postalAddress.json",
+  "title": "Postal address",
+  "description": "A postal address for a physical location.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "PostalAddress"
+    },
+    "streetAddress": {
+      "type": "string",
+      "minLength": 1
+    },
+    "addressLocality": {
+      "type": "string",
+      "minLength": 1
+    },
+    "postalCode": {
+      "type": "string",
+      "minLength": 1
+    },
+    "addressCountry": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": ["type", "streetAddress"]
+}

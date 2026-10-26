@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/course.json",
+  "title": "MOOChub v4 learning opportunity",
+  "description": "A MOOChub v4 course profile for a learning resource offered by a provider.",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/context-schema.json"
+    },
+    "type": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/courseType.json"
+    },
+    "id": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/id.json"
+    },
+    "url": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/url.json"
+    },
+    "name": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json"
+    },
+    "publisher": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/publisher.json"
+    },
+    "creator": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/creator.json"
+    },
+    "license": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/license.json"
+    },
+    "courseCode": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/courseCode.json"
+    },
+    "abstract": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json"
+    },
+    "description": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/richText.json"
+    },
+    "keywords": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/keywords.json"
+    },
+    "inLanguage": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/inLanguage.json"
+    },
+    "timeRequired": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/timeRequired.json"
+    },
+    "numberOfCredits": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/numberOfCredits.json"
+    },
+    "interactivityType": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/interactivityType.json"
+    },
+    "isAccessibleForFree": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/isAccessibleForFree.json"
+    },
+    "conditionsOfAccess": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/conditionsOfAccess.json"
+    },
+    "accessMode": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/accessMode.json"
+    },
+    "image": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/image.json"
+    },
+    "trailer": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/trailer.json"
+    },
+    "contributor": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/contributor.json"
+    },
+    "funder": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/funder.json"
+    },
+    "audience": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/audience.json"
+    },
+    "coursePrerequisites": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/richText.json"
+    },
+    "prerequisiteCourses": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/prerequisiteCourses.json"
+    },
+    "competencyRequired": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/competencyRequired.json"
+    },
+    "learningOutcomeSummary": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/richText.json"
+    },
+    "teaches": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/teaches.json"
+    },
+    "assesses": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/assesses.json"
+    },
+    "educationalLevel": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/educationalLevels.json"
+    },
+    "educationalAlignment": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/educationalAlignment.json"
+    },
+    "hasCourseInstance": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/hasCourseInstance.json"
+    },
+    "educationalCredentialAwarded": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/educationalCredentialAwarded.json"
+    },
+    "isBasedOn": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/isBasedOn.json"
+    },
+    "isPartOf": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/isPartOf.json"
+    },
+    "hasPart": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/hasPart.json"
+    },
+    "aggregateRating": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/aggregateRating.json"
+    },
+    "dateCreated": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "datePublished": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "dateModified": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expires": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["id", "type", "name", "publisher", "creator", "license"]
+}

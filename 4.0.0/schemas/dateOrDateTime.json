@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/dateOrDateTime.json",
+  "title": "RFC 3339 date or date-time",
+  "description": "An RFC 3339 date or date-time. RFC 9557 IXDTF extensions are not permitted.",
+  "oneOf": [
+    {
+      "type": "string",
+      "format": "date"
+    },
+    {
+      "type": "string",
+      "format": "date-time"
+    }
+  ]
+}

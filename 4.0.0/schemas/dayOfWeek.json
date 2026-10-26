@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/dayOfWeek.json",
+  "title": "Day of the week",
+  "description": "The day of the week using schema.org vocabulary https://schema.org/DayOfWeek",
+  "type": "string",
+  "enum": [
+    "https://schema.org/Monday",
+    "https://schema.org/Tuesday",
+    "https://schema.org/Wednesday",
+    "https://schema.org/Thursday",
+    "https://schema.org/Friday",
+    "https://schema.org/Saturday",
+    "https://schema.org/Sunday"
+  ]
+}

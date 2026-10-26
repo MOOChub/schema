@@ -1,0 +1,85 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/draft/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "type": ["LearningResource", "Course"],
+  "id": "urn:uuid:183595bb-1325-4083-8236-a98fbf4c4fe3",
+  "url": "https://www.orca.nrw/starker-start-ins-studium/fuer-studierende/mathematik/wintcheck/",
+  "name": {
+    "de": "WINT-Check Mathematik"
+  },
+  "description": [
+    {
+      "type": "TextObject",
+      "inLanguage": "de",
+      "text": "Machen Sie sich vertraut mit den mathematischen Anforderungen in WINT-Studiengängen und überprüfen Sie Ihre Vorkenntnisse. Eine ausführliche Übersicht über die 13 Wissensbereiche samt Themenfeldern bekommen Sie im WINT-Katalog Mathematik, auf den sich die Universitäten und Hochschulen für angewandte Wissenschaften in Nordrhein-Westfalen geeinigt haben. Als weitere Orientierung bietet die Veröffentlichung SINUS.NRW eine Sammlung von Aufgaben, die ohne Nutzung von technischen Hilfsmitteln bei Aufnahme eines Studiums mit Mathematikanteil gelöst werden können sollen.",
+      "encodingFormat": "text/plain"
+    }
+  ],
+  "inLanguage": ["de"],
+  "keywords": [
+    "Mathematik",
+    "WINT-Fächer",
+    "Selbsteinschätzung",
+    "Studienanforderungen",
+    "Studienbeginn"
+  ],
+  "isAccessibleForFree": true,
+  "publisher": {
+    "id": "https://www.orca.nrw",
+    "type": "Organization",
+    "name": {
+      "de": "Geschäftsstelle des Landesportals ORCA.nrw"
+    },
+    "sameAs": ["https://www.orca.nrw"],
+    "description": [
+      {
+        "type": "TextObject",
+        "inLanguage": "de",
+        "text": "ORCA.nrw - das Landesportal für Studium und Lehre in Nordrhein-Westfalen",
+        "encodingFormat": "text/plain"
+      }
+    ]
+  },
+  "creator": [
+    {
+      "id": "urn:uuid:88f4831d-ad55-48e8-b3a1-28c5d1654195",
+      "type": "Person",
+      "name": "Johanna Heitzer",
+      "honorificPrefix": "Prof."
+    },
+    {
+      "id": "urn:uuid:0ac1f284-e498-4a58-8a12-15ba0000c17e",
+      "type": "Person",
+      "name": "Fani Lauermann",
+      "honorificPrefix": "Prof.",
+      "sameAs": ["https://orcid.org/0000-0002-2051-1006"]
+    }
+  ],
+  "license": {
+    "type": "License",
+    "identifier": "CC-BY-SA-4.0",
+    "id": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "image": {
+    "type": "ImageObject",
+    "contentUrl": "https://www.orca.nrw/wp-content/uploads/2025/07/WINT-Check_Mathematik-ORCA.png",
+    "license": {
+      "type": "License",
+      "id": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "identifier": "CC-BY-SA-4.0"
+    }
+  },
+  "trailer": {
+    "contentUrl": "https://www.orca.nrw/wp-content/uploads/2024/07/fcd42339-939e-4003-980b-727cfffb0880.mp4",
+    "type": "VideoObject",
+    "license": {
+      "type": "License",
+      "id": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "identifier": "CC-BY-SA-4.0"
+    }
+  }
+}

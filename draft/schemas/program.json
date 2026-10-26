@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/draft/schemas/program.json",
+  "title": "Educational occupational program",
+  "description": "A structured educational program consisting of one or more courses.",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/context-schema.json"
+    },
+    "type": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/programType.json"
+    },
+    "id": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/id.json"
+    },
+    "url": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/url.json"
+    },
+    "name": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json"
+    },
+    "abstract": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json"
+    },
+    "description": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/richText.json"
+    },
+    "keywords": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/keywords.json"
+    },
+    "inLanguage": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/inLanguage.json"
+    },
+    "educationalProgramMode": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/educationalProgramMode.json"
+    },
+    "timeToComplete": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/timeRequired.json"
+    },
+    "numberOfCredits": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/numberOfCredits.json"
+    },
+    "programPrerequisites": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/richText.json"
+    },
+    "educationalLevel": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/educationalLevels.json"
+    },
+    "educationalAlignment": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/educationalAlignment.json"
+    },
+    "applicationStartDate": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/applicationStartDate.json"
+    },
+    "applicationDeadline": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/applicationDeadline.json"
+    },
+    "offers": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/offers.json"
+    },
+    "image": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/image.json"
+    },
+    "provider": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/publisher.json"
+    },
+    "funder": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/funder.json"
+    },
+    "hasPart": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/programParts.json"
+    },
+    "isPartOf": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/programIsPartOf.json"
+    },
+    "educationalCredentialAwarded": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/educationalCredentialAwarded.json"
+    },
+    "dateModified": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["id", "type", "url", "name", "provider", "hasPart"]
+}

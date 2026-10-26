@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/programType.json",
+  "title": "Educational Occupational Program type",
+  "description": "The RDF type required for educational occupational program.",
+  "type": "string",
+  "const": "EducationalOccupationalProgram"
+}

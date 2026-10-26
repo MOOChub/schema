@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/openingHoursSpecification.json",
+  "title": "Opening hours specification",
+  "description": "The opening hours of a location on a particular day or range of days.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "OpeningHoursSpecification"
+    },
+    "dayOfWeek": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "ref": "https://w3id.org/moochub/4.0.0/schemas/dayOfWeek.json"
+      }
+    },
+    "opens": {
+      "type": "string",
+      "format": "time"
+    },
+    "closes": {
+      "type": "string",
+      "format": "time"
+    },
+    "validFrom": {
+      "type": "string",
+      "format": "date",
+      "description": "The first calendar date on which these opening hours apply."
+    },
+    "validThrough": {
+      "type": "string",
+      "format": "date",
+      "description": "The last calendar date on which these opening hours apply, inclusive."
+    }
+  },
+  "required": ["type", "dayOfWeek", "opens", "closes"]
+}

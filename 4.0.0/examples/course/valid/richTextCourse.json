@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/4.0.0/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "id": "urn:uuid:8c2b5e73-4e90-4ef2-8efb-1ad4c4d46f6b",
+  "url": "https://example.org/courses/rich-text",
+  "name": {
+    "de": "Rich-Text-Kurs"
+  },
+  "description": [
+    {
+      "type": "TextObject",
+      "inLanguage": "de",
+      "text": "## Inhalte\n\nDieser Kurs enthält **formatierte** Inhalte.",
+      "encodingFormat": "text/markdown"
+    }
+  ],
+  "type": ["LearningResource", "Course"],
+  "publisher": {
+    "id": "https://example.org/organizations/example-provider",
+    "name": {
+      "de": "Beispielanbieter"
+    },
+    "type": "Organization"
+  },
+  "creator": [
+    {
+      "id": "https://example.org/people/beispielperson",
+      "type": "Person",
+      "name": "Beispielperson"
+    }
+  ],
+  "license": {
+    "type": "License",
+    "id": "https://spdx.org/licenses/CC-BY-4.0.html",
+    "identifier": "CC-BY-4.0"
+  }
+}

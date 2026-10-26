@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/draft/schemas/person.json",
+  "title": "Person",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/context-schema.json"
+    },
+    "id": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/id.json"
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the person. Honorific prefix and suffix have to be excluded.",
+      "example": "Jane Doe"
+    },
+    "type": {
+      "const": "Person"
+    },
+    "honorificPrefix": {
+      "type": "string",
+      "description": "The honorific prefix of the person (e.g. Dr., Prof., ...).",
+      "example": "Prof. Dr. "
+    },
+    "honorificSuffix": {
+      "type": "string",
+      "description": "The honorific suffix of the person (e.g. PhD, MD, ...).",
+      "example": "PhD"
+    },
+    "jobTitle": {
+      "type": "string",
+      "description": "The job title of the person.",
+      "example": "Professor of Computer Science"
+    },
+    "description": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/richText.json",
+      "description": "A description of the person."
+    },
+    "image": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/image.json"
+    },
+    "sameAs": {
+      "type": "array",
+      "description": "URLs that are asserted to identify the same person, such as verified social profiles, a homepage, ORCID, or Wikidata.",
+      "items": {
+        "$ref": "https://w3id.org/moochub/draft/schemas/url.json"
+      },
+      "uniqueItems": true,
+      "example": [
+        "https://orcid.org/0000-0002-1234-5678",
+        "https://www.wikidata.org/entity/Q123456"
+      ]
+    },
+    "affiliation": {
+      "type": "array",
+      "description": "Organizations that the person is affiliated with, such as an employer or a university.",
+      "minItems": 1,
+      "items": {
+        "$ref": "https://w3id.org/moochub/draft/schemas/organization.json"
+      },
+      "uniqueItems": true
+    },
+    "dateModified": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["id", "name", "type"]
+}

@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/draft/schemas/courseInstance.json",
+  "title": "Course instance",
+  "description": "An offering of a course at a particular time, location, or mode of study.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/id.json"
+    },
+    "url": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/url.json",
+      "description": "A detail page for this specific course offering."
+    },
+    "type": {
+      "const": "CourseInstance"
+    },
+    "name": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json",
+      "description": "An optional label for this offering, such as Summer semester 2026."
+    },
+    "courseMode": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/courseMode.json"
+    },
+    "inLanguage": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/inLanguage.json",
+      "description": "The language or languages in which learners can participate in this specific course offering."
+    },
+    "maximumAttendeeCapacity": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "The maximum number of attendees who can participate in this offering; zero means no limit."
+    },
+    "remainingAttendeeCapacity": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "The number of attendee places for this offering that remain unallocated; zero means no places remain available."
+    },
+    "subEvent": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/subEvent.json"
+    },
+    "courseSchedule": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "https://w3id.org/moochub/draft/schemas/schedule.json"
+      }
+    },
+    "startDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The RFC 3339 date-time at which the course offering starts."
+    },
+    "endDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The RFC 3339 date-time at which the course offering ends."
+    },
+    "duration": {
+      "type": "string",
+      "format": "duration",
+      "description": "The ISO 8601 duration of the course offering, for example P3M."
+    },
+    "applicationStartDate": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/applicationStartDate.json"
+    },
+    "applicationDeadline": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/applicationDeadline.json"
+    },
+    "location": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/courseLocation.json"
+    },
+    "instructor": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/instructor.json"
+    },
+    "offers": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/offers.json"
+    }
+  },
+  "required": ["id", "type"]
+}

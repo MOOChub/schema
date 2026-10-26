@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/context-schema.json",
+  "title": "MOOChub JSON-LD Context",
+  "description": "The JSON-LD context for MOOChub course descriptions.",
+  "type": "array",
+  "minItems": 2,
+  "allOf": [
+    {
+      "contains": {
+        "type": "string",
+        "format": "uri",
+        "enum": ["https://w3id.org/moochub/4.0.0/context.jsonld"]
+      }
+    },
+    {
+      "contains": {
+        "type": "object",
+        "properties": {
+          "@language": {
+            "type": "string",
+            "pattern": "^[A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"
+          }
+        },
+        "required": ["@language"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/4.0.0/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "id": "https://futurelearnlab.de/detailpage.php?id=18",
+  "url": "https://example.org/courses/missing-required-fields",
+  "name": {
+    "de": "Digital Trainer (Gesamtkurs)"
+  },
+  "type": ["LearningResource", "Course"]
+}

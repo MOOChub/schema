@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/courseEvent.json",
+  "title": "Course event",
+  "description": "An event or recurring phase within a course instance. Use multiple course events for individual appointments, irregular dates, or phases with different locations.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "Event"
+    },
+    "startDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The RFC 3339 date-time at which the event or phase starts."
+    },
+    "endDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The RFC 3339 date-time at which the event or phase ends."
+    },
+    "eventSchedule": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "https://w3id.org/moochub/4.0.0/schemas/schedule.json"
+      }
+    },
+    "name": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json"
+    },
+    "location": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/courseLocation.json"
+    },
+    "instructor": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/instructor.json"
+    }
+  },
+  "required": ["type"],
+  "oneOf": [
+    {
+      "required": ["startDate", "endDate"]
+    },
+    {
+      "required": ["eventSchedule"]
+    }
+  ]
+}

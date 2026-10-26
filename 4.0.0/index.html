@@ -1,0 +1,4463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>MOOChub Metadata Profile (v4)</title>
+  <script src="https://speced.github.io/respec/builds/respec-dini.js" async class="remove"></script>
+  <script class="remove">
+    var respecConfig = {
+      editors: [{
+        name: "Pascal Hürten",
+        company: "ISy (TH Lübeck)",
+        companyURL: "https://www.th-luebeck.de/isy/"
+      }],
+      format: "html",
+      localBiblio: {
+        "JSON Schema Draft 2020-12": {
+          title: "JSON Schema",
+          href: "https://json-schema.org/draft/2020-12/json-schema-core.html",
+          publisher: "JSON Schema"
+        },
+        "JSON-LD 1.1": {
+          title: "JSON-LD 1.1",
+          href: "https://www.w3.org/TR/json-ld11/",
+          publisher: "W3C"
+        },
+        "JSON:API": {
+          title: "JSON:API",
+          href: "https://jsonapi.org/format/",
+          publisher: "JSON:API"
+        },
+        "schema.org": {
+          title: "schema.org Vocabulary",
+          href: "https://schema.org",
+          publisher: "Schema.org Community Group"
+        },
+        "SKOS": {
+          title: "Simple Knowledge Organization System",
+          href: "https://www.w3.org/TR/skos-reference/",
+          publisher: "W3C"
+        },
+        "LRMI": {
+          title: "Learning Resource Metadata Initiative",
+          href: "https://w3id.org/lrmi/terms",
+          publisher: "LRMI Community"
+        },
+        "Hochschulfächersystematik": {
+          title: "Destatis-Systematik der Fächergruppen, Studienbereiche und Studienfächer",
+          href: "https://w3id.org/kim/hochschulfaechersystematik/scheme",
+          publisher: "Kompetenzzentrum Interoperable Metadaten (KIM)"
+        },
+        "Schulfächerliste": {
+          "title": "Werteliste für allgemeinbildende Schulfächer",
+          "href": "http://w3id.org/kim/schulfaecher/",
+          "publisher": "Kompetenzzentrum Interoperable Metadaten (KIM)"
+        },
+        "OEFOS": {
+          "title": "Österreichische Systematik der Wissenschaftszweige (OEFOS)",
+          "href": "https://data.statistik.gv.at/web/meta.jsp?dataset=OGDEXT_KLASSDB_OEFOS2012_1",
+          "publisher": "Statistik Austria"
+        },
+        "ISCED-F": {
+          "title": "The International Standard Classification of Education: Fields of Education and Training 2013 (ISCED-F)",
+          "href": "https://esco.ec.europa.eu/de/node/202?id=202",
+          "publisher": "UNESCO Institute for Statistics"
+        },
+        "Holland Codes": {
+          "title": "Holland Codes",
+          "href": "https://en.wikipedia.org/wiki/Holland_Codes",
+          "publisher": "Kompetenzzentrum Interoperable Metadaten (KIM)"
+        },
+        "ESCO": {
+          "title": "European Skills, Competences, Qualifications and Occupations (ESCO)",
+          "href": "https://esco.ec.europa.eu/en/classification",
+          "publisher": "European Commission"
+        },
+        "DigComp": {
+          "title": "DigComp 3.0: European Digital Competence Framework",
+          "href": "https://publications.jrc.ec.europa.eu/repository/handle/JRC144121",
+          "publisher": "Publications Office of the European Union"
+        },
+        "GRETA": {
+          "title": "GRETA-Kompetenzmodell ",
+          "href": "http://www.die-bonn.de/id/41543",
+          "publisher": "Deutsches Institut für Erwachsenenbildung (DIE)"
+        },
+        "Bildungsstufen": {
+          "title": "Werteliste für Bildungsstufen",
+          "href": "https://w3id.org/kim/educationalLevel/",
+          "publisher": "Kompetenzzentrum Interoperable Metadaten (KIM)"
+        },
+        "RFC3339": {
+          "title": "Date and Time on the Internet: Timestamps",
+          "href": "https://datatracker.ietf.org/doc/html/rfc3339",
+          "publisher": "Internet Engineering Task Force (IETF)"
+        },
+        "RFC9557": {
+          "title": "Date and Time on the Internet: Timestamps with Additional Information",
+          "href": "https://www.rfc-editor.org/rfc/rfc9557",
+          "publisher": "Internet Engineering Task Force (IETF)"
+        },
+        "RFC8594": {
+          "title": "The Sunset HTTP Header Field",
+          "href": "https://www.rfc-editor.org/rfc/rfc8594",
+          "publisher": "Internet Engineering Task Force (IETF)"
+        },
+        "MOOChub": {
+          "title": "MOOChub",
+          "href": "https://moochub.org/about/",
+          "publisher": "Technische Universität Graz"
+        },
+        "AMB": {
+          "title": "Allgemeines Metadatenprofil für Bildungsressourcen (AMB)",
+          "href": "https://w3id.org/kim/amb/20231019/schemas/",
+          "publisher": "Kompetenzzentrum Interoperable Metadaten (KIM)"
+        }
+      },
+      logos: [],
+      otherLinks: [{
+        key: "Specification links",
+        data: [{
+          value: "Permalink to version 4.0.0",
+          href: "https://w3id.org/moochub/4.0.0/"
+        }, {
+          value: "JSON-LD context",
+          href: "https://w3id.org/moochub/4.0.0/context.jsonld"
+        }, {
+          value: "GitHub repository",
+          href: "https://github.com/MOOChub/schema"
+        }]
+      }],
+      publishDate: "2026-10-15",
+      specStatus: "base"
+    };
+  </script>
+</head>
+
+<body>
+
+  <section id="abstract">
+
+    <h2><dfn>Abstract</dfn></h2>
+
+    The MOOChub metadata profile is a cross-sector metadata profile published
+    under the
+    <a rel="license" href="https://opensource.org/license/mit/">MIT License</a>
+    license for the interoperable description of learning offers, courses,
+    educational programmes, and related learning resources. The profile uses
+    [[?JSON-LD 1.1]] and [[?JSON Schema Draft 2020-12]]. It is compatible with
+    [[?AMB]] (the General Metadata Profile for Educational Resources) and
+    extends it with more detailed information focused on courses, as well as
+    profiles for educational programmes and credentials that can be earned.
+
+    The domain concepts are drawn primarily from [[?schema.org]] and the AMB
+    profile, supplemented by [[?SKOS]] concepts, European vocabularies for
+    credential categories, and European semantics for learning outcomes from
+    <a href="http://data.europa.eu/snb/model/ontology/">the European
+      Learning Outcomes Vocabulary</a>, together with MOOChub-specific constraints.
+
+    The catalogue transport uses a paginated [[?JSON:API]] structure. A
+    provider can offer different resource types that can be harvested
+    independently in a shared feed, without translating the domain objects
+    into a proprietary format.
+
+    <div class="copyright" style="display: flex; flex-direction: row; justify-content: space-between;">
+      <div>
+        This work is published under the
+        <a rel="license" href="../LICENSE">MIT License</a>.
+      </div>
+      <a target="_blank" href="https://www.dublincore.org/about/lrmi/"><img
+          src="https://raw.githubusercontent.com/dcmi/lrmi/main/images/enhanced-Long_small+bright.png"
+          alt="LRMI enhanced" /></a>
+    </div>
+  </section>
+
+  <section id="introduction" class="informative">
+    <h2>Introduction</h2>
+
+    [[?MOOChub]] is a consortium of various MOOC portals, operators of
+    online-learning platforms, higher education institutions, and
+    higher-education associations. Its goal is to leverage synergies in online
+    teaching and develop shared standards. MOOChub initially focused on the
+    German-speaking higher education community and is now opening up to
+    providers across Europe. Collaboration with international partners aims
+    to make education accessible across institutional and national borders.
+
+    MOOChub provides learners with a central point of access to MOOCs and other
+    digital learning offers. This profile describes the machine-readable
+    metadata that participating providers can use to exchange information
+    about learning offers, courses, and educational programmes through open
+    interfaces. The MOOChub profile is designed to remain compatible with AMB
+    while providing more detailed information about learning offers and
+    courses. It also describes educational programmes and credentials that
+    can be earned.
+
+    The profile focuses on a small, reliably exchangeable core: required
+    information makes it possible to find and classify a course or programme,
+    while optional information supports detailed search, presentation, and
+    navigation to the offers. The profile additionally uses European
+    vocabularies and semantics for credential categories and learning outcomes.
+
+    The normative JSON Schemas are linked, for example, in the
+    <a href="schemas/course.json">course schema</a>,
+    <a href="schemas/program.json">programme schema</a>, and
+    <a href="schemas/api/catalogFeed.json">catalogue schema</a>.
+    Examples are part of the development process and illustrate typical valid
+    and invalid documents.
+
+    <h3>Version status</h3>
+
+    This document describes the published MOOChub v4.0.0 release. The URLs
+    used in the schemas therefore contain the `4.0.0` path. Changes to required
+    fields, value ranges, or JSON-LD semantics must be agreed upon as a new
+    version before publication. Negotiation of parallel API versions and the
+    sunset phase are described in <a href="#api-versioning">API versioning</a>.
+  </section>
+
+  <section id="conformance">
+  </section>
+
+  <section id="api-versioning">
+    <h2>API versioning</h2>
+
+    <p>API versions MUST evolve in a backward-compatible manner. If a
+      breaking change is required, the old and new versions MUST be offered in
+      parallel for a transition period. The version applies to the API and
+      transport format, not to the domain identity of a JSON-LD resource.</p>
+
+    <h3>Version negotiation</h3>
+
+    <p>Clients SHOULD specify the highest API major version they have
+      implemented for each request. To do so, they set the
+      <code>moochub-version</code> parameter in the <code>Accept</code> header.
+      The parameter is used together with the JSON:API media type:
+    </p>
+
+    <pre class="example" title="Requesting a specific API version">
+GET /api/catalog HTTP/1.1
+Host: provider.example
+Accept: application/vnd.api+json; moochub-version=4
+</pre>
+
+    <p>The provider MUST confirm the version actually served in the response's
+      <code>Content-Type</code> header using the same parameter. If the request
+      omits the version parameter, the provider may use the endpoint's latest
+      supported version. A provider MUST either serve a requested version or
+      reject it with <code>406 Not Acceptable</code>; it MUST NOT silently
+      serve an unsupported version as a different version. The response SHOULD
+      include <code>Vary: Accept</code>.
+    </p>
+
+    <pre class="example" title="Confirming the version served">
+HTTP/1.1 200 OK
+Content-Type: application/vnd.api+json; moochub-version=4
+Vary: Accept
+</pre>
+
+    <h3 id="sunset-phase">Sunset phase</h3>
+
+    <p>During a sunset phase, providers MUST accept the previous and new API
+      versions in parallel if both versions have been announced for the
+      endpoint concerned. Every response MUST identify the version actually
+      served. Clients MUST continue to request the version they support and
+      MUST NOT infer a format change within a response from the existence of a
+      new version.</p>
+
+    <p>For a deprecated version or one scheduled for decommissioning, the
+      provider MUST include the HTTP <code>Sunset</code> header as specified
+      in [[?RFC8594]]. Its value is an HTTP date indicating when the version
+      concerned will no longer be supported:</p>
+
+    <pre class="example" title="Response during the v3-to-v4 sunset phase">
+HTTP/1.1 200 OK
+Content-Type: application/vnd.api+json; moochub-version=3.8
+Sunset: Tue, 15 Aug 2027 00:00:00 GMT
+Vary: Accept
+</pre>
+
+    <p>The sunset date MUST be communicated before decommissioning begins.
+      Clients MUST monitor whether <code>Sunset</code> is present and its
+      value, and plan their migration before that date. After the date has
+      passed, the provider may reject the old version; such a rejection
+      SHOULD use <code>410 Gone</code>, or <code>406 Not Acceptable</code> if
+      the version is no longer available at the endpoint. The specific
+      decommissioning MUST be announced to affected participants in advance.</p>
+
+    <h3>Client behaviour</h3>
+
+    <p>A client that supports both v3 and v4 MUST specify exactly the
+      requested version for each request and check the confirmed version in
+      <code>Content-Type</code>. A client that supports only v3 requests
+      <code>moochub-version=3</code> and treats a <code>Sunset</code> value as
+      a migration signal. After a successful migration, it requests
+      <code>moochub-version=4</code> and checks again that the provider
+      confirms this version.
+    </p>
+  </section>
+
+  <section id="format">
+    <h2>Data format and JSON-LD</h2>
+
+    MOOChub objects are transmitted as JSON documents. The optional
+    `@context` property can describe an object's JSON-LD meaning. It is not
+    required in JSON:API attributes or embedded objects. A standalone
+    JSON-LD document SHOULD include a compatible MOOChub context definition
+    at the beginning of the document:
+
+    <pre class="example json" title="JSON-LD context of a MOOChub v4 object">
+{
+  "@context": [
+    "https://w3id.org/moochub/4.0.0/context.jsonld",
+    { "@language": "en" }
+  ]
+}
+</pre>
+
+    The language object sets the default language for localized values.
+    Explicit language maps such as `{ "de": "...", "en": "..." }` remain
+    permitted for localized plain-text fields. Language codes MUST be
+    BCP 47-compatible.
+
+    `id` is the JSON-LD identity and MUST be a URI. `url` denotes the
+    publicly accessible presentation or offer page. These values are not
+    necessarily identical.
+  </section>
+
+  <section id="profile">
+    <h2>Data model</h2>
+
+    The following sections define the object types in the MOOChub v4 profile.
+    An object's JSON-LD type determines its object type, and properties can
+    link it to other object types. For example, a course uses
+    <code>creator</code> to refer to a <code>Person</code> or
+    <code>Organization</code> object.
+
+    <section data-dfn-for="Course">
+      <h3><dfn>Course</dfn></h3>
+
+      A <code>Course</code> object describes a learning offer with a coherent
+      subject. Its properties describe its identity, presentation, and domain
+      content. Specific offerings that differ in time, location, or other
+      respects are represented as <code>CourseInstance</code> objects through
+      <code>hasCourseInstance</code>.
+
+      <p>
+        If a course's subject matter does not change significantly between
+        semesters or offerings, it is recommended that these offerings be
+        assigned to the same <code>Course</code>. If the content changes
+        significantly, a separate <code>Course</code> may be more appropriate.
+        The provider decides, based on its domain data, whether a new offering
+        belongs to an existing course or represents a new course.
+      </p>
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>@context</code></td>
+            <td>yes</td>
+            <td><code>array[string|object]</code></td>
+            <td>JSON-LD context.</td>
+          </tr>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>["LearningResource", "Course"]</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>id</code></td>
+            <td>yes</td>
+            <td><a><code>ID</code></a></td>
+            <td>URI of the domain identity.</td>
+          </tr>
+          <tr>
+            <td><code>name</code></td>
+            <td>yes</td>
+            <td><a><code>LocalizedString</code></a></td>
+            <td>Course name.</td>
+          </tr>
+          <tr>
+            <td><code>publisher</code></td>
+            <td>yes</td>
+            <td><code><a>Organization</a>|<a>Person</a></code></td>
+            <td>Publishing or offering organization or person.</td>
+          </tr>
+          <tr>
+            <td><code>creator</code></td>
+            <td>yes</td>
+            <td><code><a>Organization</a>|<a>Person</a></code></td>
+            <td>People or organizations that created the course.</td>
+          </tr>
+          <tr>
+            <td><code>license</code></td>
+            <td>yes</td>
+            <td><a><code>License</code></a></td>
+            <td>Rights statement.</td>
+          </tr>
+          <tr>
+            <td><code>url</code></td>
+            <td>no</td>
+            <td><code>string (URL)</code></td>
+            <td>Publicly accessible course page. May be omitted if there are instead detail pages for individual
+              offerings.</td>
+          </tr>
+          <tr>
+            <td><code>courseCode</code></td>
+            <td>no</td>
+            <td><code>string</code></td>
+            <td>Course code assigned by the provider.</td>
+          </tr>
+          <tr>
+            <td><code>abstract</code></td>
+            <td>no</td>
+            <td><a><code>LocalizedString</code></a></td>
+            <td>Short description in plain text.</td>
+          </tr>
+          <tr>
+            <td><code>description</code></td>
+            <td>no</td>
+            <td><a><code>RichText</code></a></td>
+            <td>Detailed description, multilingual and formatted.</td>
+          </tr>
+          <tr>
+            <td><code>keywords</code></td>
+            <td>no</td>
+            <td><code>array[string]</code></td>
+            <td>Keywords or tags that describe the course and support search or categorization.</td>
+          </tr>
+          <tr>
+            <td><code>inLanguage</code></td>
+            <td>no</td>
+            <td><code>array[string]</code></td>
+            <td>Languages in which the course as a whole can be taken, possibly as a summary of its offerings. Values
+              MUST be BCP 47-compatible. If the languages of individual offerings differ, they SHOULD be specified in
+              <code>CourseInstance.inLanguage</code>. If <code>Course.inLanguage</code> is specified, it MUST include
+              the languages specified for its instances.
+            </td>
+          </tr>
+          <tr>
+            <td><code>timeRequired</code></td>
+            <td>no</td>
+            <td><code>ISO 8601 duration</code></td>
+            <td>Estimated active time required to complete the course (workload).</td>
+          </tr>
+          <tr>
+            <td><code>numberOfCredits</code></td>
+            <td>no</td>
+            <td><code>array[<a>CreditPoint</a>]</code></td>
+            <td>Credits awarded for the course. Each entry includes a numeric point and a concept identifying its framework.</td>
+          </tr>
+          <tr>
+            <td><code>interactivityType</code></td>
+            <td>no</td>
+            <td><code>array[<a>InteractivityType</a>]</code></td>
+            <td>Predominant teaching and learning approaches, e.g. "active", "expositive", or "mixed".</td>
+          </tr>
+          <tr>
+            <td><code>isAccessibleForFree</code></td>
+            <td>no</td>
+            <td><code>boolean</code></td>
+            <td>Indicates whether the course is freely accessible.</td>
+          </tr>
+          <tr>
+            <td><code>conditionsOfAccess</code></td>
+            <td>no</td>
+            <td><code><a>AccessConditionType</a></code></td>
+            <td>Access condition: whether the course requires registration or is accessible without it.</td>
+          </tr>
+          <tr>
+            <td><code>accessMode</code></td>
+            <td>no</td>
+            <td><code>array[<a>AccessMode</a>]</code></td>
+            <td>Sensory or cognitive access modes for the learning content, e.g. "auditory", "tactile", "textual", or
+              "visual".</td>
+          </tr>
+          <tr>
+            <td><code>image</code></td>
+            <td>no</td>
+            <td><code><a>ImageObject</a></code></td>
+            <td>An image representing the course, e.g. a cover image or logo.</td>
+          </tr>
+          <tr>
+            <td><code>trailer</code></td>
+            <td>no</td>
+            <td><code><a>Trailer</a></code></td>
+            <td>A short video or audio trailer introducing the course.</td>
+          </tr>
+          <tr>
+            <td><code>contributor</code></td>
+            <td>no</td>
+            <td><code>array[<a>Organization</a>|<a>Person</a>]</code></td>
+            <td>People or organizations that contributed to the course, e.g. as guest instructors.</td>
+          </tr>
+          <tr>
+            <td><code>funder</code></td>
+            <td>no</td>
+            <td><code>array[<a>Organization</a>|<a>Person</a>]</code></td>
+            <td>Organizations or people that funded the course.</td>
+          </tr>
+          <tr>
+            <td><code>audience</code></td>
+            <td>no</td>
+            <td><a><code>Audience</code></a></td>
+            <td>Target audience for the course, e.g. students, teachers, or professionals.</td>
+          </tr>
+          <tr>
+            <td><code>coursePrerequisites</code></td>
+            <td>no</td>
+            <td><a><code>RichText</code></a></td>
+            <td>Description of the prerequisites for taking the course.</td>
+          </tr>
+          <tr>
+            <td><code>prerequisiteCourses</code></td>
+            <td>no</td>
+            <td><code>array[<a>Course</a>]</code></td>
+            <td>List of courses that are prerequisites for this course.</td>
+          </tr>
+          <tr>
+            <td><code>competencyRequired</code></td>
+            <td>no</td>
+            <td><code>array[<a>Competency</a>]</code></td>
+            <td>List of competencies required to take the course.</td>
+          </tr>
+          <tr>
+            <td><code>learningOutcomeSummary</code></td>
+            <td>no</td>
+            <td><a><code>RichText</code></a></td>
+            <td>Summary of the learning outcomes intended to be achieved through the course.</td>
+          </tr>
+          <tr>
+            <td><code>teaches</code></td>
+            <td>no</td>
+            <td><code>array[<a>Competency</a>]</code></td>
+            <td>List of competencies taught by the course.</td>
+          </tr>
+          <tr>
+            <td><code>assesses</code></td>
+            <td>no</td>
+            <td><code>array[<a>Competency</a>]</code></td>
+            <td>List of competencies assessed by the course.</td>
+          </tr>
+          <tr>
+            <td><code>educationalLevel</code></td>
+            <td>no</td>
+            <td><code>array[<a>EducationalLevel</a>]</code></td>
+            <td>Educational level of the course.</td>
+          </tr>
+          <tr>
+            <td><code>educationalAlignment</code></td>
+            <td>no</td>
+            <td><code>array[<a>EducationalAlignment</a>]</code></td>
+            <td>Alignment with an educational classification standard, e.g. ISCED-F, OEFOS, the German higher
+              education subject classification, or the school subject list.</td>
+          </tr>
+          <tr>
+            <td><code>hasCourseInstance</code></td>
+            <td>no</td>
+            <td><code>array[<a>CourseInstance</a>]</code></td>
+            <td>List of specific course offerings.</td>
+          </tr>
+          <tr>
+            <td><code>educationalCredentialAwarded</code></td>
+            <td>no</td>
+            <td><code>array[<a>EducationalOccupationalCredential</a>]</code></td>
+            <td>List of educational credentials awarded upon successful completion of the course.</td>
+          </tr>
+          <tr>
+            <td><code>isBasedOn</code></td>
+            <td>no</td>
+            <td><code>array[<a>LearningItem</a>]</code></td>
+            <td>List of learning resources on which the course is based.</td>
+          </tr>
+          <tr>
+            <td><code>isPartOf</code></td>
+            <td>no</td>
+            <td><code>array[<a>ProgramReference</a>|<a>CourseReference</a>]</code></td>
+            <td>List of programmes or courses to which this course belongs.</td>
+          </tr>
+          <tr>
+            <td><code>hasPart</code></td>
+            <td>no</td>
+            <td><code>array[<a>LearningItem</a>|<a>CourseReference</a>]</code></td>
+            <td>List of learning resources or courses that are part of this course.</td>
+          </tr>
+          <tr>
+            <td><code>aggregateRating</code></td>
+            <td>no</td>
+            <td><code><a>AggregateRating</a></code></td>
+            <td>Aggregated rating of the course.</td>
+          </tr>
+          <tr>
+            <td><code>dateCreated</code></td>
+            <td>no</td>
+            <td><code>ISO 8601 date-time</code></td>
+            <td>Date and time when the course object was created.</td>
+          </tr>
+          <tr>
+            <td><code>datePublished</code></td>
+            <td>no</td>
+            <td><code>ISO 8601 date-time</code></td>
+            <td>Date and time when the course was published.</td>
+          </tr>
+          <tr>
+            <td><code>dateModified</code></td>
+            <td>no</td>
+            <td><code>ISO 8601 date-time</code></td>
+            <td>Date and time when the course object was last modified.</td>
+          </tr>
+          <tr>
+            <td><code>expires</code></td>
+            <td>no</td>
+            <td><code>ISO 8601 date-time</code></td>
+            <td>Date and time when the course is no longer available.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre class="example json" title="Example of a Course object">
+{
+  "@context": [
+    "https://w3id.org/moochub/4.0.0/context.jsonld",
+    { "@language": "en" }
+  ],
+  "type": ["LearningResource", "Course"],
+  "id": "https://example.org/courses/python",
+  "url": "https://example.org/courses/python",
+  "name": { "en": "Introduction to Python" },
+  "publisher": { "type": "Organization", "name": "Example University" },
+  "creator": [{ "type": "Person", "name": "Example Person" }],
+  "license": { "type": "License", "id": "https://creativecommons.org/licenses/by/4.0/", "identifier": "CC-BY-4.0" },
+  "courseCode": "PY101",
+  "abstract": { "en": "A brief overview of the fundamentals of the Python programming language." },
+  "description": [ "..." ],
+  "keywords": ["Python", "Programming", "Introduction"],
+  "inLanguage": ["de", "en"],
+  "timeRequired": "P20H",
+  "numberOfCredits": [{
+    "type": "CreditPoint",
+    "framework": {
+      "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+      "type": "Concept",
+      "prefLabel": { "en": "ECTS" },
+      "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+    },
+    "point": 5
+  }],
+  "interactivityType": { "..." },
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": { "..." },
+  "accessMode": [ "auditory", "textual", "visual" ],
+  "image": { "..." },
+  "trailer": { "..." },
+  "contributor": [ "..." ],
+  "funder": [ "..." ],
+  "audience": { "..." },
+  "coursePrerequisites": [ "..." ],
+  "prerequisiteCourses": [ "..." ],
+  "competencyRequired": [ "..." ],
+  "learningOutcomeSummary": [ "..." ],
+  "teaches": [ "..." ],
+  "assesses": [ "..." ],
+  "educationalLevel": [ "..." ],
+  "educationalAlignment": [ "..." ],
+  "hasCourseInstance": [ "..." ],
+  "educationalCredentialAwarded": [ "..." ],
+  "isBasedOn": [ "..." ],
+  "isPartOf": [ "..." ],
+  "hasPart": [ "..." ],
+  "aggregateRating": { "..." },
+  "dateCreated": "2024-01-15T10:00:00Z",
+  "datePublished": "2024-02-01T12:00:00Z",
+  "dateModified": "2024-03-01T14:30:00Z",
+  "expires": "2025-01-01T00:00:00Z"
+}
+    </pre>
+
+
+      <section data-dfn-for="CourseReference">
+        <h3><dfn>CourseReference</dfn></h3>
+        <p>A <code>CourseReference</code> provides a concise reference to a
+          course that has already been described.</p>
+
+        <table class="def">
+          <thead>
+            <tr>
+              <th><strong>Property</strong></th>
+              <th><strong>Required</strong></th>
+              <th><strong>Type</strong></th>
+              <th><strong>Note</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>type</code></td>
+              <td>yes</td>
+              <td><code>["LearningResource", "Course"]</code></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>id</code></td>
+              <td>yes</td>
+              <td><a><code>ID</code></a></td>
+              <td>Identifier of the referenced course.</td>
+            </tr>
+            <tr>
+              <td><code>name</code></td>
+              <td>yes</td>
+              <td><a><code>LocalizedString</code></a></td>
+              <td>Course name.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <pre class="example json" title="Example of a CourseReference">
+{
+  "id": "https://example.org/courses/python",
+  "type": ["LearningResource", "Course"],
+  "name": {
+    "de": "Einführung in Python",
+    "en": "Introduction to Python"
+  }
+}
+        </pre>
+
+        <dl>
+          <dt>References</dt>
+          <dd>
+            <code><a>Course</a> (hasPart, isPartOf)</code>
+          </dd>
+          <dt>Validation</dt>
+          <dd><a href="schemas/courseReference.json">JSON Schema: courseReference.json</a></dd>
+        </dl>
+      </section>
+    </section>
+
+    <section data-dfn-for="CourseInstance">
+      <h3><dfn>CourseInstance</dfn></h3>
+
+      A <code>CourseInstance</code> describes a specific offering or delivery
+      format of a course. Multiple offerings of the same subject course are
+      published as separate instances through <code>hasCourseInstance</code>
+      on the associated <code>Course</code>.
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"CourseInstance"</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>id</code></td>
+            <td>yes</td>
+            <td><a><code>ID</code></a></td>
+            <td>URI of the course instance.</td>
+          </tr>
+          <tr>
+            <td><code>url</code></td>
+            <td>no</td>
+            <td><code>string (URL)</code></td>
+            <td>Detail page for this specific course offering. MAY be omitted if there is a general course page.</td>
+          </tr>
+          <tr>
+            <td><code>name</code></td>
+            <td>no</td>
+            <td><a><code>LocalizedString</code></a></td>
+            <td>Name of the course instance.</td>
+          </tr>
+          <tr>
+            <td><code>courseMode</code></td>
+            <td>no</td>
+            <td><code>array[<a><code>LearningMode</code></a>]</code></td>
+            <td>Ways in which the course is provided or delivered.</td>
+          </tr>
+          <tr>
+            <td><code>inLanguage</code></td>
+            <td>no</td>
+            <td><code>array[string]</code></td>
+            <td>Languages in which this specific offering can be taken, expressed as BCP 47 language tags. If
+              <code>Course.inLanguage</code> is specified, every language listed here MUST also be included there.
+            </td>
+          </tr>
+          <tr>
+            <td><code>maximumAttendeeCapacity</code></td>
+            <td>no</td>
+            <td><code>integer</code></td>
+            <td>Maximum number of participants. A value of <code>0</code> means there is no limit.</td>
+          </tr>
+          <tr>
+            <td><code>remainingAttendeeCapacity</code></td>
+            <td>no</td>
+            <td><code>integer</code></td>
+            <td>Remaining available places. A value of <code>0</code> means no places are available.</td>
+          </tr>
+          <tr>
+            <td><code>subEvent</code></td>
+            <td>no</td>
+            <td><code>array[</code><a><code>CourseEvent</code></a><code>]</code></td>
+            <td>List of individual events or phases within the course offering.</td>
+          </tr>
+          <tr>
+            <td><code>courseSchedule</code></td>
+            <td>no</td>
+            <td><code>array[</code><a><code>Schedule</code></a><code>]</code></td>
+            <td>List of recurring events within the course offering.</td>
+          </tr>
+          <tr>
+            <td><code>startDate</code></td>
+            <td>no</td>
+            <td><code>RFC 3339 date-time</code></td>
+            <td>Start of the course offering.</td>
+          </tr>
+          <tr>
+            <td><code>endDate</code></td>
+            <td>no</td>
+            <td><code>RFC 3339 date-time</code></td>
+            <td>End of the course offering.</td>
+          </tr>
+          <tr>
+            <td><code>duration</code></td>
+            <td>no</td>
+            <td><code>ISO 8601 duration</code></td>
+            <td>Duration of the course offering.</td>
+          </tr>
+          <tr>
+            <td><code>applicationStartDate</code></td>
+            <td>no</td>
+            <td><code>RFC 3339 date-time</code></td>
+            <td>Start of the application period.</td>
+          </tr>
+          <tr>
+            <td><code>applicationDeadline</code></td>
+            <td>no</td>
+            <td><code>RFC 3339 date-time</code></td>
+            <td>Application deadline.</td>
+          </tr>
+          <tr>
+            <td><code>location</code></td>
+            <td>no</td>
+            <td><a><code>Location</code></a></td>
+            <td>Physical or virtual location of the course offering.</td>
+          </tr>
+          <tr>
+            <td><code>instructor</code></td>
+            <td>no</td>
+            <td><code>array[</code><a><code>Person</code></a><code>]</code></td>
+            <td>List of people responsible for the course.</td>
+          </tr>
+          <tr>
+            <td><code>offers</code></td>
+            <td>no</td>
+            <td><code>array[</code><a><code>Offer</code></a><code>]</code></td>
+            <td>List of offers with prices and access conditions.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre class="example json" title="Example of a course offered in the summer semester">
+"hasCourseInstance": [{
+  "type": "CourseInstance",
+  "id": "https://example.org/courses/python/summer-2026",
+  "url": "https://example.org/courses/python/summer-2026",
+  "courseMode": ["onsite", "synchronous"],
+  "inLanguage": ["en"],
+  "maximumAttendeeCapacity": 20,
+  "remainingAttendeeCapacity": 0,
+  "startDate": "2026-03-01T00:00:00Z",
+  "endDate": "2026-07-31T23:59:59Z",
+  "duration": "P5M",
+  "applicationStartDate": "2026-01-01T00:00:00Z",
+  "applicationDeadline": "2026-02-15T23:59:59Z",
+  "courseSchedule": [ "..." ],
+  "location": [ "..." ],
+  "instructor": [ "..." ]
+}]
+      </pre>
+
+      <pre class="example json" title="Example of a course offering with two events and an exam">
+"hasCourseInstance": [{
+  "type": "CourseInstance",
+  "id": "https://example.org/courses/python/certification-2026",
+  "courseMode": ["online", "synchronous"],
+  "subEvent": [
+    {
+      "type": "Event",
+      "name": {
+        "en": "Exam preparation"
+      },
+      "eventSchedule": [ "..." ],
+      "location": [ "..." ],
+      "instructor": [ "..." ]
+    },
+    {
+      "type": "Event",
+      "name": {
+        "en": "Exam"
+      },
+      "startDate": "2026-06-15T10:00:00Z",
+      "endDate": "2026-06-15T12:00:00Z",
+      "location":  [ "..." ],
+      "instructor": [ "..." ]
+    }
+  ],
+  "maximumAttendeeCapacity": 30,
+  "offers": [ "..." ]
+}]
+      </pre>
+
+      <dl>
+        <dt>References</dt>
+        <dd><code><a>LearningItem</a> (hasCourseInstance)</code></dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/courseInstance.json">JSON Schema: courseInstance.json</a></dd>
+      </dl>
+    </section>
+
+    <section data-dfn-for="CourseEvent">
+      <h3><dfn>CourseEvent</dfn></h3>
+
+      A <code>CourseEvent</code> describes an individual event or phase within
+      a course instance.
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"Event"</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>name</code></td>
+            <td>no</td>
+            <td><a><code>LocalizedString</code></a></td>
+            <td>Name of the event or phase.</td>
+          </tr>
+          <tr>
+            <td><code>startDate</code></td>
+            <td>Yes, if <code>eventSchedule</code> is not specified.</td>
+            <td><code>RFC 3339 date-time</code></td>
+            <td>Start date and time of the event or phase.</td>
+          </tr>
+          <tr>
+            <td><code>endDate</code></td>
+            <td>Yes, if <code>eventSchedule</code> is not specified.</td>
+            <td><code>RFC 3339 date-time</code></td>
+            <td>End date and time of the event or phase.</td>
+          </tr>
+          <tr>
+            <td><code>eventSchedule</code></td>
+            <td>Yes, if <code>startDate</code> and <code>endDate</code> are not specified.</td>
+            <td><a><code>schedule</code></a></td>
+            <td>Recurring schedule for the event or phase.</td>
+          </tr>
+          <tr>
+            <td><code>location</code></td>
+            <td>no</td>
+            <td><a><code>Location</code></a></td>
+            <td>Physical or virtual location of the event or phase.</td>
+          </tr>
+          <tr>
+            <td><code>instructor</code></td>
+            <td>no</td>
+            <td><code>array[<a><code>Person</code></a>]</code></td>
+            <td>List of people responsible for the event or phase.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre class="example json" title="Example of a course event">
+{
+  "type": "Event",
+  "name": {
+    "en": "Exam"
+  },
+  "startDate": "2026-06-15T10:00:00Z",
+  "endDate": "2026-06-15T12:00:00Z",
+  "location": [ "..." ],
+  "instructor": [ "..." ]
+}
+      </pre>
+
+      <pre class="example json" title="Example of a course phase">
+{
+  "type": "Event",
+  "name": {
+    "en": "Laboratory session"
+  },
+  "eventSchedule": [ "..." ],
+  "location": [ "..." ],
+  "instructor": [ "..." ]
+}
+      </pre>
+
+      <dl>
+        <dt>References</dt>
+        <dd><code><a>CourseInstance</a> (subEvent)</code></dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/courseEvent.json">JSON Schema: courseEvent.json</a></dd>
+      </dl>
+    </section>
+
+    <section data-dfn-for="LearningItem">
+      <h3><dfn>LearningItem</dfn></h3>
+      <p>A <code>LearningItem</code> describes an individual learning resource
+        within a course.</p>
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>array[string]</code></td>
+            <td>Specific type of learning resource. Permitted values are subclasses of <a
+                href="https://schema.org/CreativeWork">https://schema.org/CreativeWork</a>. MUST always include
+              "LearningResource", e.g. <code>["LearningResource", "VideoObject"]</code>.</td>
+          </tr>
+          <tr>
+            <td><code>id</code></td>
+            <td>yes</td>
+            <td><a><code>ID</code></a></td>
+            <td>Unique identifier of the learning resource.</td>
+          </tr>
+          <tr>
+            <td><code>name</code></td>
+            <td>yes</td>
+            <td><a><code>LocalizedString</code></a></td>
+            <td>Name of the learning resource.</td>
+          </tr>
+          <tr>
+            <td><code>description</code></td>
+            <td>no</td>
+            <td><a><code>RichText</code></a></td>
+            <td>Description of the learning resource.</td>
+          </tr>
+          <tr>
+            <td><code>timeRequired</code></td>
+            <td>no</td>
+            <td><code>ISO 8601 duration</code></td>
+            <td>Time required to complete the learning resource.</td>
+          </tr>
+          <tr>
+            <td><code>competencyRequired</code></td>
+            <td>no</td>
+            <td><code>array[<a>Competency</a>]</code></td>
+            <td>Competencies required to complete the learning resource.</td>
+          </tr>
+          <tr>
+            <td><code>teaches</code></td>
+            <td>no</td>
+            <td><code>array[<a>Competency</a>]</code></td>
+            <td>Competencies taught by completing the learning resource.</td>
+          </tr>
+          <tr>
+            <td><code>assesses</code></td>
+            <td>no</td>
+            <td><code>array[<a>Competency</a>]</code></td>
+            <td>Competencies assessed through the learning resource.</td>
+          </tr>
+          <tr>
+            <td><code>license</code></td>
+            <td>no</td>
+            <td><a><code>License</code></a></td>
+            <td>License of the learning resource.</td>
+          </tr>
+          <tr>
+            <td><code>creator</code></td>
+            <td>no</td>
+            <td><code>array[<a><code>Person</code></a>|<a><code>Organization</code></a>]</code></td>
+            <td>Creators of the learning resource.</td>
+          </tr>
+          <tr>
+            <td><code>publisher</code></td>
+            <td>no</td>
+            <td><code>array[<a><code>Person</code></a>|<a><code>Organization</code></a>]</code></td>
+            <td>Publishers of the learning resource.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <dl>
+        <dt>References</dt>
+        <dd><code><a>Course</a> (isBasedOn, hasPart)</code></dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/learningItem.json">JSON Schema: learningItem.json</a></dd>
+      </dl>
+    </section>
+
+    <section data-dfn-for="EducationalOccupationalProgram">
+      <h3><dfn>EducationalOccupationalProgram</dfn></h3>
+
+      An <code>EducationalOccupationalProgram</code> object is a package of
+      courses. In addition to its identity and presentation, it describes the
+      provider, included courses, and optional information about organization,
+      scope, applications, and completion.
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>@context</code></td>
+            <td>no</td>
+            <td><code>array[string|object]</code></td>
+            <td>JSON-LD context.</td>
+          </tr>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"EducationalOccupationalProgram"</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>id</code></td>
+            <td>yes</td>
+            <td><a><code>ID</code></a></td>
+            <td>URI of the programme's domain identity.</td>
+          </tr>
+          <tr>
+            <td><code>url</code></td>
+            <td>yes</td>
+            <td><code>string (URL)</code></td>
+            <td>Publicly accessible programme page.</td>
+          </tr>
+          <tr>
+            <td><code>name</code></td>
+            <td>yes</td>
+            <td><a><code>LocalizedString</code></a></td>
+            <td>Programme name.</td>
+          </tr>
+          <tr>
+            <td><code>abstract</code></td>
+            <td>no</td>
+            <td><a><code>LocalizedString</code></a></td>
+            <td>Short description of the programme.</td>
+          </tr>
+          <tr>
+            <td><code>description</code></td>
+            <td>no</td>
+            <td><a><code>RichText</code></a></td>
+            <td>Detailed description of the programme.</td>
+          </tr>
+          <tr>
+            <td><code>keywords</code></td>
+            <td>no</td>
+            <td><code>array[string]</code></td>
+            <td>Keywords or tags that describe the programme.</td>
+          </tr>
+          <tr>
+            <td><code>inLanguage</code></td>
+            <td>no</td>
+            <td><code>array[string]</code></td>
+            <td>Languages in which the programme is offered, expressed as BCP 47 language tags, e.g.
+              <code>["de", "en"]</code>
+            </td>
+          </tr>
+          <tr>
+            <td><code>educationalProgramMode</code></td>
+            <td>no</td>
+            <td><code>array[<a><code>LearningMode</code></a>]</code></td>
+            <td>Ways in which the programme is provided or delivered.</td>
+          </tr>
+          <tr>
+            <td><code>timeToComplete</code></td>
+            <td>no</td>
+            <td><code>ISO 8601 duration</code></td>
+            <td>Active time required to complete the programme.</td>
+          </tr>
+          <tr>
+            <td><code>numberOfCredits</code></td>
+            <td>no</td>
+            <td><code>array[<a>CreditPoint</a>]</code></td>
+            <td>Credits awarded for the programme. Each entry includes a numeric point and a concept identifying its framework.</td>
+          </tr>
+          <tr>
+            <td><code>programPrerequisites</code></td>
+            <td>no</td>
+            <td><a><code>RichText</code></a></td>
+            <td>Prerequisites for taking the programme.</td>
+          </tr>
+          <tr>
+            <td><code>educationalLevel</code></td>
+            <td>no</td>
+            <td><code>array[<a><code>EducationalLevel</code></a>]</code></td>
+            <td>Educational level of the programme.</td>
+          </tr>
+          <tr>
+            <td><code>educationalAlignment</code></td>
+            <td>no</td>
+            <td><code>array[<a><code>EducationalAlignment</code></a>]</code></td>
+            <td>Alignment with an educational classification standard, e.g. ISCED-F, OEFOS, the German higher
+              education subject classification, or the school subject list.</td>
+          </tr>
+          <tr>
+            <td><code>applicationStartDate</code></td>
+            <td>no</td>
+            <td><code>RFC 3339 date-time</code></td>
+            <td>Start of the application period.</td>
+          </tr>
+          <tr>
+            <td><code>applicationDeadline</code></td>
+            <td>no</td>
+            <td><code>RFC 3339 date-time</code></td>
+            <td>Application deadline.</td>
+          </tr>
+          <tr>
+            <td><code>offers</code></td>
+            <td>no</td>
+            <td><code>array[<a><code>Offer</code></a>]</code></td>
+            <td>Offers for taking or booking the programme.</td>
+          </tr>
+          <tr>
+            <td><code>image</code></td>
+            <td>no</td>
+            <td><a><code>ImageObject</code></a></td>
+            <td>Image or logo of the programme.</td>
+          </tr>
+          <tr>
+            <td><code>provider</code></td>
+            <td>yes</td>
+            <td><a><code>Organization</code></a>|<a><code>Person</code></a></td>
+            <td>Organization or person providing the programme.</td>
+          </tr>
+          <tr>
+            <td><code>funder</code></td>
+            <td>no</td>
+            <td><code>array[<a>Organization</a>|<a>Person</a>]</code></td>
+            <td>Organizations or people providing financial support for the programme.</td>
+          </tr>
+          <tr>
+            <td><code>hasPart</code></td>
+            <td>yes</td>
+            <td><code>array[<a><code>ProgramPart</code></a>]</code></td>
+            <td>Programme components, with their credits and the courses they contain.</td>
+          </tr>
+          <tr>
+            <td><code>isPartOf</code></td>
+            <td>no</td>
+            <td><code>array[<a><code>ProgramReference</code></a>]</code></td>
+            <td>List of programmes to which this programme belongs.</td>
+          </tr>
+          <tr>
+            <td><code>educationalCredentialAwarded</code></td>
+            <td>no</td>
+            <td><code>array[<a><code>EducationalOccupationalCredential</code></a>]</code></td>
+            <td>List of credentials awarded.</td>
+          </tr>
+          <tr>
+            <td><code>dateModified</code></td>
+            <td>no</td>
+            <td><code>RFC 3339 date-time</code></td>
+            <td>Date and time when the published programme data was last modified.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre class="example json" title="Example of an EducationalOccupationalProgram">
+{
+  "@context": [
+    "https://w3id.org/moochub/4.0.0/context.jsonld",
+    { "@language": "en" }
+  ],
+  "type": "EducationalOccupationalProgram",
+  "id": "https://example.org/programs/python-bootcamp",
+  "url": "https://example.org/programs/python-bootcamp",
+  "name": {
+    "de": "Python-Bootcamp",
+    "en": "Python Bootcamp"
+  },
+  "keywords": ["Python", "Bootcamp"],
+  "provider": {
+    "type": "Organization",
+    "name": {
+      "de": "Beispiel Universität",
+      "en": "Example University"
+    }
+  },
+  "funder": [{
+    "type": "Organization",
+    "name": {
+      "de": "Beispiel-Förderwerk",
+      "en": "Example Funding Organization"
+    }
+  }],
+  "hasPart": [
+    {
+      "name": { "en": "Required component" },
+      "numberOfCredits": [{
+        "type": "CreditPoint",
+        "framework": {
+          "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+          "type": "Concept",
+          "prefLabel": { "en": "ECTS" },
+          "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+        },
+        "point": 30
+      }],
+      "hasCourse": [{
+        "type": ["LearningResource", "Course"],
+        "id": "https://example.org/courses/python",
+        "name": {
+          "de": "Einführung in Python",
+          "en": "Introduction to Python"
+        }
+      }]
+    },
+    {
+      "name": { "en": "Elective component" },
+      "numberOfCredits": [{
+        "type": "CreditPoint",
+        "framework": {
+          "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+          "type": "Concept",
+          "prefLabel": { "en": "ECTS" },
+          "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+        },
+        "point": 30
+      }],
+      "hasCourse": [{
+        "type": ["LearningResource", "Course"],
+        "id": "https://example.org/courses/python-advanced",
+        "name": {
+          "de": "Fortgeschrittene Python-Programmierung",
+          "en": "Advanced Python Programming"
+        }
+      }]
+    }
+  ],
+  "abstract": {
+    "de": "Ein kompaktes Bootcamp, um die Grundlagen von Python zu erlernen.",
+    "en": "A compact bootcamp to learn the basics of Python."
+  },
+  "description": [{
+    "type": "TextObject",
+    "text": "# Python Bootcamp\n\nIn this bootcamp, you will learn the fundamentals of the Python programming language...",
+    "inLanguage": "en",
+    "encodingFormat": "text/markdown"
+  }],
+  "applicationStartDate": "2026-01-01T00:00:00Z",
+  "applicationDeadline": "2026-02-01T23:59:59Z",
+  "offers": [{
+    "type": "Offer",
+    "price": 0,
+    "priceCurrency": "EUR",
+    "category": "complete",
+    "url": "https://example.org/programs/python-bootcamp/enroll"
+  }],
+  "educationalCredentialAwarded": [{
+    "type": "EducationalOccupationalCredential",
+    "id": "https://example.org/credentials/python-bootcamp-certificate",
+    "name": {"en": "Certificate of Completion for the Python Bootcamp"}
+  }],
+  "educationalProgramMode": ["online", "asynchronous"],
+  "timeToComplete": "P2M",
+  "numberOfCredits": [{
+    "type": "CreditPoint",
+    "framework": {
+      "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+      "type": "Concept",
+      "prefLabel": { "en": "ECTS" },
+      "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+    },
+    "point": 5
+  }],
+  "programPrerequisites": [{
+    "type": "TextObject",
+    "text": "Basic programming knowledge is required to participate in the bootcamp.",
+    "inLanguage": "en",
+    "encodingFormat": "text/plain"
+  }]
+}
+      </pre>
+
+      <dl>
+        <dt>Validation</dt>
+        <dd><a href="schemas/educationalOccupationalProgram.json">JSON Schema: educationalOccupationalProgram.json</a>
+        </dd>
+      </dl>
+
+      <section data-dfn-for="ProgramPart">
+        <h4><dfn>ProgramPart</dfn></h4>
+        <p><code>ProgramPart</code> describes a component of an educational
+          programme, including its credit requirement and associated courses.</p>
+        <p>
+          Further requirements that cannot be expressed as credits SHOULD be
+          described in <code>description</code>. For example, a component with
+          <code>numberOfCredits</code> entry with a <code>value</code> of
+          <code>0</code> can specify that a minimum number of the listed courses
+          must be completed.
+        </p>
+
+        <table class="def">
+          <thead>
+            <tr>
+              <th><strong>Property</strong></th>
+              <th><strong>Required</strong></th>
+              <th><strong>Type</strong></th>
+              <th><strong>Note</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>name</code></td>
+              <td>yes</td>
+              <td><a><code>LocalizedString</code></a></td>
+              <td>Name of the programme component.</td>
+            </tr>
+            <tr>
+              <td><code>description</code></td>
+              <td>no</td>
+              <td><a><code>RichText</code></a></td>
+              <td>Description of the programme component.</td>
+            </tr>
+            <tr>
+              <td><code>numberOfCredits</code></td>
+              <td>yes</td>
+              <td><code>array[<a>CreditPoint</a>]</code></td>
+              <td>Credit amount required for the component; zero may indicate a non-credit completion requirement.</td>
+            </tr>
+            <tr>
+              <td><code>hasCourse</code></td>
+              <td>yes</td>
+              <td><code>array[<a><code>CourseReference</code></a>]</code></td>
+              <td>Courses in the programme component.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <pre class="example json" title="Example of a required component">
+  {
+    "name": {
+      "en": "Required component"
+    },
+    "description": [{ "..." }],
+    "numberOfCredits": [{
+      "type": "CreditPoint",
+      "framework": {
+        "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+        "type": "Concept",
+        "prefLabel": { "en": "ECTS" },
+        "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+      },
+      "point": 30
+    }],
+    "hasCourse": [{
+      "id": "https://example.org/courses/python",
+      "type": ["LearningResource", "Course"],
+      "name": {
+        "en": "Introduction to Python"
+      }
+    }]
+  }
+        </pre>
+
+        <pre class="example json" title="Example of an elective component with special requirements">
+  {
+    "name": {
+      "en": "Additional courses"
+    },
+    "description": [{
+      "type": "TextObject",
+      "inLanguage": "en",
+      "text": "At least two of the listed courses must be completed successfully.",
+      "encodingFormat": "text/plain"
+    }],
+    "numberOfCredits": [{
+      "type": "CreditPoint",
+      "framework": {
+        "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+        "type": "Concept",
+        "prefLabel": { "en": "ECTS" },
+        "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+      },
+      "point": 0
+    }],
+    "hasCourse": [
+      {
+        "id": "https://example.org/courses/python",
+        "type": ["LearningResource", "Course"],
+        "name": { "en": "Introduction to Python" }
+      },
+      {
+        "id": "https://example.org/courses/data-literacy",
+        "type": ["LearningResource", "Course"],
+        "name": { "en": "Data literacy" }
+      },
+      {
+        "id": "https://example.org/courses/advanced-python",
+        "type": ["LearningResource", "Course"],
+        "name": { "en": "Advanced Python" }
+      }
+    ]
+  }
+        </pre>
+
+        <dl>
+          <dt>References</dt>
+          <dd><code><a>EducationalOccupationalProgram</a> (hasPart)</code></dd>
+          <dt>Validation</dt>
+          <dd><a href="schemas/programPart.json">JSON Schema: programPart.json</a></dd>
+        </dl>
+      </section>
+
+      <section data-dfn-for="ProgramReference">
+        <h4><dfn>ProgramReference</dfn></h4>
+        <p>A <code>ProgramReference</code> provides a concise reference to an
+          educational programme that has already been described.</p>
+
+        <table class="def">
+          <thead>
+            <tr>
+              <th><strong>Property</strong></th>
+              <th><strong>Required</strong></th>
+              <th><strong>Type</strong></th>
+              <th><strong>Note</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>type</code></td>
+              <td>yes</td>
+              <td><code>"EducationalOccupationalProgram"</code></td>
+              <td>Type of the educational programme.</td>
+            </tr>
+            <tr>
+              <td><code>id</code></td>
+              <td>yes</td>
+              <td><a><code>ID</code></a></td>
+              <td>Identifier of the referenced programme.</td>
+            </tr>
+            <tr>
+              <td><code>name</code></td>
+              <td>yes</td>
+              <td><a><code>LocalizedString</code></a></td>
+              <td>Programme name.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <pre class="example json" title="Example of a ProgramReference">
+  {
+        "type": "EducationalOccupationalProgram",
+        "id": "https://example.org/programs/python-bootcamp",
+        "name": {
+          "de": "Python-Bootcamp",
+          "en": "Python Bootcamp"
+        }
+  }
+        </pre>
+
+        <dl>
+          <dt>References</dt>
+          <dd><code><a>Course</a> (isPartOf)</code></dd>
+          <dt>Validation</dt>
+          <dd><a href="schemas/programReference.json">JSON Schema: programReference.json</a></dd>
+        </dl>
+      </section>
+    </section>
+
+    <section data-dfn-for="EducationalOccupationalCredential">
+      <h3><dfn>EducationalOccupationalCredential</dfn></h3>
+      <p>An <code>EducationalOccupationalCredential</code> describes an
+        educational or occupational qualification.</p>
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>@context</code></td>
+            <td>no</td>
+            <td><code>array[string|object]</code></td>
+            <td>JSON-LD context.</td>
+          </tr>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"EducationalOccupationalCredential"</code></td>
+            <td>Fixed type of the credential.</td>
+          </tr>
+          <tr>
+            <td><code>id</code></td>
+            <td>yes</td>
+            <td><a><code>ID</code></a></td>
+            <td>Identifier of the credential.</td>
+          </tr>
+          <tr>
+            <td><code>name</code></td>
+            <td>yes</td>
+            <td><a><code>LocalizedString</code></a></td>
+            <td>Name of the credential.</td>
+          </tr>
+          <tr>
+            <td><code>abstract</code></td>
+            <td>no</td>
+            <td><a><code>LocalizedString</code></a></td>
+            <td>Short description of the credential.</td>
+          </tr>
+          <tr>
+            <td><code>description</code></td>
+            <td>no</td>
+            <td><a><code>RichText</code></a></td>
+            <td>Description of the credential.</td>
+          </tr>
+          <tr>
+            <td><code>inLanguage</code></td>
+            <td>no</td>
+            <td><code>array[string]</code></td>
+            <td>Languages in which the credential is described or issued.</td>
+          </tr>
+          <tr>
+            <td><code>credentialCategory</code></td>
+            <td>no</td>
+            <td><a><code>CredentialCategory</code></a></td>
+            <td>Category from the European Digital Credentials vocabulary.</td>
+          </tr>
+          <tr>
+            <td><code>url</code></td>
+            <td>no</td>
+            <td><code>string (URL)</code></td>
+            <td>Web page describing the credential.</td>
+          </tr>
+          <tr>
+            <td><code>image</code></td>
+            <td>no</td>
+            <td><a><code>ImageObject</code></a></td>
+            <td>Image of the credential.</td>
+          </tr>
+          <tr>
+            <td><code>hasPart</code></td>
+            <td>no</td>
+            <td><code>array[<a><code>CredentialReference</code></a>]</code></td>
+            <td>Credentials that are part of this credential.</td>
+          </tr>
+          <tr>
+            <td><code>isPartOf</code></td>
+            <td>no</td>
+            <td><code>array[<a><code>CredentialReference</code></a>]</code></td>
+            <td>Credentials of which this credential is a part.</td>
+          </tr>
+          <tr>
+            <td><code>numberOfCredits</code></td>
+            <td>no</td>
+            <td><code>array[<a>CreditPoint</a>]</code></td>
+            <td>Credits awarded for the credential. Each entry includes a numeric point and a concept identifying its framework.</td>
+          </tr>
+          <tr>
+            <td><code>competencyRequired</code></td>
+            <td>no</td>
+            <td><code>array[<a><code>Competency</code></a>]</code></td>
+            <td>Competencies required to earn the credential.</td>
+          </tr>
+          <tr>
+            <td><code>educationalLevel</code></td>
+            <td>no</td>
+            <td><code>array[<a><code>EducationalLevel</code></a>]</code></td>
+            <td>Educational level of the credential.</td>
+          </tr>
+          <tr>
+            <td><code>educationalAlignment</code></td>
+            <td>no</td>
+            <td><code>array[<a><code>EducationalAlignment</code></a>]</code></td>
+            <td>Alignment of the credential with an educational or classification standard.</td>
+          </tr>
+          <tr>
+            <td><code>isAwardedBy</code></td>
+            <td>no</td>
+            <td><code>array[<a>CourseReference</a>|<a>ProgramReference</a>]</code></td>
+            <td>Courses or programmes through which this credential can be awarded. These are not necessarily the
+              only ways to earn it.</td>
+          </tr>
+          <tr>
+            <td><code>publisher</code></td>
+            <td>no</td>
+            <td><code><a>Organization</a>|<a>Person</a></code></td>
+            <td>Publisher of the credential.</td>
+          </tr>
+          <tr>
+            <td><code>recognizedBy</code></td>
+            <td>no</td>
+            <td><code>array[<a><code>Organization</code></a>]</code></td>
+            <td>Organizations that recognize the credential.</td>
+          </tr>
+          <tr>
+            <td><code>dateModified</code></td>
+            <td>no</td>
+            <td><code>RFC 3339 date-time</code></td>
+            <td>Date and time when the published credential data was last modified.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre class="example json" title="Example of an EducationalOccupationalCredential">
+{
+  "type": "EducationalOccupationalCredential",
+  "id": "urn:uuid:1f9d2f1d-2d30-4d18-9e0e-12c004a1cf15",
+  "name": {
+    "en": "Python Bootcamp Certificate"
+  },
+  "description": [{
+    "type": "TextObject",
+    "text": "This certificate confirms that the holder successfully completed the Python Bootcamp and acquired the competencies taught.",
+    "inLanguage": "en",
+    "encodingFormat": "text/plain"
+  }],
+  "competencyRequired": [
+    {
+      "type": "Competency",
+      "id": "urn:uuid:9e7c1b64-c460-4672-b666-cb64dc2d3921",
+      "name": {
+        "en": "Ability to write and run simple Python programs"
+      },
+      "relatedSkill": [ "..." ]
+    }
+  ],
+  "credentialCategory": {
+    "type": "Concept",
+    "id": "http://data.europa.eu/snb/credential/e34929035b",
+    "prefLabel": {
+      "en": "Generic"
+    },
+    "inScheme": "http://data.europa.eu/snb/credential/25831c2"
+  },
+  "recognizedBy": [{
+    "type": "Organization",
+    "name": {
+      "en": "Example University"
+    }
+  }],
+  "isPartOf": [
+    {
+      "type": "EducationalOccupationalCredential",
+      "id": "urn:uuid:2f9d2f1d-2d30-4d18-9e0e-12c004a1cf15",
+      "name": {
+        "en": "Microcredential: Scripting"
+      }
+    }
+  ]
+}
+      </pre>
+
+      <dl>
+        <dt>References</dt>
+        <dd><code><a>Course</a> (educationalCredentialAwarded)</code>,
+          <code><a>EducationalOccupationalProgram</a> (educationalCredentialAwarded)</code>
+        </dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/educationalOccupationalCredential.json">JSON Schema:
+            educationalOccupationalCredential.json</a></dd>
+      </dl>
+
+      <section data-dfn-for="CredentialReference">
+        <h4><dfn>CredentialReference</dfn></h4>
+        <p>A <code>CredentialReference</code> provides a concise reference to an
+          <a><code>EducationalOccupationalCredential</code></a> that has already been described.
+
+        <table class="def">
+          <thead>
+            <tr>
+              <th><strong>Property</strong></th>
+              <th><strong>Required</strong></th>
+              <th><strong>Type</strong></th>
+              <th><strong>Note</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>type</code></td>
+              <td>yes</td>
+              <td><code>"EducationalOccupationalCredential"</code></td>
+              <td>Fixed type of the credential.</td>
+            </tr>
+            <tr>
+              <td><code>id</code></td>
+              <td>yes</td>
+              <td><a><code>ID</code></a></td>
+              <td>Identifier of the referenced credential.</td>
+            </tr>
+            <tr>
+              <td><code>name</code></td>
+              <td>yes</td>
+              <td><a><code>LocalizedString</code></a></td>
+              <td>Name of the credential.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <pre class="example json" title="Example of a CredentialReference">
+{
+  "type": "EducationalOccupationalCredential",
+  "id": "urn:uuid:1f9d2f1d-2d30-4d18-9e0e-12c004a1cf15",
+  "name": {
+    "en": "Python Bootcamp Certificate"
+  }
+}
+        </pre>
+
+        <dl>
+          <dt>References</dt>
+          <dd><code><a>EducationalOccupationalCredential</a> (isPartOf, hasPart)</code></dd>
+          <dt>Validation</dt>
+          <dd><a href="schemas/credentialReference.json">JSON Schema: credentialReference.json</a></dd>
+        </dl>
+      </section>
+    </section>
+
+    <section data-dfn-for="ID">
+      <h3><dfn>ID</dfn></h3>
+      <p>A URI that denotes the domain identity of the resource.</p>
+      <p>The ID MUST be a valid URI. It MAY be an HTTPS URI or a non-resolvable
+        URI, such as a URN.</p>
+
+      <pre class="example json" title="Example of an HTTP URI">
+"id": "https://example.org/courses/python"
+        </pre>
+      <pre class="example json" title="Example of a UUID URI">
+"id": "urn:uuid:123e4567-e89b-12d3-a456-426614174000"
+        </pre>
+      <pre class="example json" title="Example of a URN URI">
+"id": "urn:moochub:course:python"
+        </pre>
+
+      <dl>
+        <dt>Type</dt>
+        <dd><code>string (URI)</code></dd>
+        <dt>References</dt>
+        <dd>
+          <code><a>Course</a> (id)</code>,
+          <code><a>CourseInstance</a> (id)</code>,
+          <code><a>EducationalOccupationalProgram</a> (id)</code>,
+          <code><a>EducationalOccupationalCredential</a> (id)</code>,
+          <code><a>Person</a> (id)</code>,
+          <code><a>Organization</a> (id)</code>,
+          <code><a>Concept</a> (id)</code>
+        </dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/id.json">JSON Schema: id.json</a></dd>
+      </dl>
+    </section>
+
+    <section data-dfn-for="LocalizedString">
+      <h3><dfn>LocalizedString</dfn></h3>
+      <p>A <code>LocalizedString</code> is an object that MAY contain text in
+        multiple languages.</p>
+      <p>Each language MUST be specified as a property name using a BCP 47
+        language tag. The value is the text in that language.</p>
+
+      <pre class="example json" title="Example of a localized string">
+{
+  "de": "Dies ist ein Text auf Deutsch.",
+  "en": "This is a text in English."
+}
+      </pre>
+
+      <dl>
+        <dt>Type</dt>
+        <dd>Object with BCP 47 language tags as property names.</dd>
+        <dt>Validation</dt>
+        <dd><a href="https://w3id.org/kim/amb/20231019/schemas/localizedString.json">JSON Schema:
+            localizedString.json</a></dd>
+      </dl>
+    </section>
+
+    <section data-dfn-for="RichText">
+      <h3><dfn>RichText</dfn></h3>
+
+      <p>A <code>RichText</code> is a non-empty list of <code><a>TextObject</a></code>
+        objects containing the same text in different languages and formats.</p>
+
+      <ul>
+        <li>Each item in the list MUST be a <code><a>TextObject</a></code> object.</li>
+        <li>The list MUST contain at least one item.</li>
+      </ul>
+
+      <pre class="example json" title="Example of RichText">
+[
+  {
+    "type": "TextObject",
+    "text": "Dies ist ein **Beispieltext**.",
+    "inLanguage": "de",
+    "encodingFormat": "text/markdown"
+  },
+  {
+    "type": "TextObject",
+    "text": "&lt;p&gt;This is an &lt;strong&gt;example text&lt;/strong&gt;.&lt;/p&gt;",
+    "inLanguage": "en",
+    "encodingFormat": "text/html"
+  }
+]
+      </pre>
+
+      <dl>
+        <dt>References</dt>
+        <dd>
+          <code><a>Course</a> (description, learningOutcomeSummary, coursePrerequisites)</code>,
+          <code><a>EducationalOccupationalProgram</a> (description, programPrerequisites)</code>,
+          <code><a>EducationalOccupationalCredential</a> (description)</code>
+          <code><a>Person</a> (description)</code>,
+          <code><a>Organization</a> (description)</code>,
+          <code><a>Location</a> (description)</code>,
+          <code><a>Audience</a> (description)</code>
+        </dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/richText.json">JSON Schema: richText.json</a></dd>
+      </dl>
+
+
+
+      <section data-dfn-for="TextObject">
+        <h4><dfn>TextObject</dfn></h4>
+
+        <p>A <code>TextObject</code> contains text with additional information
+          about language and format.</p>
+
+        <table class="def">
+          <thead>
+            <tr>
+              <th><strong>Property</strong></th>
+              <th><strong>Required</strong></th>
+              <th><strong>Type</strong></th>
+              <th><strong>Note</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>type</code></td>
+              <td>yes</td>
+              <td><code>"TextObject"</code></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>text</code></td>
+              <td>yes</td>
+              <td><code>string</code></td>
+              <td>Text content of the object.</td>
+            </tr>
+            <tr>
+              <td><code>inLanguage</code></td>
+              <td>yes</td>
+              <td><code>string</code></td>
+              <td>Language of the text as a BCP 47 language tag, e.g. "de" or "en".</td>
+            </tr>
+            <tr>
+              <td><code>encodingFormat</code></td>
+              <td>yes</td>
+              <td><code>string</code></td>
+              <td>Media type of the text, e.g. "text/plain", "text/html", or "text/markdown".</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <pre class="example json" title="Example of a TextObject with plain text">
+{
+  "type": "TextObject",
+  "text": "This is an example text.",
+  "inLanguage": "en",
+  "encodingFormat": "text/plain"
+}
+      </pre>
+
+        <pre class="example json" title="Example of a TextObject with HTML formatting">
+{
+  "type": "TextObject",
+  "text": "&lt;p&gt;This is an &lt;strong&gt;example text&lt;/strong&gt;.&lt;/p&gt;",
+  "inLanguage": "en",
+  "encodingFormat": "text/html"
+}
+      </pre>
+
+        <pre class="example json" title="Example of a TextObject with Markdown formatting">
+{
+  "type": "TextObject",
+  "text": "This is an **example text**.",
+  "inLanguage": "en",
+  "encodingFormat": "text/markdown"
+}
+      </pre>
+
+        <dl>
+          <dt>References</dt>
+          <dd><a>RichText</a></dd>
+          <dt>Validation</dt>
+          <dd><a href="schemas/textObject.json">JSON Schema: textObject.json</a></dd>
+        </dl>
+      </section>
+    </section>
+
+    <section data-dfn-for="Schedule">
+      <h3><dfn>Schedule</dfn></h3>
+      A <code>Schedule</code> describes regular or recurring events.
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"Schedule"</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>byDay</code></td>
+            <td>yes</td>
+            <td><code>array[<a><code>DayOfWeek</code></a>]</code></td>
+            <td>Days of the week on which an event in the schedule takes place.</td>
+          </tr>
+          <tr>
+            <td><code>startTime</code></td>
+            <td>yes</td>
+            <td><code>RFC 3339 time</code></td>
+            <td>Start time of the event in the schedule.</td>
+          </tr>
+          <tr>
+            <td><code>endTime</code></td>
+            <td>yes</td>
+            <td><code>RFC 3339 time</code></td>
+            <td>End time of the event in the schedule.</td>
+          </tr>
+          <tr>
+            <td><code>scheduleTimezone</code></td>
+            <td>no</td>
+            <td><code>string</code></td>
+            <td>IANA time zone of the schedule, e.g. "Europe/Berlin" (optional).</td>
+          </tr>
+          <tr>
+            <td><code>repeatFrequency</code></td>
+            <td>yes</td>
+            <td><code>ISO 8601 duration</code></td>
+            <td>Recurrence interval, e.g. "P1W" for weekly recurrence.</td>
+          </tr>
+          <tr>
+            <td><code>startDate</code></td>
+            <td>yes</td>
+            <td><code>RFC 3339 date</code></td>
+            <td>First calendar date on which an event in the schedule takes place.</td>
+          </tr>
+          <tr>
+            <td><code>endDate</code></td>
+            <td>no</td>
+            <td><code>RFC 3339 date</code></td>
+            <td>Last calendar date on which an event in the schedule takes place.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre class="example json" title="Example of a weekly recurring schedule">
+{
+  "type": "Schedule",
+  "byDay": ["https://schema.org/Monday", "https://schema.org/Wednesday", "https://schema.org/Friday"],
+  "startTime": "10:00:00",
+  "endTime": "12:00:00",
+  "scheduleTimezone": "Europe/Berlin",
+  "repeatFrequency": "P1W",
+  "startDate": "2026-06-01",
+  "endDate": "2026-06-30"
+}
+      </pre>
+
+      <pre class="example json" title="Example of a monthly recurring schedule">
+{
+  "type": "Schedule",
+  "byDay": ["https://schema.org/Tuesday"],
+  "startTime": "14:00:00",
+  "endTime": "16:00:00",
+  "scheduleTimezone": "Europe/Berlin",
+  "repeatFrequency": "P1M",
+  "startDate": "2026-06-01",
+  "endDate": "2026-12-31"
+}
+      </pre>
+
+      <dl>
+        <dt>References</dt>
+        <dd>
+          <code><a>CourseInstance</a> (courseSchedule)</code>,
+          <code><a>CourseEvent</a> (eventSchedule)</code>
+        </dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/schedule.json">JSON Schema: schedule.json</a></dd>
+      </dl>
+    </section>
+
+    <section data-dfn-for="Offer">
+      <h3><dfn>Offer</dfn></h3>
+      <p>An <code>Offer</code> describes the price and access conditions for a
+        course, certificate, or complete package.</p>
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"Offer"</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>price</code></td>
+            <td>yes</td>
+            <td><code>number</code></td>
+            <td>Price in the specified currency, e.g. 49.99.</td>
+          </tr>
+          <tr>
+            <td><code>priceCurrency</code></td>
+            <td>yes</td>
+            <td><code>string</code></td>
+            <td>Three-letter ISO 4217 currency code, e.g. "EUR" for euros.</td>
+          </tr>
+          <tr>
+            <td><code>category</code></td>
+            <td>yes</td>
+            <td><a><code>OfferCategory</code></a></td>
+            <td>Offer category, e.g. "course", "certificate", or "complete".</td>
+          </tr>
+          <tr>
+            <td><code>paymentFrequency</code></td>
+            <td>no</td>
+            <td><a><code>PaymentFrequency</code></a></td>
+            <td>Payment frequency, e.g. "monthly" for monthly payments.</td>
+          </tr>
+          <tr>
+            <td><code>availabilityStarts</code></td>
+            <td>no</td>
+            <td><code>RFC 3339 date-time</code></td>
+            <td>Start date and time of the offer's availability, e.g. "2024-01-01T00:00:00Z".</td>
+          </tr>
+          <tr>
+            <td><code>availabilityEnds</code></td>
+            <td>no</td>
+            <td><code>RFC 3339 date-time</code></td>
+            <td>End date and time of the offer's availability, e.g. "2024-12-31T23:59:59Z".</td>
+          </tr>
+          <tr>
+            <td><code>url</code></td>
+            <td>no</td>
+            <td><code>string (URL)</code></td>
+            <td>URL of the booking or enrolment page, e.g. "https://example.org/courses/python/enroll".</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre class="example json" title="Example of an Offer for a course">
+{
+  "type": "Offer",
+  "price": 49.99,
+  "priceCurrency": "EUR",
+  "category": "course",
+  "paymentFrequency": "monthly",
+  "availabilityStarts": "2024-01-01T00:00:00Z",
+  "availabilityEnds": "2024-12-31T23:59:59Z",
+  "url": "https://example.org/courses/python/enroll"
+}
+      </pre>
+
+      <pre class="example json" title="Example of an Offer for a certificate">
+{
+  "type": "Offer",
+  "price": 19.99,
+  "priceCurrency": "EUR",
+  "category": "certificate",
+  "availabilityStarts": "2024-01-01T00:00:00Z",
+  "availabilityEnds": "2024-12-31T23:59:59Z",
+  "url": "https://example.org/courses/python/certificate"
+}
+      </pre>
+
+      <pre class="example json" title="Example of an Offer for a complete package">
+{
+  "type": "Offer",
+  "price": 69.99,
+  "priceCurrency": "EUR",
+  "category": "complete",
+  "availabilityStarts": "2024-01-01T00:00:00Z",
+  "availabilityEnds": "2024-12-31T23:59:59Z",
+  "url": "https://example.org/courses/python/complete"
+}
+      </pre>
+
+      <dl>
+        <dt>References</dt>
+        <dd><code><a>Course</a> (offers)</code></dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/offer.json">JSON Schema: offer.json</a></dd>
+      </dl>
+    </section>
+
+    <section data-dfn-for="Person">
+      <h3><dfn>Person</dfn></h3>
+      <p>Describes a person involved, for example an instructor, creator, or
+        contributor.
+      </p>
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>@context</code></td>
+            <td>no</td>
+            <td><code>array[string|object]</code></td>
+            <td>JSON-LD context.</td>
+          </tr>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"Person"</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>id</code></td>
+            <td>yes</td>
+            <td><a><code>ID</code></a></td>
+            <td>Unique identifier of the person, e.g. a URI or URN.</td>
+          </tr>
+          <tr>
+            <td><code>name</code></td>
+            <td>yes</td>
+            <td><a><code>LocalizedString</code></a></td>
+            <td>Name of the person in one or more languages.</td>
+          </tr>
+          <tr>
+            <td><code>honorificPrefix</code></td>
+            <td>no</td>
+            <td><code>string</code></td>
+            <td>Academic or courtesy title preceding the name, e.g. "Dr.", "Prof.", or "Sir".</td>
+          </tr>
+          <tr>
+            <td><code>honorificSuffix</code></td>
+            <td>no</td>
+            <td><code>string</code></td>
+            <td>Academic or courtesy title following the name, e.g. "PhD", "Jr.", or "Sr."</td>
+          </tr>
+          <tr>
+            <td><code>jobTitle</code></td>
+            <td>no</td>
+            <td><code>string</code></td>
+            <td>Occupation or role of the person, e.g. "Professor of Computer Science".</td>
+          </tr>
+          <tr>
+            <td><code>description</code></td>
+            <td>no</td>
+            <td><a><code>RichText</code></a></td>
+            <td>Longer description of the person in one or more languages and formats.</td>
+          </tr>
+          <tr>
+            <td><code>sameAs</code></td>
+            <td>no</td>
+            <td><code>array[string (URI)]</code></td>
+            <td>List of <code>URI</code>s referring to the person, e.g. a homepage, Wikipedia page, or LinkedIn profile.
+            </td>
+          </tr>
+          <tr>
+            <td><code>image</code></td>
+            <td>no</td>
+            <td><a><code>ImageObject</code></a></td>
+            <td>Images of the person, e.g. portrait photos.</td>
+          </tr>
+          <tr>
+            <td><code>affiliation</code></td>
+            <td>no</td>
+            <td><code>array[<a><code>Organization</code></a>]</code></td>
+            <td>Organizations with which the person is affiliated, e.g. an employer or higher education institution.
+            </td>
+          </tr>
+          <tr>
+            <td><code>dateModified</code></td>
+            <td>no</td>
+            <td><code>RFC 3339 date-time</code></td>
+            <td>Date and time when the published person data was last modified.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre class="example json" title="Example of a Person">
+{
+  "type": "Person",
+  "id": "https://example.org/people/beispielperson",
+  "name": "Example Person",
+  "honorificPrefix": "Prof.",
+  "honorificSuffix": "Dr.",
+  "jobTitle": "Professor of Computer Science",
+  "description": [{
+    "type": "TextObject",
+    "text": "Example Person is a professor of computer science at Lübeck University of Applied Sciences.",
+    "inLanguage": "en",
+    "encodingFormat": "text/plain"
+  }],
+  "sameAs": [
+    "https://example.org/people/beispielperson"
+  ],
+  "image": {
+    "type": "ImageObject",
+    "contentUrl": "https://example.org/images/beispielperson.jpg",
+    "license": {
+      "type": "License",
+      "identifier": "Proprietary",
+      "id": null
+    }
+  },
+  "affiliation": {
+    "type": "Organization",
+    "name": {
+      "en": "Lübeck University of Applied Sciences"
+    }
+  }
+}
+      </pre>
+
+      <dl>
+        <dt>References</dt>
+        <dd><code><a>Course</a> (publisher, creator, contributor, funder)</code>,
+          <code><a>CourseInstance</a> (instructor)</code>, <code><a>CourseEvent</a> (instructor)</code>,
+          <code><a>EducationalOccupationalProgram</a> (provider)</code>,
+          <code><a>Location</a> (owner)</code>,
+          <code><a>LearningItem</a> (publisher, creator)</code>
+        </dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/person.json">JSON Schema: person.json</a></dd>
+      </dl>
+    </section>
+
+    <section data-dfn-for="Organization">
+      <h3><dfn>Organization</dfn></h3>
+
+      <p>Describes an institution, provider, publisher, funder, or other organization.</p>
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>@context</code></td>
+            <td>no</td>
+            <td><code>array[string|object]</code></td>
+            <td>JSON-LD context.</td>
+          </tr>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"Organization"</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>id</code></td>
+            <td>yes</td>
+            <td><a><code>ID</code></a></td>
+            <td>Unique identifier of the organization, e.g. a URI or URN.</td>
+          </tr>
+          <tr>
+            <td><code>name</code></td>
+            <td>yes</td>
+            <td><a><code>LocalizedString</code></a></td>
+            <td>Name of the organization in one or more languages.</td>
+          </tr>
+          <tr>
+            <td><code>sameAs</code></td>
+            <td>no</td>
+            <td><code>array[<code>string (URL)</code>]</code></td>
+            <td>List of <code>URI</code>s referring to the organization, e.g. a homepage, Wikipedia page, or LinkedIn
+              profile.</td>
+          </tr>
+          <tr>
+            <td><code>description</code></td>
+            <td>no</td>
+            <td><a><code>RichText</code></a></td>
+            <td>Longer description of the organization in one or more languages and formats.</td>
+          </tr>
+          <tr>
+            <td><code>image</code></td>
+            <td>no</td>
+            <td><a><code>ImageObject</code></a></td>
+            <td>Images of the organization, e.g. logos.</td>
+          </tr>
+          <tr>
+            <td><code>dateModified</code></td>
+            <td>no</td>
+            <td><code>RFC 3339 date-time</code></td>
+            <td>Date and time when the published organization data was last modified.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre class="example json" title="Example of an Organization">
+{
+  "name": {
+    "en": "Institute for Interactive Systems"
+  },
+  "sameAs": [
+    "https://www.th-luebeck.de"
+  ],
+  "type": "Organization",
+  "image": {
+    "description": {
+      "en": "Logo of Lübeck University of Applied Sciences"
+    },
+    "type": "ImageObject",
+    "contentUrl": "https://futurelearnlab.de/hub/pluginfile.php/1/local_ildmeta/provider/2/fhl-intern-logo.png",
+    "license": {
+      "type": "License",
+      "identifier": "Proprietary",
+      "id": null
+    }
+  }
+}
+      </pre>
+
+      <dl>
+        <dt>References</dt>
+        <dd><code><a>Course</a> (publisher, creator, contributor, funder)</code>,
+          <code><a>EducationalOccupationalProgram</a> (provider)</code>,
+          <code><a>Location</a> (owner)</code>,
+          <code><a>LearningItem</a> (publisher, creator)</code>,
+          <code><a>Person</a> (affiliation)</code>
+        </dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/organization.json">JSON Schema: organization.json</a></dd>
+      </dl>
+    </section>
+
+    <section data-dfn-for="Location">
+      <h3><dfn>Location</dfn></h3>
+
+      <p><code>Location</code> describes a physical or virtual venue.</p>
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>@context</code></td>
+            <td>no</td>
+            <td><code>array[string|object]</code></td>
+            <td>JSON-LD context.</td>
+          </tr>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"Place"</code> or <code>"VirtualLocation"</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>id</code></td>
+            <td>yes</td>
+            <td><a><code>ID</code></a></td>
+            <td>Unique identifier of the location.</td>
+          </tr>
+          <tr>
+            <td><code>name</code></td>
+            <td>yes</td>
+            <td><a><code>LocalizedString</code></a></td>
+            <td>Name of the location, e.g. "Lübeck University of Applied Sciences" or "Zoom meeting room".</td>
+          </tr>
+          <tr>
+            <td><code>address</code></td>
+            <td>Yes, if neither <code>url</code> nor <code>geo</code> is specified.</td>
+            <td><a><code>PostalAddress</code></a></td>
+            <td>Physical address of the location, e.g. "Mönkhofer Weg 239, 23562 Lübeck, Germany".</td>
+          </tr>
+          <tr>
+            <td><code>url</code></td>
+            <td>Yes, if neither <code>address</code> nor <code>geo</code> is specified.</td>
+            <td><code>string (URL)</code></td>
+            <td>Virtual URL of the location, e.g. "https://example.org/online-course".</td>
+          </tr>
+          <tr>
+            <td><code>geo</code></td>
+            <td>Yes, if neither <code>address</code> nor <code>url</code> is specified.</td>
+            <td><a><code>GeoCoordinates</code></a></td>
+            <td>Geographical coordinates of the location, e.g. {"latitude": 53.8791, "longitude": 10.6866}.</td>
+          </tr>
+          <tr>
+            <td><code>description</code></td>
+            <td>no</td>
+            <td><a><code>RichText</code></a></td>
+            <td>Description of the location, e.g. "Main campus of Lübeck University of Applied Sciences".</td>
+          </tr>
+          <tr>
+            <td><code>publicAccess</code></td>
+            <td>no</td>
+            <td><code>boolean</code></td>
+            <td>Indicates whether the location is publicly accessible (true) or not (false).</td>
+          </tr>
+          <tr>
+            <td><code>photo</code></td>
+            <td>no</td>
+            <td><a><code>ImageObject</code></a></td>
+            <td>An image of the location, e.g. a cover image or a photo of the facilities.</td>
+          </tr>
+          <tr>
+            <td><code>openingHoursSpecification</code></td>
+            <td>no</td>
+            <td><code>array[<a><code>OpeningHoursSpecification</code></a>]</code></td>
+            <td>Opening hours of the location.</td>
+          </tr>
+          <tr>
+            <td><code>owner</code></td>
+            <td>no</td>
+            <td><code><a><code>Organization</code></a> | <a><code>Person</code></a></code></td>
+            <td>The organization or person that owns or manages the location, e.g. Lübeck University of Applied
+              Sciences.
+            </td>
+          </tr>
+          <tr>
+            <td><code>maximumAttendeeCapacity</code></td>
+            <td>no</td>
+            <td><code>integer</code></td>
+            <td>Maximum capacity of the location, e.g. 100.</td>
+          </tr>
+          <tr>
+            <td><code>sameAs</code></td>
+            <td>no</td>
+            <td><code>array[<code>string (URL)</code>]</code></td>
+            <td>List of URLs describing the location, e.g. a Wikipedia article or the provider's website.
+            </td>
+          </tr>
+          <tr>
+            <td><code>dateModified</code></td>
+            <td>no</td>
+            <td><code>RFC 3339 date-time</code></td>
+            <td>Date and time when the published location data was last modified.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre class="example json" title="Example of a physical location">
+{
+  "type": "Place",
+  "id": "urn:uuid:f988cf9e-d10e-4847-8c0f-d87e88ff4f2a",
+  "name": {
+    "en": "Campus Luebeck, Building A, Room 101"
+  },
+  "description": [ "..." ],
+  "address": {
+    "type": "PostalAddress",
+    "streetAddress": "Mönkhofer Weg 239",
+    "postalCode": "23562",
+    "addressLocality": "Luebeck",
+    "addressCountry": "Germany"
+  },
+  "geo": {
+    "type": "GeoCoordinates",
+    "latitude": 53.8695,
+    "longitude": 10.6861
+  },
+  "publicAccess": true,
+  "photo": {
+    "type": "ImageObject",
+    "..."
+  },
+  "openingHoursSpecification": [
+    {
+      "type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Wednesday"
+      ],
+      "opens": "08:00:00",
+      "closes": "18:00:00"
+    }
+  ],
+  "owner": {
+    "type": "Organization",
+    "..."
+  },
+  "maximumAttendeeCapacity": 20,
+  "sameAs": [
+    "https://pubdoc.th-luebeck.de/1af09392ff"
+  ]
+}
+      </pre>
+
+      <pre class="example json" title="Example of a virtual location">
+{
+  "type": "VirtualLocation",
+  "name": {
+    "en": "Virtual Meeting Room"
+  },
+  "url": "https://example.org/virtual-meeting-room"
+}
+      </pre>
+
+      <dl>
+        <dt>References</dt>
+        <dd>
+          <code><a>CourseInstance</a> (location)</code>,
+          <code><a>CourseEvent</a> (location)</code>
+        </dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/location.json">JSON Schema: location.json</a></dd>
+      </dl>
+    </section>
+
+    <section data-dfn-for="PostalAddress">
+      <h3><dfn>PostalAddress</dfn></h3>
+      A <code>PostalAddress</code> describes a physical address with a street, locality, postal code, and country.
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"PostalAddress"</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>streetAddress</code></td>
+            <td>yes</td>
+            <td><code>string</code></td>
+            <td>Street name and building number, e.g. "Mönkhofer Weg 239".</td>
+          </tr>
+          <tr>
+            <td><code>addressLocality</code></td>
+            <td>no</td>
+            <td><code>string</code></td>
+            <td>City or locality, e.g. "Lübeck".</td>
+          </tr>
+          <tr>
+            <td><code>postalCode</code></td>
+            <td>no</td>
+            <td><code>string</code></td>
+            <td>Postal code, e.g. "23562".</td>
+          </tr>
+          <tr>
+            <td><code>addressCountry</code></td>
+            <td>no</td>
+            <td><code>string</code></td>
+            <td>Country, e.g. "Germany".</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre class="example json" title="Example of a PostalAddress">
+{
+  "type": "PostalAddress",
+  "streetAddress": "Mönkhofer Weg 239",
+  "addressLocality": "Lübeck",
+  "postalCode": "23562",
+  "addressCountry": "Deutschland"
+}
+        </pre>
+
+      <dl>
+        <dt>References</dt>
+        <dd><code><a>Location</a> (postalAddress)</code></dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/postalAddress.json">JSON Schema: postalAddress.json</a></dd>
+      </dl>
+    </section>
+
+    <section data-dfn-for="GeoCoordinates">
+      <h3><dfn>GeoCoordinates</dfn></h3>
+      <code>GeoCoordinates</code> describes the geographical position of a
+      location using <code>latitude</code> and <code>longitude</code>.
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"GeoCoordinates"</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>latitude</code></td>
+            <td>yes</td>
+            <td><code>number</code></td>
+            <td>Latitude in decimal degrees, e.g. 53.8791.</td>
+          </tr>
+          <tr>
+            <td><code>longitude</code></td>
+            <td>yes</td>
+            <td><code>number</code></td>
+            <td>Longitude in decimal degrees, e.g. 10.6866.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre class="example json" title="Example of GeoCoordinates">
+{
+  "type": "GeoCoordinates",
+  "latitude": 53.8791,
+  "longitude": 10.6866
+}
+      </pre>
+
+      <dl>
+        <dt>References</dt>
+        <dd><code><a>Location</a> (geo)</code></dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/geoCoordinates.json">JSON Schema: geoCoordinates.json</a></dd>
+      </dl>
+    </section>
+
+    <section data-dfn-for="OpeningHoursSpecification">
+      <h3><dfn>OpeningHoursSpecification</dfn></h3>
+
+      An <code>OpeningHoursSpecification</code> describes the opening hours of a location.
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"OpeningHoursSpecification"</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>dayOfWeek</code></td>
+            <td>yes</td>
+            <td><code>array[<a><code>DayOfWeek</code></a>]</code></td>
+            <td>List of days of the week on which the location is open.</td>
+          </tr>
+          <tr>
+            <td><code>opens</code></td>
+            <td>yes</td>
+            <td><code>RFC 3339 time</code></td>
+            <td>Opening time in the format "hh:mm:ss", e.g. "08:00:00".</td>
+          </tr>
+          <tr>
+            <td><code>closes</code></td>
+            <td>yes</td>
+            <td><code>RFC 3339 time</code></td>
+            <td>Closing time in the format "hh:mm:ss", e.g. "18:00:00".</td>
+          </tr>
+          <tr>
+            <td><code>validFrom</code></td>
+            <td>no</td>
+            <td><code>RFC 3339 date</code></td>
+            <td>Optional restriction on the period during which the opening hours apply.</td>
+          </tr>
+          <tr>
+            <td><code>validThrough</code></td>
+            <td>no</td>
+            <td><code>RFC 3339 date</code></td>
+            <td>Optional restriction on the period during which the opening hours apply.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <dl>
+        <dt>References</dt>
+        <dd><code><a>Location</a> (openingHoursSpecification)</code></dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/openingHoursSpecification.json">JSON Schema: openingHoursSpecification.json</a></dd>
+      </dl>
+    </section>
+
+    <section id="License">
+      <h3><dfn>License</dfn></h3>
+      <p>A <code>License</code> object describes the rights to a resource.</p>
+      <p>It MUST provide an <code>identifier</code> as a human-readable label
+        and MUST provide <code>id</code> as the URI of the license terms.
+      <p>If no public license URI exists, <code>id</code> SHOULD explicitly be
+        <code>null</code>, for example for proprietary content.
+        <code>identifier</code> MUST still clearly state the rights status.
+      </p>
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"License"</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>id</code></td>
+            <td>no</td>
+            <td><code>string (URL)</code></td>
+            <td>URI of the license terms. Omit the field if no public license URI is available.</td>
+          </tr>
+          <tr>
+            <td><code>identifier</code></td>
+            <td>yes</td>
+            <td><code>string</code></td>
+            <td>Human-readable license label, e.g. "CC BY 4.0" or "Proprietary".</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>For rights statements such as "All rights reserved", a readable
+        <code>identifier</code> MUST be provided. If no public license document exists,
+        <code>id</code> MAY be omitted. <code>id: null</code> is not permitted
+        because <code>id</code> is interpreted as <code>@id</code> in the
+        JSON-LD context, where JSON-LD does not allow null values.
+      </p>
+
+      <pre class="example json" title="Example of a License object">
+{
+  "type": "License",
+  "id": "https://creativecommons.org/licenses/by/4.0/",
+  "identifier": "CC BY 4.0"
+}
+      </pre>
+
+      <dl>
+        <dt>References</dt>
+        <dd>
+          <code><a>Course</a> (license)</code>,
+          <code><a>ImageObject</a> (license)</code>,
+          <code><a>Trailer</a> (license)</code>
+        </dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/license.json">JSON Schema: license.json</a></dd>
+      </dl>
+    </section>
+
+    <section id="ImageObject">
+      <h3><dfn>ImageObject</dfn></h3>
+
+      <p>An <code>ImageObject</code> is a licensed image.</p>
+      <p>It MUST contain <code>contentUrl</code> and <code>license</code>.</p>
+      <p>An optional description MAY also be provided as a localized plain-text value.</p>
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"ImageObject"</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>contentUrl</code></td>
+            <td>yes</td>
+            <td><code>string (URL)</code></td>
+            <td>URL of the image, e.g. "https://example.org/images/python-bootcamp-cover.jpg".</td>
+          </tr>
+          <tr>
+            <td><code>license</code></td>
+            <td>yes</td>
+            <td><a><code>License</code></a></td>
+            <td>License information for the image.</td>
+          </tr>
+          <tr>
+            <td><code>description</code></td>
+            <td>no</td>
+            <td><a><code>LocalizedString</code></a></td>
+            <td>Localized descriptive text for the image.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre class="example json" title="Example of an ImageObject">
+"image": {
+  "type": "ImageObject",
+  "contentUrl": "https://example.org/images/python-bootcamp-cover.jpg",
+  "license": {
+    "type": "License",
+    "id": "https://creativecommons.org/licenses/by/4.0/",
+    "identifier": "CC BY 4.0"
+  },
+  "description": {
+    "de": "Titelbild des Python-Bootcamps",
+    "en": "Cover image of the Python Bootcamp"
+  }
+}
+      </pre>
+
+      <dl>
+        <dt>References</dt>
+        <dd>
+          <code><a>Course</a> (image)</code>,
+          <code><a>EducationalOccupationalProgram</a> (image)</code>,
+          <code><a>Location</a> (photo)</code>,
+          <code><a>Person</a> (image)</code>,
+          <code><a>Organization</a> (image)</code>
+        </dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/image.json">JSON Schema: image.json</a></dd>
+      </dl>
+    </section>
+
+    <section id="Trailer">
+      <h3><dfn>Trailer</dfn></h3>
+      <p>A <code>Trailer</code> is a licensed video.</p>
+      <p>It MUST contain either <code>contentUrl</code> or <code>embedUrl</code>, and MUST contain <code>license</code>.
+      </p>
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"VideoObject"</code> or <code>"AudioObject"</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>contentUrl</code></td>
+            <td>yes, if embedUrl is not specified.</td>
+            <td><code>string (URL)</code></td>
+            <td>URL of the video, e.g. "https://example.org/videos/python-bootcamp-trailer.mp4".</td>
+          </tr>
+          <tr>
+            <td><code>embedUrl</code></td>
+            <td>yes, if contentUrl is not specified.</td>
+            <td><code>string (URL)</code></td>
+            <td>URL for embedding the video, e.g. "https://www.youtube.com/embed/abc123".</td>
+          </tr>
+          <tr>
+            <td><code>encodingFormat</code></td>
+            <td>no</td>
+            <td><code>string</code></td>
+            <td>IANA media type of the video, e.g. "video/mp4" or "video/webm". See <a
+                href="https://www.iana.org/assignments/media-types/media-types.xml">IANA Media Types</a>.</td>
+          </tr>
+          <tr>
+            <td><code>contentSize</code>
+            <td>no</td>
+            <td><code>string</code></td>
+            <td>Size of the video in bytes, e.g. "1048576" for 1 MB.</td>
+          </tr>
+          <tr>
+            <td><code>sha256</code></td>
+            <td>no</td>
+            <td><code>string</code></td>
+            <td>SHA-256 hash of the video.</td>
+          </tr>
+          <tr>
+            <td><code>bitrate</code></td>
+            <td>no</td>
+            <td><code>string</code></td>
+            <td>Video bitrate in kilobits per second, e.g. "5000" for 5 Mbps.</td>
+          </tr>
+          <tr>
+            <td><code>license</code></td>
+            <td>yes</td>
+            <td><a><code>License</code></a></td>
+            <td>License information for the video.</td>
+          </tr>
+          <tr>
+            <td><code>description</code></td>
+            <td>no</td>
+            <td><a><code>LocalizedString</code></a></td>
+            <td>Localized descriptive text for the video.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre class="example json" title="Example of a Trailer">
+"trailer": {
+  "type": "VideoObject",
+  "embedUrl": "https://example.org/videos/embed/python-bootcamp-trailer.mp4",
+  "license": {
+    "type": "License",
+    "id": "https://creativecommons.org/licenses/by/4.0/",
+    "identifier": "CC BY 4.0"
+  },
+  "description": {
+    "de": "Trailer des Python-Bootcamps",
+    "en": "Trailer of the Python Bootcamp"
+  }
+}
+      </pre>
+
+      <dl>
+        <dt>References</dt>
+        <dd><code><a>Course</a> (trailer)</code></dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/trailer.json">JSON Schema: trailer.json</a></dd>
+      </dl>
+    </section>
+
+    <section id="EnumTypes">
+      <h3>Enumerations</h3>
+      <p>The following types are enumerations that permit only specific values.</p>
+
+      <section data-dfn-for="LearningMode">
+        <h4><dfn>LearningMode</dfn></h4>
+
+        <p>The way in which a learning offer is provided or delivered.</p>
+        <p>The value of <code>learningMode</code> MUST be one of the following:</p>
+
+        <ul>
+          <li><code>online</code>: The course can be completed entirely online.</li>
+          <li><code>onsite</code>: The course can be completed entirely in person.</li>
+          <li><code>blended</code>: The course must be completed both online and in person.</li>
+          <li><code>synchronous</code>: The course takes place at fixed times that all participants must attend
+            simultaneously.</li>
+          <li><code>asynchronous</code>: The course can be completed flexibly, without all participants having to be
+            present at the same time.</li>
+        </ul>
+
+        <pre class="example json" title="Example of courseMode for an online self-paced course">
+"courseMode": ["online", "asynchronous"]
+        </pre>
+        <pre class="example json" title="Example of courseMode for a guided in-person course">
+"courseMode": ["onsite", "synchronous"]
+        </pre>
+        <pre class="example json" title="Example of courseMode for a blended-learning course">
+"courseMode": ["blended", "synchronous"]
+        </pre>
+        <pre class="example json"
+          title="Example of a hybrid course offer that can be completed both online and in person">
+"courseMode": ["online", "onsite", "synchronous"]
+        </pre>
+
+        <dl>
+          <dt>References</dt>
+          <dd><code><a>Course</a> (courseMode)</code>, </code><a>EducationalOccupationalProgram</a>
+            (educationalProgramMode)</code></dd>
+          <dt>Validation</dt>
+          <dd><a href="schemas/learningMode.json">JSON Schema: learningMode.json</a></dd>
+        </dl>
+      </section>
+
+      <section data-dfn-for="AccessMode">
+        <h4><dfn>AccessMode</dfn></h4>
+
+        <p>An <code>AccessMode</code> describes the sensory or cognitive access mode of a learning resource.</p>
+        <p>The value of <code>accessMode</code> MUST be one of the following:</p>
+
+        <ul>
+          <li><code>auditory</code>: The learning resource can be perceived through hearing.</li>
+          <li><code>tactile</code>: The learning resource can be perceived through touch.</li>
+          <li><code>textual</code>: The learning resource can be perceived through reading text.</li>
+          <li><code>visual</code>: The learning resource can be perceived through sight.</li>
+        </ul>
+
+        <pre class="example json"
+          title="Example of access modes for an online course with text, audio, and video content">
+"accessMode": ["textual", "auditory", "visual"]
+      </pre>
+
+        <dl>
+          <dt>References</dt>
+          <dd><code><a>Course</a> (accessMode)</code></dd>
+          <dt>Validation</dt>
+          <dd><a href="schemas/accessModeType.json">JSON Schema: accessModeType.json</a></dd>
+        </dl>
+      </section>
+
+      <section data-dfn-for="DayOfWeek">
+        <h4><dfn>DayOfWeek</dfn></h4>
+        A <code>DayOfWeek</code> is a weekday enumeration type defined in <a
+          href="https://schema.org/DayOfWeek">schema.org</a>.
+
+        The following values are permitted:
+        <ul>
+          <li><code>https://schema.org/Monday</code></li>
+          <li><code>https://schema.org/Tuesday</code></li>
+          <li><code>https://schema.org/Wednesday</code></li>
+          <li><code>https://schema.org/Thursday</code></li>
+          <li><code>https://schema.org/Friday</code></li>
+          <li><code>https://schema.org/Saturday</code></li>
+          <li><code>https://schema.org/Sunday</code></li>
+        </ul>
+
+        <dl>
+          <dt>References</dt>
+          <dd>
+            <code><a>OpeningHoursSpecification</a> (dayOfWeek)</code>,
+            <code><a>Schedule</a> (byDay)</code>,
+          </dd>
+          <dt>Validation</dt>
+          <dd><a href="schemas/dayOfWeek.json">JSON Schema: dayOfWeek.json</a></dd>
+        </dl>
+      </section>
+
+      <section data-dfn-for="OfferCategory">
+        <h4><dfn>OfferCategory</dfn></h4>
+        <p>An <code>OfferCategory</code> is an <code>ENUM</code> value that describes the category of an offer.
+        </p>
+        <p>It MUST be one of the following values:</p>
+        <ul>
+          <li><code>"course"</code> – Offer for a course</li>
+          <li><code>"certificate"</code> – Offer for a certificate</li>
+          <li><code>"complete"</code> – Offer for the complete package (course + certificate)</li>
+        </ul>
+
+        <dl>
+          <dt>References</dt>
+          <dd><code><a>Offer</a> (category)</code></dd>
+          <dt>Validation</dt>
+          <dd><a href="schemas/offerCategory.json">JSON Schema: offerCategory.json</a></dd>
+        </dl>
+      </section>
+
+      <section data-dfn-for="PaymentFrequency">
+        <h4><dfn>PaymentFrequency</dfn></h4>
+        <p>A <code>PaymentFrequency</code> is an <code>ENUM</code> value that describes how often an offer is paid for.
+        </p>
+        <p>It MAY be one of the following values:</p>
+        <ul>
+          <li><code>"one-time"</code> – One-time payment (default)</li>
+          <li><code>"weekly"</code> – Weekly payment</li>
+          <li><code>"monthly"</code> – Monthly payment</li>
+          <li><code>"quarterly"</code> – Quarterly payment</li>
+          <li><code>"by-term"</code> – Payment per semester or trimester</li>
+          <li><code>"half-yearly"</code> – Half-yearly payment</li>
+          <li><code>"yearly"</code> – Yearly payment</li>
+          <li><code>"other"</code> – Other payment frequency</li>
+        </ul>
+
+        <dl>
+          <dt>References</dt>
+          <dd><code><a>Offer</a> (paymentFrequency)</code></dd>
+          <dt>Validation</dt>
+          <dd><a href="schemas/paymentFrequency.json">JSON Schema: paymentFrequency.json</a></dd>
+        </dl>
+      </section>
+    </section>
+
+    <section data-dfn-for="AlignmentObject">
+      <h3><dfn>AlignmentObject</dfn></h3>
+      <p>An <code>AlignmentObject</code> describes how a resource maps to a classification system.</p>
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"AlignmentObject"</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>alignmentType</code></td>
+            <td>yes</td>
+            <td><code>string</code></td>
+            <td>Type of alignment, e.g. "educationalSubject".</td>
+          </tr>
+          <tr>
+            <td><code>educationalFramework</code></td>
+            <td>yes</td>
+            <td><code>string</code></td>
+            <td>Name of the classification system, e.g. "ISCED-F".</td>
+          </tr>
+          <tr>
+            <td><code>targetUrl</code></td>
+            <td>Yes, if identifier is not specified.</td>
+            <td><code>string (URI)</code></td>
+            <td>Unique URL of the aligned object in the classification.</td>
+          </tr>
+          <tr>
+            <td><code>identifier</code></td>
+            <td>Yes, if targetUrl is not specified.</td>
+            <td><code>string</code></td>
+            <td>Unique identifier of the aligned object in the classification.</td>
+          </tr>
+          <tr>
+            <td><code>targetName</code></td>
+            <td>yes</td>
+            <td><a><code>LocalizedString</code></a></td>
+            <td>Name of the aligned object in the classification.</td>
+          </tr>
+          <tr>
+            <td><code>targetDescription</code></td>
+            <td>no</td>
+            <td><a><code>LocalizedString</code></a></td>
+            <td>Description of the aligned object in the classification.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre class="example json" title="Example of an AlignmentObject">
+{
+  "type": "AlignmentObject",
+  "alignmentType": "educationalSubject",
+  "educationalFramework": "ISCED-F",
+  "targetName": {
+    "en": "Computer use"
+  },
+  "targetUrl": "http://data.europa.eu/esco/isced-f/0611",
+  "identifier": "0611",
+  "targetDescription": {
+    "en": "The ability to use computers and related technology efficiently."
+  }
+}
+      </pre>
+
+      <dl>
+        <dt>Validation</dt>
+        <dd><a href="schemas/alignmentObject.json">JSON Schema: alignmentObject.json</a></dd>
+      </dl>
+
+      <section data-dfn-for="EducationalAlignment">
+        <h4><dfn>EducationalAlignment</dfn></h4>
+
+        <p><code>EducationalAlignment</code> aligns the course with one or more
+          subjects, knowledge domains, or learner interests in a named
+          classification system.</p>
+        <p>The property MUST contain a non-empty list of <a>AlignmentObject</a>
+          objects or one of the following recommended specialized profiles.</p>
+        <ul>
+          <li><a><code>ISCED-F Alignment</code></a></li>
+          <li><a><code>OEFOS Alignment</code></a></li>
+          <li><a><code>Hochschulfächersystematik Alignment</code></a></li>
+          <li><a><code>Schulfächer Alignment</code></a></li>
+          <li><a><code>Holland Codes Alignment</code></a></li>
+        </ul>
+
+        <pre class="example json" title="Example of aligning a course with subjects and learner interests">
+"educationalAlignment": [
+  {
+    "type": "AlignmentObject",
+    "alignmentType": "educationalSubject",
+    "educationalFramework": "ISCED-F",
+    "targetName": {
+      "en": "Computer use"
+    },
+    "targetUrl": "http://data.europa.eu/esco/isced-f/0611"
+  },
+  {
+    "type": "AlignmentObject",
+    "alignmentType": "educationalSubject",
+    "educationalFramework": "OEFOS",
+    "targetName": {
+      "en": "Computer use"
+    },
+    "identifier": "0611"
+  },
+  {
+    "type": "AlignmentObject",
+    "alignmentType": "educationalSubject",
+    "educationalFramework": "Hochschulfächersystematik",
+    "targetName": {
+      "en": "Medieninformatik"
+    },
+    "targetUrl": "https://w3id.org/kim/hochschulfaechersystematik/n121"
+  },
+  {
+    "type": "AlignmentObject",
+    "alignmentType": "educationalSubject",
+    "educationalFramework": "Schulfächer",
+    "targetName": {
+      "en": "Informatik"
+    },
+    "targetUrl": "http://w3id.org/kim/schulfaecher/s1013"
+  },
+  {
+    "type": "AlignmentObject",
+    "alignmentType": "educationalSubject",
+    "educationalFramework": "Holland Codes",
+    "targetName": {
+      "en": "Artistic (A)"
+    },
+    "targetUrl": "https://www.onetcenter.org/rdf/resources/onet/Element/52c657cb-1b12-11ea-8239-782bcb5df6ac",
+    "identifier": "A"
+  }
+]
+        </pre>
+
+        <dl>
+          <dt>References</dt>
+          <dd><code><a>Course</a> (educationalAlignment)</code></dd>
+          <dt>Validation</dt>
+          <dd><a href="schemas/educationalAlignment.json">JSON Schema: educationalAlignment.json</a></dd>
+        </dl>
+      </section>
+
+      <section data-dfn-for="ISCED-F Alignment">
+        <h4><dfn>ISCED-F Alignment</dfn></h4>
+        <p>For the <code>ISCED-F</code> framework (International Standard Classification of Education – Fields of
+          Education and Training 2013), use the <code>educationalSubject</code> <code>alignmentType</code>.</p>
+        <p><code>targetUrl</code> MUST refer to a valid URL in the ESCO ISCED-F vocabulary.
+          The pattern is <code>^http://data.europa.eu/esco/isced-f/.*$</code>.</p>
+        <p>For more information, see [[!ISCED-F]].</p>
+
+        <pre class="example json" title="Example of specifying an ISCED-F subject">
+{
+  "type": "AlignmentObject",
+  "alignmentType": "educationalSubject",
+  "educationalFramework": "ISCED-F",
+  "targetName": {
+    "en": "Computer use"
+  },
+  "targetUrl": "http://data.europa.eu/esco/isced-f/0611"
+}
+          </pre>
+
+        <dl>
+          <dt>Validation</dt>
+          <dd><a href="schemas/iscedFAlignment.json">JSON Schema: iscedFAlignment.json</a></dd>
+        </dl>
+      </section>
+
+      <section data-dfn-for="OEFOS Alignment">
+        <h4><dfn>OEFOS Alignment</dfn></h4>
+        <p>For the <code>OEFOS</code> framework (Austrian Classification of
+          Fields of Science), use the <code>educationalSubject</code>
+          <code>alignmentType</code>. The <code>identifier</code> MUST be a
+          numeric code containing two to four digits.
+        </p>
+
+        <pre class="example json" title="Example of specifying an OEFOS subject">
+{
+  "type": "AlignmentObject",
+  "alignmentType": "educationalSubject",
+  "educationalFramework": "OEFOS",
+  "targetName": {
+    "en": "Computer use"
+  },
+  "identifier": "0611"
+}
+          </pre>
+
+        <p>For more information, see [[!OEFOS]].</p>
+        <dl>
+          <dt>Validation</dt>
+          <dd><a href="schemas/oefosAlignment.json">JSON Schema: oefosAlignment.json</a></dd>
+        </dl>
+      </section>
+
+      <section data-dfn-for="Hochschulfächersystematik Alignment">
+        <h4><dfn>Hochschulfächersystematik Alignment</dfn></h4>
+        <p>The <code>Hochschulfächersystematik</code> is Destatis's classification
+          of subject groups, fields of study, and subjects. For this framework,
+          use the <code>educationalSubject</code> <code>alignmentType</code>.
+        </p>
+        <p><code>targetUrl</code> MUST refer to an entry in the
+          Hochschulfächersystematik. The pattern is
+          <code>^https://w3id.org/kim/hochschulfaechersystematik/.*$</code>.
+        </p>
+        <p>For more information, see [[!Hochschulfächersystematik]].</p>
+
+        <pre class="example json" title="Example of specifying a subject from the Hochschulfächersystematik">
+{
+  "type": "AlignmentObject",
+  "alignmentType": "educationalSubject",
+  "educationalFramework": "Hochschulfächersystematik",
+  "targetName": {
+    "en": "Medieninformatik"
+  },
+  "targetUrl": "https://w3id.org/kim/hochschulfaechersystematik/n121"
+}
+          </pre>
+
+        <dl>
+          <dt>Validation</dt>
+          <dd><a href="schemas/hochschulfaechersystematikAlignment.json">JSON Schema:
+              hochschulfaechersystematikAlignment.json</a></dd>
+        </dl>
+      </section>
+
+      <section data-dfn-for="Schulfächer Alignment">
+        <h4><dfn>Schulfächer Alignment</dfn></h4>
+        <p><code>Schulfächer</code> is a value list for general education school
+          subjects. For this framework, use the <code>educationalSubject</code>
+          <code>alignmentType</code>.
+        </p>
+        <p><code>targetUrl</code> MUST refer to an entry in the school subject
+          list. The pattern is
+          <code>^http://w3id.org/kim/schulfaecher/.*$</code>.
+        </p>
+        <p>For more information, see [[!Schulfächerliste]].</p>
+
+        <pre class="example json" title="Example of specifying a school subject">
+{
+  "type": "AlignmentObject",
+  "alignmentType": "educationalSubject",
+  "educationalFramework": "Schulfächer",
+  "targetName": {
+    "en": "Informatik"
+  },
+  "targetUrl": "http://w3id.org/kim/schulfaecher/s1013"
+}
+          </pre>
+
+        <dl>
+          <dt>Validation</dt>
+          <dd><a href="schemas/schulfaecherAlignment.json">JSON Schema: schulfaecherAlignment.json</a></dd>
+        </dl>
+      </section>
+
+      <section data-dfn-for="Holland Codes Alignment">
+        <h4><dfn>Holland Codes Alignment</dfn></h4>
+        <p>The <code>Holland Codes</code> (RIASEC) describe vocational
+          interests using six interest types. For this framework, use the
+          <code>educationalSubject</code> <code>alignmentType</code>.
+        </p>
+        <p>The required <code>identifier</code> MUST be exactly one of the six
+          Holland-Codes <code>R</code> (Realistic), <code>I</code>
+          (Investigative), <code>A</code> (Artistic), <code>S</code> (Social),
+          <code>E</code> (Enterprising) or <code>C</code> (Conventional)
+          entsprechen.
+        </p>
+        <p>For more information, see [[!Holland Codes]].</p>
+
+        <pre class="example json" title="Example of specifying a Holland Code">
+{
+  "type": "AlignmentObject",
+  "alignmentType": "educationalSubject",
+  "educationalFramework": "Holland Codes",
+  "targetName": {
+    "en": "Artistic (A)"
+  },
+  "targetUrl": "https://www.onetcenter.org/rdf/resources/onet/Element/52c657cb-1b12-11ea-8239-782bcb5df6ac",
+  "identifier": "A"
+}
+          </pre>
+
+        <dl>
+          <dt>Validation</dt>
+          <dd><a href="schemas/hollandCodesAlignment.json">JSON Schema: hollandCodesAlignment.json</a></dd>
+        </dl>
+      </section>
+    </section>
+
+    <section data-dfn-for="Concept">
+      <h3><dfn>Concept</dfn></h3>
+
+      <p>A <code>Concept</code> refers to a term in a stable, published, and
+        controlled vocabulary.</p>
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"Concept"</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>id</code></td>
+            <td>yes</td>
+            <td><code>string (URI)</code></td>
+            <td>URI that uniquely identifies the concept.</td>
+          </tr>
+          <tr>
+            <td><code>inScheme</code></td>
+            <td>no</td>
+            <td><code>string (URI)</code></td>
+            <td>URI of the vocabulary that contains the concept.</td>
+          </tr>
+          <tr>
+            <td><code>prefLabel</code></td>
+            <td>yes</td>
+            <td><a><code>LocalizedString</code></a></td>
+            <td>Name of the concept.</td>
+          </tr>
+          <tr>
+            <td><code>definition</code></td>
+            <td>no</td>
+            <td><a><code>LocalizedString</code></a></td>
+            <td>Definition of the concept.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre class="example json" title="Example of a Concept">
+{
+  "type": "Concept",
+  "id": "https://w3id.org/kim/educationalLevel/level_6",
+  "prefLabel": {
+    "en": "Bachelor or equivalent"
+  },
+  "definition": {
+    "en": "An educational level equivalent to a bachelor's degree or equivalent."
+  },
+  "inScheme": "https://w3id.org/kim/educationalLevel/"
+}
+      </pre>
+
+      <dl>
+        <dt>References</dt>
+        <dd>
+          <code><a>Competency</a> (proficiencyLevel)</code>
+        </dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/concept.json">JSON Schema: concept.json</a></dd>
+      </dl>
+
+      <section>
+        <h4 id="skillconcept">Skill Concept</h4>
+
+        <p>A skill is described in MOOChub as a <a><code>Concept</code></a>.
+          There is no additional dedicated data type for it.</p>
+        <p>
+          Skill concepts SHOULD be included in a stable, published, and
+          controlled vocabulary. Providers SHOULD use the original URIs,
+          <code>inScheme</code> values, and labels from the relevant
+          competency model. MOOChub particularly recommends the following
+          models for skills:
+        </p>
+        <ul>
+          <li><strong>[[!ESCO]]:</strong> <code>id</code> is the URI of the skill, for example
+            <code>http://data.europa.eu/esco/skill/...</code>; <code>inScheme</code> is
+            <code>http://data.europa.eu/esco/concept-scheme/skills</code>.
+          </li>
+          <li><strong>[[!DigComp]]:</strong> Competency concepts SHOULD retain their original <code>id</code>,
+            <code>inScheme</code>, label, and definition from the published DigComp dataset. In addition to
+            competency concepts, DigComp also contains proficiency-level concepts; their use is described in the
+            <a><code>ProficiencyLevel</code></a> section.
+          </li>
+        </ul>
+
+        <pre class="example json" title="Example of a Concept representing a skill from the ESCO classification">
+{
+  "type": "Concept",
+  "id": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d",
+  "prefLabel": {
+    "en": "Python (computer programming)"
+  },
+  "definition": {
+    "en": "Techniques and principles of software development, such as analysis, algorithms, programming, testing, and compiling programming paradigms in Python."
+  },
+  "inScheme": "http://data.europa.eu/esco/concept-scheme/skills"
+}
+      </pre>
+
+        <dl>
+          <dt>References</dt>
+          <dd><code><a>Competency</a> (relatedSkill)</code></dd>
+          <dt>Validation</dt>
+          <dd><a href="schemas/concept.json">JSON Schema: concept.json</a></dd>
+        </dl>
+      </section>
+
+      <section data-dfn-for="ProficiencyLevel">
+        <h4><dfn>ProficiencyLevel</dfn></h4>
+        <p><code>proficiencyLevel</code> describes the proficiency level of a
+          <a><code>Competency</code></a>. Its value is one or more
+          <a><code>Concept</code></a> objects. <code>ProficiencyLevel</code> is
+          not a separate data type and adds no validation of its own. Only the
+          rules for <a><code>Concept</code></a> apply.
+        </p>
+        <p>Use of the DigComp vocabulary is recommended. Providers SHOULD
+          retain the original <code>id</code>, the vocabulary URI in
+          <code>inScheme</code>, and, if available, the original
+          <code>prefLabel</code>. The following is an example of a DigComp 3.0
+          concept:
+        </p>
+        <pre class="example json" title="DigComp ProficiencyLevel as a Concept">
+{
+  "type": "Concept",
+  "id": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/DIGCOMP/DIGCOMP3.0/DigComp%203.0%20Data%20Supplement%2024%20Nov%202025.jsonld#ProficiencyLevel/Intermediate_3",
+  "inScheme": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/DIGCOMP/DIGCOMP3.0/DigComp%203.0%20Data%20Supplement%2024%20Nov%202025.jsonld",
+  "prefLabel": {
+    "en": "Intermediate"
+  }
+}
+        </pre>
+
+        <dl>
+          <dt>Type</dt>
+          <dd><a>Concept</a></dd>
+          <dt>Validation</dt>
+          <dd><a href="schemas/concept.json">JSON Schema: concept.json</a></dd>
+        </dl>
+      </section>
+
+      <section data-dfn-for="EducationalLevel">
+        <h4><dfn>EducationalLevel</dfn></h4>
+
+        <p>Reference to a level in the education system as the teaching and
+          learning context for which a learning resource is intended.
+        </p>
+        <p>An <code>EducationalLevel</code> is a <a><code>Concept</code></a> that describes an educational level.
+        </p>
+        <p>The `id` property MUST be a URI from [[!Bildungsstufen]].</p>
+
+        <pre class="example json" title="Example of an educational level">
+{
+  "type": "Concept",
+  "id": "https://w3id.org/kim/educationalLevel/level_6",
+  "prefLabel": {
+    "de": "Bachelor oder äquivalent",
+    "en": "Bachelor or equivalent"
+  },
+  "definition": {
+    "de": "Ein Bildungsniveau, das einem Bachelorabschluss oder einem gleichwertigen Abschluss entspricht.",
+    "en": "An educational level equivalent to a bachelor's degree or equivalent."
+  },
+  "inScheme": "https://w3id.org/kim/educationalLevel/"
+}
+      </pre>
+
+        <dl>
+          <dt>Type</dt>
+          <dd><a>Concept</a></dd>
+          <dt>References</dt>
+          <dd>
+            <code><a>Course</a> (educationalLevel)</code>
+            <code><a>EducationalOccupationalCredential</a> (educationalLevel)</code>
+          </dd>
+          <dt>Validation</dt>
+          <dd><a href="schemas/educationalLevel.json">JSON Schema: educationalLevel.json</a></dd>
+        </dl>
+      </section>
+
+      <section data-dfn-for="AudienceType">
+        <h4><dfn>AudienceType</dfn></h4>
+        <p>An <code>AudienceType</code> is a reference to an audience role in the [[!LRMI]] vocabulary, represented
+          as a <code>Concept</code> object.
+        </p>
+        <p><code>id</code> MUST be one of the following LRMI vocabulary URIs:</p>
+        <ul>
+          <li><code>http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/administrator</code></li>
+          <li><code>http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/generalPublic</code></li>
+          <li><code>http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/mentor</code></li>
+          <li><code>http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/parent</code></li>
+          <li><code>http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/peerTutor</code></li>
+          <li><code>http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/professional</code></li>
+          <li><code>http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/student</code></li>
+          <li><code>http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/teacher</code></li>
+        </ul>
+        <p><code>inScheme</code> MUST refer to
+          <code>http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole</code>.
+        </p>
+
+        <pre class="example json" title="Example of an AudienceType">
+{
+  "type": "Concept",
+  "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/student",
+  "prefLabel": {
+    "en": "Student",
+    "de": "Studierende"
+  },
+  "inScheme": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole"
+}
+        </pre>
+
+        <dl>
+          <dt>References</dt>
+          <dd>
+            <code><a>Audience</a> (audienceType)</code>
+          </dd>
+          <dt>Validation</dt>
+          <dd><a href="schemas/audienceType.json">JSON Schema: audienceType.json</a></dd>
+        </dl>
+      </section>
+
+      <section data-dfn-for="CredentialCategory">
+        <h4><dfn>CredentialCategory</dfn></h4>
+        <p>A <code>CredentialCategory</code> describes the category of an
+          educational or occupational credential.</p>
+        <p>A <code>CredentialCategory</code> is a <a><code>Concept</code></a>
+          based on the European vocabulary for credential types.</p>
+        <p>The value of <code>inScheme</code> MUST be
+          <code>http://data.europa.eu/snb/credential/25831c2</code>.
+        </p>
+        <p>The value of <code>id</code> MUST be one of the following URIs:</p>
+        <ul>
+          <li><code>http://data.europa.eu/snb/credential/48b514e72a</code> - Learning Activity</li>
+          <li><code>http://data.europa.eu/snb/credential/6dff8a0f87</code> - Diploma Supplement</li>
+          <li><code>http://data.europa.eu/snb/credential/bdc47cb449</code> - Learning Entitlement</li>
+          <li><code>http://data.europa.eu/snb/credential/e34929035b</code> - Generic</li>
+        </ul>
+
+        <pre class="example json" title="Example of a CredentialCategory">
+  {
+    "type": "Concept",
+    "id": "http://data.europa.eu/snb/credential/e34929035b",
+    "prefLabel": {
+      "de": "Generisch",
+      "en": "Generic"
+    },
+    "inScheme": "http://data.europa.eu/snb/credential/25831c2"
+  }
+        </pre>
+
+        <dl>
+          <dt>References</dt>
+          <dd>
+            <code><a>EducationalOccupationalCredential</a> (credentialCategory)</code>
+          </dd>
+          <dt>Validation</dt>
+          <dd><a href="schemas/credentialCategory.json">JSON Schema: credentialCategory.json</a></dd>
+        </dl>
+      </section>
+
+      <section data-dfn-for="InteractivityType">
+        <h4><dfn>InteractivityType</dfn></h4>
+        <p>An <code>InteractivityType</code> is a <a><code>Concept</code></a>
+          that describes the predominant teaching and learning approach of an
+          educational resource using the [[!LRMI]] vocabulary.</p>
+        <p>The `id` property MUST be one of the following LRMI vocabulary URIs:</p>
+
+        <ul>
+          <li><code>http://purl.org/dcx/lrmi-vocabs/interactivityType/active</code></li>
+          <li><code>http://purl.org/dcx/lrmi-vocabs/interactivityType/expositive</code></li>
+          <li><code>http://purl.org/dcx/lrmi-vocabs/interactivityType/mixed</code></li>
+        </ul>
+
+        <pre class="example json" title="Example of specifying a course's interactivity type">
+"interactivityType": {
+  "type": "Concept",
+  "id": "http://purl.org/dcx/lrmi-vocabs/interactivityType/active",
+  "prefLabel": {
+    "de": "aktiv",
+    "en": "active"
+  },
+  "inScheme": "http://purl.org/dcx/lrmi-vocabs/interactivityType/"
+}
+        </pre>
+
+        <dl>
+          <dt>References</dt>
+          <dd><code><a>Course</a> (interactivityType)</code></dd>
+          <dt>Validation</dt>
+          <dd><a href="https://w3id.org/kim/amb/20231019/schemas/interactivityType.json">JSON Schema:
+              interactivityType.json</a></dd>
+        </dl>
+      </section>
+
+      <section data-dfn-for="AccessConditionType">
+        <h4><dfn>AccessConditionType</dfn></h4>
+
+        <p>An <code>AccessConditionType</code> is a <a><code>Concept</code></a>
+          that describes the access conditions for an educational resource.</p>
+        <p>The `id` property MUST be a URI from the
+          <a href="https://w3id.org/kim/conditionsOfAccess/">conditions of access vocabulary</a>.
+        </p>
+        <p>The following values are permitted:</p>
+        <ul>
+          <li><code>http://w3id.org/kim/conditionsOfAccess/no_login</code> - Access without login</li>
+          <li><code>http://w3id.org/kim/conditionsOfAccess/login</code> - Access with login</li>
+        </ul>
+
+        <pre class="example json" title="Example of specifying a course's access conditions">
+"conditionsOfAccess": {
+  "type": "Concept",
+  "id": "http://w3id.org/kim/conditionsOfAccess/no_login",
+  "prefLabel": {
+    "de": "Zugang ohne Login",
+    "en": "Access without login"
+  },
+  "inScheme": "https://w3id.org/kim/conditionsOfAccess/"
+}
+          </pre>
+
+        <dl>
+          <dt>References</dt>
+          <dd><code><a>Course</a> (conditionsOfAccess)</code></dd>
+          <dt>Validation</dt>
+          <dd><a href="https://w3id.org/kim/amb/20231019/schemas/conditionsOfAccess.json">JSON Schema:
+              conditionsOfAccess.json</a></dd>
+        </dl>
+      </section>
+    </section>
+
+    <section data-dfn-for="CreditPoint">
+      <h3><dfn>CreditPoint</dfn></h3>
+      <p>A <code>CreditPoint</code> records a numeric credit amount in a
+        particular framework. The <code>framework</code> is a
+        <a><code>Concept</code></a>; consumers SHOULD use its stable
+        <code>id</code> to identify and compare credit systems. Credit amounts
+        from different frameworks are not directly comparable unless an
+        explicit conversion rule exists.</p>
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"CreditPoint"</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>point</code></td>
+            <td>yes</td>
+            <td><code>number</code></td>
+            <td>Non-negative numeric amount. Display formatting is determined by consumers.</td>
+          </tr>
+          <tr>
+            <td><code>framework</code></td>
+            <td>yes</td>
+            <td><a><code>Concept</code></a></td>
+            <td>Concept identifying the credit framework.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><code>numberOfCredits</code> is a non-empty array of
+        <code>CreditPoint</code> objects. Add one entry per credit framework.
+        If no shared concept URI exists, providers MAY use a stable,
+        provider-controlled URI for <code>framework.id</code>. Such identifiers
+        only match across providers when those providers reuse the same URI or
+        maintain an explicit mapping.</p>
+
+      <pre class="example json" title="ECTS CreditPoint using the published ELM concept">
+{
+  "numberOfCredits": [{
+    "type": "CreditPoint",
+    "point": 6,
+    "framework": {
+      "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+      "type": "Concept",
+      "prefLabel": {
+        "en": "ECTS"
+      },
+      "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+    }
+  }]
+}
+      </pre>
+
+      <pre class="example json" title="Illustrative UK CATS and provider-defined CME credit frameworks">
+{
+  "numberOfCredits": [
+    {
+      "type": "CreditPoint",
+      "point": 15,
+      "framework": {
+        "id": "urn:example:provider:creditscheme:cats",
+        "type": "Concept",
+        "prefLabel": {
+          "en": "CATS"
+        }
+      }
+    },
+    {
+      "type": "CreditPoint",
+      "point": 3,
+      "framework": {
+        "id": "urn:example:provider:creditscheme:cme",
+        "type": "Concept",
+        "prefLabel": {
+          "en": "CME"
+        }
+      }
+    }
+  ]
+}
+      </pre>
+      <p>The <code>urn:example</code> identifiers and credit amounts above are
+        illustrative only, not published framework identifiers or a claim
+        that these amounts are equivalent.</p>
+
+      <dl>
+        <dt>References</dt>
+        <dd><code><a>Course</a> (numberOfCredits)</code>,
+          <code><a>EducationalOccupationalProgram</a> (numberOfCredits)</code>,
+          <code><a>ProgramPart</a> (numberOfCredits)</code>, and
+          <code><a>EducationalOccupationalCredential</a> (numberOfCredits)</code></dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/creditPoint.json">JSON Schema: creditPoint.json</a></dd>
+      </dl>
+    </section>
+
+    <section data-dfn-for="Competency">
+      <h3><dfn>Competency</dfn></h3>
+      <p><code>Competency</code> describes a competency or learning outcome.</p>
+
+      <p>The <code>name</code> property MAY contain a free-text competency label.</p>
+      <p>Where possible, <code>relatedSkill</code> SHOULD be used to specify the competency by referencing one or more
+        skill concepts from a known competency vocabulary. See <a href="#skillconcept">Skill Concept</a>.</p>
+      <p><code>proficiencyLevel</code> MAY also be specified to indicate the competency's proficiency level. See
+        <a href="#proficiencylevel">ProficiencyLevel</a>.
+      </p>
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"Competency"</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>id</code></td>
+            <td>yes</td>
+            <td><code>string (URI)</code></td>
+            <td>URI that uniquely identifies the competency.</td>
+          </tr>
+          <tr>
+            <td><code>name</code></td>
+            <td>yes</td>
+            <td><a><code>LocalizedString</code></a></td>
+            <td>Name of the competency.</td>
+          </tr>
+          <tr>
+            <td><code>relatedSkill</code></td>
+            <td>no</td>
+            <td><code>array[<a><code>Concept</code></a>]</code></td>
+            <td>Skills from a known or provider-specific competency vocabulary.</td>
+          </tr>
+          <tr>
+            <td><code>proficiencyLevel</code></td>
+            <td>no</td>
+            <td><code>array[<a><code>Concept</code></a>]</code></td>
+            <td>Framework-specific proficiency level for this competency.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre class="example json" title="Example of a Competency">
+{
+  "type": "Competency",
+  "id": "urn:uuid:9e7c1b64-c460-4672-b666-cb64dc2d3921",
+  "name": {
+    "en": "Ability to write and run simple Python programs"
+  },
+  "relatedSkill": [
+    {
+      "type": "Concept",
+      "id": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d",
+      "inScheme": "http://data.europa.eu/esco/concept-scheme/skills",
+      "prefLabel": {
+        "en": "Python (computer programming)"
+      }
+    }
+  ],
+  "proficiencyLevel": [
+    {
+      "type": "Concept",
+      "id": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/DIGCOMP/DIGCOMP3.0/DigComp%203.0%20Data%20Supplement%2024%20Nov%202025.jsonld#ProficiencyLevel/Intermediate_3",
+      "inScheme": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/DIGCOMP/DIGCOMP3.0/DigComp%203.0%20Data%20Supplement%2024%20Nov%202025.jsonld",
+      "prefLabel": {
+        "en": "Intermediate"
+      }
+    }
+  ]
+}
+        </pre>
+
+      <dl>
+        <dt>References</dt>
+        <dd>
+          <code><a>Course</a> (competencyRequired, teaches, assesses)</code>
+          <code><a>EducationalOccupationalCredential</a> (competencyRequired)</code>
+        </dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/competency.json">JSON Schema: competency.json</a></dd>
+      </dl>
+    </section>
+
+    <section data-dfn-for="Audience">
+      <h3><dfn>Audience</dfn></h3>
+
+      <p><code>Audience</code> describes the intended audience of a course.</p>
+      <p>At least one of the <code>audienceType</code>, <code>description</code>,
+        or <code>suggestedAge</code> properties MUST be specified.
+      </p>
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"Audience"</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>audienceType</code></td>
+            <td>no</td>
+            <td><code>array[<a><code>AudienceType</code></a>]</code></td>
+            <td>Audience roles, e.g. "Student", "Teacher", or "Parent" from the LRMI vocabulary.</td>
+          </tr>
+          <tr>
+            <td><code>description</code></td>
+            <td>no</td>
+            <td><a><code>RichText</code></a>
+            <td>Free-text description of the audience.</td>
+          </tr>
+          <tr>
+            <td><code>suggestedAge</code></td>
+            <td>no</td>
+            <td><a><code>SuggestedAge</code></a></td>
+            <td>Restriction on the audience's age range, e.g. minValue: 16, maxValue: 50.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre class="example json" title="Example of an Audience">
+{
+  "type": "Audience",
+  "audienceType": [
+    {
+      "type": "Concept",
+      "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/student",
+      "prefLabel": {
+        "en": "Student",
+        "de": "Studierende"
+      },
+      "inScheme": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole"
+    }
+  ],
+  "description": [
+    {
+      "type": "TextObject",
+      "inLanguage": "en",
+      "text": "This course is intended for students who want to expand their Python programming skills.",
+      "encodingFormat": "text/plain"
+    }
+  ],
+  "suggestedAge": {
+    "minValue": 16,
+    "maxValue": 50
+  }
+}
+      </pre>
+
+      <dl>
+        <dt>References</dt>
+        <dd>
+          <code><a>Course</a> (audience)</code>
+        </dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/audience.json">JSON Schema: audience.json</a></dd>
+      </dl>
+    </section>
+
+    <section data-dfn-for="SuggestedAge">
+      <h3><dfn>SuggestedAge</dfn></h3>
+      <p><code>SuggestedAge</code> describes the audience's age range.</p>
+      <p><code>minValue</code> and <code>maxValue</code> are optional, but at least one of the two properties MUST be
+        specified.</p>
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>minValue</code></td>
+            <td>yes, if <code>maxValue</code> is not specified.</td>
+            <td><code>integer</code></td>
+            <td>Minimum age of the audience, e.g. 16.</td>
+          </tr>
+          <tr>
+            <td><code>maxValue</code></td>
+            <td>yes, if <code>minValue</code> is not specified.</td>
+            <td><code>integer</code></td>
+            <td>Maximum age of the audience, e.g. 50.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre class="example json" title="Example of a SuggestedAge">
+{
+  "minValue": 16,
+  "maxValue": 50
+}
+        </pre>
+
+      <dl>
+        <dt>References</dt>
+        <dd>
+          <code><a>Audience</a> (suggestedAge)</code>
+        </dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/suggestedAge.json">JSON Schema: suggestedAge.json</a></dd>
+      </dl>
+    </section>
+
+    <section data-dfn-for="AggregateRating">
+      <h3><dfn>AggregateRating</dfn></h3>
+      <p>An <code>AggregateRating</code> describes a combined rating based on individual ratings of an item.</p>
+
+      <table class="def">
+        <thead>
+          <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Required</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Note</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>type</code></td>
+            <td>yes</td>
+            <td><code>"AggregateRating"</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>ratingValue</code></td>
+            <td>yes</td>
+            <td><code>number</code></td>
+            <td>Average rating, e.g. 4.5.</td>
+          </tr>
+          <tr>
+            <td><code>reviewCount</code></td>
+            <td>yes</td>
+            <td><code>integer</code></td>
+            <td>Number of ratings, e.g. 120.</td>
+          </tr>
+          <tr>
+            <td><code>bestRating</code></td>
+            <td>no</td>
+            <td><code>number</code></td>
+            <td>Highest possible rating, e.g. 5.</td>
+          </tr>
+          <tr>
+            <td><code>worstRating</code></td>
+            <td>no</td>
+            <td><code>number</code></td>
+            <td>Lowest possible rating, e.g. 1.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre class="example json" title="Example of an AggregateRating">
+{
+  "type": "AggregateRating",
+  "ratingValue": 4.5,
+  "reviewCount": 120,
+  "bestRating": 5,
+  "worstRating": 1
+}
+        </pre>
+
+      <dl>
+        <dt>References</dt>
+        <dd>
+          <code><a>Course</a> (aggregateRating)</code>
+        </dd>
+        <dt>Validation</dt>
+        <dd><a href="schemas/aggregateRating.json">JSON Schema: aggregateRating.json</a></dd>
+      </dl>
+    </section>
+  </section>
+
+  <section id="catalog">
+    <h2>JSON:API catalogue</h2>
+
+    The catalogue is a paginated JSON:API feed for independently harvestable
+    Ressourcen wie `courses`, `programs`, `credentials`, `persons`,
+    `organizations`, and `locations`. The transport structure is defined in
+    <a href="schemas/api/catalogFeed.json">api/catalogFeed.json</a> definiert.
+
+    <p>The catalogue MUST use the <code>application/vnd.api+json</code> media
+      type and return a JSON:API 1.1 response. Resource types MAY be mixed in
+      the same feed. Providers SHOULD offer a canonical catalogue endpoint and
+      support <code>filter[type]</code>, so harvesters can retrieve one or more
+      homogeneous subsets when needed. Additional type-specific endpoints are
+      permitted but MUST use the same identity space.
+    </p>
+
+    <section id="catalog-property-documentation">
+      <h3>Catalogue properties</h3>
+      <section data-dfn-for="links">
+        <h4><dfn>links</dfn></h4>
+        Catalogue pagination links: <code>self</code>, <code>first</code>,
+        <code>last</code>, and optionally <code>next</code> and <code>prev</code>.
+        <dl>
+          <dt>Required</dt>
+          <dd>yes</dd>
+          <dt>Type</dt>
+          <dd>Object</dd>
+          <dt>Validation</dt>
+          <dd><a href="schemas/api/catalogFeed.json">JSON Schema</a></dd>
+        </dl>
+      </section>
+      <section data-dfn-for="data">
+        <h4><dfn>data</dfn></h4>
+        List of independently harvestable objects transmitted as JSON:API
+        resources. Supported resource types are
+        <code>courses</code>, <code>programs</code>, <code>credentials</code>,
+        <code>persons</code>, <code>organizations</code>, and
+        <code>locations</code>.
+        <dl>
+          <dt>Required</dt>
+          <dd>yes</dd>
+          <dt>Type</dt>
+          <dd><code>array[CatalogResource]</code></dd>
+          <dt>Validation</dt>
+          <dd><a href="schemas/api/catalogFeed.json">JSON Schema</a></dd>
+        </dl>
+      </section>
+    </section>
+
+    <pre class="example json" title="Catalogue response with a course resource">
+{
+  "links": {
+    "self": "https://provider.example/api/catalog?page[number]=1",
+    "first": "https://provider.example/api/catalog?page[number]=1",
+    "last": "https://provider.example/api/catalog?page[number]=1",
+    "next": null,
+    "prev": null
+  },
+  "data": [
+    {
+      "type": "courses",
+      "id": "course-123",
+      "attributes": { "...": "complete Course object" }
+    }
+  ]
+}
+</pre>
+
+    The catalogue uses a provider-local JSON:API ID in `data[].id`.
+    The object's domain URI is in
+    `data[].attributes.id`.
+
+    <section id="catalog-pagination">
+      <h3>Pagination and filtering</h3>
+      <p>The canonical query parameters are:</p>
+      <ul>
+        <li><code>page[number]</code>: one-based page number; the default is
+          <code>1</code>.
+        </li>
+        <li><code>page[size]</code>: requested page size. Providers MAY apply
+          a documented maximum size and MUST indicate the actual page size
+          through the links.</li>
+        <li><code>filter[type]</code>: optional, comma-separated list of
+          <code>courses</code>, <code>programs</code>, <code>credentials</code>,
+          <code>persons</code>, <code>organizations</code>, and
+          <code>locations</code>.
+        </li>
+      </ul>
+      <p><code>links.self</code> is required. Providers SHOULD provide
+        <code>first</code>, <code>last</code>, <code>next</code>, and
+        <code>prev</code>. At the respective ends of the result set,
+        <code>next</code> or <code>prev</code> is <code>null</code>. The order
+        MUST remain stable throughout a complete harvesting run.
+        <code>meta.total</code> MAY specify the total count after the filter
+        has been applied.
+      </p>
+      <p>A valid request, including one for an empty page, MUST return
+        <code>200 OK</code>. Invalid pagination or filter values MUST return a
+        JSON:API error document with <code>400 Bad Request</code>. Requests for
+        non-existent resources SHOULD return <code>404 Not Found</code>;
+        <code>410 Gone</code> MAY be used for resources that have been
+        intentionally withdrawn.
+      </p>
+    </section>
+
+    <section id="catalog-identifiers">
+      <h3>Resource IDs and JSON-LD</h3>
+      <p><code>data[].id</code> is a non-empty, provider-local JSON:API ID.
+        The domain JSON-LD resource in
+        <code>data[].attributes</code> also has a stable URI in
+        <code>id</code>. These identities serve different layers and do not
+        need to have the same value.
+      </p>
+      <p>Every independently harvestable object MUST have a stable
+        <code>attributes.id</code> and a corresponding domain
+        <code>attributes.type</code>. The combination of
+        <code>attributes.type</code> and <code>attributes.id</code> forms the
+        domain identity key. The JSON Schemas do not require an
+        <code>@context</code> property. However, a standalone published
+        JSON-LD document SHOULD include a compatible MOOChub context at the
+        beginning of the document.
+      </p>
+      <p>A compact reference object MAY contain only <code>id</code>,
+        <code>type</code>, and optionally <code>name</code>. It denotes the
+        same resource as a full representation and MUST NOT delete previously
+        stored properties when merged.
+      </p>
+    </section>
+  </section>
+
+  <section id="profile-diagrams" class="informative">
+    <h2>Profile at a glance</h2>
+    <p>The following schema-derived overviews show the main object types and
+      their relationships. They complement, but do not replace, the normative
+      schemas.
+    </p>
+
+    <figure>
+      <img src="diagrams/course-detail.svg" alt="Schema overview for courses" loading="lazy"
+        style="width: 100%; max-width: 100%; height: auto;">
+      <figcaption>Course</figcaption>
+    </figure>
+
+    <figure>
+      <img src="diagrams/program-detail.svg" alt="Schema overview for educational programmes" loading="lazy"
+        style="width: 100%; max-width: 100%; height: auto;">
+      <figcaption>Educational programme</figcaption>
+    </figure>
+
+    <figure>
+      <img src="diagrams/credential-detail.svg" alt="Schema overview for educational credentials" loading="lazy"
+        style="width: 100%; max-width: 100%; height: auto;">
+      <figcaption>Educational credential</figcaption>
+    </figure>
+
+    <figure>
+      <img src="diagrams/catalog.svg" alt="Schema overview for the catalogue feed" loading="lazy"
+        style="width: 100%; max-width: 100%; height: auto;">
+      <figcaption>Catalogue feed</figcaption>
+    </figure>
+  </section>
+
+  <section id="schemas">
+    <h2>JSON Schemas and examples</h2>
+
+    The root schema for courses is
+    <a href="schemas/course.json">schemas/course.json</a>, for programmes
+    <a href="schemas/program.json">schemas/program.json</a>, and for the catalogue
+    <a href="schemas/api/catalogFeed.json">schemas/api/catalogFeed.json</a>.
+    Reusable submodels are located in the same schema directory.
+
+    Valid examples are available, for example,
+    <a href="examples/course/valid/course.json">for courses</a>,
+    <a href="examples/program/valid/microdegree.json">for programmes</a>, and
+    <a href="examples/catalog/valid/catalog.json">for catalogues</a>.
+  </section>
+
+  <section id="references" class="informative">
+    <h2>Further documents</h2>
+
+    <ul>
+      <li><a href="../README.md">MOOChub README</a></li>
+      <li><a href="changelog.md">Changelog</a></li>
+      <li><a href="migration-guide.md">Migration guide</a></li>
+      <li><a href="context.jsonld">JSON-LD context</a></li>
+    </ul>
+  </section>
+</body>
+
+</html>

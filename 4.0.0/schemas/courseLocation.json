@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/courseLocation.json",
+  "title": "Course location",
+  "description": "One or more physical or virtual locations for a course instance.",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "$ref": "https://w3id.org/moochub/4.0.0/schemas/location.json"
+  }
+}

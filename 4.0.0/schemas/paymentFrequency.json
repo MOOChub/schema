@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/paymentFrequency.json",
+  "title": "Payment frequency",
+  "description": "The payment frequency used by the MOOChub profile.",
+  "type": "string",
+  "enum": [
+    "one-time",
+    "weekly",
+    "monthly",
+    "quarterly",
+    "half-yearly",
+    "by-term",
+    "yearly",
+    "other"
+  ]
+}

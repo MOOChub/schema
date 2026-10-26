@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/4.0.0/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "id": "urn:uuid:c96a2376-bdf2-4307-a21f-19a4ff141b5f",
+  "url": "https://example.org/courses/course-1",
+  "name": {
+    "de": "Example course"
+  },
+  "type": ["LearningResource", "Course"],
+  "publisher": {
+    "id": "https://example.org/organizations/example-university",
+    "name": {
+      "de": "Example University"
+    },
+    "type": "Organization"
+  },
+  "creator": [
+    {
+      "id": "https://example.org/people/example-person",
+      "name": {
+        "de": "Example University"
+      },
+      "type": "Organization"
+    }
+  ],
+  "license": {
+    "type": "License",
+    "identifier": "proprietary"
+  },
+  "hasCourseInstance": [
+    {
+      "id": "https://example.org/course-instances/course-1-2026",
+      "type": "CourseInstance",
+      "courseMode": ["hybrid"]
+    }
+  ]
+}

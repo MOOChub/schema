@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/id.json",
+  "title": "URI identifier",
+  "description": "A URI identifying an object in the supplied data graph. Use an HTTP(S) URI when the object is independently addressable; use a urn:uuid URI when migrating a UUID without another stable URI.",
+  "type": "string",
+  "format": "uri"
+}

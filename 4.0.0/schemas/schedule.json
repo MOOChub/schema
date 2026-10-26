@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/schedule.json",
+  "title": "Recurring schedule",
+  "description": "A recurring meeting schedule for a course instance or event.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "Schedule"
+    },
+    "byDay": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "ref": "https://w3id.org/moochub/4.0.0/schemas/dayOfWeek.json"
+      }
+    },
+    "startTime": {
+      "type": "string",
+      "format": "time"
+    },
+    "endTime": {
+      "type": "string",
+      "format": "time"
+    },
+    "scheduleTimezone": {
+      "type": "string",
+      "description": "An IANA time-zone identifier, for example Europe/Berlin."
+    },
+    "repeatFrequency": {
+      "type": "string",
+      "format": "duration",
+      "description": "The ISO 8601 interval between occurrences, for example P1W."
+    },
+    "startDate": {
+      "type": "string",
+      "format": "date",
+      "description": "The first calendar date on which an occurrence may take place."
+    },
+    "endDate": {
+      "type": "string",
+      "format": "date",
+      "description": "The last calendar date on which an occurrence may take place, inclusive."
+    }
+  },
+  "required": [
+    "type",
+    "byDay",
+    "startTime",
+    "endTime",
+    "repeatFrequency",
+    "startDate",
+    "endDate"
+  ]
+}

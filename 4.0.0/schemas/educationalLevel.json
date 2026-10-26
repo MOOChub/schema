@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/educationalLevel.json",
+  "title": "Educational level",
+  "description": "A concept that describe the educational level of a course or program using the DINI-AG-KIM educational level vocabulary.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/concept.json"
+    },
+    {
+      "properties": {
+        "id": {
+          "pattern": "(^https://w3id.org/kim/educationalLevel/.*)"
+        },
+        "inScheme": {
+          "const": "https://w3id.org/kim/educationalLevel/"
+        }
+      }
+    }
+  ]
+}

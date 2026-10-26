@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/applicationStartDate.json",
+  "title": "Application start date-time",
+  "description": "The RFC 3339 date-time at which applications open for a course instance.",
+  "type": "string",
+  "format": "date-time"
+}

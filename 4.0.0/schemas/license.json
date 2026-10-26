@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/license.json",
+  "title": "License",
+  "type": "object",
+  "description": "A license or rights statement with a readable label and an optional canonical URL. Omit id when no public license document is available, for example for proprietary or all-rights-reserved content.",
+  "properties": {
+    "type": {
+      "const": "License"
+    },
+    "id": {
+      "type": "string",
+      "format": "url",
+      "description": "The URL of the license document or license terms. Omit when no public license document exists.",
+      "example": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "identifier": {
+      "type": "string",
+      "minLength": 1,
+      "description": "A readable license label or identifier, such as CC BY 4.0, CC0 1.0 Universal, or Proprietary.",
+      "example": "CC BY 4.0"
+    }
+  },
+  "required": ["type", "identifier"]
+}

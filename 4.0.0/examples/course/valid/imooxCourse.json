@@ -1,0 +1,121 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/4.0.0/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "type": ["LearningResource", "Course"],
+  "id": "urn:uuid:bcca20ca-d659-50ec-bbbd-3202cf88aca0",
+  "url": "https://imoox.at/course/maker",
+  "name": {
+    "de": "“Making” - Kreatives digitales Gestalten mit Kindern"
+  },
+  "description": [
+    {
+      "type": "TextObject",
+      "inLanguage": "de",
+      "text": " \"Making\" - der offene Online-Kurs zum kreativen digitalen Gestalten und Experimentieren mit Kindern ist eine siebenwöchige Einführung in unterschiedliche Making-Werkzeuge und -Aktivitäten für Kinder in der Schule und Kinderarbeit. Handlungsorientiert und praxisnah werden ausgewählte Werkzeuge der Making-Bewegung vorgestellt und von Expertinnen konkrete Beispiele für ihren Einsatz gegeben sowie Herausforderungen und Tipps genannt. Geplant sind so die Vorstellung von ausgewählten Unterrichts- oder Workshopszenarien fürs Programmieren, Roboterbauen oder 3D-Drucken. Der Kurs wendet sich dabei explizit an Einsteiger/innen, d.h. Personen, die selbst noch keine Erfahrungen mit den Werkzeugen haben. ",
+      "encodingFormat": "text/plain"
+    }
+  ],
+  "inLanguage": ["de"],
+  "courseCode": "3",
+  "hasCourseInstance": [
+    {
+      "id": "urn:uuid:c33bf3b6-01f3-4b13-b12d-0292331e2f92",
+      "type": "CourseInstance",
+      "courseMode": ["online"],
+      "startDate": "2015-10-19T12:00:00+02:00",
+      "duration": "P7W",
+      "instructor": [
+        {
+          "id": "urn:uuid:e54670a9-3f6c-404d-b3ee-283c5fcf7af5",
+          "type": "Person",
+          "name": "Martin Ebner"
+        },
+        {
+          "id": "urn:uuid:baf292f8-998b-4591-948f-1b75386c29ec",
+          "type": "Person",
+          "name": "Sandra Schön"
+        }
+      ],
+      "offers": [
+        {
+          "type": "Offer",
+          "price": 0,
+          "priceCurrency": "EUR",
+          "paymentFrequency": "one-time",
+          "category": "complete"
+        }
+      ]
+    }
+  ],
+  "image": {
+    "type": "ImageObject",
+    "contentUrl": "https://imoox.at/mooc/pluginfile.php/15775/course/overviewfiles/Making.jpg",
+    "license": {
+      "type": "License",
+      "id": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "identifier": "CC0-1.0"
+    }
+  },
+  "contributor": [
+    {
+      "id": "urn:uuid:a61cb574-8b70-49f1-b4e9-be2b31624075",
+      "type": "Organization",
+      "name": {
+        "de": "Technische Universität Graz"
+      }
+    }
+  ],
+  "publisher": {
+    "id": "https://imoox.at/mooc",
+    "type": "Organization",
+    "name": {
+      "de": "iMooX"
+    },
+    "sameAs": ["https://imoox.at/mooc"]
+  },
+  "timeRequired": "PT14H",
+  "license": {
+    "type": "License",
+    "id": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "identifier": "CC-BY-SA-4.0"
+  },
+  "isAccessibleForFree": true,
+  "educationalAlignment": [
+    {
+      "type": "AlignmentObject",
+      "alignmentType": "educationalSubject",
+      "educationalFramework": "OEFOS",
+      "targetName": {
+        "en": "Computer Sciences",
+        "de": "Informatik"
+      },
+      "identifier": "102"
+    },
+    {
+      "type": "AlignmentObject",
+      "alignmentType": "educationalSubject",
+      "educationalFramework": "OEFOS",
+      "targetName": {
+        "en": "Physics",
+        "de": "Physik"
+      },
+      "identifier": "103"
+    }
+  ],
+  "creator": [
+    {
+      "id": "urn:uuid:e54670a9-3f6c-404d-b3ee-283c5fcf7af5",
+      "type": "Person",
+      "name": "Martin Ebner"
+    },
+    {
+      "id": "urn:uuid:baf292f8-998b-4591-948f-1b75386c29ec",
+      "type": "Person",
+      "name": "Sandra Schön"
+    }
+  ]
+}

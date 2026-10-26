@@ -1,0 +1,172 @@
+{
+  "links": {
+    "self": "https://provider.example/api/v4/catalog?page%5Bnumber%5D=1",
+    "first": "https://provider.example/api/v4/catalog?page%5Bnumber%5D=1",
+    "last": "https://provider.example/api/v4/catalog?page%5Bnumber%5D=1",
+    "next": null,
+    "prev": null
+  },
+  "meta": {
+    "total": 6
+  },
+  "data": [
+    {
+      "type": "courses",
+      "id": "5234",
+      "attributes": {
+        "@context": [
+          "https://w3id.org/moochub/4.0.0/context.jsonld",
+          {
+            "@language": "en"
+          }
+        ],
+        "id": "https://provider.example/courses/intro-digital-skills",
+        "url": "https://provider.example/courses/intro-digital-skills",
+        "name": {
+          "en": "Introduction to Digital Skills"
+        },
+        "type": ["LearningResource", "Course"],
+        "publisher": {
+          "id": "https://provider.example/organizations/example-university",
+          "type": "Organization",
+          "name": {
+            "en": "Example University"
+          }
+        },
+        "creator": [
+          {
+            "id": "https://provider.example/people/example-author",
+            "type": "Person",
+            "name": "Example Author"
+          }
+        ],
+        "license": {
+          "type": "License",
+          "identifier": "Proprietary"
+        }
+      }
+    },
+    {
+      "type": "programs",
+      "id": "microdegree-digital-skills",
+      "attributes": {
+        "@context": [
+          "https://w3id.org/moochub/4.0.0/context.jsonld",
+          {
+            "@language": "en"
+          }
+        ],
+        "id": "https://provider.example/programs/digital-skills-microdegree",
+        "type": "EducationalOccupationalProgram",
+        "url": "https://provider.example/programs/digital-skills-microdegree",
+        "name": {
+          "en": "Digital Skills Microdegree"
+        },
+        "description": [
+          {
+            "type": "TextObject",
+            "inLanguage": "en",
+            "text": "A course program for foundational digital skills.",
+            "encodingFormat": "text/plain"
+          }
+        ],
+        "provider": {
+          "id": "https://provider.example/organizations/example-university",
+          "type": "Organization",
+          "name": {
+            "en": "Example University"
+          }
+        },
+        "educationalProgramMode": ["online", "asynchronous"],
+        "timeToComplete": "P3M",
+        "numberOfCredits": [
+          {
+            "type": "CreditPoint",
+            "framework": {
+              "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+              "type": "Concept",
+              "prefLabel": {
+                "en": "ECTS"
+              },
+              "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+            },
+            "point": 10
+          }
+        ],
+        "hasPart": [
+          {
+            "name": {
+              "en": "Core module"
+            },
+            "numberOfCredits": [
+              {
+                "type": "CreditPoint",
+                "framework": {
+                  "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+                  "type": "Concept",
+                  "prefLabel": {
+                    "en": "ECTS"
+                  },
+                  "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+                },
+                "point": 10
+              }
+            ],
+            "hasCourse": [
+              {
+                "id": "https://provider.example/courses/intro-digital-skills",
+                "type": ["LearningResource", "Course"],
+                "name": {
+                  "en": "Introduction to Digital Skills"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "credentials",
+      "id": "credential-digital-skills",
+      "attributes": {
+        "id": "https://provider.example/credentials/digital-skills",
+        "type": "EducationalOccupationalCredential",
+        "name": {
+          "en": "Digital Skills Certificate"
+        }
+      }
+    },
+    {
+      "type": "persons",
+      "id": "example-author",
+      "attributes": {
+        "id": "https://provider.example/people/example-author",
+        "type": "Person",
+        "name": "Example Author"
+      }
+    },
+    {
+      "type": "organizations",
+      "id": "example-university",
+      "attributes": {
+        "id": "https://provider.example/organizations/example-university",
+        "type": "Organization",
+        "name": {
+          "en": "Example University"
+        }
+      }
+    },
+    {
+      "type": "locations",
+      "id": "example-virtual-classroom",
+      "attributes": {
+        "id": "https://provider.example/locations/virtual-classroom",
+        "type": "VirtualLocation",
+        "name": {
+          "en": "Virtual classroom"
+        },
+        "url": "https://provider.example/virtual-classroom"
+      }
+    }
+  ]
+}

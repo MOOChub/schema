@@ -1,0 +1,41 @@
+{
+  "course/invalid/abstractTextObject.json": ["additionalProperties:/abstract"],
+  "course/invalid/courseCodeEmpty.json": ["minLength:/courseCode"],
+  "course/invalid/courseInstanceInvalidMode.json": [
+    "enum:/hasCourseInstance/0/courseMode/0"
+  ],
+  "course/invalid/courseMissingRequiredFields.json": ["required:"],
+  "course/invalid/credentialMissingName.json": [
+    "required:/educationalCredentialAwarded/0"
+  ],
+  "course/invalid/invalidEducationalLevel.json": [
+    "pattern:/educationalLevel/0/id"
+  ],
+  "course/invalid/nameTextObject.json": ["additionalProperties:/name"],
+  "course/invalid/richTextUnsupportedFormat.json": ["type:/description"],
+  "catalog/invalid/nonStringResourceId.json": [
+    "const:/data/0/attributes/type",
+    "const:/data/0/type",
+    "enum:/data/0/attributes/type",
+    "oneOf:/data/0",
+    "required:/data/0/attributes",
+    "type:/data/0/attributes/name",
+    "type:/data/0/attributes/type",
+    "type:/data/0/id"
+  ],
+  "catalog/invalid/resourceTypeMismatch.json": [
+    "anyOf:/data/0/attributes/hasPart/0",
+    "const:/data/0/attributes/type",
+    "const:/data/0/type",
+    "enum:/data/0/attributes/type",
+    "oneOf:/data/0",
+    "required:/data/0/attributes",
+    "required:/data/0/attributes/hasPart/0",
+    "type:/data/0/attributes/name",
+    "type:/data/0/attributes/type"
+  ],
+  "program/invalid/incompleteCourseReference.json": [
+    "required:/hasPart/0/hasCourse/0"
+  ],
+  "program/invalid/missingHasCourse.json": ["required:"]
+}

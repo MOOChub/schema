@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/4.0.0/context.jsonld",
+    {
+      "@language": "en"
+    }
+  ],
+  "id": "https://provider.example/courses/ethical-ai",
+  "url": "https://provider.example/courses/ethical-ai",
+  "name": {
+    "en": "Ethical AI"
+  },
+  "type": ["LearningResource", "Course"],
+  "publisher": {
+    "id": "https://example.org/organizations/example-university",
+    "type": "Organization",
+    "name": {
+      "en": "Example University"
+    }
+  },
+  "creator": [
+    {
+      "id": "https://example.org/people/example-author",
+      "type": "Person",
+      "name": "Example Author"
+    }
+  ],
+  "license": {
+    "type": "License",
+    "identifier": "Proprietary"
+  },
+  "teaches": [
+    {
+      "id": "https://provider.example/courses/ethical-ai/outcomes/explain-implications",
+      "type": "Competency",
+      "name": {
+        "en": "Explain ethical implications of AI-supported decisions"
+      }
+    }
+  ],
+  "competencyRequired": [
+    {
+      "id": "https://provider.example/courses/ethical-ai/requirements/critical-thinking",
+      "type": "Competency",
+      "name": {
+        "en": "Basic critical thinking"
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/4.0.0/context.jsonld",
+    {
+      "@language": "en"
+    }
+  ],
+  "id": "https://provider.example/programs/empty-program",
+  "type": "EducationalOccupationalProgram",
+  "url": "https://provider.example/programs/empty-program",
+  "name": {
+    "en": "Empty Program"
+  },
+  "provider": {
+    "id": "https://example.org/organizations/example-university",
+    "type": "Organization",
+    "name": {
+      "en": "Example University"
+    }
+  }
+}

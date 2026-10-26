@@ -1,0 +1,199 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/draft/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "type": ["LearningResource", "Course"],
+  "id": "urn:uuid:096c4cba-efe2-428a-968a-3eca66914256",
+  "url": "https://lernen.oncampus.de/weiterbildung/moocs/iwb-40",
+  "courseCode": "oncampus-MOOC-2016-002602",
+  "name": {
+    "de": "IWB 4.0"
+  },
+  "abstract": {
+    "de": "Immer mehr und mehr Schulen werden mit interaktiven Whiteboards ausgestattet. Jedoch trauen sich viele Lehrkr&auml;fte, aus verschiedenen Gr&uuml;nden, nicht diese im Unterricht einzusetzen.\u003Cbr/\u003EDieser Kurs soll Lehrern und Lehrerinnen dabei helfen, im Umgang mit interaktiven Whiteboards sicher zu werden und diese didaktisch sinnvoll in ihren Unterricht zu integrieren. Dazu wird dargestellt, wie das Whiteboard funktioniert, wie es als Tafelersatz genutzt werden kann und welche weiterf&uuml;hrenden Einsatzm&ouml;glichkeiten diese Technik bietet."
+  },
+  "description": [
+    {
+      "type": "TextObject",
+      "inLanguage": "de",
+      "text": "\u003Cbr/\u003EGrundwissen\u003Cbr/\u003EBasisfunktionen\u003Cbr/\u003EFortgeschrittene Funktionen\u003Cbr/\u003EZus&auml;tzliche Tipps\u003Cbr/\u003E",
+      "encodingFormat": "text/html"
+    }
+  ],
+  "inLanguage": ["de"],
+  "hasCourseInstance": [
+    {
+      "id": "urn:uuid:59ecc481-5de7-47ab-9071-7c029c1c20d1",
+      "type": "CourseInstance",
+      "inLanguage": ["de"],
+      "startDate": "2016-03-06T00:00:00+00:00",
+      "duration": "P4W",
+      "instructor": [
+        {
+          "id": "urn:uuid:89080623-86c2-4eb5-b05b-c2e54aaa5812",
+          "type": "Person",
+          "name": "Prof. Dr. Jürgen Handke",
+          "image": {
+            "contentUrl": "https://moodalis.oncampus.de/files/users/314afa3243170c45d8ac707cc5367043/juergen_handke.jpg",
+            "license": {
+              "type": "License",
+              "identifier": "CC BY 4.0",
+              "id": "https://creativecommons.org/licenses/by/4.0/"
+            }
+          },
+          "description": [
+            {
+              "type": "TextObject",
+              "inLanguage": "de",
+              "text": "\u003Cp\u003EJ&uuml;rgen Handke ist Professor f&uuml;r Linguistik und Sprachtechnologie am Institut f&uuml;r Anglistik und Amerikanistik und Board Member der Lenkungsgruppe Neue Medien an der Philipps-Universit&auml;t Marburg. Dar&uuml;ber hinaus ist er beratendes Mitglied beim Hochschulforum Digitalisierung, einer unabh&auml;ngigen nationalen Plattform, die in Kooperation mit dem Stifterverband der deutschen Wissenschaft, der Hochschulrektorenkonferenz, sowie dem Centrum f&uuml;r Hochschulentwicklung den Dialog &uuml;ber die Digitalisierungspotentiale der deutschen Hochschulen b&uuml;ndelt und moderiert. Professor Handke betreibt die weltweit gr&ouml;&szlig;te linguistische Lernplattform, den Virtual Linguistics Campus, und bringt seine Erfahrung aus mehreren Jahrzehnten in der Lehre in das Projekt \"Schule 4.0\" ein.\u003C/p\u003E\r\n\u003Cp\u003EIm Dezember 2013 erhielt Professor Handke den Hessischen Hochschulpreis f&uuml;r Exzellenz in der Lehre. Im November 2015 wurde er mit dem Ars Legendi Preis f&uuml;r exzellente Hochschullehre ausgezeichnet.\u003C/p\u003E",
+              "encodingFormat": "text/html"
+            }
+          ]
+        },
+        {
+          "id": "urn:uuid:beeb8e90-f738-40b6-bf0b-c882c9e31b7a",
+          "type": "Person",
+          "name": "Tabea Weiß",
+          "image": {
+            "type": "ImageObject",
+            "contentUrl": "https://moodalis.oncampus.de/files/users/257f67cb9207c621cf23f06a1c614d6d/tabea_weiss.jpg",
+            "license": {
+              "type": "License",
+              "identifier": "CC BY 4.0",
+              "id": "https://creativecommons.org/licenses/by/4.0/"
+            }
+          },
+          "description": [
+            {
+              "type": "TextObject",
+              "inLanguage": "de",
+              "text": "\u003Cp\u003ETabea Wei&szlig; ist wissenschaftliche Mitarbeiterin am Lehrstuhl f&uuml;r Sprachwissenschaft und Linguistische Datenverarbeitung am Institut f&uuml;r Anglistik und Amerikanistik der Philipps-Universit&auml;t Marburg. Im Projekt \"Interaktive E-Books f&uuml;r die digitalisierte Hochschullehre\" verantwortet sie die technische Konzeptionierung und unterst&uuml;tzt die Entwicklung didaktischer Konzepte, um E-Books von reinen Lese- zu interaktiven und adaptiven Arbeitsb&uuml;chern weiterzuentwickeln. Perspektivisch sollen Lerner mithilfe dieser \"E-Workbooks\" in unterschiedlichen Situationen und f&uuml;r unterschiedliche Zwecke Inhalte allein oder in Zusammenarbeit mit anderen erarbeiten und vertiefen k&ouml;nnen.\u003C/p\u003E",
+              "encodingFormat": "text/html"
+            }
+          ]
+        },
+        {
+          "id": "urn:uuid:f6fbb573-970a-468c-8de7-bf3c836a0473",
+          "type": "Person",
+          "name": "Katharina Weber",
+          "image": {
+            "type": "ImageObject",
+            "contentUrl": "https://moodalis.oncampus.de/files/users/f4f29705a416633abb9a08d3eb234e50/katharina_weber.jpg",
+            "license": {
+              "type": "License",
+              "identifier": "CC BY 4.0",
+              "id": "https://creativecommons.org/licenses/by/4.0/"
+            }
+          },
+          "description": [
+            {
+              "type": "TextObject",
+              "inLanguage": "de",
+              "text": "\u003Cp\u003EKatharina Weber ist wissenschaftliche Mitarbeiterin am Lehrstuhl f&uuml;r Sprachwissenschaft und linguistische Datenverarbeitung am Institut f&uuml;r Anglistik und Amerikanistik der Philipps-Universit&auml;t Marburg. Im Projekt \"Flexible digitale Kursformate f&uuml;r Lehrveranstaltungen mit Pr&auml;senz\" erforscht sie, wie sich die flexible Gestaltung eines Kurses im Inverted Classroom - insbesondere die Steigerung der Flexibilit&auml;t in der digitalen Selbstlernphase - auf die Studierbarkeit auswirkt. Die Lernenden bekommen die M&ouml;glichkeit, ihr Lerntempo selbst einzuteilen, wodurch auch f&uuml;r die gemeinsame Arbeit in der Pr&auml;senzphase eine Steigerung der Qualit&auml;t erwartet wird.\u003C/p\u003E",
+              "encodingFormat": "text/html"
+            }
+          ]
+        },
+        {
+          "id": "urn:uuid:1c4645d0-0aff-4937-b353-5597dfbf2e87",
+          "type": "Person",
+          "name": "Medya Durak",
+          "image": {
+            "type": "ImageObject",
+            "contentUrl": "https://moodalis.oncampus.de/files/users/1cf05035487600cb2e5f6929d8099a00/medya_durak.jpg",
+            "license": {
+              "type": "License",
+              "identifier": "CC BY 4.0",
+              "id": "https://creativecommons.org/licenses/by/4.0/"
+            }
+          },
+          "description": [
+            {
+              "type": "TextObject",
+              "inLanguage": "de",
+              "text": "\u003Cp\u003EMedya Durak ist studentische Hilfskraft am Institut f&uuml;r Anglistik und Amerikanistik der Philipps-Universit&auml;t Marburg und arbeitet seit 2012 im Virtuellen Zentrum f&uuml;r Lehrerbildung u.a. als Kursleiterin. Sie hat sich &uuml;ber das Virtuelle Zentrum f&uuml;r Lehrerbildung auch zur IWB-Trainerin ausbilden lassen.\u003C/p\u003E",
+              "encodingFormat": "text/html"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "timeRequired": "PT480H",
+  "image": {
+    "type": "ImageObject",
+    "contentUrl": "https://moodalis.oncampus.de/files/moduledescriptions/6adbbba03ac38611afb11c8a1f4dbff6/iwb40mooc_kurskachel_des_gra_de.jpg",
+    "license": {
+      "type": "License",
+      "identifier": "CC0-1.0",
+      "id": "https://creativecommons.org/licenses/by/1.0/"
+    }
+  },
+  "trailer": {
+    "type": "VideoObject",
+    "contentUrl": "https://www.youtube.com/embed/JF96dl2hFrw",
+    "license": {
+      "type": "License",
+      "identifier": "CC BY 4.0",
+      "id": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "creator": [
+    {
+      "id": "urn:uuid:89080623-86c2-4eb5-b05b-c2e54aaa5812",
+      "type": "Person",
+      "name": "Schule 4.0/Jürgen Handke"
+    }
+  ],
+  "learningOutcomeSummary": [
+    {
+      "type": "TextObject",
+      "inLanguage": "de",
+      "text": "\u003Cul class=\"clean_list\"\u003E\r\n\u003Cli\u003EDu erh&auml;ltst Basiswissen zum Aufbau und der Technik eines IWBs.\u003C/li\u003E\r\n\u003Cli\u003EDu lernst die Grundfunktionen sowie fortgeschrittene Funktionen eines IWBs kennen.\u003C/li\u003E\r\n\u003Cli\u003EDu erh&auml;ltst noch Tipps, u.a. zu m&ouml;glichen Problemen.\u003C/li\u003E\r\n\u003C/ul\u003E",
+      "encodingFormat": "text/html"
+    }
+  ],
+  "contributor": [
+    {
+      "id": "https://www.uni-marburg.de/",
+      "type": "Organization",
+      "name": {
+        "de": "Philipps-Universität Marburg"
+      },
+      "sameAs": ["https://www.uni-marburg.de/"],
+      "image": {
+        "type": "ImageObject",
+        "contentUrl": "https://moodalis.oncampus.de/files/users/d83102461d48c91490a39eed070d6232/logo_uni_marburg.jpg",
+        "license": {
+          "type": "License",
+          "identifier": "Alle Rechte vorbehalten"
+        }
+      }
+    }
+  ],
+  "publisher": {
+    "id": "https://lernen.oncampus.de/",
+    "type": "Organization",
+    "name": {
+      "de": "oncampus GmbH"
+    },
+    "sameAs": ["https://lernen.oncampus.de/"],
+    "image": {
+      "type": "ImageObject",
+      "contentUrl": "https://moodalis.oncampus.de/fhl/images.php?url=companies/4424c66006ecb1657c1e6d6147f1f0e0/oncampus_logo_neu_2015.png",
+      "license": {
+        "type": "License",
+        "identifier": "Alle Rechte vorbehalten"
+      }
+    }
+  },
+  "license": {
+    "type": "License",
+    "identifier": "CC BY 4.0",
+    "id": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "isAccessibleForFree": true
+}

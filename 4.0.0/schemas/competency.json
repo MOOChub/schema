@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/competency.json",
+  "title": "Competency",
+  "description": "Shared properties for competencies, learning outcomes, and competency requirements. It is strongly recommended to use the relatedSkill property to map the competency to defined skill concepts to support interoperability and searchability.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/id.json"
+    },
+    "type": {
+      "const": "Competency"
+    },
+    "name": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json"
+    },
+    "relatedSkill": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/concepts.json"
+    },
+    "proficiencyLevel": {
+      "$ref": "https://w3id.org/moochub/4.0.0/schemas/concepts.json",
+      "description": "One or more concepts that describe the proficiency level of this competency."
+    }
+  },
+  "required": ["id", "type", "name"]
+}

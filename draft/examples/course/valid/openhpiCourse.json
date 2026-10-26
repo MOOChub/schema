@@ -1,0 +1,95 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/draft/context.jsonld",
+    {
+      "@language": "en"
+    }
+  ],
+  "type": ["LearningResource", "Course"],
+  "id": "urn:uuid:019488db-32ea-7465-931f-e463930d1d53",
+  "url": "https://open.hpi.de/learn/aimethods2025",
+  "courseCode": "aimethods2025",
+  "name": {
+    "en": "Sustainability in the Digital Age: Efficient AI Techniques in the LLM Era "
+  },
+  "description": [
+    {
+      "type": "TextObject",
+      "inLanguage": "en",
+      "text": "\u003Ch2\u003EWelcome to the \"Sustainability in the Digital Age\" series\u003C/h2\u003E\n\n\u003Cp\u003EIn an era where digital technologies are reshaping industries and daily life, the environmental impact of AI systems has become a growing concern. This course explores efficient AI methodologies to address these challenges. From deep learning model compression to low-bit quantization and collaborative inference, we delve into techniques that enhance computational efficiency and reduce energy consumption. We will also focus on low-bit quantization specifically for large language models (LLMs), showcasing cutting-edge open-source tools and models. Join us to learn how to build sustainable AI systems while pushing the boundaries of innovation.\u003C/p\u003E\n\n\u003Chr\u003E\n\n\u003Cp\u003EThis course is part of the \u003Cstrong\u003ESustainability in the Digital Age\u003C/strong\u003E series, a collaborative project between colleagues from Stanford University, SAP and the Hasso Plattner Institute. \u003C/p\u003E\n",
+      "encodingFormat": "text/html"
+    }
+  ],
+  "inLanguage": ["en"],
+  "isAccessibleForFree": true,
+  "hasCourseInstance": [
+    {
+      "id": "urn:uuid:078865c8-5283-48a5-8397-b6b65402ec02",
+      "type": "CourseInstance",
+      "startDate": "2025-05-27T07:00:00Z",
+      "endDate": "2025-06-10T23:55:00Z",
+      "instructor": [
+        {
+          "id": "urn:uuid:51290236-2101-47d2-be1c-6f5cd04996dc",
+          "type": "Person",
+          "name": "Haojin Yang"
+        }
+      ],
+      "courseMode": ["online"],
+      "duration": "P2W"
+    }
+  ],
+  "image": {
+    "type": "ImageObject",
+    "contentUrl": "https://openhpi-public.s3.openhpicloud.de/courses/2YS78Zv17alY3otYfawef/6oZhJaYw9hJ8uEqj6Cf23G/Picture_1.png",
+    "license": {
+      "type": "License",
+      "identifier": "CC-BY-NC-SA-4.0",
+      "id": "https://creativecommons.org/licenses/by-nc-sa/4.0"
+    }
+  },
+  "publisher": {
+    "id": "https://open.hpi.de",
+    "type": "Organization",
+    "name": {
+      "en": "openHPI"
+    },
+    "sameAs": ["https://open.hpi.de"],
+    "description": [
+      {
+        "type": "TextObject",
+        "inLanguage": "en",
+        "text": "openHPI is the digital education platform of the Hasso Plattner Institute, Potsdam, Germany. On openHPI you take part in a worldwide social learning network based on interactive online courses covering different subjects in Information and Communication Technology (ICT).",
+        "encodingFormat": "text/plain"
+      }
+    ]
+  },
+  "creator": [
+    {
+      "id": "urn:uuid:51290236-2101-47d2-be1c-6f5cd04996dc",
+      "type": "Person",
+      "name": "Haojin Yang",
+      "description": [
+        {
+          "type": "TextObject",
+          "inLanguage": "en",
+          "text": "PD Dr. Haojin Yang is a senior researcher and multimedia and machine learning (MML) research group leader at Hasso-Plattner-Institute (HPI). Since 2019, he has been habilitated for a professorship. His research focuses on efficient deep learning, model acceleration and compression, and AI agentic systems.",
+          "encodingFormat": "text/plain"
+        }
+      ],
+      "image": {
+        "type": "ImageObject",
+        "contentUrl": "https://openhpi-public.s3.openhpicloud.de/teachers/2eiFJCGJdxKlAHIr3N89WX/41oDFjyLAwfjno25m9JxcE/haojin.png",
+        "license": {
+          "type": "License",
+          "identifier": "proprietary"
+        }
+      }
+    }
+  ],
+  "license": {
+    "type": "License",
+    "identifier": "CC-BY-NC-SA-4.0",
+    "id": "https://creativecommons.org/licenses/by-nc-sa/4.0"
+  }
+}

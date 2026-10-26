@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/audienceType.json",
+  "title": "Audience type",
+  "description": "Audience types from the LRMI Educational Audience Role vocabulary.",
+  "type": "array",
+  "uniqueItems": true,
+  "items": {
+    "allOf": [
+      {
+        "$ref": "https://w3id.org/moochub/4.0.0/schemas/concept.json"
+      },
+      {
+        "properties": {
+          "id": {
+            "enum": [
+              "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/administrator",
+              "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/generalPublic",
+              "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/mentor",
+              "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/parent",
+              "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/peerTutor",
+              "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/professional",
+              "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/student",
+              "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/teacher"
+            ]
+          },
+          "inScheme": {
+            "const": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole"
+          }
+        }
+      }
+    ]
+  }
+}

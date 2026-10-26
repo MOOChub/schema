@@ -1,0 +1,48 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/draft/context.jsonld",
+    {
+      "@language": "en"
+    }
+  ],
+  "id": "https://provider.example/programs/incomplete-program",
+  "type": "EducationalOccupationalProgram",
+  "url": "https://provider.example/programs/incomplete-program",
+  "name": {
+    "en": "Incomplete Program"
+  },
+  "provider": {
+    "id": "https://example.org/organizations/example-university",
+    "type": "Organization",
+    "name": {
+      "en": "Example University"
+    }
+  },
+  "hasPart": [
+    {
+      "name": {
+        "en": "Core module"
+      },
+      "numberOfCredits": [
+        {
+          "type": "CreditPoint",
+          "framework": {
+            "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+            "type": "Concept",
+            "prefLabel": {
+              "en": "ECTS"
+            },
+            "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+          },
+          "point": 5
+        }
+      ],
+      "hasCourse": [
+        {
+          "id": "https://provider.example/courses/intro-digital-skills",
+          "type": ["LearningResource", "Course"]
+        }
+      ]
+    }
+  ]
+}

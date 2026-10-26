@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/draft/schemas/concept.json",
+  "title": "Concept",
+  "description": "A reference to a concept from any stable, published, or provider-controlled concept scheme.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/id.json"
+    },
+    "type": {
+      "const": "Concept",
+      "description": "The SKOS type of this concept."
+    },
+    "prefLabel": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json",
+      "description": "The preferred label of the concept in one or more languages."
+    },
+    "definition": {
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json",
+      "description": "A definition of the concept in one or more languages."
+    },
+    "inScheme": {
+      "$ref": "https://w3id.org/moochub/draft/schemas/url.json",
+      "description": "The URL of the concept scheme that defines this concept."
+    }
+  },
+  "required": ["id", "type"]
+}

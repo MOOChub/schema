@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/moochub/4.0.0/schemas/subEvent.json",
+  "title": "Sub event",
+  "description": "A list of sub events that are part of a course instance. Sub events can be used to represent individual sessions or phases of a course instance.",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "$ref": "https://w3id.org/moochub/4.0.0/schemas/courseEvent.json"
+  }
+}

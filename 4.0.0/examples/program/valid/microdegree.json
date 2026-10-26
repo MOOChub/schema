@@ -1,0 +1,222 @@
+{
+  "@context": [
+    "https://w3id.org/moochub/4.0.0/context.jsonld",
+    {
+      "@language": "en"
+    }
+  ],
+  "id": "https://provider.example/programs/digital-skills-microdegree",
+  "type": "EducationalOccupationalProgram",
+  "url": "https://example.edu/programs/digital-skills",
+  "name": {
+    "en": "Digital Skills Microdegree"
+  },
+  "keywords": ["digital skills", "microdegree"],
+  "inLanguage": ["en"],
+  "educationalLevel": [
+    {
+      "id": "https://w3id.org/kim/educationalLevel/level_6",
+      "type": "Concept",
+      "prefLabel": {
+        "en": "Bachelor level"
+      },
+      "inScheme": "https://w3id.org/kim/educationalLevel/"
+    }
+  ],
+  "educationalAlignment": [
+    {
+      "type": "AlignmentObject",
+      "alignmentType": "educationalSubject",
+      "educationalFramework": "ISCED-F",
+      "targetName": {
+        "en": "Computer use"
+      },
+      "targetUrl": "http://data.europa.eu/esco/isced-f/0611"
+    }
+  ],
+  "description": [
+    {
+      "type": "TextObject",
+      "inLanguage": "en",
+      "text": "A structured program covering foundational digital skills.",
+      "encodingFormat": "text/plain"
+    }
+  ],
+  "provider": {
+    "id": "https://provider.example/organizations/example-university",
+    "type": "Organization",
+    "name": {
+      "en": "Example University"
+    }
+  },
+  "funder": [
+    {
+      "id": "https://provider.example/organizations/digital-skills-fund",
+      "type": "Organization",
+      "name": {
+        "en": "Digital Skills Fund"
+      }
+    }
+  ],
+  "applicationStartDate": "2026-01-01T00:00:00Z",
+  "applicationDeadline": "2026-03-31T23:59:59Z",
+  "offers": [
+    {
+      "type": "Offer",
+      "price": 0,
+      "priceCurrency": "EUR",
+      "category": "complete",
+      "url": "https://example.edu/programs/digital-skills/enroll"
+    }
+  ],
+  "educationalProgramMode": ["online", "asynchronous"],
+  "timeToComplete": "P3M",
+  "numberOfCredits": [
+    {
+      "type": "CreditPoint",
+      "framework": {
+        "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+        "type": "Concept",
+        "prefLabel": {
+          "en": "ECTS"
+        },
+        "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+      },
+      "point": 10
+    }
+  ],
+  "programPrerequisites": [
+    {
+      "type": "TextObject",
+      "inLanguage": "en",
+      "text": "Basic digital literacy.",
+      "encodingFormat": "text/plain"
+    }
+  ],
+  "hasPart": [
+    {
+      "name": {
+        "en": "Core module"
+      },
+      "numberOfCredits": [
+        {
+          "type": "CreditPoint",
+          "framework": {
+            "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+            "type": "Concept",
+            "prefLabel": {
+              "en": "ECTS"
+            },
+            "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+          },
+          "point": 5
+        }
+      ],
+      "hasCourse": [
+        {
+          "id": "https://provider.example/courses/intro-digital-skills",
+          "type": ["LearningResource", "Course"],
+          "name": {
+            "en": "Introduction to Digital Skills"
+          }
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Elective module"
+      },
+      "numberOfCredits": [
+        {
+          "type": "CreditPoint",
+          "framework": {
+            "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+            "type": "Concept",
+            "prefLabel": {
+              "en": "ECTS"
+            },
+            "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+          },
+          "point": 5
+        }
+      ],
+      "hasCourse": [
+        {
+          "id": "https://provider.example/courses/digital-communication",
+          "type": ["LearningResource", "Course"],
+          "name": {
+            "en": "Digital Communication"
+          }
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Additional courses"
+      },
+      "description": [
+        {
+          "type": "TextObject",
+          "inLanguage": "en",
+          "text": "Complete at least three of the courses listed for this program area.",
+          "encodingFormat": "text/plain"
+        }
+      ],
+      "numberOfCredits": [
+        {
+          "type": "CreditPoint",
+          "framework": {
+            "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+            "type": "Concept",
+            "prefLabel": {
+              "en": "ECTS"
+            },
+            "inScheme": "http://data.europa.eu/snb/education-credit/25831c2"
+          },
+          "point": 0
+        }
+      ],
+      "hasCourse": [
+        {
+          "id": "https://provider.example/courses/digital-security",
+          "type": ["LearningResource", "Course"],
+          "name": {
+            "en": "Digital Security"
+          }
+        },
+        {
+          "id": "https://provider.example/courses/data-literacy",
+          "type": ["LearningResource", "Course"],
+          "name": {
+            "en": "Data Literacy"
+          }
+        },
+        {
+          "id": "https://provider.example/courses/digital-accessibility",
+          "type": ["LearningResource", "Course"],
+          "name": {
+            "en": "Digital Accessibility"
+          }
+        }
+      ]
+    }
+  ],
+  "isPartOf": [
+    {
+      "id": "https://provider.example/programs/technology-microdegree",
+      "type": "EducationalOccupationalProgram",
+      "name": {
+        "en": "Information Technology"
+      }
+    }
+  ],
+  "educationalCredentialAwarded": [
+    {
+      "id": "https://provider.example/credentials/digital-skills-microdegree",
+      "type": "EducationalOccupationalCredential",
+      "name": {
+        "en": "Digital Skills Microdegree"
+      }
+    }
+  ]
+}

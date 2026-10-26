@@ -1,54 +1,38 @@
 # MOOChub Schema
 
-This repository contains specification files for data exchange between MOOC
-providers participating in the [MOOChub](https://moochub.org). Based on previous
-work regarding [MOOC standards](https://github.com/openHPI/mooc-standards), the
-JSON format specified enables a seamless exchange of course information,
-instructors, and the institutes offering a course. Minimal information is
-required per course to ease onboarding for new partners while allowing
-customizability to fit individual needs.
+This repository contains specifications for data exchange between MOOC
+providers participating in the [MOOChub](https://moochub.org). The published v4
+specification defines a paginated JSON:API catalog for exchanging courses,
+programs, credentials, persons, organizations, and locations.
+
+## Important: v3 sunset
+
+By the end of February 2027, all providers must be able to deliver a [v4 feed](4.0.0/schemas/api/catalogFeed.json). At the
+end of March 2027, the MOOChub.org client will stop accepting [v3 feeds](moochub-schema.json).
 
 ## Specification
 
-The draft profile is compatible with the pinned AMB `20231019` release.
+The current published specification is the
+[latest release (v4.0.0)](latest/index.html). Use it as the reference for
+implementing the current v4 API. The versioned
+[4.0.0 release](4.0.0/index.html) is a fixed snapshot. The
+[draft](draft/index.html) is where changes for a future release are developed;
+it may change and should not be treated as a published release.
 
-The v4 draft exposes courses, programs, credentials, persons, organizations,
-and locations through a common, paginated JSON:API catalog. The resource types,
-pagination rules, and harvesting behavior are documented normatively in the
-[catalog section of the English draft specification](draft/index.html#catalog). The
-complete feed example is available in
-[draft/examples/catalog/valid/catalog.json](draft/examples/catalog/valid/catalog.json).
-The 4.0.0 release is available from
-[4.0.0/index.html](4.0.0/index.html); [latest/index.html](latest/index.html)
-points to the newest published version.
-
-The MOOChub API specification consists of two major parts: (1) A JSON format and
-(2) an API versioning concept.
-
-1. JSON format
-
-   The JSON format specified in this repository is based on the
-   [JSON:API](https://jsonapi.org) schema and uses their proposed pagination
-   approach. In a valid response, only a few attributes must be present, most
-   can be omitted or can be `null`. As we see a semantical difference between an
-   omitted and a `null` value, we kindly ask you to provide as much information
-   as possible.
-
-2. API versioning concept
-
-   Upon request of the API, the server and client might negotiate the most
-   suitable version of the API using HTTP headers. Please refer to the
-   [dedicated versioning specification](moochub-versioning.md) for more details.
+The published specification documents the resource types, pagination rules, and
+harvesting behavior in its [JSON:API catalog section](latest/index.html#catalog).
+A complete feed example is available in
+[examples/catalog/valid/catalog.json](latest/examples/catalog/valid/catalog.json).
+API version negotiation and sunset behavior are described in the
+[API versioning section](latest/index.html#api-versioning).
 
 ## Releases
 
-The
-[latest finalized version](https://github.com/moochub/schema/releases/latest) of
-the schema is released in this repository and tagged appropriately. All MOOChub
-compliant software is requested to implement the versioning as outlined in the
-[dedicated API versioning specification](moochub-versioning.md). We follow a
-[semantic versioning](https://semver.org) approach for all releases to ease
-consuming schema-compliant APIs.
+Published releases are tagged in this repository. The
+[latest finalized release](https://github.com/moochub/schema/releases/latest)
+is also available through the `latest/` path; versioned paths such as `4.0.0/`
+remain fixed snapshots. Releases follow
+[semantic versioning](https://semver.org).
 
 ## Contributions
 
@@ -64,4 +48,4 @@ release. Please create an issue or a pull request to start contributing!
 
 If you have further questions or would like to get listed in the
 [MOOChub](https://moochub.org) using an endpoint following this schema, please
-drop us a mail at office@moochub.org.
+drop us a mail at <office@moochub.org>.
